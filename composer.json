@@ -1,0 +1,18 @@
+{
+    "package": "sunseeker/website",
+    "authors": [
+        {
+            "name": "Alec Carpenter",
+            "email": "alec.g.carpenter@wmich.edu"
+        }
+    ],
+    "require": {
+        "maverick/maverick": "0.*",
+        "twig/twig": "1.*"
+    },
+    "autoload": {
+        "psr-0": {
+            "Sunseeker": "src"
+        }
+    }
+}

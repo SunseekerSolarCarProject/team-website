@@ -1,0 +1,4 @@
+RewriteEngine On
+#RewriteBase /sunseeker
+#RewriteCond %{REMOTE_ADDR} ^$
+RewriteRule ^(.*) public/$1 [L]

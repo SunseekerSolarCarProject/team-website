@@ -1,0 +1,6 @@
+{
+    "name": "sunseeker",
+    "dependencies": {
+        "bootstrap": "3.2.*"
+    }
+}

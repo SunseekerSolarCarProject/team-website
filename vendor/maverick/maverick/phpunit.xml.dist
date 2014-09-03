@@ -1,0 +1,13 @@
+<phpunit bootstrap="bootstrap.php" colors="true">
+  <testsuites>
+    <testsuite name="Maverick Tests">
+      <directory>./tests/*</directory>
+    </testsuite>
+  </testsuites>
+  <filter>
+    <blacklist>
+      <directory>config</directory>
+      <directory>vendor</directory>
+    </blacklist>
+  </filter>
+</phpunit>

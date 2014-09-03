@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <title>We'll be Back | Sunseeker Solar Car Project</title>
+    <style>
+    body {
+        background: #FFF;
+        font-family: Helvetica;
+        font-weight: 100;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .wrapper {
+        width: 600px;
+        margin: 10px auto;
+    }
+    
+    h1 {
+        font-weight: 100;
+    }
+    
+    .logo {
+        margin-top: 30px;
+        text-align: center;
+        float: right;
+    }
+    
+    .logo img {
+        max-width: 50%;
+    }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        var wrapperHeight = $('.wrapper').height(), windowHeight = $(document).height(), margin;
+
+        margin = (windowHeight - wrapperHeight) / 2;
+
+        $('.wrapper').css('margin-top', margin + 'px');
+    });
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="logo">
+        <img src="fireballs.png" alt="Sunseeker" />
+      </div>
+      <h1>We'll be Back!</h1>
+      We're making changes to our website, and will be back soon!
+    </div>
+  </body>
+</html>
