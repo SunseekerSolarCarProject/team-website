@@ -5,13 +5,24 @@
 @wmu-brown: #630;
 @wmu-gold: #FC6;
 
-@header-height: 55px;
+@header-height: 65px;
+
+html {
+    background: #FFF;
+}
 
 body.container-fluid {
     font-size: 16px;
-    font-weight: 100;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     padding: 0;
+}
+
+a, a:hover {
+    color: darken(@wmu-gold, 25%);
+}
+
+header {
+    margin-bottom: 20px;
 }
 
 @media (min-width: @screen-md-min) {
@@ -19,9 +30,9 @@ body.container-fluid {
     main {
         .container;
     }
-
+    
     header {
-        background: darken(@wmu-brown, 2%);
+        /*background: darken(@wmu-brown, 2%);*/
         line-height: @header-height;
         
         .wrapper {
@@ -35,7 +46,7 @@ body.container-fluid {
             background-size: 90%;
             text-indent: -9999px;
             position: relative;
-            width: 150px;
+            width: 175px;
             display: block;
         }
         
@@ -53,21 +64,80 @@ body.container-fluid {
                 li {
                     display: inline;
                     list-style: none;
+                    margin-right: -6px;
                     
                     a, a:hover {
-                        color: @wmu-gold;
+                        color: @wmu-brown;
+                        font-weight: 200;
                         text-decoration: none;
-                        line-height: @header-height;
+                        line-height: @header-height / 2;
                         display: inline-block;
                         padding: 0 15px;
                     }
                     
-                    a:hover {
+                    a:hover, a.active {
                         background: @wmu-brown;
+                        color: @wmu-gold;
                         transition: .25s;
+                    }
+                    
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+    
+    h1 {
+        margin-bottom: 10px;
+    }
+    
+    h1, h2, h3 {
+        margin-top: 0;
+    }
+    
+    footer {
+        background: transparent;
+        font-weight: 200;
+        padding: 20px;
+        margin-top: 20px;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        
+        a {
+            color: #000;
+            text-decoration: underline;
+            
+            &:hover {
+                color: #000;
+                text-decoration: none;
+            }
+        }
+        
+        .organization {
+            .pull-left;
+        }
+        
+        nav {
+            .pull-right;
+            padding: 0;
+            
+            ul {
+                margin: 0;
+                
+                li {
+                    display: inline;
+                    margin-right: 10px;
+                    
+                    &:last-of-type {
+                        margin-right: 0;
                     }
                 }
             }
         }
     }
 }
+
+@import 'pages.less';

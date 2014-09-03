@@ -1,6 +1,7 @@
 <?php
 
-use Maverick\Application;
+use Maverick\Application,
+    Maverick\Http\Response\Instruction\RedirectInstruction;
 
 define('ROOT', dirname(__DIR__));
 
@@ -16,16 +17,43 @@ $app->services->register('twig', function() {
     return new Twig_Environment($loader);
 });
 
+$app->services->replace('error.controller', function($mgr) {
+    return new Sunseeker\Controller\ErrorController($mgr->get('twig'));
+});
+
 $app->start();
 
 // Create an "alias" for the twig service to be "used" by closures.
 $twig = $app->services->get('twig');
 
 // Add the URL prefix to the twig environment
-$twig->addGlobal('url_prefix', Application::debugCompare('<', Application::DEBUG_LEVEL_PROD) ? '/' : '/sunseeker/');
+$twig->addGlobal('url_prefix', Application::debugCompare('<', Application::DEBUG_LEVEL_PROD) ? '' : '/sunseeker');
+
+// Add the nav links
+$twig->addGlobal('nav_links', [
+    '/'             => 'Home',
+    '/about-us'     => 'About Us',
+    '/the-car'      => 'The Car',
+    '/team-members' => 'Team Members',
+    '/our-sponsors' => 'Our Sponsors',
+    '/gallery'      => 'Photos',
+    '/blog'         => 'Blog',
+]);
+
+// Add the current url to twig
+$twig->addGlobal('current_page', $app->request->getUrn());
 
 $app->router->match('*', '/', function() use ($twig) {
     return $twig->render('index.twig');
+});
+
+$app->router->get('/about-us', function() use ($twig) {
+    return $twig->render('about.twig');
+});
+
+// Redirects
+$app->router->get('/the-team', function() {
+    return RedirectInstruction::factory('/about-us', '', 301);
 });
 
 $app->finish();

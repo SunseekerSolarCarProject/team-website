@@ -1,26 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{% block title %}Sunseeker Solar Car Project | Western Michigan University{% endblock %}</title>
+    <title>{% block title %}Welcome{% endblock %} | Sunseeker Solar Car Project</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-    <link rel="stylesheet" href="{{ url_prefix }}assets/css/style.css">
+    <link rel="stylesheet" href="{{ url_prefix }}/assets/css/style.css">
   </head>
-  <body class="container-fluid">
+  <body id="{% block pageid %}{% endblock %}" class="container-fluid">
     {% block header %}
     <header>
       <div class="wrapper">
         <a class="branding" href="{{ url_prefix }}">Sunseeker Solar Car Project</a>
         <nav>
           <ul>
-            <li><a href="{{ url_prefix }}">Home</a>
-            <li><a href="{{ url_prefix }}about">About Us</a>
-            <li><a href="{{ url_prefix }}the-car">The Car</a>
-            <li><a href="{{ url_prefix }}members">The Team</a>
-            <li><a href="{{ url_prefix }}sponsors">Our Sponsors</a>
-            <li><a href="{{ url_prefix }}gallery">Photos</a>
-            <li><a href="{{ url_prefix }}blog">Blog</a>
+            {% for link,label in nav_links %}
+            <li><a href="{{ url_prefix }}{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
+            {% endfor %}
           </ul>
         </nav>
       </div>
@@ -32,4 +28,18 @@
       {% endblock %}
     </main>
   </body>
+  <footer>
+    <div class="container">
+      <div class="organization">Sunseeker Solar Car Project | <a href="https://www.wmich.edu/">Western Michigan University</a></div>
+      <nav>
+        <ul>
+          <li><a href="{{ url_prefix }}/become-a-sponsor">Become a Sponsor</a>
+          <li><a href="{{ url_prefix }}/contact-us">Contact Us</a>
+          <li><a href="{{ url_prefix }}/media">Media</a>
+          <li><a href="{{ url_prefix }}/members">Member Area</a>
+        </ul>
+      </nav>
+      <div class="clearfix"></div>
+    </div>
+  </footer>
 </html>
