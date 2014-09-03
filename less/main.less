@@ -1,1 +1,73 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
+
+@url-prefix: '/';
+
+@wmu-brown: #630;
+@wmu-gold: #FC6;
+
+@header-height: 55px;
+
+body.container-fluid {
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    padding: 0;
+}
+
+@media (min-width: @screen-md-min) {
+    header .wrapper,
+    main {
+        .container;
+    }
+
+    header {
+        background: darken(@wmu-brown, 2%);
+        line-height: @header-height;
+        
+        .wrapper {
+            position: relative;
+        }
+        
+        a.branding {
+            background-image: url('@{url-prefix}assets/images/logo_small.png');
+            background-repeat: no-repeat;
+            background-position: left center;
+            background-size: 90%;
+            text-indent: -9999px;
+            position: relative;
+            width: 150px;
+            display: block;
+        }
+        
+        nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            
+            ul {
+                * {
+                    margin: 0;
+                    padding: 0;
+                }
+                
+                li {
+                    display: inline;
+                    list-style: none;
+                    
+                    a, a:hover {
+                        color: @wmu-gold;
+                        text-decoration: none;
+                        line-height: @header-height;
+                        display: inline-block;
+                        padding: 0 15px;
+                    }
+                    
+                    a:hover {
+                        background: @wmu-brown;
+                        transition: .25s;
+                    }
+                }
+            }
+        }
+    }
+}

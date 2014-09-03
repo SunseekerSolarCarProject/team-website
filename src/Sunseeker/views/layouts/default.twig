@@ -7,7 +7,29 @@
 
     <link rel="stylesheet" href="{{ url_prefix }}assets/css/style.css">
   </head>
-  <body>
-    
+  <body class="container-fluid">
+    {% block header %}
+    <header>
+      <div class="wrapper">
+        <a class="branding" href="{{ url_prefix }}">Sunseeker Solar Car Project</a>
+        <nav>
+          <ul>
+            <li><a href="{{ url_prefix }}">Home</a>
+            <li><a href="{{ url_prefix }}about">About Us</a>
+            <li><a href="{{ url_prefix }}the-car">The Car</a>
+            <li><a href="{{ url_prefix }}members">The Team</a>
+            <li><a href="{{ url_prefix }}sponsors">Our Sponsors</a>
+            <li><a href="{{ url_prefix }}gallery">Photos</a>
+            <li><a href="{{ url_prefix }}blog">Blog</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    {% endblock %}
+    <main>
+      {% block main %}
+      <h1>This is a new page!</h1>
+      {% endblock %}
+    </main>
   </body>
 </html>
