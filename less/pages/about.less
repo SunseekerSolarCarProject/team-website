@@ -5,11 +5,29 @@
             width: 50%;
         }
         
-        .slideshow {
+        #slideshow {
             background: #F1F1F1;
             padding: 10px;
             width: 49%;
             .pull-right;
+            
+            .list-standard;
+            
+            ul li {
+                display: none;
+                
+                img {
+                    max-width: 100%;
+                }
+                
+                p {
+                    margin-top: 10px;
+                }
+                
+                &:first-of-type {
+                    display: block;
+                }
+            }
         }
     }
 }

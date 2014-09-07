@@ -13,11 +13,14 @@
       <div class="wrapper">
         <a class="branding" href="{{ url_prefix }}">Sunseeker Solar Car Project</a>
         <nav>
-          <ul>
-            {% for link,label in nav_links %}
-            <li><a href="{{ url_prefix }}{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
-            {% endfor %}
-          </ul>
+          <div class="toggle"></div>
+          <div class="wrap">
+            <ul>
+              {% for link,label in nav_links %}
+              <li><a href="{{ url_prefix }}{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
+              {% endfor %}
+            </ul>
+          </div>
         </nav>
       </div>
     </header>
@@ -42,4 +45,6 @@
       <div class="clearfix"></div>
     </div>
   </footer>
+  <script src="{{ url_prefix }}/assets/javascript/lib/require-2.1.14.js"></script>
+  <script>require(['./assets/javascript/common', './assets/javascript/analytics', './assets/javascript/app/mobileNav']{% if requirejs is not empty %}, function() {require(['{{ requirejs }}']);}{% endif %});</script>
 </html>

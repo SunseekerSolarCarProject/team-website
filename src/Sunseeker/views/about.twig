@@ -2,6 +2,8 @@
 
 {% block title %}About the Team{% endblock %}
 
+{% set requirejs='about' %}
+
 {% block pageid %}about{% endblock %}
 
 {% block main %}
@@ -17,8 +19,12 @@
   <h2>Why? (Our Mission)</h2>
   <p>To raise awareness of clean, renewable energy sources by demonstrating our student-built solar powered vehicle.</p>
 </section>
-<section class="slideshow">
-  Picture goes here.
+<section id="slideshow">
+  <ul>
+    <li><img src="{{ url_prefix }}/assets/images/slideshow/about/id4-spaceship-look.jpg"><p>The car during practice runs at Circuit of the Americas before the 2014 Formula Sun Grand Prix Powered by Austin Energy.</p></li>
+    <li><img src="{{ url_prefix }}/assets/images/slideshow/about/prepping-for-dynamics.jpg"><p>Getting the car and driver all set to start dynamic testing for the 2014 Formula Sun Grand Prix Powered by Austin Energy.</p></li>
+    <li><img src="{{ url_prefix }}/assets/images/slideshow/about/pit-stop.jpg"><p>Adding some air to the tires and making sure the car is sealed up tight. Sadly there wasn't a lot of sun this day.</p></li>
+  </ul>
 </section>
 <div class="clearfix"></div>
 {% endblock %}
