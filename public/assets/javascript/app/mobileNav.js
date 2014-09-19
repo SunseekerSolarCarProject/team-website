@@ -1,11 +1,11 @@
 define(['jquery'], function($) {
-    var $nav, $toggle;
-
-    $nav    = $('header nav');
-    $toggle = $nav.children('.toggle');
-console.log($nav);
-console.log($toggle);
-    $toggle.on('click', function() {
-        $nav.toggleClass('active');
+    var $nav;
+    $nav = $('header nav');
+    $nav.children('.toggle').on('click', function() {
+        if($nav.children('.wrap').css('display') == 'none') {
+            $nav.children('.wrap').slideDown();
+        } else {
+            $nav.children('.wrap').slideUp();
+        }
     });
 });

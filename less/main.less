@@ -9,12 +9,16 @@
 
 @header-height: 65px;
 
+@nav-border-color: darken(@wmu-gold, 20%);
+
+@standard-spacing: 10px;
+
 .list-standard {
     ul , ul * {
         margin: 0;
         padding: 0;
     }
-        
+
     ul li {
         list-style: none;
     }
@@ -37,99 +41,122 @@ a, a:hover {
 header {
     background: @header-bg;
     line-height: @header-height;
-    padding-left: 10px;
-    margin-bottom: 20px;
-    
+    width: 100%;
+
     a.branding {
         background-image: url('@{url-prefix}assets/images/logo_small.png');
         background-repeat: no-repeat;
-        background-position: left center;
+        background-position-y: center;
+        background-position-x: @standard-spacing;
         background-size: 90%;
         text-indent: -9999px;
         position: relative;
         width: 175px;
         display: block;
     }
-    
+
     nav {
         .toggle {
             background-image: url('@{url-prefix}assets/images/mobile_nav_toggle.png');
             background-size: 50%;
-            background-position-x: center;
-            background-position-y: 7px;
+            background-position: center center;
             background-repeat: no-repeat;
             width: @header-height;
             height: @header-height;
             position: absolute;
-            top: 10px;
-            right: 10px;
+            top: 0px;
+            right: 0px;
+            border-bottom: 0;
+            cursor: pointer;
         }
-        
+
         .list-standard;
-        
+
         .wrap {
             background: @header-bg;
-            padding: 10px 10px 10px 0;
+            padding: @standard-spacing;
             display: none;
-            
+
             ul {
-                background: @wmu-gold;
-                border-radius: 10px;
-                border-top-right-radius: 0;
-                padding: 10px 0;
-                
                 li {
-                    a {
-                        color: @wmu-brown;
+                    a, a:hover {
+                        background: lighten(@wmu-brown, 2%);
+                        color: @wmu-gold;
                         line-height: 1.5em;
                         display: block;
-                        padding: 10px;
-                        margin: 0 10px;
+                        padding: @standard-spacing;
+                        margin-bottom: 3px;
                     }
-                    
+
                     &:last-of-type a {
-                        border-bottom: none;
+                        margin-bottom: 0;
                     }
                 }
-            }
-        }
-        
-        &.active {
-            .toggle {
-                background-image: url('@{url-prefix}assets/images/mobile_nav_toggle_active.png');
-                background-color: @wmu-gold;
-                background-position: center center;
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
-            }
-            
-            .wrap {
-                display: block;
             }
         }
     }
 }
 
 main {
-    padding: 0 20px;
+    padding: @standard-spacing;
 }
 
-@media (min-width: @screen-md-min) {
-    header .wrapper,
-    main {
-        .container;
+footer {
+    background: @wmu-brown;
+    color: #FFF;
+    padding: @standard-spacing;
+
+    .container {
+        padding: 0;
+        width: 100%;
     }
-    
-    header {
-        .wrapper {
-            position: relative;
+
+    nav {
+        .list-standard;
+
+        ul {
+            li {
+                a, a:hover {
+                    background: lighten(@wmu-brown, 2%);
+                    color: @wmu-gold;
+                    line-height: 1.5em;
+                    display: block;
+                    padding: @standard-spacing;
+                    margin-bottom: 3px;
+                }
+
+                &:last-of-type a {
+                    margin-bottom: 0;
+                }
+            }
         }
-        
+    }
+
+    .organization {
+        margin-top: @standard-spacing;
+        .text-center;
+
+        a {
+            color: #FFF;
+            text-decoration: underline;
+
+            &.school {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) {
+    header {
         nav {
+            line-height: @header-height;
+            padding: 0;
+
             .toggle {
                 display: none;
             }
-            
+
             .wrap {
                 background: transparent;
                 display: block;
@@ -137,31 +164,34 @@ main {
                 position: absolute;
                 top: 0;
                 right: 0;
-            
+
                 ul {
                     background: transparent;
+                    border: none;
                     padding: 0;
-                    
+
                     li {
                         display: inline;
                         margin-right: -6px;
-                        
+
                         a, a:hover {
+                            background: transparent;
                             color: @wmu-gold;
                             font-weight: 200;
                             text-decoration: none;
                             line-height: @header-height;
                             display: inline-block;
-                            padding: 0 15px;
+                            padding: 0 @standard-spacing;
                             margin: 0;
+                            border: none;
                         }
-                        
+
                         a:hover, a.active {
                             background: lighten(@wmu-brown, 2%);
                             color: @wmu-gold;
                             transition: .25s;
                         }
-                        
+
                         &:last-of-type {
                             margin-right: 0;
                         }
@@ -170,47 +200,100 @@ main {
             }
         }
     }
-    
-    h1 {
-        margin-bottom: 10px;
+}
+
+@media (min-width: @screen-md-min) {
+    header .wrapper,
+    main {
+        .container;
+        padding: 0;
     }
-    
+
+    main {
+        margin-top: @standard-spacing;
+    }
+
+    header {
+        .wrapper {
+            position: relative;
+
+            .branding {
+                background-position-x: 0;
+            }
+
+            nav .wrap ul li a {
+                padding: 0 @standard-spacing * 2;
+            }
+        }
+    }
+
+    h1 {
+        margin-bottom: @standard-spacing;
+    }
+
     h1, h2, h3 {
         margin-top: 0;
     }
-    
+
     footer {
         background: transparent;
-        padding: 20px;
-        margin-top: 20px;
-        
+        color: #000;
+        padding: 0 0 @standard-spacing;
+        font-size: 1em;
+        text-align: left;
+        margin-top: @standard-spacing;
+
+        .container {
+            padding: 0;
+            width: @container-lg;
+        }
+
         a {
             color: #000;
             text-decoration: underline;
-            
+
             &:hover {
                 color: #000;
                 text-decoration: none;
             }
         }
-        
+
         .organization {
+            margin: 0;
             .pull-left;
+
+            a {
+                color: #000;
+
+                &.school {
+                    color: @wmu-brown;
+                    display: inline;
+                }
+            }
         }
-        
+
         nav {
+            background: transparent;
+            border: none;
             .pull-right;
             padding: 0;
-            
+            margin: 0;
+
             .list-standard;
-            
+
             ul {
-                margin: 0;
-                
                 li {
                     display: inline;
-                    margin-right: 10px;
-                    
+                    margin-right: @standard-spacing;
+                    border: none;
+
+                    a, a:hover {
+                        background: transparent;
+                        display: inline;
+                        color: #000;
+                        padding: 0;
+                    }
+
                     &:last-of-type {
                         margin-right: 0;
                     }

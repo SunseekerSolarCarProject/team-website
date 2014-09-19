@@ -25,26 +25,28 @@
       </div>
     </header>
     {% endblock %}
+    {% block main %}
     <main>
-      {% block main %}
+      {% block content %}
       <h1>This is a new page!</h1>
       {% endblock %}
     </main>
+    {% endblock %}
+    <footer>
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="{{ url_prefix }}/become-a-sponsor">Become a Sponsor</a>
+            <li><a href="{{ url_prefix }}/contact-us">Contact Us</a>
+            <li><a href="{{ url_prefix }}/media">Media</a>
+            <li><a href="{{ url_prefix }}/members">Member Area</a>
+          </ul>
+        </nav>
+        <div class="organization">Sunseeker Solar Car Project <a href="https://www.wmich.edu/" class="school">Western Michigan University</a></div>
+        <div class="clearfix"></div>
+      </div>
+    </footer>
+    <script src="{{ url_prefix }}/assets/javascript/lib/require-2.1.14.js"></script>
+    <script>require(['./assets/javascript/common', './assets/javascript/analytics', './assets/javascript/app/mobileNav']{% if requirejs is not empty %}, function() {require(['{{ requirejs }}']);}{% endif %});</script>
   </body>
-  <footer>
-    <div class="container">
-      <div class="organization">Sunseeker Solar Car Project | <a href="https://www.wmich.edu/">Western Michigan University</a></div>
-      <nav>
-        <ul>
-          <li><a href="{{ url_prefix }}/become-a-sponsor">Become a Sponsor</a>
-          <li><a href="{{ url_prefix }}/contact-us">Contact Us</a>
-          <li><a href="{{ url_prefix }}/media">Media</a>
-          <li><a href="{{ url_prefix }}/members">Member Area</a>
-        </ul>
-      </nav>
-      <div class="clearfix"></div>
-    </div>
-  </footer>
-  <script src="{{ url_prefix }}/assets/javascript/lib/require-2.1.14.js"></script>
-  <script>require(['./assets/javascript/common', './assets/javascript/analytics', './assets/javascript/app/mobileNav']{% if requirejs is not empty %}, function() {require(['{{ requirejs }}']);}{% endif %});</script>
 </html>

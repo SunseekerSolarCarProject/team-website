@@ -1,1 +1,28 @@
 {% extends 'layouts/default.twig' %}
+
+{% set requirejs='index' %}
+
+{% block pageid %}index{% endblock %}
+
+{% block content %}
+<div id="slideshow">
+  <ul>
+    <li>FSGP 2014 Dynamic Testing</li>
+    <li>Sunny Weather Before the Race</li>
+    <li>Coming up to Turn 1</li>
+    <li>Down the Main Stretch</li>
+    <li>Practive Before the Race</li>
+    <li>Serious Face -- Time to Race</li>
+    <li>Teamwork Example 1</li>
+  </ul>
+</div>
+<div id="social">
+  <ul>
+    <li><a href="https://www.facebook.com/SunseekerSolarCar" target="_blank" class="facebook">SunseekerSolarCar</a></li>
+    <li><a href="https://twitter.com/wmusunseeker" target="_blank" class="twitter">@WMUSunseeker</a></li>
+    <li><a href="https://www.flickr.com/photos/wmu-sunseeker/" target="_blank" class="flickr">Flickr</a></li>
+    <li><a href="{{ url_prefix }}blog" class="rss">Team Blog</a></li>
+  </ul>
+</div>
+<div class="clearfix"></div>
+{% endblock %}

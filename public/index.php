@@ -34,8 +34,8 @@ $twig->addGlobal('nav_links', [
     '/'             => 'Home',
     '/about-us'     => 'About Us',
     '/the-car'      => 'The Car',
-    '/team-members' => 'Team Members',
-    '/our-sponsors' => 'Our Sponsors',
+    '/team-members' => 'Members',
+    '/our-sponsors' => 'Sponsors',
     '/gallery'      => 'Photos',
     '/blog'         => 'Blog',
 ]);
@@ -52,6 +52,10 @@ $app->router->get('/about-us', function() use ($twig) {
 });
 
 // Redirects
+$app->router->get('/gallery', function() {
+    return RedirectInstruction::factory('https://www.flickr.com/photos/wmu-sunseeker/');
+});
+
 $app->router->get('/the-team', function() {
     return RedirectInstruction::factory('/about-us', '', 301);
 });
