@@ -1,0 +1,59 @@
+body#our-car {
+    img.of-car {
+        max-width: 100%;
+        margin-bottom: @standard-spacing;
+        height: 200px;
+    }
+
+    section.stats {
+        background: #F0F0F0;
+        padding: 0 @standard-spacing;
+
+        table {
+            margin-bottom: @standard-spacing;
+            width: 100%;
+
+            thead tr th,
+            tbody tr td {
+                padding: @standard-spacing 0;
+                vertical-align: top;
+            }
+
+            thead tr {
+                border-bottom: 2px solid #CCC;
+            }
+
+            tbody tr td:first-of-type {
+                width: 50%;
+                font-weight: bold;
+            }
+        }
+
+        table:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    @media (min-width: @screen-md-min) {
+        img.of-car {
+            margin-top: -@standard-spacing;
+            height: 572px;
+        }
+
+        section.description {
+            float: left;
+            width: 50%;
+            padding-right: @standard-spacing;
+            box-sizing: border-box;
+        }
+
+        section.stats {
+            float: right;
+            width: 50%;
+
+            table tbody tr td:first-of-type {
+                width: 40%;
+            }
+        }
+    }
+}

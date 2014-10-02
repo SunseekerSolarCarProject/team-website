@@ -33,11 +33,9 @@ $twig->addGlobal('url_prefix', Application::debugCompare('<', Application::DEBUG
 $twig->addGlobal('nav_links', [
     '/'             => 'Home',
     '/about-us'     => 'About Us',
-    '/the-car'      => 'The Car',
-    '/team-members' => 'Members',
+    '/our-car'      => 'Our Car',
     '/our-sponsors' => 'Sponsors',
-    '/gallery'      => 'Photos',
-    '/blog'         => 'Blog',
+    '/donate'       => 'Donate',
 ]);
 
 // Add the current url to twig
@@ -51,13 +49,21 @@ $app->router->get('/about-us', function() use ($twig) {
     return $twig->render('about.twig');
 });
 
+$app->router->get('/our-car', function() use ($twig) {
+    return $twig->render('ourCar.twig');
+});
+
 // Redirects
 $app->router->get('/gallery', function() {
     return RedirectInstruction::factory('https://www.flickr.com/photos/wmu-sunseeker/');
 });
 
 $app->router->get('/the-team', function() {
-    return RedirectInstruction::factory('/about-us', '', 301);
+    return RedirectInstruction::factory('/about-us');
+});
+
+$app->router->get('/our-cars/2010', function() {
+    return RedirectInstruction::factory('/our-car');
 });
 
 $app->finish();

@@ -6,6 +6,9 @@ require.config({
     shim: {
         'app/slideshow': {
             deps: ['jquery']
+        },
+        'app/lightbox': {
+            deps: ['jquery']
         }
     }
 });

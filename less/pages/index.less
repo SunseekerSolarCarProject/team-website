@@ -17,31 +17,31 @@ body#index {
             height: 200px;
 
             &:nth-child(1) {
-                background-image: url('@{url-prefix}assets/images/slideshow/home/in_front_of_turn_one.jpg');
+                background-image: url('../images/slideshow/home/in_front_of_turn_one.jpg');
             }
 
             &:nth-child(2) {
-                background-image: url('@{url-prefix}assets/images/slideshow/home/practice_slolam.jpg');
+                background-image: url('../images/slideshow/home/practice_slolam.jpg');
             }
 
             &:nth-child(3) {
-                background-image: url('@{url-prefix}assets/images/slideshow/home/coming_up_to_turn_1.jpg');
+                background-image: url('../images/slideshow/home/coming_up_to_turn_1.jpg');
             }
 
             &:nth-child(4) {
-                background-image: url('@{url-prefix}assets/images/slideshow/home/down_the_main_stretch.jpg');
+                background-image: url('../images/slideshow/home/down_the_main_stretch.jpg');
             }
 
             &:nth-child(5) {
-                background-image: url('@{url-prefix}assets/images/slideshow/home/practice_before_the_race.jpg');
+                background-image: url('../images/slideshow/home/practice_before_the_race.jpg');
             }
 
             &:nth-child(6) {
-                background-image: url('@{url-prefix}assets/images/slideshow/home/sunny_weather_before_the_race.jpg');
+                background-image: url('../images/slideshow/home/sunny_weather_before_the_race.jpg');
             }
 
             &:nth-child(7) {
-                background-image: url('@{url-prefix}assets/images/slideshow/home/teamwork_example_1.jpg');
+                background-image: url('../images/slideshow/home/teamwork_example_1.jpg');
             }
 
             &:first-of-type {
@@ -75,28 +75,28 @@ body#index {
                 display: block;
 
                 &:hover {
-                    text-decoration: none;
+                    text-decoration: none !important;
                 }
 
                 &.facebook {
                     background-color: #3B579D;
-                    background-image: url('@{url-prefix}assets/images/social/fb_icon.png');
+                    background-image: url('../images/social/fb_icon.png');
                 }
 
                 &.twitter {
                     background-color: #55ACEE;
-                    background-image: url('@{url-prefix}assets/images/social/twitter_icon.png');
+                    background-image: url('../images/social/twitter_icon.png');
                 }
 
                 &.flickr {
                     color: #000;
                     background-color: #F1F1F1;
-                    background-image: url('@{url-prefix}assets/images/social/flickr_icon.png');
+                    background-image: url('../images/social/flickr_icon.png');
                 }
 
                 &.rss {
                     background-color: #F60;
-                    background-image: url('@{url-prefix}assets/images/social/rss_icon.png');
+                    background-image: url('../images/social/rss_icon.png');
                 }
 
                 &:hover {
@@ -110,11 +110,14 @@ body#index {
         }
     }
 
+    .about-us {
+        background: #F1F1F1;
+        padding: @standard-spacing;
+    }
+
     @media (min-width: @screen-sm-min) {
-        #slideshow {
-            li {
-                height: 400px;
-            }
+        #slideshow li {
+            height: 400px;
         }
 
         #social li {
@@ -126,10 +129,8 @@ body#index {
         main {
             margin-top: 0;
 
-            #slideshow {
-                li {
-                    height: 572px;
-                }
+            #slideshow li {
+                height: 572px;
             }
 
             #sidebar {

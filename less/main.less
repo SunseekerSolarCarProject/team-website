@@ -1,7 +1,5 @@
 @import '../bower_components/bootstrap/less/bootstrap.less';
 
-@url-prefix: '/';
-
 @wmu-brown: #630;
 @wmu-gold: #FC6;
 
@@ -30,12 +28,25 @@ html {
 
 body.container-fluid {
     font-size: 16px;
-    letter-spacing: 1px;
+    font-family: "Lucida Grande", "Helvetica";
     padding: 0;
 }
 
 a, a:hover {
-    color: darken(@wmu-gold, 25%);
+    color: @wmu-brown;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: @standard-spacing;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
 }
 
 header {
@@ -44,7 +55,7 @@ header {
     width: 100%;
 
     a.branding {
-        background-image: url('@{url-prefix}assets/images/logo_small.png');
+        background-image: url('../images/logo.png');
         background-repeat: no-repeat;
         background-position-y: center;
         background-position-x: @standard-spacing;
@@ -57,7 +68,7 @@ header {
 
     nav {
         .toggle {
-            background-image: url('@{url-prefix}assets/images/mobile_nav_toggle.png');
+            background-image: url('../images/mobile_nav_toggle.png');
             background-size: 50%;
             background-position: center center;
             background-repeat: no-repeat;
@@ -99,6 +110,18 @@ header {
 
 main {
     padding: @standard-spacing;
+
+    p {
+        margin-bottom: @standard-spacing;
+    }
+
+    ul, ol {
+        padding-left: 3 * @standard-spacing;
+
+        li {
+            margin-bottom: @standard-spacing;
+        }
+    }
 }
 
 footer {
@@ -159,7 +182,7 @@ footer {
 
             .wrap {
                 background: transparent;
-                display: block;
+                display: block !important;
                 padding: 0;
                 position: absolute;
                 top: 0;
@@ -177,11 +200,11 @@ footer {
                         a, a:hover {
                             background: transparent;
                             color: @wmu-gold;
-                            font-weight: 200;
+                            font-weight: 100;
                             text-decoration: none;
                             line-height: @header-height;
                             display: inline-block;
-                            padding: 0 @standard-spacing;
+                            padding: 0 @standard-spacing * 2;
                             margin: 0;
                             border: none;
                         }
@@ -199,6 +222,14 @@ footer {
                 }
             }
         }
+    }
+
+    footer, footer a, footer a:hover {
+        color: #999 !important;
+    }
+
+    footer .container {
+        padding-top: @standard-spacing !important;
     }
 }
 
@@ -220,24 +251,11 @@ footer {
             .branding {
                 background-position-x: 0;
             }
-
-            nav .wrap ul li a {
-                padding: 0 @standard-spacing * 2;
-            }
         }
-    }
-
-    h1 {
-        margin-bottom: @standard-spacing;
-    }
-
-    h1, h2, h3 {
-        margin-top: 0;
     }
 
     footer {
         background: transparent;
-        color: #000;
         padding: 0 0 @standard-spacing;
         font-size: 1em;
         text-align: left;
@@ -248,16 +266,6 @@ footer {
             width: @container-lg;
         }
 
-        a {
-            color: #000;
-            text-decoration: underline;
-
-            &:hover {
-                color: #000;
-                text-decoration: none;
-            }
-        }
-
         .organization {
             margin: 0;
             .pull-left;
@@ -266,7 +274,6 @@ footer {
                 color: #000;
 
                 &.school {
-                    color: @wmu-brown;
                     display: inline;
                 }
             }
@@ -290,7 +297,6 @@ footer {
                     a, a:hover {
                         background: transparent;
                         display: inline;
-                        color: #000;
                         padding: 0;
                     }
 
@@ -304,3 +310,4 @@ footer {
 }
 
 @import 'pages.less';
+@import 'lightbox.less';

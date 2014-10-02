@@ -1,37 +1,32 @@
 #about {
-    #slideshow {
-        background: #F1F1F1;
-        padding: 10px;
-        margin-top: 20px;
-        
+    .timeline-imgs {
         .list-standard;
-        
+
         ul li {
-            display: none;
-            
+            width: 50%;
+            display: inline-block;
+            vertical-align: middle;
+
             img {
                 max-width: 100%;
-            }
-            
-            p {
-                margin-top: 10px;
-            }
-            
-            &:first-of-type {
+                max-height: 300px;
+                padding: @standard-spacing;
+                box-sizing: border-box;
                 display: block;
+                margin: @standard-spacing auto;
             }
         }
     }
-    
+
     @media (min-width: @screen-md-min) {
-        .information {
-            .pull-left;
-            width: 50%;
+        p.lead {
+            margin-bottom: 0;
         }
         
-        #slideshow {
-            width: 49%;
-            .pull-right;
+        .timeline-imgs {
+            ul li {
+                width: 25%;
+            }
         }
     }
 }
