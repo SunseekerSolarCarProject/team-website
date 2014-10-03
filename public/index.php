@@ -11,14 +11,47 @@ Application::setDebugLevel(Application::DEBUG_LEVEL_DEV);
 
 $app = new Application();
 
-// Define some services
+/*
+ * Define services
+ */
 $app->services->register('twig', function() {
     $loader = new Twig_Loader_Filesystem(ROOT . '/src/Sunseeker/views/');
     return new Twig_Environment($loader);
 });
 
+$app->services->register('doctrine', function() {
+    $config = new \Doctrine\ORM\Configuration();
+
+    if(Application::debugCompare('<', Application::DEBUG_LEVEL_PROD)) {
+        $cache = new Doctrine\Common\Cache\ArrayCache();
+    } else {
+        $cache = new Doctrine\Common\Cache\ApcCache();
+    }
+
+    $config->setMetadataCacheImpl($cache);
+    $config->setMetadataDriverImpl($config->newDefaultAnnotationDriver(ROOT . 'src/Sunseeker/Entity'));
+    $config->setQueryCacheImpl($cache);
+    $config->setProxyDir(ROOT . 'src/Sunseeker/Proxy');
+    $config->setProxyNamespace('Sunseeker\Proxy');
+
+    if(Application::debugCompare('<', Application::DEBUG_LEVEL_PROD)) {
+        $config->setAutoGenerateProxyClasses(true);
+    } else {
+        $config->setAutoGenerateProxyClasses(false);
+    }
+
+    return \Doctrine\ORM\EntityManager::create(Application::getConfig('database')->dump(), $config);
+});
+
+/*
+ * Define controllers as services
+ */
 $app->services->replace('error.controller', function($mgr) {
     return new Sunseeker\Controller\ErrorController($mgr->get('twig'));
+});
+
+$app->services->register('blog.controller', function($mgr) {
+    return new Sunseeker\Controller\BlogController($mgr->get('twig'));
 });
 
 $app->start();
@@ -36,11 +69,17 @@ $twig->addGlobal('nav_links', [
     '/our-car'      => 'Our Car',
     '/our-sponsors' => 'Sponsors',
     '/donate'       => 'Donate',
+    '/blog'         => 'Team Blog'
 ]);
 
-// Add the current url to twig
+/*
+ * Tell Twig where we are
+ */
 $twig->addGlobal('current_page', $app->request->getUrn());
 
+/*
+ * Define the routes
+ */
 $app->router->match('*', '/', function() use ($twig) {
     return $twig->render('index.twig');
 });
@@ -53,7 +92,11 @@ $app->router->get('/our-car', function() use ($twig) {
     return $twig->render('ourCar.twig');
 });
 
-// Redirects
+$app->router->get('/blog', 'blog.controller->indexAction');
+
+/*
+ * Redirects
+ */
 $app->router->get('/gallery', function() {
     return RedirectInstruction::factory('https://www.flickr.com/photos/wmu-sunseeker/');
 });

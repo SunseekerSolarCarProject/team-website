@@ -2,3 +2,5 @@
 /public/assets/css/style.css
 node_modules
 bower_components
+/src/Sunseeker/Proxy
+/vendor
