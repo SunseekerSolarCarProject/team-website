@@ -1,5 +1,7 @@
 .DS_Store
 /public/assets/css/style.css
+/public/assets/images/uploads
+/public/assets/images/team_pictures
 node_modules
 bower_components
 /src/Sunseeker/Proxy
