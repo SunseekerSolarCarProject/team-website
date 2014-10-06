@@ -16,4 +16,8 @@ class ErrorController extends MaverickErrorController {
     public function show404ErrorAction() {
         return $this->twig->render('errors/pageNotFound.twig');
     }
+
+    public function show500ErrorAction() {
+        return $this->twig->render('errors/fatalError.twig');
+    }
 }
