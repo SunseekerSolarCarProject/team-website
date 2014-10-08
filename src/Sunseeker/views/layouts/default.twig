@@ -5,19 +5,21 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
+    <link rel="shortcut icon" href="https://www.wmich.edu/profiles/wmu/themes/wmu_responsive/favicon.ico" />
+
     <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body id="{% block pageid %}{% endblock %}" class="container-fluid">
     {% block header %}
     <header>
       <div class="wrapper">
-        <a class="branding" href="{{ url_prefix }}/">Sunseeker Solar Car Project</a>
+        <a class="branding" href="/sunseeker">Sunseeker Solar Car Project</a>
         <nav>
           <div class="toggle"></div>
           <div class="wrap">
             <ul>
               {% for link,label in nav_links %}
-              <li><a href="{{ url_prefix }}{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
+              <li><a href="/sunseeker{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
               {% endfor %}
             </ul>
           </div>
@@ -36,17 +38,17 @@
       <div class="container">
         <nav>
           <ul>
-            <li><a href="{{ url_prefix }}/become-a-sponsor">Become a Sponsor</a>
-            <li><a href="{{ url_prefix }}/contact-us">Contact Us</a>
-            <li><a href="{{ url_prefix }}/media">Media</a>
-            <li><a href="{{ url_prefix }}/members">Member Area</a>
+            <li><a href="/sunseeker/become-a-sponsor">Become a Sponsor</a>
+            <li><a href="/sunseeker/contact-us">Contact Us</a>
+            <li><a href="/sunseeker/media">Media</a>
+            <li><a href="/sunseeker/members">Member Area</a>
           </ul>
         </nav>
         <div class="organization">Sunseeker Solar Car Project <a href="https://www.wmich.edu/" class="school">Western Michigan University</a></div>
         <div class="clearfix"></div>
       </div>
     </footer>
-    <script src="{{ url_prefix }}/assets/javascript/lib/require-2.1.14.js"></script>
+    <script src="assets/javascript/lib/require-2.1.14.js"></script>
     <script>require(['./assets/javascript/common', './assets/javascript/analytics', './assets/javascript/app/mobileNav']{% if requirejs is not empty %}, function() {require(['{{ requirejs }}']);}{% endif %});</script>
   </body>
 </html>

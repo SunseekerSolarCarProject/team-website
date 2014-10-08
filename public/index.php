@@ -80,32 +80,32 @@ $twig->addGlobal('current_page', $app->request->getUrn());
 /*
  * Define the routes
  */
-$app->router->match('*', '/', function() use ($twig) {
+$app->router->match('*', '/sunseeker', function() use ($twig) {
     return $twig->render('index.twig');
 });
 
-$app->router->get('/about-us', function() use ($twig) {
+$app->router->get('/sunseeker/about-us', function() use ($twig) {
     return $twig->render('about.twig');
 });
 
-$app->router->get('/our-car', function() use ($twig) {
+$app->router->get('/sunseeker/our-car', function() use ($twig) {
     return $twig->render('ourCar.twig');
 });
 
-$app->router->get('/blog', 'blog.controller->indexAction');
+$app->router->get('/sunseeker/blog', 'blog.controller->indexAction');
 
 /*
  * Redirects
  */
-$app->router->get('/gallery', function() {
+$app->router->get('/sunseeker/gallery', function() {
     return RedirectInstruction::factory('https://www.flickr.com/photos/wmu-sunseeker/');
 });
 
-$app->router->get('/the-team', function() {
+$app->router->get('/sunseeker/the-team', function() {
     return RedirectInstruction::factory('/about-us');
 });
 
-$app->router->get('/our-cars/2010', function() {
+$app->router->get('/sunseeker/our-cars/2010', function() {
     return RedirectInstruction::factory('/our-car');
 });
 
