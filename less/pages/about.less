@@ -10,10 +10,9 @@
             img {
                 max-width: 100%;
                 max-height: 300px;
-                padding: @standard-spacing;
                 box-sizing: border-box;
                 display: block;
-                margin: @standard-spacing auto;
+                padding: @standard-spacing / 2;
             }
         }
     }
@@ -22,10 +21,26 @@
         p.lead {
             margin-bottom: 0;
         }
-        
+
         .timeline-imgs {
             ul li {
                 width: 25%;
+
+                img {
+                    margin: @standard-spacing * 2 0;
+                }
+
+                &:first-of-type {
+                    img {
+                        padding-left: 0;
+                    }
+                }
+
+                &:last-of-type {
+                    img {
+                        padding-right: 0;
+                    }
+                }
             }
         }
     }

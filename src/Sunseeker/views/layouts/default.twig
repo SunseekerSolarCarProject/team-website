@@ -19,7 +19,7 @@
           <div class="wrap">
             <ul>
               {% for link,label in nav_links %}
-              <li><a href="/sunseeker{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
+              <li><a href="{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
               {% endfor %}
             </ul>
           </div>
@@ -38,10 +38,9 @@
       <div class="container">
         <nav>
           <ul>
-            <li><a href="/sunseeker/become-a-sponsor">Become a Sponsor</a>
-            <li><a href="/sunseeker/contact-us">Contact Us</a>
-            <li><a href="/sunseeker/media">Media</a>
-            <li><a href="/sunseeker/members">Member Area</a>
+            <li><a href="/sunseeker/donate">Donate</a>
+            <li><a href="/sunseeker/our-sponsors">Our Sponsors</a>
+            <li><a href="/sunseeker/our-car">Our Car</a>
           </ul>
         </nav>
         <div class="organization">Sunseeker Solar Car Project <a href="https://www.wmich.edu/" class="school">Western Michigan University</a></div>

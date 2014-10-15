@@ -2,7 +2,8 @@
 
 namespace Sunseeker\Controller;
 
-use Maverick\Controller\ErrorController as MaverickErrorController,
+use Maverick\Application,
+    Maverick\Controller\ErrorController as MaverickErrorController,
     Twig_Environment;
 
 class ErrorController extends MaverickErrorController {

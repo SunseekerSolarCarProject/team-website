@@ -1,0 +1,55 @@
+body#sponsors {
+    .sponsor {
+        .image {
+            background-repeat: no-repeat;
+            background-position: center center;
+            text-align: center;
+            text-indent: -99999px;
+            height: 150px;
+        }
+
+        h3 small {
+            display: block;
+            margin-top: @standard-spacing / 2;
+        }
+    }
+
+    main {
+        .list-standard;
+    }
+
+    .sponsor.alone,
+    .sponsor .description,
+    main ul li {
+        background: lighten(#F1F1F1, 3%);
+        padding: @standard-spacing;
+        margin-bottom: @standard-spacing;
+    }
+
+    @media (min-width: @screen-md-min) {
+        .sponsor {
+            .image, .description {
+                height: 150px;
+                box-sizing: border-box;
+            }
+
+            .image {
+                float: left;
+                width: 25%;
+            }
+
+            .description {
+                width: 75%;
+                float: right;
+            }
+
+            h3 small {
+                display: inline;
+            }
+        }
+
+        .sponsor.alone.empty h3 {
+            margin-bottom: 0;
+        }
+    }
+}

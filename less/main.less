@@ -22,6 +22,31 @@
     }
 }
 
+.btn-gold,
+.btn-brown {
+    text-decoration: none;
+}
+
+.btn-gold {
+    background: @wmu-gold;
+    color: @wmu-brown;
+    border: 1px solid darken(@wmu-gold, 10%);
+
+    &:hover {
+        background: darken(@wmu-gold, 10%);
+    }
+}
+
+.btn-brown {
+    background: @wmu-brown;
+    color: @wmu-gold;
+    border: 1px solid darken(@wmu-brown, 10%);
+
+    &:hover {
+        background: darken(@wmu-brown, 10%);
+    }
+}
+
 html {
     background: #FFF;
 }
@@ -121,6 +146,24 @@ main {
         li {
             margin-bottom: @standard-spacing;
         }
+    }
+
+    section.join {
+        background: @wmu-gold;
+        color: @wmu-brown;
+        padding: @standard-spacing;
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+
+    * > p:last-of-type {
+        margin-bottom: 0;
     }
 }
 

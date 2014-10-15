@@ -1,0 +1,16 @@
+{% extends 'layouts/default.twig' %}
+
+{% block pageid %}blog-main{% endblock %}
+
+{% block content %}
+<h1>Team Blog</h1>
+{% for post in posts %}
+<div class="post">
+  <h2><a href="{{ post.getUrl() }}">{{ post.getTitle() }}</a></h2>
+  <p class="intro">{{ post.getIntro()|raw }}&hellip;<br /><a href="{{ post.getUrl() }}">Continue Reading&hellip;</a></p>
+  <p class="description">Posted by {{ post.getAuthor().getFullName() }} on {{ post.getPublishDate().format('F j, Y g:i a') }}</p>
+</div>
+{% else %}
+<p>Hmmmm... We don't have any posts to show you right now.</p>
+{% endfor %}
+{% endblock %}

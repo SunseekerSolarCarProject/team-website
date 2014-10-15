@@ -54,6 +54,11 @@ class MemberEntity {
     private $major;
 
     /**
+     * @Column(name="picture",type="string",nullable=true)
+     */
+    private $picture;
+
+    /**
      * @Column(name="linkedin_url",type="string")
      */
     private $linkedIn;
@@ -83,6 +88,10 @@ class MemberEntity {
     public function setLastName($name) {
         $this->lastName = $name;
         return $this;
+    }
+
+    public function getFullName() {
+        return $this->firstName . ' ' . $this->lastName;
     }
 
     public function getEmail() {
@@ -135,6 +144,15 @@ class MemberEntity {
 
     public function setMajor($major) {
         $this->major = $major;
+        return $this;
+    }
+
+    public function getPicture() {
+        return $this->picture;
+    }
+
+    public function setPicture($picture) {
+        $this->picture = $picture;
         return $this;
     }
 

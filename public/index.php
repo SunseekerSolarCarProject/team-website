@@ -3,7 +3,7 @@
 use Maverick\Application,
     Maverick\Http\Response\Instruction\RedirectInstruction;
 
-define('ROOT', dirname(__DIR__));
+define('ROOT', dirname(__DIR__) . '/');
 
 require(ROOT . '/vendor/autoload.php');
 
@@ -44,14 +44,31 @@ $app->services->register('doctrine', function() {
 });
 
 /*
- * Define controllers as services
+ * Define repositories as services
  */
-$app->services->replace('error.controller', function($mgr) {
-    return new Sunseeker\Controller\ErrorController($mgr->get('twig'));
+$app->services->register('member.repo', function($mgr) {
+    return $mgr->get('doctrine')->getRepository('Sunseeker\Entity\MemberEntity');
 });
 
+$app->services->register('blogpost.repo', function($mgr) {
+    return $mgr->get('doctrine')->getRepository('Sunseeker\Entity\BlogPostEntity');
+});
+
+/*
+ * Define controllers as services
+ */
+if(Application::debugCompare('>', Application::DEBUG_LEVEL_DEV)) {
+    $app->services->replace('error.controller', function($mgr) {
+        return new Sunseeker\Controller\ErrorController($mgr->get('twig'));
+    });
+}
+
 $app->services->register('blog.controller', function($mgr) {
-    return new Sunseeker\Controller\BlogController($mgr->get('twig'));
+    return new Sunseeker\Controller\BlogController($mgr->get('twig'), $mgr->get('blogpost.repo'));
+});
+
+$app->services->register('team.controller', function($mgr) {
+    return new Sunseeker\Controller\TeamController($mgr->get('twig'), $mgr->get('member.repo'));
 });
 
 $app->start();
@@ -64,12 +81,12 @@ $twig->addGlobal('url_prefix', Application::debugCompare('<', Application::DEBUG
 
 // Add the nav links
 $twig->addGlobal('nav_links', [
-    '/'             => 'Home',
-    '/about-us'     => 'About Us',
-    '/our-car'      => 'Our Car',
-    '/our-sponsors' => 'Sponsors',
-    '/donate'       => 'Donate',
-    '/blog'         => 'Team Blog'
+    '/sunseeker'               => 'Home',
+    '/sunseeker/about-us'      => 'About Us',
+    '/sunseeker/meet-the-team' => 'The Team',
+    '/sunseeker/our-car'       => 'Our Car',
+    '/sunseeker/our-sponsors'  => 'Sponsors',
+    '/sunseeker/blog'          => 'Team Blog'
 ]);
 
 /*
@@ -84,12 +101,23 @@ $app->router->match('*', '/sunseeker', function() use ($twig) {
     return $twig->render('index.twig');
 });
 
-$app->router->get('/sunseeker/about-us', function() use ($twig) {
-    return $twig->render('about.twig');
-});
+$app->router->get('/sunseeker/meet-the-team', 'team.controller->meetAction');
+$app->router->get('/sunseeker/about-us', 'team.controller->aboutAction');
 
 $app->router->get('/sunseeker/our-car', function() use ($twig) {
     return $twig->render('ourCar.twig');
+});
+
+$app->router->get('/sunseeker/our-sponsors', function() use ($twig) {
+    return $twig->render('sponsors/current.twig');
+});
+
+$app->router->get('/sunseeker/past-sponsors', function() use ($twig) {
+    return $twig->render('sponsors/past.twig');
+});
+
+$app->router->get('/sunseeker/donate', function() use ($twig) {
+    return $twig->render('sponsors/donate.twig');
 });
 
 $app->router->get('/sunseeker/blog', 'blog.controller->indexAction');
@@ -102,11 +130,11 @@ $app->router->get('/sunseeker/gallery', function() {
 });
 
 $app->router->get('/sunseeker/the-team', function() {
-    return RedirectInstruction::factory('/about-us');
+    return RedirectInstruction::factory('/sunseeker/about-us');
 });
 
 $app->router->get('/sunseeker/our-cars/2010', function() {
-    return RedirectInstruction::factory('/our-car');
+    return RedirectInstruction::factory('/sunseeker/our-car');
 });
 
 $app->finish();

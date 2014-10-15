@@ -2,16 +2,21 @@
 
 namespace Sunseeker\Controller;
 
-use Twig_Environment;
+use Twig_Environment,
+    Sunseeker\Repository\BlogPostRepository;
 
 class BlogController {
     private $twig;
+    private $blogPosts;
 
-    public function __construct(Twig_Environment $twig) {
-        $this->twig = $twig;
+    public function __construct(Twig_Environment $twig, BlogPostRepository $blogPosts) {
+        $this->twig      = $twig;
+        $this->blogPosts = $blogPosts;
     }
 
     public function indexAction() {
-        return $this->twig->render('blog/index.twig');
+        $posts = $this->blogPosts->findPublished();
+
+        return $this->twig->render('blog/main.twig', ['posts' => $posts]);
     }
 }
