@@ -2,15 +2,20 @@
 
 namespace Sunseeker\Repository;
 
-use Doctrine\ORM\EntityRepository;
+use Doctrine\ORM\EntityRepository,
+    Doctrine\ORM\Tools\Pagination\Paginator;
 
 class BlogPostRepository extends EntityRepository {
-    public function findPublished() {
+    public function findPublished($max, $page=1) {
         $em    = $this->getEntityManager();
         $query = $em->createQuery('SELECT bp FROM Sunseeker\Entity\BlogPostEntity bp WHERE bp.published = :published ORDER BY bp.publishDate DESC');
 
-        $query->setParameter('published', '1');
+        $query->setParameter('published', '1')
+            ->setFirstResult(($page - 1) * 10)
+            ->setMaxResults($max);
 
-        return $query->getResult();
+        $paginator = new Paginator($query);
+
+        return $paginator;
     }
 }

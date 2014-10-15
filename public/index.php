@@ -14,9 +14,17 @@ $app = new Application();
 /*
  * Define services
  */
-$app->services->register('twig', function() {
+$app->services->register('twig', function($mgr) {
     $loader = new Twig_Loader_Filesystem(ROOT . '/src/Sunseeker/views/');
-    return new Twig_Environment($loader);
+    $twig   = new Twig_Environment($loader);
+
+    $generateUrnFunc = new Twig_SimpleFunction('generateUrn', function($urn, $params) use ($mgr) {
+        return $mgr->get('router')->generateUrn($urn, $params);
+    });
+
+    $twig->addFunction($generateUrnFunc);
+
+    return $twig;
 });
 
 $app->services->register('doctrine', function() {
@@ -80,14 +88,25 @@ $twig = $app->services->get('twig');
 $twig->addGlobal('url_prefix', Application::debugCompare('<', Application::DEBUG_LEVEL_PROD) ? '' : '/sunseeker');
 
 // Add the nav links
-$twig->addGlobal('nav_links', [
+$navLinks = [
     '/sunseeker'               => 'Home',
     '/sunseeker/about-us'      => 'About Us',
     '/sunseeker/meet-the-team' => 'The Team',
     '/sunseeker/our-car'       => 'Our Car',
     '/sunseeker/our-sponsors'  => 'Sponsors',
     '/sunseeker/blog'          => 'Team Blog'
-]);
+];
+
+$activeLink = '';
+
+foreach($navLinks as $urn => $label) {
+    if(strpos($app->request->getUrn(), $urn) === 0) {
+        $activeLink = $urn;
+    }
+}
+
+$twig->addGlobal('nav_links', $navLinks);
+$twig->addGlobal('active_link', $activeLink);
 
 /*
  * Tell Twig where we are
@@ -121,6 +140,8 @@ $app->router->get('/sunseeker/donate', function() use ($twig) {
 });
 
 $app->router->get('/sunseeker/blog', 'blog.controller->indexAction');
+$app->router->get('/sunseeker/blog/page/{#([0-9]+)#}', 'blog.controller->indexAction', ['name' => 'blogPage']);
+$app->router->get('/sunseeker/blog/post/{#([0-9]+)#}', 'blog.controller->viewPostAction', ['name' => 'blogPost']);
 
 /*
  * Redirects
@@ -131,6 +152,14 @@ $app->router->get('/sunseeker/gallery', function() {
 
 $app->router->get('/sunseeker/the-team', function() {
     return RedirectInstruction::factory('/sunseeker/about-us');
+});
+
+$app->router->get('/sunseeker/the-team/members', function() {
+    return RedirectInstruction::factory('/sunseeker/meet-the-team');
+});
+
+$app->router->get('/sunseeker/become-a-sponsor', function() {
+    return RedirectInstruction::factory('/sunseeker/donate');
 });
 
 $app->router->get('/sunseeker/our-cars/2010', function() {

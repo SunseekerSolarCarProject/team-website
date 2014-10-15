@@ -1,7 +1,7 @@
 require.config({
-    baseUrl: 'assets/javascript',
+    baseUrl: '/sunseeker/assets/javascript/',
     paths: {
-        jquery: 'lib/jquery-1.11.1'
+        'jquery': 'lib/jquery-1.11.1'
     },
     shim: {
         'app/slideshow': {

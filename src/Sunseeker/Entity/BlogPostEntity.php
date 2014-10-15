@@ -46,6 +46,10 @@ class BlogPostEntity {
      */
     private $format;
 
+    public function getId() {
+        return $this->id;
+    }
+
     public function getTitle() {
         return $this->title;
     }
@@ -101,9 +105,5 @@ class BlogPostEntity {
     public function setFormat($format) {
         $this->format;
         return $this;
-    }
-
-    public function getUrl() {
-        
     }
 }

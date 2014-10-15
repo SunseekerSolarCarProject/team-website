@@ -1,0 +1,13 @@
+{% extends 'layouts/default.twig' %}
+
+{% block title %}{{ post.getTitle() }}{% endblock %}
+
+{% block pageid %}blog-post{% endblock %}
+
+{% block content %}
+<h1>{{ post.getTitle() }}</h1>
+<p class="description">Posted by {{ post.getAuthor().getFullName() }} on {{ post.getPublishDate().format('F j, Y g:i a') }}</p>
+<article>
+  {{ post.getContents()|raw }}
+</article>
+{% endblock %}

@@ -7,7 +7,7 @@
 
     <link rel="shortcut icon" href="https://www.wmich.edu/profiles/wmu/themes/wmu_responsive/favicon.ico" />
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="/sunseeker/assets/css/style.css">
   </head>
   <body id="{% block pageid %}{% endblock %}" class="container-fluid">
     {% block header %}
@@ -19,7 +19,7 @@
           <div class="wrap">
             <ul>
               {% for link,label in nav_links %}
-              <li><a href="{{ link }}"{% if link == current_page %} class="active"{% endif %}>{{ label }}</a>
+              <li><a href="{{ link }}"{% if link == active_link %} class="active"{% endif %}>{{ label }}</a>
               {% endfor %}
             </ul>
           </div>
@@ -35,19 +35,17 @@
     </main>
     {% endblock %}
     <footer>
-      <div class="container">
-        <nav>
-          <ul>
-            <li><a href="/sunseeker/donate">Donate</a>
-            <li><a href="/sunseeker/our-sponsors">Our Sponsors</a>
-            <li><a href="/sunseeker/our-car">Our Car</a>
-          </ul>
-        </nav>
-        <div class="organization">Sunseeker Solar Car Project <a href="https://www.wmich.edu/" class="school">Western Michigan University</a></div>
-        <div class="clearfix"></div>
-      </div>
+      <nav>
+        <ul>
+          <li><a href="/sunseeker/donate">Donate</a>
+          <li><a href="/sunseeker/our-sponsors">Our Sponsors</a>
+          <li><a href="/sunseeker/our-car">Our Car</a>
+        </ul>
+      </nav>
+      <div class="organization">Sunseeker Solar Car Project <a href="https://www.wmich.edu/" class="school">Western Michigan University</a></div>
+      <div class="clearfix"></div>
     </footer>
-    <script src="assets/javascript/lib/require-2.1.14.js"></script>
-    <script>require(['./assets/javascript/common', './assets/javascript/analytics', './assets/javascript/app/mobileNav']{% if requirejs is not empty %}, function() {require(['{{ requirejs }}']);}{% endif %});</script>
+    <script src="/sunseeker/assets/javascript/lib/require-2.1.14.js"></script>
+    <script>require(['/sunseeker/assets/javascript/common.js'], function() {require(['app/analytics', 'app/mobileNav',{% if requirejs is not empty %} 'page/{{ requirejs }}'{% endif %}]);});</script>
   </body>
 </html>
