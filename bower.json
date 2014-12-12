@@ -1,0 +1,14 @@
+{
+  "name": "Sunseeker Solar Car Project Website",
+  "version": "1.0.0",
+  "homepage": "https://github.com/gunnar94/sunseeker",
+  "authors": [
+    "gunnar94 <gunnar94@me.com>"
+  ],
+  "description": "Team website for the Sunseeker Solar Car Project at Western Michigan University.",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+      "jquery": "1.11.1"
+  }
+}
