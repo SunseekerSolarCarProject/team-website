@@ -7,7 +7,10 @@ The Sunseeker Solar Car Project is a team of students at [Western Michigan Unive
 ## How to Make Changes
 If you would like to make changes to this website, please follow these instructions:
 
-- Ensure you have [Jekyll](http://jekyllrb.com) installed (it requires Ruby)
+- Ensure you have [Jekyll](http://jekyllrb.com) installed
+- Ensure you have [Bower](http://bower.io) installed
 - `cd` into the project directory
+- Install Bower dependencies, run `bower install`
+- Create your feature branch
 - Run `jekyll build --watch`
 - Create a pull request for your branch
