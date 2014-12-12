@@ -1,0 +1,40 @@
+#homepage {
+    main {
+        padding-top: 0;
+    }
+
+    .slideshow ul li {
+        @extend .img;
+        background-size: cover;
+        height: 200px;
+        margin: 0 -10px 20px;
+
+        &:nth-child(1) {
+            background-image: url('../images/slideshows/homepage/in-front-of-turn-one.jpg');
+        }
+
+        &:nth-child(2) {
+            background-image: url('../images/slideshows/homepage/cota-in-the-background.jpg');
+        }
+
+        &:nth-child(3) {
+            background-image: url('../images/slideshows/homepage/practice-before-the-race.jpg');
+        }
+
+        &:nth-child(4) {
+            background-image: url('../images/slideshows/homepage/in-the-lab.jpg');
+        }
+    }
+
+    @include media-query(tablet) {
+        .slideshow ul li {
+            height: 450px;
+        }
+    }
+
+    @include media-query(desktop) {
+        .slideshow ul li {
+            height: 550px;
+        }
+    }
+}

@@ -1,0 +1,77 @@
+#car {
+    .big-picture {
+        @extend .img;
+        background-image: url('../images/about/crossing-the-line.jpg');
+        background-size: cover;
+        margin-bottom: 10px;
+        height: 200px;
+    }
+
+    section.information {
+        margin-bottom: 10px;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            padding-left: 30px;
+
+            li {
+                margin-bottom: 10px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    section.specification {
+        background: #F1F1F1;
+        padding: 0 10px;
+
+        table {
+            thead th,
+            tbody td {
+                padding: 10px 0;
+            }
+
+            thead th {
+                text-align: left;
+                border-bottom: 3px solid #CCC;
+            }
+
+            tbody td {
+                &:first-child {
+                    font-weight: bold;
+                    width: 40%;
+                }
+
+                &:last-child {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+
+    @include media-query(tablet) {
+        .big-picture {
+            height: 500px;
+        }
+
+        section.information,
+        section.specification {
+            width: 50%;
+            box-sizing: border-box;
+        }
+
+        section.information {
+            float: left;
+            padding-right: 10px;
+            margin: 0;
+        }
+
+        section.specification {
+            float: right;
+        }
+    }
+}

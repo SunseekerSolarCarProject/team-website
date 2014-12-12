@@ -1,0 +1,103 @@
+- name: Bryan Harris
+  position: Project Manager
+  picture: bryan_harris.jpg
+
+- name: Vincent Kucway
+  position: Assistant Project Manager
+  subteam: Cockpit Team
+  picture: vincent_kucway.jpg
+
+- name: Robert Galman
+  position: Electrical Lead
+  subteam: Electrical Team
+  picture: robert_galman.jpg
+
+- name: Joel Thompson
+  position: Mechanical Lead
+  subteam: Chassis Team
+  picture: joel_thompson.jpg
+
+- name: Denis KiMuhu
+  position: Aero Lead
+  subteam: Aero Shell Team
+  picture: denis_kimuhu.jpg
+
+- name: Alec Carpenter
+  position: Webmaster
+  subteam: Cockpit Team
+  picture: alec_carpenter.jpg
+
+- name: Quinten Bader
+  picture: quinten_bader.jpg
+  subteam: Chassis Team
+
+- name: Andrew Borkowski
+  picture: andrew_borkowski.jpg
+  subteam: Electrical Team
+
+- name: Gregory Bosma
+  picture: gregory_bosma.jpg
+
+- name: Nick Byers
+  picture: nick_byers.jpg
+
+- name: Megan Derwich
+  picture: megan_derwich.jpg
+
+- name: Kai Gray
+  subteam: Cockpit Team
+  picture: kai_gray.jpg
+
+- name: Joseph Hagye
+  picture: joseph_hagye.jpg
+
+- name: Ross Hiller
+  subteam: Suspension Team
+  picture: ross_hiller.jpg
+
+- name: Tyler Huffman
+  picture: tyler_huffman.jpg
+
+- name: Dylan Kimball
+  subteam: Aero Shell Team
+  picture: dylan_kimball.jpg
+
+- name: Cameron Knight
+  subteam: Suspension Team
+  picture: cameron_knight.jpg
+
+- name: Blair LaCross
+  picture: blair_lacross.jpg
+
+- name: Chelsea Russell
+  picture: chelsea_russell.jpg
+
+- name: Charlie Schlansker
+  picture: charlie_schlansker.jpg
+
+- name: Ryan Shereda
+  picture: ryan_shereda.jpg
+  subteam: Aero Shell Team
+
+- name: Benson Vande Streek
+  picture: benson_vandestreek.jpg
+
+- name: Katherine Vittini
+  picture: katherine_vittini.jpg
+
+- name: Blake Williamson
+  picture: blake_williamson.jpg
+
+- name: Jonathan Welsing
+  subteam: Roll Cage Team
+  picture: jonathan_welsing.jpg
+
+- name: Bradley Bazuin
+  position: Faculty Advisior
+  department: Electrical Engineering
+  picture: bradley_bazuin.jpg
+
+- name: Andrew Day
+  position: Industry Advisor
+  department: Toyota Boshoku America INC.
+  picture: andrew_day.jpg

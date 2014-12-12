@@ -1,0 +1,30 @@
+#members {
+    p.lead {
+        margin-bottom: 10px;
+    }
+
+    .member-group {
+        box-sizing: border-box;
+        float: left;
+
+        .member {
+            text-align: center;
+            float: left;
+            width: 50%;
+            padding: 0 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+
+            img {
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    @include media-query(tablet) {
+        .member-group {
+            width: 50%;
+        }
+    }
+}

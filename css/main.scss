@@ -1,0 +1,52 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Typography
+$base-font-family: Lucida Grande, Arial;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.3;
+
+// Dimensions
+$header-height: $base-font-size * 3;
+
+// Colors
+$bronco-brown: #630;
+$bronco-gold: #FC6;
+
+// Media query mixin
+@mixin media-query($device) {
+    @if $device == tablet {
+        @media (min-width: 768px) { @content; }
+    }
+    @else {
+        @media (min-width: 992px) { @content; }
+    }
+}
+
+// Other mixins
+.img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    text-indent: -99999px;
+    position: relative;
+}
+
+.clear-all {
+    clear: both;
+}
+
+.list-standard {
+    ul,
+    ul *,
+    ul li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+
+@import "base", "slideshows", "pages";

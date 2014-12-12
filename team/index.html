@@ -1,0 +1,30 @@
+---
+layout: default
+pageid: members
+title: Meet the Team
+intro: Sunseeker isn't just a team of engineering students, we have members from many academic disciplines. Below are the current members who make up the 2014-2015 Sunseeker Solar Car Project.
+---
+<div class="member-group">
+{% for member in site.data.members %}
+  {% capture mod2 %}{{ forloop.index0 | modulo:2  }}{% endcapture %}
+  {% capture mod4 %}{{ forloop.index0 | modulo:4  }}{% endcapture %}
+
+  {% if forloop.index0 != 0 %}
+    {% if mod2 == '0' %}
+      <div class="clear-all"></div></div>
+      {% if mod4 == '0' %}
+        <div class="clear-all"></div>
+      {% endif %}
+      <div class="member-group">
+    {% endif %}
+  {% endif %}
+
+  <div class="member">
+    <img src="{{ '/images/team-members/1415/' | prepend: site.url }}{{ member.picture }}">
+    <div class="info">
+      <strong>{{ member.name }}</strong>{% if member.position %}<br />{{ member.position }}{% endif %}{% if member.subteam %}<br />{{ member.subteam }}{% endif %}{% if member.department %}<br />{{ member.department }}{% endif %}
+    </div>
+  </div>
+{% endfor %}
+</div>
+<div class="clear-all"></div>

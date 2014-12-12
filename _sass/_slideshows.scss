@@ -1,0 +1,14 @@
+.slideshow {
+    @extend .list-standard;
+
+    ul {
+        li {
+            @extend .img;
+            display: none;
+
+            &:first-of-type {
+                display: block;
+            }
+        }
+    }
+}

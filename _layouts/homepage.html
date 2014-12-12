@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body{% if page.pageid %} id="{{ page.pageid }}"{% endif %}>
+    {% include header.html %}
+    <main>
+      <div class="slideshow">
+        <ul>
+          <li class="slide">Turn one in the background.
+          <li class="slide">Circuit of the Americas building in the background.
+          <li class="slide">Practice before the race.
+          <li class="slide">Working in the lab.
+        </ul>
+      </div>
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+    {% include footer.html %}
+  </body>
+</html>

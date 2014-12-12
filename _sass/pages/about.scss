@@ -1,0 +1,31 @@
+#about {
+    .slideshow ul li {
+        @extend .img;
+        background-size: cover;
+        height: 200px;
+        margin-bottom: 10px;
+
+        &:nth-child(1) {
+            background-image: url('../images/timeline/1995-running-to-the-future.jpg');
+        }
+
+        &:nth-child(2) {
+            background-image: url('../images/timeline/1997-tire-check.jpg');
+            background-position: bottom center;
+        }
+
+        &:nth-child(3) {
+            background-image: url('../images/timeline/setting-the-array.jpg');
+        }
+
+        &:nth-child(4) {
+            background-image: url('../images/timeline/2014-fsgp-pit-stop.jpg');
+        }
+    }
+
+    @include media-query(tablet) {
+        .slideshow ul li {
+            height: 450px;
+        }
+    }
+}
