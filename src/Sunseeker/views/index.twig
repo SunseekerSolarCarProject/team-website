@@ -1,0 +1,32 @@
+{% extends 'layouts/default.twig' %}
+
+{% set requirejs='index' %}
+
+{% block pageid %}index{% endblock %}
+
+{% block content %}
+<div id="slideshow">
+  <ul>
+    <li>FSGP 2014 Dynamic Testing</li>
+    <li>Sunny Weather Before the Race</li>
+    <li>Coming up to Turn 1</li>
+    <li>Down the Main Stretch</li>
+    <li>Practive Before the Race</li>
+    <li>Serious Face -- Time to Race</li>
+    <li>Teamwork Example 1</li>
+  </ul>
+</div>
+<div id="social">
+  <ul>
+    <li><a href="https://www.facebook.com/SunseekerSolarCar" target="_blank" class="facebook">SunseekerSolarCar</a></li>
+    <li><a href="https://twitter.com/wmusunseeker" target="_blank" class="twitter">@WMUSunseeker</a></li>
+    <li><a href="https://www.flickr.com/photos/wmu-sunseeker/" target="_blank" class="flickr">Flickr</a></li>
+    <li><a href="{{ url_prefix }}blog" class="rss">Team Blog</a></li>
+  </ul>
+  <div class="clearfix"></div>
+</div>
+<div class="about-us">
+  <p>We are the Sunseeker Solar Car Project, a team of students from <a href="https://www.wmich.edu/" target="_blank">Western Michigan University</a> in Kalamazoo, Michigan. We design, build, and race our <a href="{{ url_prefix }}/our-car">solar powered vehicle</a> in the <a href="http://americansolarchallenge.org" target="_blank">American Solar Challenge</a> and Formula Sun Grand Prix. If you would like to learn more, you can find more about our team on the <a href="/sunseeker/about-us">about us page</a>.</p>
+  <p>If you would like to get in touch with the team, you can can send an email to <a href="mailto: sunseeker@wmich.edu">sunseeker@wmich.edu</a>.</p>
+</div>
+{% endblock %}

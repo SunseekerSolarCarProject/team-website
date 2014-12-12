@@ -1,0 +1,23 @@
+{% extends 'layouts/default.twig' %}
+
+{% block title %}Team Blog{% endblock %}
+
+{% block pageid %}blog-main{% endblock %}
+
+{% import "macros/pagination.twig" as pagination %}
+
+{% block content %}
+<h1>Team Blog</h1>
+{% for post in posts %}
+<div class="post">
+  <h2><a href="{{ generateUrn('blogPost', [post.getId()]) }}">{{ post.getTitle() }}</a></h2>
+  <p class="intro">{{ post.getIntro()|raw }}&hellip;<br /><a href="{{ generateUrn('blogPost', [post.getId()]) }}">Continue Reading&hellip;</a></p>
+  <p class="description">Posted by {{ post.getAuthor().getFullName() }} on {{ post.getPublishDate().format('F j, Y g:i a') }}</p>
+</div>
+{% else %}
+<p>Hmmmm... There aren't any posts to who you.</p>
+{% endfor %}
+{% if posts %}
+{{ pagination.generate(page, pages, 'blogPage') }}
+{% endif %}
+{% endblock %}

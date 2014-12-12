@@ -1,0 +1,93 @@
+img[lightbox="true"] {
+    cursor: pointer;
+}
+
+#lightbox-container {
+    background: #252525;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    display: none;
+}
+
+#lightbox-container #lightbox-header {
+    text-align: right;
+}
+
+#lightbox-container #lightbox-header #lightbox-close {
+    background-image: url('../images/lightbox/close-standard.png');
+    text-align: left;
+    text-indent: -99999px;
+    position: static;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-index: -9999px;
+}
+
+#lightbox-container #lightbox-header #lightbox-close:hover,
+#lightbox-container #lightbox-header #lightbox-close:active {
+    background-color: #333;
+    cursor: pointer;
+}
+
+#lightbox-container #lightbox-navigation #lightbox-previous,
+#lightbox-container #lightbox-navigation #lightbox-next {
+    display: none;
+}
+
+#lightbox-container.grouped #lightbox-navigation #lightbox-previous,
+#lightbox-container.grouped #lightbox-navigation #lightbox-next {
+    display: block;
+}
+
+#lightbox-container #lightbox-main img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: 0 auto;
+}
+
+#lightbox-container #lightbox-footer {
+    color: #FFF;
+    text-shadow: 0px 0px 3px #000;
+    max-height: 75px;
+    overflow: hidden;
+    padding: 20px;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+#lightbox-container #lightbox-footer a {
+    color: #FFF;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#lightbox-container #lightbox-footer.expanded {
+    max-height: none;
+    position: static;
+}
+
+/*
+ * For Retina displays
+ * Source: http://www.sitepoint.com/support-retina-displays/
+ */
+@media screen and (-webkit-min-device-pixel-ratio: 1.5), screen and (-moz-min-device-pixel-ratio: 1.5), screen and (min-device-pixel-ratio: 1.5) {
+    #lightbox-container #lightbox-header #lightbox-close {
+        background-image: url('/assets/images/lightbox/close-retina.png');
+        background-size: 40px 40px;
+    }
+}
+
+@media (min-width: 992px) {
+    #lightbox-container #lightbox-footer {
+        background: #333;
+        bottom: 0;
+    }
+}
