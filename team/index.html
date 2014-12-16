@@ -6,8 +6,8 @@ intro: Sunseeker isn't just a team of engineering students, we have members from
 ---
 <div class="member-group">
 {% for member in site.data.members %}
-  {% capture mod2 %}{{ forloop.index0 | modulo:2  }}{% endcapture %}
-  {% capture mod4 %}{{ forloop.index0 | modulo:4  }}{% endcapture %}
+  {% capture mod2 %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
+  {% capture mod4 %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
 
   {% if forloop.index0 != 0 %}
     {% if mod2 == '0' %}
