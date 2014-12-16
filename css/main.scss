@@ -21,6 +21,9 @@ $bronco-gold: #FC6;
     @if $device == tablet {
         @media (min-width: 768px) { @content; }
     }
+    @elseif $device == enormous {
+        @media (min-width: 1500px) { @content; }
+    }
     @else {
         @media (min-width: 992px) { @content; }
     }

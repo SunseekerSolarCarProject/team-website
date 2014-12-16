@@ -37,4 +37,10 @@
             height: 550px;
         }
     }
+
+    @include media-query(enormous) {
+        .slideshow ul li {
+            height: 700px;
+        }
+    }
 }
