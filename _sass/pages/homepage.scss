@@ -25,6 +25,23 @@
             background-image: url('../images/slideshows/homepage/in-the-lab.jpg');
         }
     }
+    
+    .meeting-info {
+        background: #F1F1F1;
+        padding: 20px 0;
+        border-top: 2px solid #E1E1E1;
+        
+        h3 {
+            margin-top: 0;
+            padding-top: 0;
+            font-weight: bold;
+        }
+    }
+    
+    footer {
+        background: #FFF;
+        margin-top: 0;
+    }
 
     @include media-query(tablet) {
         .slideshow ul li {

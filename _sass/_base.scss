@@ -47,14 +47,10 @@ p {
     margin: 0;
 }
 
-header,
-footer {
-    padding: 10px;
-}
-
 header {
     background: $bronco-brown;
     line-height: $header-height;
+    padding: 10px;
 
     .logo {
         @extend .img;
