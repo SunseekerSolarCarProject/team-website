@@ -205,7 +205,43 @@ footer {
     section.title {
         margin-bottom: 20px;
     }
+    
+    main {
+        blockquote,
+        .message {
+            margin: 20px;
+        }
+    }
 
+    footer {
+        margin-top: 20px;
+        padding: 5px;
+        
+        .social {
+            float: left;
+            width: 40%;
+
+            ul li {
+                a {
+                    font-weight: 100;
+                }
+
+                &:last-of-type a {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .copyright {
+            float: right;
+            width: 60%;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+@include media-query(desktop) {
     header {
         padding: 10px 20px;
         
@@ -254,40 +290,6 @@ footer {
                     }
                 }
             }
-        }
-    }
-    
-    main {
-        blockquote,
-        .message {
-            margin: 20px;
-        }
-    }
-
-    footer {
-        margin-top: 20px;
-        padding: 5px;
-        
-        .social {
-            float: left;
-            width: 40%;
-
-            ul li {
-                a {
-                    font-weight: 100;
-                }
-
-                &:last-of-type a {
-                    margin-bottom: 0;
-                }
-            }
-        }
-
-        .copyright {
-            float: right;
-            width: 60%;
-            padding-right: 20px;
-            box-sizing: border-box;
         }
     }
 }
