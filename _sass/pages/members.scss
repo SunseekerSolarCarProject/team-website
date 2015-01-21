@@ -1,8 +1,4 @@
 #members {
-    header {
-        margin-bottom: 20px;
-    }
-    
     p.lead {
         margin-bottom: 10px;
     }
@@ -10,13 +6,13 @@
     .member-group {
         box-sizing: border-box;
         float: left;
+        margin: 20px 0;
 
         .member {
             text-align: center;
             float: left;
             width: 50%;
             padding: 0 10px;
-            margin-bottom: 20px;
             box-sizing: border-box;
 
             img {

@@ -1,37 +1,51 @@
 #about {
+    .section-nav {
+        @extend .list-standard;
+        display: none;
+    }
+    
     .picture {
         @extend .img;
         background-size: cover;
         height: 200px;
     
         &.history-block-picture {
-            background-image: url('../images/timeline/1995-running-to-the-future.jpg');
+            background-image: url('../images/about/1995-running-to-the-future.jpg');
         }
-    }
     
-    .slideshow ul li {
-        @extend .img;
-        background-size: cover;
-        height: 200px;
-        margin-bottom: 10px;
-
-        &:nth-child(2) {
-            background-image: url('../images/timeline/1997-tire-check.jpg');
-            background-position: bottom center;
+        &.challenge-block-picture {
+            background-image: url('../images/about/crossing-the-line.jpg');
         }
-
-        &:nth-child(3) {
-            background-image: url('../images/timeline/setting-the-array.jpg');
-        }
-
-        &:nth-child(4) {
-            background-image: url('../images/timeline/2014-fsgp-pit-stop.jpg');
+    
+        &.mission-block-picture {
+            background-image: url('../images/about/vince-talking.jpg');
         }
     }
 
     @include media-query(tablet) {
+        .section-nav {
+            font-size: 1.1em;
+            text-align: center;
+            display: block;
+            margin-top: 20px;
+            
+            ul li {
+                display: inline;
+                margin: 0 20px;
+                
+                a {
+                    color: #333;
+                }
+            }
+        }
+        
         .picture {
             height: 500px;
+            margin: 20px 0px;
+            
+            &:first-of-type {
+                margin-top: 0;
+            }
         }
     }
 

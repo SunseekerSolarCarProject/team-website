@@ -6,7 +6,7 @@
         height: 200px;
     }
 
-    .information {
+    .fast-facts {
         ul {
             margin: 0;
             padding: 0;
@@ -61,6 +61,7 @@
     @include media-query(tablet) {
         .big-picture {
             height: 500px;
+            margin-bottom: 20px;
         }
 
         .specs {

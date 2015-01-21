@@ -142,6 +142,7 @@ main {
         background: #F1F1F1;
         font-style: italic;
         padding: 10px;
+        margin: 0 10px 10px;
     }
 }
 
@@ -196,19 +197,18 @@ footer {
         margin: 0 auto;
         
         &.block {
-            padding: 20px 0;
+            margin: 20px auto;
+            padding: 0 20px;
         }
     }
 
-    header {
-        padding: 10px;
-    }
-
     section.title {
-        padding: 15px 10px 20px;
+        margin-bottom: 20px;
     }
 
     header {
+        padding: 10px 20px;
+        
         .clear-logo {
             clear: none;
         }
@@ -256,8 +256,18 @@ footer {
             }
         }
     }
+    
+    main {
+        blockquote,
+        .message {
+            margin: 20px;
+        }
+    }
 
     footer {
+        margin-top: 20px;
+        padding: 5px;
+        
         .social {
             float: left;
             width: 40%;
