@@ -38,6 +38,11 @@
         background: lighten(#F1F1F1, 2%);
         padding: 10px;
     }
+    
+    .sponsor,
+    main ul li {
+        margin-bottom: 10px;
+    }
 
     @include media-query(tablet) {
         .sponsor {
@@ -59,10 +64,6 @@
             h3 small {
                 display: inline;
             }
-        }
-
-        .sponsor.alone.empty h3 {
-            margin-bottom: 0;
         }
     }
 }
