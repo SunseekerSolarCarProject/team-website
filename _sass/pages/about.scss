@@ -1,13 +1,19 @@
 #about {
+    .picture {
+        @extend .img;
+        background-size: cover;
+        height: 200px;
+    
+        &.history-block-picture {
+            background-image: url('../images/timeline/1995-running-to-the-future.jpg');
+        }
+    }
+    
     .slideshow ul li {
         @extend .img;
         background-size: cover;
         height: 200px;
         margin-bottom: 10px;
-
-        &:nth-child(1) {
-            background-image: url('../images/timeline/1995-running-to-the-future.jpg');
-        }
 
         &:nth-child(2) {
             background-image: url('../images/timeline/1997-tire-check.jpg');
@@ -24,8 +30,14 @@
     }
 
     @include media-query(tablet) {
-        .slideshow ul li {
-            height: 450px;
+        .picture {
+            height: 500px;
+        }
+    }
+
+    @include media-query(enormous) {
+        .picture {
+            height: 700px;
         }
     }
 }
