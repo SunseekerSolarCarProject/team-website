@@ -10,9 +10,9 @@
   label: Meet The Team
   url: /team
 
-- name: car
-  label: Our Car
-  url: /car
+- name: cars
+  label: Our Cars
+  url: /our-cars
 
 - name: sponsors
   label: Our Sponsors

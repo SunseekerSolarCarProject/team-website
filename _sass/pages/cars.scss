@@ -1,8 +1,16 @@
-#car {
-    main {
-        padding-top: 0;
+#cars {
+    .car {
+        .car-picture {
+            @extend .img;
+            
+            background-size: cover;
+            
+            &.ten-car {
+                background-image: url("../images/cars/2010.jpg");
+            }
+        }
     }
-    
+
     .big-picture {
         @extend .img;
         background-image: url('../images/about/crossing-the-line.jpg');
@@ -63,6 +71,21 @@
     }
 
     @include media-query(tablet) {
+        .car {
+            .car-picture {
+                float: left;
+                width: 25%;
+                height: 150px;
+            }
+            
+            .description {
+                float: left;
+                width: 75%;
+                box-sizing: border-box;
+                padding-left: 20px;
+            }
+        }
+        
         .big-picture {
             height: 500px;
             margin-bottom: 20px;
