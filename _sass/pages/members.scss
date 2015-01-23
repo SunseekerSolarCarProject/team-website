@@ -1,12 +1,8 @@
 #members {
-    p.lead {
-        margin-bottom: 10px;
-    }
-
     .member-group {
         box-sizing: border-box;
         float: left;
-        margin: 20px 0;
+        margin: 10px 0;
 
         .member {
             text-align: center;
@@ -25,6 +21,7 @@
     @include media-query(tablet) {
         .member-group {
             width: 50%;
+            margin: 20px 0;
         }
     }
 }

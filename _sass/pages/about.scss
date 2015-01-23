@@ -1,4 +1,8 @@
 #about {
+    main {
+        padding-top: 0;
+    }
+    
     .section-nav {
         @extend .list-standard;
         display: none;
@@ -24,6 +28,10 @@
     }
 
     @include media-query(tablet) {
+        main {
+            padding-top: 20px;
+        }
+        
         .section-nav {
             font-size: 1.1em;
             text-align: center;
