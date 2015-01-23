@@ -4,7 +4,7 @@ html {
 }
 
 body {
-    background: #FFF;
+    background: lighten(#F1F1F1, 2%);
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
@@ -115,7 +115,7 @@ header {
 
 section.title,
 footer {
-    background: lighten(#F1F1F1, 2%);
+    background: transparent;
 }
 
 section.title {
@@ -137,6 +137,8 @@ section.title {
 }
 
 main {
+    background: #FFF;
+    
     blockquote,
     .message {
         background: #F1F1F1;
@@ -197,13 +199,8 @@ footer {
         margin: 0 auto;
         
         &.block {
-            margin: 20px auto;
-            padding: 0 20px;
+            padding: 20px;
         }
-    }
-
-    section.title {
-        margin-bottom: 20px;
     }
     
     main {
@@ -214,7 +211,6 @@ footer {
     }
 
     footer {
-        margin-top: 20px;
         padding: 5px;
         
         .social {
