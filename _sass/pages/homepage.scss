@@ -7,7 +7,7 @@
         @extend .img;
         background-size: cover;
         height: 200px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
         &:nth-child(1) {
             background-image: url('../images/slideshows/homepage/in-front-of-turn-one.jpg');
@@ -29,10 +29,7 @@
     @include media-query(tablet) {
         .slideshow ul li {
             height: 450px;
-        }
-        
-        .meetin-info {
-            padding: 20px 0;
+            margin-bottom: 20px;
         }
     }
 
