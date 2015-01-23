@@ -1,4 +1,8 @@
 #car {
+    main {
+        padding-top: 0;
+    }
+    
     .big-picture {
         @extend .img;
         background-image: url('../images/about/crossing-the-line.jpg');

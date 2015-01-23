@@ -1,8 +1,13 @@
 #homepage {
+    main {
+        padding-top: 0;
+    }
+    
     .slideshow ul li {
         @extend .img;
         background-size: cover;
         height: 200px;
+        margin-bottom: 20px;
 
         &:nth-child(1) {
             background-image: url('../images/slideshows/homepage/in-front-of-turn-one.jpg');
