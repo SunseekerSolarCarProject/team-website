@@ -19,7 +19,7 @@
             &.five-car {
                 background-image: url("../images/cars/2005.jpg");
             }
-            
+
             &.ninety-five-car {
                 background-image: url("../images/cars/1995.jpg");
             }
@@ -90,13 +90,19 @@
     }
 
     @include media-query(tablet) {
+<<<<<<< HEAD
 <<<<<<< HEAD:_sass/pages/cars.scss
+=======
+>>>>>>> Added 2005 car to our cars page
         main {
             padding-top: 20px;
         }
         
+<<<<<<< HEAD
 =======
 >>>>>>> Fixed merge conflict:_sass/pages/cars.scss
+=======
+>>>>>>> Added 2005 car to our cars page
         .car {
             .car-picture {
                 float: left;
