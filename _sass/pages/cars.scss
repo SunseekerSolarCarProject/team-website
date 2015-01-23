@@ -1,4 +1,8 @@
 #cars {
+    main {
+        padding-top: 0;
+    }
+    
     .car {
         .car-picture {
             @extend .img;
