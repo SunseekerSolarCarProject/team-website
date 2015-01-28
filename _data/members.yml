@@ -66,6 +66,12 @@
   subteam: Suspension Team
   picture: cameron_knight.jpg
 
+- name: Blair LaCross
+  picture: blair_lacross.jpg
+
+- name: Chelsea Russell
+  picture: chelsea_russell.jpg
+
 - name: Charlie Schlansker
   picture: charlie_schlansker.jpg
 
@@ -81,7 +87,6 @@
 
 - name: Blake Williamson
   picture: blake_williamson.jpg
-  subteam: Chassis Team
 
 - name: Jonathan Welsing
   subteam: Roll Cage Team
