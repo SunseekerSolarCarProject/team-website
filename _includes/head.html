@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl }}">
 
-    <script src="{{ "/js/lib/jquery/dist/jquery.min.js" | prepend: site.baseurl }}"></script>
-    <script src="{{ "/js/global.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/lib/LAB.min.js" | prepend: site.baseurl }}"></script>
+    <script>
+    $LAB.script('{{ "/js/lib/bower/jquery/dist/jquery.min.js" | prepend: site.baseurl }}').wait()
+        .script('{{ "/js/global.js" | prepend: site.baseurl }}');
+    </script>
 </head>
