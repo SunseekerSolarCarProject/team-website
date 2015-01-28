@@ -4,92 +4,98 @@
 
 - name: Vincent Kucway
   position: Assistant Project Manager
-  subteam: Cockpit Team
+  subteam: Cockpit
   picture: vincent_kucway.jpg
 
 - name: Robert Galman
   position: Electrical Lead
-  subteam: Electrical Team
+  subteam: Electrical
   picture: robert_galman.jpg
 
 - name: Joel Thompson
   position: Mechanical Lead
-  subteam: Chassis Team
+  subteam: Chassis
   picture: joel_thompson.jpg
 
 - name: Denis KiMuhu
   position: Aero Lead
-  subteam: Aero Shell Team
+  subteam: Aero Shell
   picture: denis_kimuhu.jpg
 
 - name: Alec Carpenter
   position: Webmaster
-  subteam: Cockpit Team
+  subteam: Cockpit
   picture: alec_carpenter.jpg
 
 - name: Quinten Bader
   picture: quinten_bader.jpg
-  subteam: Chassis Team
+  subteam: Chassis
 
 - name: Andrew Borkowski
   picture: andrew_borkowski.jpg
-  subteam: Electrical Team
+  subteam: Electrical
 
 - name: Gregory Bosma
   picture: gregory_bosma.jpg
+  subteam: Axle and Motor
 
 - name: Nick Byers
   picture: nick_byers.jpg
-
-- name: Megan Derwich
-  picture: megan_derwich.jpg
+  subteam: Suspension
 
 - name: Kai Gray
-  subteam: Cockpit Team
+  subteam: Cockpit
   picture: kai_gray.jpg
 
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
+  subteam: Material Aquisitions
 
 - name: Ross Hiller
-  subteam: Suspension Team
+  subteam: Suspension
   picture: ross_hiller.jpg
 
 - name: Tyler Huffman
   picture: tyler_huffman.jpg
 
 - name: Dylan Kimball
-  subteam: Aero Shell Team
+  subteam: Aero Shell
   picture: dylan_kimball.jpg
 
 - name: Cameron Knight
-  subteam: Suspension Team
+  subteam: Suspension
   picture: cameron_knight.jpg
 
 - name: Blair LaCross
   picture: blair_lacross.jpg
+  subteam: Chassis
 
 - name: Chelsea Russell
   picture: chelsea_russell.jpg
+  subteam: Electrical
 
 - name: Charlie Schlansker
   picture: charlie_schlansker.jpg
+  subteam: FEA
 
 - name: Ryan Shereda
   picture: ryan_shereda.jpg
-  subteam: Aero Shell Team
+  subteam: Aero Shell
 
 - name: Benson Vande Streek
   picture: benson_vandestreek.jpg
+  subteam: Brakes
 
 - name: Katherine Vittini
   picture: katherine_vittini.jpg
+  subteam: Chassis
 
 - name: Blake Williamson
   picture: blake_williamson.jpg
+  subteam: Suspension
 
 - name: Jonathan Welsing
-  subteam: Roll Cage Team
+  subteam: Roll Cage
   picture: jonathan_welsing.jpg
 
 - name: Bradley Bazuin
