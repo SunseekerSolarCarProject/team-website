@@ -1,1 +1,3 @@
-$('.slideshow').slideshow();
+require(['jquery', 'slideshow'], function($) {
+    $('.slideshow').slideshow();
+});
