@@ -48,9 +48,11 @@
 
 - name: Nicole Corla
   picture: nicole_corla.jpg
+  subteam: Aero Shell
 
 - name: Nathan Fisher
   picture: nathan_fisher.jpg
+  subteam: Aero Shell
 
 - name: Kai Gray
   subteam: Cockpit
@@ -58,6 +60,7 @@
 
 - name: Jonah Groendal
   picture: jonah_groendal.jpg
+  subteam: Telemetry
 
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
@@ -87,9 +90,11 @@
 
 - name: Margaret Mooney
   picture: margaret_mooney.jpg
+  subteam: Chassis
 
 - name: Rockie Parr-Besemer
   picture: rockie_parr-besemer.jpg
+  subteam: Business
 
 - name: Chelsea Russell
   picture: chelsea_russell.jpg
