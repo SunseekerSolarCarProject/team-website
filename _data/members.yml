@@ -43,9 +43,21 @@
   picture: nick_byers.jpg
   subteam: Suspension
 
+- name: Vince Cipriano
+  picture: vince_cipriano.jpg
+
+- name: Nicole Corla
+  picture: nicole_corla.jpg
+
+- name: Nathan Fisher
+  picture: nathan_fisher.jpg
+
 - name: Kai Gray
   subteam: Cockpit
   picture: kai_gray.jpg
+
+- name: Jonah Groendal
+  picture: jonah_groendal.jpg
 
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
@@ -57,6 +69,9 @@
 
 - name: Tyler Huffman
   picture: tyler_huffman.jpg
+
+- name: Reed Isenhart
+  picture: reed_isenhart.jpg
 
 - name: Dylan Kimball
   subteam: Aero Shell
@@ -70,6 +85,12 @@
   picture: blair_lacross.jpg
   subteam: Chassis
 
+- name: Margaret Mooney
+  picture: margaret_mooney.jpg
+
+- name: Rockie Parr-Besemer
+  picture: rockie_parr-besemer.jpg
+
 - name: Chelsea Russell
   picture: chelsea_russell.jpg
   subteam: Electrical
@@ -81,6 +102,9 @@
 - name: Ryan Shereda
   picture: ryan_shereda.jpg
   subteam: Aero Shell
+
+- name: Jordan Stoy
+  picture: jordan_stoy.jpg
 
 - name: Benson Vande Streek
   picture: benson_vandestreek.jpg
@@ -97,6 +121,9 @@
 - name: Jonathan Welsing
   subteam: Roll Cage
   picture: jonathan_welsing.jpg
+
+- name: Bo Ching Wong
+  picture: bo_ching_wong.jpg
 
 - name: Bradley Bazuin
   position: Faculty Advisior
