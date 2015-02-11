@@ -31,6 +31,10 @@
   picture: quinten_bader.jpg
   subteam: Chassis
 
+- name: Mark Bliss
+  picture: mark_bliss.jpg
+  subteam: Suspension/Chassis
+
 - name: Andrew Borkowski
   picture: andrew_borkowski.jpg
   subteam: Electrical
@@ -64,7 +68,7 @@
 
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
-  subteam: Material Aquisitions
+  subteam: Material Aquisition
 
 - name: Ross Hiller
   subteam: Suspension
@@ -81,7 +85,7 @@
   picture: dylan_kimball.jpg
 
 - name: Cameron Knight
-  subteam: Suspension
+  subteam: Suspension/Chassis
   picture: cameron_knight.jpg
 
 - name: Blair LaCross
