@@ -52,4 +52,12 @@ $bronco-gold: #FC6;
     }
 }
 
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
 @import "base", "slideshows", "pages";

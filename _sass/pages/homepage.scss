@@ -26,10 +26,23 @@
         }
     }
 
+    .general-info .block:first-of-type {
+        margin-bottom: 20px;
+    }
+
     @include media-query(tablet) {
         .slideshow ul li {
             height: 450px;
             margin-bottom: 20px;
+        }
+
+        .general-info .block {
+            width: 49%;
+            float: left;
+
+            &:first-of-type {
+                margin-right: 20px;
+            }
         }
     }
 
