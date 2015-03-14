@@ -62,10 +62,6 @@
   subteam: Cockpit
   picture: kai_gray.jpg
 
-- name: Jonah Groendal
-  picture: jonah_groendal.jpg
-  subteam: Telemetry
-
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
   subteam: Material Aquisition
@@ -73,9 +69,6 @@
 - name: Ross Hiller
   subteam: Suspension
   picture: ross_hiller.jpg
-
-- name: Tyler Huffman
-  picture: tyler_huffman.jpg
 
 - name: Reed Isenhart
   picture: reed_isenhart.jpg
@@ -87,10 +80,6 @@
 - name: Cameron Knight
   subteam: Suspension/Chassis
   picture: cameron_knight.jpg
-
-- name: Blair LaCross
-  picture: blair_lacross.jpg
-  subteam: Chassis
 
 - name: Margaret Mooney
   picture: margaret_mooney.jpg
