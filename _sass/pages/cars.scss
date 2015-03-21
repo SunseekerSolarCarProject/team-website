@@ -90,10 +90,13 @@
     }
 
     @include media-query(tablet) {
+<<<<<<< HEAD:_sass/pages/cars.scss
         main {
             padding-top: 20px;
         }
         
+=======
+>>>>>>> Fixed merge conflict:_sass/pages/cars.scss
         .car {
             .car-picture {
                 float: left;
