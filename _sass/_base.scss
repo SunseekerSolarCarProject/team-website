@@ -149,8 +149,8 @@ main {
 }
 
 footer {
-    text-align: center;
     border-top: 2px solid #E1E1E1;
+    text-align: center;
 
     .copyright {
         a {
@@ -161,32 +161,47 @@ footer {
     .social {
         @extend .list-standard;
 
+        margin-bottom: 20px;
+
         ul li {
+            display: inline;
+
             a {
-                background: #000;
-                color: #FFF;
-                text-decoration: none;
-                font-weight: bold;
-                display: block;
-                padding: 10px;
-                margin-bottom: 10px;
+                background-repeat: no-repeat;
+                text-indent: -99999px;
+                display: inline-block;
+                margin-right: 20px;
+                width: 32px;
+                height: 32px;
+            }
+
+            &.linkedin {
+                a {
+                    background-image: url('../images/social-icons/linkedin.png');
+                }
             }
 
             &.facebook {
                 a {
-                    background: #3B5998;
+                    background-image: url('../images/social-icons/facebook.png');
                 }
             }
 
             &.twitter {
                 a {
-                    background: #55ACEE;
+                    background-image: url('../images/social-icons/twitter.png');
+                }
+            }
+
+            &.youtube {
+                a {
+                    background-image: url('../images/social-icons/you-tube.png');
                 }
             }
 
             &.flickr {
                 a {
-                    background: #FF0084;
+                    background-image: url('../images/social-icons/flickr.png');
                 }
             }
         }
@@ -288,5 +303,9 @@ footer {
                 }
             }
         }
+    }
+
+    footer social ul li {
+
     }
 }
