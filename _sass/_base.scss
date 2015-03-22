@@ -205,6 +205,10 @@ footer {
                     background-image: url('../images/social-icons/email.png');
                 }
             }
+
+            &:last-of-type a {
+                margin-right: 0;
+            }
         }
     }
 
