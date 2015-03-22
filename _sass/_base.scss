@@ -98,10 +98,10 @@ header {
             padding: 10px 10px 0;
 
             li {
+                background: darken($bronco-brown, 5%);
                 border-bottom: 2px solid $bronco-brown;
                 
                 a {
-                    background: darken($bronco-brown, 5%);
                     color: $bronco-gold;
                     text-align: center;
                     text-decoration: none;
@@ -151,12 +151,6 @@ main {
 footer {
     border-top: 2px solid #E1E1E1;
     text-align: center;
-
-    .copyright {
-        a {
-            display: inline-block;
-        }
-    }
 
     .social {
         @extend .list-standard;
@@ -213,6 +207,27 @@ footer {
             }
         }
     }
+
+    .other-links {
+        @extend .list-standard;
+
+        ul {
+            li {
+                background: darken(#E1E1E1, 5%);
+                border-bottom: 2px solid #E1E1E1;
+
+                a {
+                    color: #333;
+                    display: block;
+                    padding: 10px 0;
+                }
+
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
 }
 
 @include media-query(tablet) {
@@ -231,32 +246,6 @@ footer {
         blockquote,
         .message {
             padding: 20px;
-        }
-    }
-
-    footer {
-        padding: 5px;
-        
-        .social {
-            float: left;
-            width: 40%;
-
-            ul li {
-                a {
-                    font-weight: 100;
-                }
-
-                &:last-of-type a {
-                    margin-bottom: 0;
-                }
-            }
-        }
-
-        .copyright {
-            float: right;
-            width: 60%;
-            padding-right: 20px;
-            box-sizing: border-box;
         }
     }
 }
@@ -312,24 +301,35 @@ footer {
         }
     }
 
-    footer .social {
-        text-align: left;
+    footer {
+        padding: 0;
 
-        ul li {
-            display: block;
-            margin-bottom: 10px;
+        .social {
+            margin-bottom: 20px;
+        }
 
-            a {
-                color: #333;
-                text-indent: 0;
-                padding-top: 12px;
-                padding-left: 55px;
-                height: 33px;
-                width: auto;
+        .other-links {
+            h3 {
+                display: none;
             }
 
-            &:last-of-type {
-                margin-bottom: 0;
+            ul {
+                li {
+                    background: transparent;
+                    list-style: none;
+                    display: inline;
+                    border-bottom: 0;
+                    border-right: 2px solid #CCC;
+                    padding: 0 10px;
+
+                    a {
+                        display: inline;
+                    }
+
+                    &:last-of-type {
+                        border-right: none;
+                    }
+                }
             }
         }
     }
