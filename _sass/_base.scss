@@ -161,14 +161,14 @@ footer {
     .social {
         @extend .list-standard;
 
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
         ul li {
             display: inline;
 
             a {
                 background-repeat: no-repeat;
-                background-size: cover;
+                background-size: 45px 45px;
                 text-indent: -99999px;
                 display: inline-block;
                 margin-right: 20px;
@@ -312,7 +312,25 @@ footer {
         }
     }
 
-    footer social ul li {
+    footer .social {
+        text-align: left;
 
+        ul li {
+            display: block;
+            margin-bottom: 10px;
+
+            a {
+                color: #333;
+                text-indent: 0;
+                padding-top: 12px;
+                padding-left: 55px;
+                height: 33px;
+                width: auto;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
     }
 }
