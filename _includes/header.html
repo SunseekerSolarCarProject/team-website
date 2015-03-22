@@ -3,7 +3,7 @@
     <a href="{{ '/' | prepend: site.url }}" class="logo">Sunseeker Solar Car Project</a>
     <div class="clear-logo"></div>
     <nav>
-      <div class="mobile-menu-toggle">Mobile Nav</div>
+      <div class="mobile-menu-toggle">Menu</div>
       <ul>
         {% for link in site.data.nav %}
         <li><a href="{{ link.url | prepend: site.url }}"{% if page.pageid == link.name %} class="active"{% endif %}>{{ link.label }}</a>
