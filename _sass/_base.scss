@@ -168,11 +168,12 @@ footer {
 
             a {
                 background-repeat: no-repeat;
+                background-size: cover;
                 text-indent: -99999px;
                 display: inline-block;
                 margin-right: 20px;
-                width: 32px;
-                height: 32px;
+                width: 45px;
+                height: 45px;
             }
 
             &.linkedin {
@@ -195,13 +196,19 @@ footer {
 
             &.youtube {
                 a {
-                    background-image: url('../images/social-icons/you-tube.png');
+                    background-image: url('../images/social-icons/youtube.png');
                 }
             }
 
             &.flickr {
                 a {
                     background-image: url('../images/social-icons/flickr.png');
+                }
+            }
+
+            &.email {
+                a {
+                    background-image: url('../images/social-icons/email.png');
                 }
             }
         }
