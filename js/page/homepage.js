@@ -14,6 +14,7 @@ require(['jquery', 'slideshow', 'konami'], function($) {
     		var c, v, s, bg, ht;
 
     		bigSlide.stop();
+    		window.scrollTo(0, 0);
 
     		c  = bigSlide.current();
     		v  = $('<video>');
