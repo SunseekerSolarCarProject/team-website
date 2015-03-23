@@ -7,7 +7,8 @@ requirejs.config({
         jquery: siteUrl + '/js/lib/bower/jquery/dist/jquery.min'
     },
     shim: {
-    	slideshow: ['jquery']
+    	slideshow: ['jquery'],
+    	konami: ['jquery']
     }
 });
 

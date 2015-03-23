@@ -1,9 +1,10 @@
 (function($) {
-    var $show, slides, current, next, config, methods, transitions;
+    var $show, slides, current, next, stop, config, methods, transitions;
 
     slides  = [];
     current = -1;
     next    = 0;
+    stop    = false;
 
     config = {
         'displayTime': 5,
@@ -18,11 +19,14 @@
                 slides[slides.length] = $(this);
             });
 
-            if(slides.length > 1) {
-                methods.scheduleTransition();
-            }
+            methods.start();
+
+            return this;
         },
         scheduleTransition: function() {
+            if(stop)
+                return;
+
             current = (current + 1) % slides.length;
             next    = (current + 1) % slides.length;
 
@@ -31,10 +35,31 @@
             }, config.displayTime * 1000);
         },
         nextSlide: function() {
+            if(stop)
+                return;
+
             switch(config.transition) {
                 default:
                     transitions.fade();
             }
+        },
+        stop: function() {
+            stop = true;
+        },
+        start: function() {
+            stop = false;
+
+            if(--current < 0)
+                current = slides.length - 1;
+
+            if(--next < 0)
+                next = slides.length - 1;
+
+            if(slides.length > 1)
+                methods.scheduleTransition();
+        },
+        current: function() {
+            return slides[current];
         }
     };
 
@@ -53,6 +78,6 @@
     $.fn.slideshow = function(conf) {
         $show  = $(this);
         config = $.extend(config, conf);
-        methods.init();
+        return methods.init();
     };
 })(jQuery);
