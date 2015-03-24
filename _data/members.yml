@@ -83,7 +83,7 @@
 
 - name: Margaret Mooney
   picture: margaret_mooney.jpg
-  subteam: Chassis
+  subteam: Roll Cage
 
 - name: Rockie Parr-Besemer
   picture: rockie_parr-besemer.jpg
@@ -115,10 +115,6 @@
 - name: Blake Williamson
   picture: blake_williamson.jpg
   subteam: Suspension
-
-- name: Jonathan Welsing
-  subteam: Roll Cage
-  picture: jonathan_welsing.jpg
 
 - name: Bo Ching Wong
   picture: bo_ching_wong.jpg
