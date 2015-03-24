@@ -11,16 +11,17 @@ require(['jquery', 'slideshow', 'konami'], function($) {
 
             konamiGoing = true;
 
-            var c, v, s, bg, ht;
+            var c, v, sm4v, smov, bg, ht;
 
             bigSlide.stop();
             window.scrollTo(0, 0);
 
-            c  = bigSlide.current();
-            v  = $('<video>');
-            s  = $('<source>');
-            bg = c.css('background-image');
-            ht = c.css('height');
+            c     = bigSlide.current();
+            v     = $('<video>');
+            smov  = $('<source>');
+            sm4v  = $('<source>');
+            bg    = c.css('background-image');
+            ht    = c.css('height');
 
             c.css('height', '720px');
             c.css('background-color', '#000');
@@ -44,10 +45,14 @@ require(['jquery', 'slideshow', 'konami'], function($) {
                 bigSlide.start();
             });
 
-            s.attr('src', 'videos/DriverStyle.mov');
-            s.attr('type', 'video/quicktime');
+            smov.attr('src', 'videos/DriverStyle.mov');
+            smov.attr('type', 'video/quicktime');
 
-            v.append(s);
+            sm4v.attr('src', 'videos/DriverStyle.m4v');
+            sm4v.attr('type', 'video/m4v');
+
+            v.append(smov);
+            v.append(sm4v);
             c.append(v);
         }
     });
