@@ -16,12 +16,13 @@ require(['jquery', 'slideshow', 'konami'], function($) {
             bigSlide.stop();
             window.scrollTo(0, 0);
 
-            c     = bigSlide.current();
-            v     = $('<video>');
-            smov  = $('<source>');
-            sm4v  = $('<source>');
-            bg    = c.css('background-image');
-            ht    = c.css('height');
+            c      = bigSlide.current();
+            v      = $('<video>');
+            smov   = $('<source>');
+            sm4v   = $('<source>');
+            swebm  = $('<source>');
+            bg     = c.css('background-image');
+            ht     = c.css('height');
 
             c.css('height', '720px');
             c.css('background-color', '#000');
@@ -51,8 +52,12 @@ require(['jquery', 'slideshow', 'konami'], function($) {
             sm4v.attr('src', 'videos/DriverStyle.m4v');
             sm4v.attr('type', 'video/m4v');
 
+            swebm.attr('src', 'videos/DriverStyle.webm');
+            swebm.attr('type', 'video/webm');
+
             v.append(smov);
             v.append(sm4v);
+            v.append(swebm);
             c.append(v);
         }
     });
