@@ -23,7 +23,7 @@ intro: Sunseeker is made up of more than just engineering students, we have memb
   <div class="member">
     <img src="{{ '/images/team-members/1415/' | prepend: site.url }}{{ member.picture }}">
     <div class="info">
-      <strong>{{ member.name }}</strong>{% if member.position %}<br />{{ member.position }}{% endif %}{% if member.subteam %}<br />{{ member.subteam }}{% endif %}{% if member.department %}<br />{{ member.department }}{% endif %}
+      <strong>{{ member.name }} {% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank" class="linkedin">LinkedIn Profile</a>{% endif %}</strong>{% if member.position %}<br />{{ member.position }}{% endif %}{% if member.subteam %}<br />{{ member.subteam }}{% endif %}{% if member.department %}<br />{{ member.department }}{% endif %}
     </div>
   </div>
 {% endfor %}
