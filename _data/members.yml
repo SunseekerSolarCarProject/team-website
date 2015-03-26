@@ -47,10 +47,6 @@
 - name: Vince Cipriano
   picture: vince_cipriano.jpg
 
-- name: Nicole Corla
-  picture: nicole_corla.jpg
-  subteam: Aero Shell
-
 - name: Nathan Fisher
   picture: nathan_fisher.jpg
   subteam: Aero Shell
@@ -66,9 +62,6 @@
 - name: Ross Hiller
   subteam: Suspension
   picture: ross_hiller.jpg
-
-- name: Reed Isenhart
-  picture: reed_isenhart.jpg
 
 - name: Dylan Kimball
   subteam: Aero Shell
