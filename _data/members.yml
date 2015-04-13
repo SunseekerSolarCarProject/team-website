@@ -44,9 +44,6 @@
   picture: nick_byers.jpg
   subteam: Suspension
 
-- name: Vince Cipriano
-  picture: vince_cipriano.jpg
-
 - name: Nathan Fisher
   picture: nathan_fisher.jpg
   subteam: Aero Shell
@@ -74,10 +71,6 @@
 - name: Margaret Mooney
   picture: margaret_mooney.jpg
   subteam: Roll Cage
-
-- name: Rockie Parr-Besemer
-  picture: rockie_parr-besemer.jpg
-  subteam: Business
 
 - name: Charlie Schlansker
   picture: charlie_schlansker.jpg

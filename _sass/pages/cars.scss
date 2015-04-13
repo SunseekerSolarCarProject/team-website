@@ -1,13 +1,9 @@
 #cars {
-    main {
-        padding-top: 0;
-    }
-    
     .car {
         .car-picture {
             @extend .img;
             
-            background-size: cover;
+            background-size: contain;
             background-position: center-center;
             width: 100%;
             height: 200px;
