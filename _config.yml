@@ -1,8 +1,10 @@
 # Site settings
 email: sunseeker@wmich.edu
 description: The Sunseeker Solar Car Project at Western Michigan University is a team of students who design, build, and compete with solar powered vehicles.
-baseurl: ""
-url: ""
+baseurl: "/sunseeker"
+url: "https://www.wmich.edu"
+
+include: [.htsecure, .htaccess]
 
 # Build settings
 markdown: kramdown

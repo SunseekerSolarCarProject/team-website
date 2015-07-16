@@ -4,7 +4,7 @@
 requirejs.config({
     baseUrl: siteUrl + '/js',
     paths: {
-        jquery: siteUrl + '/js/lib/bower/jquery/dist/jquery.min'
+        jquery: siteUrl + '/js/lib/jquery/dist/jquery.min'
     },
     shim: {
     	slideshow: ['jquery'],
