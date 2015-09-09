@@ -1,26 +1,27 @@
-- name: Bryan Harris
+- name: Cameron Knight
   position: Project Manager
-  picture: bryan_harris.jpg
+  subteam: Suspension/Chassis
+  picture: cameron_knight.jpg
 
-- name: Vincent Kucway
+- name: Margaret Mooney
   position: Assistant Project Manager
-  subteam: Cockpit
-  picture: vincent_kucway.jpg
+  picture: margaret_mooney.jpg
+  subteam: Roll Cage
+  linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
 
-- name: Robert Galman
-  position: Electrical Lead
-  subteam: Electrical
-  picture: robert_galman.jpg
-
-- name: Joel Thompson
+- name: Gregory Bosma
   position: Mechanical Lead
-  subteam: Chassis
-  picture: joel_thompson.jpg
+  picture: gregory_bosma.jpg
+  subteam: Axle and Motor
 
-- name: Denis KiMuhu
+- name: Nathan Fisher
   position: Aero Lead
+  picture: nathan_fisher.jpg
   subteam: Aero Shell
-  picture: denis_kimuhu.jpg
+
+- name: Bryan Harris
+  position: Business Lead
+  picture: bryan_harris.jpg
 
 - name: Alec Carpenter
   position: Webmaster
@@ -32,17 +33,9 @@
   picture: quinten_bader.jpg
   subteam: Chassis
 
-- name: Gregory Bosma
-  picture: gregory_bosma.jpg
-  subteam: Axle and Motor
-
 - name: Nick Byers
   picture: nick_byers.jpg
   subteam: Suspension
-
-- name: Nathan Fisher
-  picture: nathan_fisher.jpg
-  subteam: Aero Shell
 
 - name: Kai Gray
   subteam: Cockpit
@@ -60,18 +53,13 @@
   subteam: Aero Shell
   picture: dylan_kimball.jpg
 
-- name: Cameron Knight
-  subteam: Suspension/Chassis
-  picture: cameron_knight.jpg
+- name: Denis KiMuhu
+  subteam: Aero Shell
+  picture: denis_kimuhu.jpg
 
-- name: Margaret Mooney
-  picture: margaret_mooney.jpg
-  subteam: Roll Cage
-  linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
-
-- name: Charlie Schlansker
-  picture: charlie_schlansker.jpg
-  subteam: FEA
+- name: Vincent Kucway
+  subteam: Cockpit
+  picture: vincent_kucway.jpg
 
 - name: Ryan Shereda
   picture: ryan_shereda.jpg
@@ -79,6 +67,10 @@
 
 - name: Jordan Stoy
   picture: jordan_stoy.jpg
+
+- name: Joel Thompson
+  subteam: Chassis
+  picture: joel_thompson.jpg
 
 - name: Benson Vande Streek
   picture: benson_vandestreek.jpg
