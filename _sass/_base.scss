@@ -146,6 +146,18 @@ main {
         font-style: italic;
         padding: 10px;
     }
+
+    .message--notice {
+        background: $bronco-gold;
+
+        h3 {
+            text-transform: uppercase;
+        }
+
+        a {
+            color: #000;
+        }
+    }
 }
 
 footer {
