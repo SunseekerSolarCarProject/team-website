@@ -30,4 +30,16 @@
         font-size: .9em;
         margin: -10px 0 10px;
     }
+
+    @include media-query(tablet) {
+        .blog__banner {
+            height: 500px;
+        }
+    }
+    
+    @include media-query(enormous) {
+        .blog__banner {
+            height: 700px;
+        }
+    }
 }
