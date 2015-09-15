@@ -1,0 +1,26 @@
+---
+layout: default
+pageid: blog
+title: Blog
+intro: Want to learn more about the team, and see what we're up to? Take a look at some of the posts you will find below, for an inside look at the workings of a solar car team!
+---
+
+<div class="wrapper block">
+    <ul class="posts">
+        {% for post in site.posts %}
+            <li class="posts__post">
+                <div class="posts__post__date">
+                    <div class="post__date__day">{{ post.date | date: '%d' }}</div>
+                    <div class="post__date__year">{{ post.date | date: '%b' }}</div>
+                </div>
+                <div class="posts__post__info">
+                    <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+                    <p class="excerpt">{{ post.excerpt }}</p>
+                </div>
+                <div class="clear-all"></div>
+            </li>
+        {% else %}
+            <p class="message">We have not posted anything, yet. Stay tuned!</p>
+        {% endfor %}
+    </ul>
+</div>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body{% if page.pageid %} id="{{ page.pageid }}"{% endif %}>
+    {% include header.html %}
+    <section class="title">
+      <div class="wrapper">
+        <h1>{{ page.title }}</h1>
+        Posted on {{ page.date | date: '%B %d, %Y' }} by {{ page.author }}.
+      </div>
+    </section>
+    <main>
+      <div class="wrapper block">
+        {{ content }}
+      </div>
+    </main>
+    {% include footer.html %}
+    {% if page.requirejs %}
+    <script>require(['page/{{ page.requirejs }}']);</script>
+    {% endif %}
+  </body>
+</html>

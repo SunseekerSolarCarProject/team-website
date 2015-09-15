@@ -5,28 +5,28 @@ title: Meet the Team
 intro: Sunseeker is made up of more than just engineering students, we have members from many academic disciplines. Below are the currently active members of the 2015-2016 Sunseeker Solar Car Project.
 ---
 <div class="wrapper">
-<div class="member-group">
-{% for member in site.data.members %}
-  {% capture mod2 %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
-  {% capture mod4 %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
+  <div class="member-group">
+    {% for member in site.data.members %}
+      {% capture mod2 %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
+      {% capture mod4 %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
 
-  {% if forloop.index0 != 0 %}
-    {% if mod2 == '0' %}
-      <div class="clear-all"></div></div>
-      {% if mod4 == '0' %}
-        <div class="clear-all"></div>
+      {% if forloop.index0 != 0 %}
+        {% if mod2 == '0' %}
+          <div class="clear-all"></div></div>
+          {% if mod4 == '0' %}
+            <div class="clear-all"></div>
+          {% endif %}
+          <div class="member-group">
+        {% endif %}
       {% endif %}
-      <div class="member-group">
-    {% endif %}
-  {% endif %}
 
-  <div class="member">
-    <img src="{{ '/images/team-members/1415/' | prepend: site.baseurl }}{{ member.picture }}">
-    <div class="info">
-      <strong>{{ member.name }} {% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank" class="linkedin">LinkedIn Profile</a>{% endif %}</strong>{% if member.position %}<br />{{ member.position }}{% endif %}{% if member.subteam %}<br />{{ member.subteam }}{% endif %}{% if member.department %}<br />{{ member.department }}{% endif %}
-    </div>
+      <div class="member">
+        <img src="{{ '/images/team-members/1415/' | prepend: site.baseurl }}{{ member.picture }}">
+        <div class="info">
+          <strong>{{ member.name }} {% if member.linkedin %}<a href="{{ member.linkedin }}" target="_blank" class="linkedin">LinkedIn Profile</a>{% endif %}</strong>{% if member.position %}<br />{{ member.position }}{% endif %}{% if member.subteam %}<br />{{ member.subteam }}{% endif %}{% if member.department %}<br />{{ member.department }}{% endif %}
+        </div>
+      </div>
+    {% endfor %}
   </div>
-{% endfor %}
-</div>
-<div class="clear-all"></div>
+  <div class="clear-all"></div>
 </div>

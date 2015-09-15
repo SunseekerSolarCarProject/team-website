@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body{% if page.pageid %} id="{{ page.pageid }}"{% endif %}>
+    {% include header.html %}
+    {% include title.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+    {% if page.requirejs %}
+    <script>require(['page/{{ page.requirejs }}']);</script>
+    {% endif %}
+  </body>
+</html>

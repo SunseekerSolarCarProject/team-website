@@ -8,3 +8,5 @@ include: [.htsecure, .htaccess]
 
 # Build settings
 markdown: kramdown
+
+permalink: /blog/:categories/:year/:month/:day/:title.html

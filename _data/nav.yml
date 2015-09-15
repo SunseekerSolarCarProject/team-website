@@ -17,3 +17,7 @@
 - name: sponsors
   label: Our Sponsors
   url: /sponsors
+
+- name: blog
+  label: Blog
+  url: /blog
