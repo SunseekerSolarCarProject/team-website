@@ -21,9 +21,12 @@ a {
     }
 }
 
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0 0 20px;
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
-    margin: 0 0 10px;
     padding: 0;
 }
 
@@ -33,22 +36,6 @@ h1 {
 
 h2 {
     font-size: 1.6em;
-}
-
-p {
-    margin: 0 0 10px;
-
-    &.lead {
-        font-size: 1.2em;
-    }
-}
-
-* > p:last-of-type {
-    margin: 0;
-}
-
-.wrapper.block {
-    padding: 10px;
 }
 
 header {
@@ -118,33 +105,51 @@ footer {
     background: transparent;
 }
 
+section.title,
+main {
+    padding: 10px 10px 0;
+
+    .wrapper {
+        padding: 0 0 10px;
+
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 section.title {
-    padding: 20px;
     border-bottom: 2px solid #E1E1E1;
 
     h1 {
-        margin-bottom: 0;
+        margin: 0;
     }
 
     p {
         font-size: 1.1em;
-        margin-top: 10px;
 
         a {
             color: #000;
         }
     }
+
+    .wrapper {
+        padding: 0 0 10px;
+    }
 }
 
 main {
     background: #FFF;
-    padding: 10px 0;
     
     blockquote,
     .message {
         background: #F1F1F1;
         font-style: italic;
         padding: 10px;
+
+        h2, h3 {
+            margin-top: 0;
+        }
     }
 
     .message--notice {
@@ -163,6 +168,7 @@ main {
 footer {
     border-top: 2px solid #E1E1E1;
     text-align: center;
+    padding: 10px;
 
     .social {
         @extend .list-standard;
@@ -250,19 +256,37 @@ footer {
     .wrapper {
         max-width: 1200px;
         margin: 0 auto;
-        
-        &.block {
-            padding: 20px;
+    }
+
+    section.title,
+    main {
+        padding: 20px 0 0;
+    
+        .wrapper {
+            padding: 0 0 20px;
         }
     }
     
+    main,
+    footer {
+        padding: 0;
+    }
+
     main {
-        padding: 20px 0;
-        
+        padding: 20px 0 0;
+
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0 0 20px;
+        }
+
         blockquote,
         .message {
             padding: 20px;
         }
+    }
+
+    footer {
+        padding: 20px 0;
     }
 }
 
@@ -318,8 +342,6 @@ footer {
     }
 
     footer {
-        padding: 0;
-
         .social {
             margin-bottom: 20px;
         }

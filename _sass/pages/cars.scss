@@ -9,7 +9,7 @@
             height: 200px;
             
             &.sixteen-car {
-                background-image: url("../images/cars/2015.png");
+                background-image: url("../images/cars/2016.png");
             }
             
             &.ten-car {
@@ -33,15 +33,15 @@
         margin-top: -10px;
         
         &.sixteen-car {
-            background-image: url('../images/about/2016-render.jpg');
+            background-image: url('../images/cars/banners/2016.jpg');
         }
         
         &.ten-car {
-            background-image: url('../images/about/crossing-the-line.jpg');
+            background-image: url('../images/cars/banners/2010.jpg');
         }
 
         &.five-car {
-            background-image: url('../images/about/five-car.jpg');
+            background-image: url('../images/cars/banners/2005.jpg');
         }
     }
 

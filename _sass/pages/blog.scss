@@ -1,15 +1,24 @@
 #blog {
     .posts {
         padding: 0;
+        margin: 0;
 
         li {
             list-style: none;
             margin-bottom: 20px;
 
+            &:last-of-type {
+                margin: 0;
+            }
+
             h3 {
                 font-weight: 100;
             }
         }
+    }
+
+    .posts__post__info h3 {
+        margin: 0 0 10px;
     }
 
     .posts__post__date {

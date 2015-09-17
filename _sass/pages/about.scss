@@ -12,6 +12,7 @@
         @extend .img;
         background-size: cover;
         height: 200px;
+        margin: 0 -10px 10px;
     
         &.history-block-picture {
             background-image: url('../images/about/1995-running-to-the-future.jpg');
@@ -28,14 +29,11 @@
     }
 
     @include media-query(tablet) {
-        main {
-            padding-top: 20px;
-        }
-        
         .section-nav {
             font-size: 1.1em;
             text-align: center;
             display: block;
+            padding: 20px 0;
             
             ul li {
                 display: inline;
@@ -49,7 +47,7 @@
         
         .picture {
             height: 500px;
-            margin: 20px 0px;
+            margin: 0 0 20px;
             
             &:first-of-type {
                 margin-top: 0;
