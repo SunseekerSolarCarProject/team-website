@@ -1,6 +1,6 @@
 - name: Cameron Knight
   position: Project Manager
-  subteam: Suspension/Chassis
+  subteam: "Chassis &amp; Suspension"
   picture: cameron_knight.jpg
 
 - name: Margaret Mooney
@@ -32,11 +32,11 @@
 
 - name: Quinten Bader
   picture: quinten_bader.jpg
-  subteam: Chassis
+  subteam: "Chassis &amp; Suspension"
 
 - name: Nick Byers
   picture: nick_byers.jpg
-  subteam: Suspension
+  subteam: "Chassis &amp; Suspension"
 
 - name: Kai Gray
   subteam: Cockpit
@@ -47,7 +47,7 @@
   subteam: Material Aquisition
 
 - name: Ross Hiller
-  subteam: Suspension
+  subteam: "Chassis &amp; Suspension"
   picture: ross_hiller.jpg
 
 - name: Dylan Kimball
@@ -68,9 +68,10 @@
 
 - name: Jordan Stoy
   picture: jordan_stoy.jpg
+  subteam: "Chassis &amp; Suspension"
 
 - name: Joel Thompson
-  subteam: Chassis
+  subteam: "Chassis &amp; Suspension"
   picture: joel_thompson.jpg
 
 - name: Benson Vande Streek
@@ -79,11 +80,10 @@
 
 - name: Katherine Vittini
   picture: katherine_vittini.jpg
-  subteam: Chassis
 
 - name: Blake Williamson
   picture: blake_williamson.jpg
-  subteam: Suspension
+  subteam: "Chassis &amp; Suspension"
 
 - name: Bo Ching Wong
   picture: bo_ching_wong.jpg
