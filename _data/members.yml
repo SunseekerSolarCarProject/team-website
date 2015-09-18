@@ -1,23 +1,19 @@
 - name: Cameron Knight
   position: Project Manager
-  subteam: "Chassis &amp; Suspension"
   picture: cameron_knight.jpg
 
 - name: Margaret Mooney
   position: Assistant Project Manager
   picture: margaret_mooney.jpg
-  subteam: Roll Cage
   linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
 
 - name: Gregory Bosma
   position: Mechanical Lead
   picture: gregory_bosma.jpg
-  subteam: Axle and Motor
 
 - name: Nathan Fisher
   position: Aero Lead
   picture: nathan_fisher.jpg
-  subteam: Aero Shell
 
 - name: Bryan Harris
   position: Business Lead
@@ -26,7 +22,6 @@
 
 - name: Alec Carpenter
   position: Webmaster
-  subteam: Cockpit
   picture: alec_carpenter.jpg
   linkedin: https://www.linkedin.com/in/aleccarpenter
 
@@ -76,7 +71,6 @@
 
 - name: Benson Vande Streek
   picture: benson_vandestreek.jpg
-  subteam: Brakes
 
 - name: Katherine Vittini
   picture: katherine_vittini.jpg
