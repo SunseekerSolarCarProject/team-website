@@ -30,7 +30,7 @@
         @extend .img;
         background-size: cover;
         height: 200px;
-        margin-top: -10px;
+        margin: -10px -10px 10px;
         
         &.sixteen-car {
             background-image: url('../images/cars/banners/2016.jpg');
