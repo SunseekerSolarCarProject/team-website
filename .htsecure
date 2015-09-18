@@ -1,7 +1,0 @@
-ErrorDocument 404 /not-found.html
-
-RewriteEngine on
-RewriteBase /
-RewriteCond %{HTTP_HOST} ^www.wmich.edu [NC]
-RewriteRule ^our-car[\/index\.html]*$ https://www.wmich.edu/sunseeker/our-cars/2010 [L,R=301]
-RewriteRule ^car[\/index\.html]*$ https://www.wmich.edu/sunseeker/our-cars/2010 [L,R=301]
