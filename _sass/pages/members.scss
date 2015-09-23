@@ -3,36 +3,46 @@
         padding: 0;
     }
 
-    .member-group {
+    .members__group {
         box-sizing: border-box;
         float: left;
         margin: 10px 0;
+    }
 
-        .member {
-            text-align: center;
-            float: left;
-            width: 50%;
-            padding: 0 10px;
-            box-sizing: border-box;
+    .members__member {
+        text-align: center;
+        float: left;
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
 
-            img {
-                max-width: 100%;
-                margin-bottom: 10px;
-            }
+        img {
+            max-width: 100%;
+            margin-bottom: 10px;
+        }
 
-            .linkedin {
-                @extend .img;
+        .linkedin {
+            @extend .img;
 
-                background-image: url('../images/social-icons/linkedin-small.png');
-                display: inline-block;
-                width: 32px;
-                height: 21px;
-            }
+            background-image: url('../images/social-icons/linkedin-small.png');
+            display: inline-block;
+            width: 32px;
+            height: 21px;
+        }
+    }
+
+    .member__data {
+        margin: 0;
+        padding:0;
+
+        li {
+            list-style: none;
+            padding: 0;
         }
     }
 
     @include media-query(tablet) {
-        .member-group {
+        .members__group {
             width: 50%;
             margin: 20px 0;
         }

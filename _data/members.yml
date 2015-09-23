@@ -1,87 +1,122 @@
+# The following lists the available fields.
+# Please order them the same for each member
+# as they appear below, for the sake of
+# consistency. They will appear in the same
+# order on the live rendered page.
+#
+#- name: First Last
+#  picture: first_name.img
+#  linkedin: public LinkedIn profile URL
+#  position: their title on the team
+#  company: an industry advisor's place of employment
+#  department: faculty/industry advisors "major"
+#  major: whatever their studying
+#  subteam: the group of people they primarily work with
+
 - name: Cameron Knight
-  position: Project Manager
   picture: cameron_knight.jpg
+  major: Mechanical Engineering
+  position: Project Manager
 
 - name: Margaret Mooney
-  position: Assistant Project Manager
   picture: margaret_mooney.jpg
   linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
+  major: Aerospace Engineering
+  position: Assistant Project Manager
 
 - name: Gregory Bosma
-  position: Mechanical Lead
   picture: gregory_bosma.jpg
+  major: Mechanical Engineering
+  position: Mechanical Lead
 
 - name: Nathan Fisher
-  position: Aero Lead
   picture: nathan_fisher.jpg
+  major: Aerospace Engineering
+  position: Aero Lead
 
 - name: Bryan Harris
-  position: Business Lead
   picture: bryan_harris.jpg
   linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
+  major: Mechanical Engineering
+  position: Business Lead
 
 - name: Alec Carpenter
-  position: Webmaster
   picture: alec_carpenter.jpg
   linkedin: https://www.linkedin.com/in/aleccarpenter
+  major: Computer Science
+  position: Webmaster
 
 - name: Quinten Bader
   picture: quinten_bader.jpg
+  major: Mechanical Engineering
   subteam: "Chassis &amp; Suspension"
 
 - name: Nick Byers
   picture: nick_byers.jpg
+  major: Mechanical Engineering
   subteam: "Chassis &amp; Suspension"
 
 - name: Kai Gray
-  subteam: Cockpit
   picture: kai_gray.jpg
+  major: Computer Science
+  subteam: Driver Compartment
 
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
-  subteam: Material Aquisition
+  major: Engineering Design Technology
 
 - name: Ross Hiller
-  subteam: "Chassis &amp; Suspension"
   picture: ross_hiller.jpg
+  major: Mechanical Engineering
+  subteam: "Chassis &amp; Suspension"
 
 - name: Dylan Kimball
-  subteam: Composites
   picture: dylan_kimball.jpg
+  major: Aeronautical Engineering
+  subteam: Composites
 
 - name: Denis KiMuhu
-  subteam: Aero Shell
   picture: denis_kimuhu.jpg
+  major: Aeronautical Engineering
+  subteam: Aero Shell
 
 - name: Vincent Kucway
-  subteam: Cockpit
   picture: vincent_kucway.jpg
+  major: Engineering Management
+  subteam: Driver Compartment
 
 - name: Ryan Shereda
   picture: ryan_shereda.jpg
+  major: Aerospace Engineering
   subteam: Aero Shell
 
 - name: Jordan Stoy
   picture: jordan_stoy.jpg
+  major: Mechanical Engineering
   subteam: "Chassis &amp; Suspension"
 
 - name: Joel Thompson
-  subteam: "Chassis &amp; Suspension"
   picture: joel_thompson.jpg
+  major: Mechanical Engineering
+  subteam: "Chassis &amp; Suspension"
 
 - name: Benson Vande Streek
   picture: benson_vandestreek.jpg
 
 - name: Katherine Vittini
   picture: katherine_vittini.jpg
+  major: Computer Science
 
 - name: Blake Williamson
   picture: blake_williamson.jpg
+  major: Mechanical Engineering
   subteam: "Chassis &amp; Suspension"
 
 - name: Bo Ching Wong
   picture: bo_ching_wong.jpg
   linkedin: https://www.linkedin.com/in/bochingwong
+  major: Mechanical Engineering
+  subteam: Aero Shell
 
 - name: Bradley Bazuin
   position: Faculty Advisior
@@ -89,12 +124,14 @@
   picture: bradley_bazuin.jpg
 
 - name: Robert Galman
-  position: Industry Advisor
-  department: Elecyr
   picture: robert_galman.jpg
   linkedin: https://www.linkedin.com/pub/robert-galman/b9/9a5/b0a
+  department: Electrical Engineering
+  position: Industry Advisor
+  company: Elecyr
 
 - name: Andrew Day
-  position: Industry Advisor
-  department: Toyota Boshoku America INC.
   picture: andrew_day.jpg
+  department: Mechanical Engineering
+  position: Industry Advisor
+  company: Toyota Boshoku America INC.
