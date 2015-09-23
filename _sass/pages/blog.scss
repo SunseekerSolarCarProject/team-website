@@ -40,9 +40,28 @@
         margin: -10px 0 10px;
     }
 
+    .image-list {
+        padding: 0;
+
+        li {
+            list-style: none;
+
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+
     @include media-query(tablet) {
         .blog__banner {
             height: 500px;
+        }
+
+        .image-list.image-list--three {
+            li {
+                display: inline-block;
+                width: 33%;
+            }
         }
     }
     
