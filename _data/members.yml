@@ -1,3 +1,9 @@
+# The following lists the available fields.
+# Please order them the same for each member
+# as they appear below, for the sake of
+# consistency. They will appear in the same
+# order on the live rendered page.
+#
 #- name: First Last
 #  picture: first_name.img
 #  linkedin: public LinkedIn profile URL
