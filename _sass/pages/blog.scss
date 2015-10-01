@@ -57,7 +57,8 @@
             height: 500px;
         }
 
-        .image-list.image-list--three {
+        .image-list.image-list--three,
+        .image-list.image-list--one {
             li {
                 display: inline-block;
                 width: 33%;
