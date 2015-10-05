@@ -30,6 +30,29 @@
         margin: 0 0 10px;
     }
 
+    .countdown {
+        margin: 0;
+        padding: 0;
+    }
+
+    .countdown__stat {
+        background: #E1E1E1;
+        list-style: none;
+        padding: 10px;
+        margin: 0 10px 10px 0;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    .countdown__stat__quantity {
+        font-family: courier;
+        font-weight: bold;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
     @include media-query(tablet) {
         .slideshow ul li {
             height: 450px;
@@ -42,6 +65,19 @@
 
             &:first-of-type {
                 margin: 0 20px 0 0;
+            }
+        }
+
+        .countdown {
+            float: right;
+        }
+
+        .countdown__stat {
+            display: inline;
+            margin-right: 10px;
+
+            &:last-of-type {
+                margin: 0;
             }
         }
     }
