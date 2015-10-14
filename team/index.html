@@ -21,7 +21,7 @@ intro: The following individuals make up the 2015-16 Sunseeker Solar Car Project
       {% endif %}
 
       <div class="members__member">
-        <img src="{{ '/images/team-members/1415/' | prepend: site.baseurl }}{{ member.picture }}">
+        <img src="{{ '/images/team-members/1415/' | prepend: site.baseurl }}{% if member.picture %}{{ member.picture }}{% else %}../no-picture.png{% endif %}">
         <strong>
           {{ member.name }}
           {% if member.linkedin %}

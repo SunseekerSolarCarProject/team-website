@@ -9,114 +9,218 @@
 #  linkedin: public LinkedIn profile URL
 #  position: their title on the team
 #  company: an industry advisor's place of employment
-#  department: faculty/industry advisors "major"
-#  major: whatever their studying
+#  department: faculty/industry advisor "major"
 #  subteam: the group of people they primarily work with
 
 - name: Cameron Knight
   picture: cameron_knight.jpg
-  major: Mechanical Engineering
   position: Project Manager
 
 - name: Margaret Mooney
   picture: margaret_mooney.jpg
   linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
-  major: Aerospace Engineering
   position: Assistant Project Manager
 
 - name: Gregory Bosma
   picture: gregory_bosma.jpg
   linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
-  major: Mechanical Engineering
   position: Mechanical Lead
+
+- name: Krystal York
+  position: Electrical Lead
 
 - name: Nathan Fisher
   picture: nathan_fisher.jpg
-  major: Aerospace Engineering
   position: Aero Lead
 
 - name: Bryan Harris
   picture: bryan_harris.jpg
   linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
-  major: Mechanical Engineering
   position: Business Lead
 
 - name: Alec Carpenter
   picture: alec_carpenter.jpg
   linkedin: https://www.linkedin.com/in/aleccarpenter
-  major: Computer Science
   position: Webmaster
+
+- name: Andreas Argoudelis
+  subteam: Mechanical
 
 - name: Quinten Bader
   picture: quinten_bader.jpg
-  major: Mechanical Engineering
-  subteam: "Chassis &amp; Suspension"
+  subteam: Mechanical
+
+- name: Andrew Borkowski
+  subteam: Electrical
+
+- name: Molly Bowers
+  subteam: Mechanical
+
+- name: Derek Braun
+  subteam: Mechanical
+
+- name: Alex Brunk
+  subteam: Aero
+
+- name: Cory Buchholz
+  subteam: Aero
+
+- name: Noah Buscher
+  subteam: Mechanical
 
 - name: Nick Byers
   picture: nick_byers.jpg
-  major: "Aerospace &amp; Mechanical Engineering"
-  subteam: "Chassis &amp; Suspension"
+  subteam: Mechanical
+
+- name: Karl Calkins
+  subteam: Aero
+
+- name: Hayley Carter
+  subteam: Aero
+
+- name: Colin Ceisel
+  subteam: Mechanical
+
+- name: Joshua Clemens
+  subteam: Electrical
+
+- name: Justin Diep
+  subteam: Electrical
+
+- name: Hecter Gembe
+  subteam: Aero
+
+- name: Chris Gilbert
+  subteam: Electrical
 
 - name: Kai Gray
   picture: kai_gray.jpg
-  major: Computer Science
-  subteam: Driver Compartment
+  subteam: Electrical/CS
+
+- name: Daniel Gron
+  subteam: Aero
 
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
-  major: Engineering Design Technology
   subteam: Material Acquisition
+
+- name: Colin Haynes
+  subteam: Aero
 
 - name: Ross Hiller
   picture: ross_hiller.jpg
-  major: Mechanical Engineering
-  subteam: "Chassis &amp; Suspension"
+  subteam: Mechanical
+
+- name: Michael Hinz
+  subteam: Mechanical
+
+- name: Brandon Joseph
+  subteam: Mechanical
+
+- name: Greg Kaiser
+  subteam: Mechanical
+
+- name: Jonathan Kellogg
+  subteam: Electrical
+
+- name: Austin Key
+  subteam: Aero
 
 - name: Dylan Kimball
   picture: dylan_kimball.jpg
-  major: Aeronautical Engineering
   subteam: Composites
 
 - name: Denis KiMuhu
   picture: denis_kimuhu.jpg
-  major: Aeronautical Engineering
-  subteam: Aero Shell
+  subteam: Aero
 
 - name: Vincent Kucway
   picture: vincent_kucway.jpg
   linkedin: https://www.linkedin.com/in/vincentkucway
-  major: Engineering Management
-  subteam: Driver Compartment
+
+- name: Nathan LaWarre
+  subteam: Electrical
+
+- name: Daniel Michael
+  subteam: Electrical
+
+- name: Christopher Moore
+  subteam: Mechanical
+
+- name: Patrick Murphy
+  subteam: Aero
+
+- name: Hamid Mehmood Pasha
+  subteam: Electrical
+
+- name: Nicholas Patzer
+  subteam: Mechanical
+
+- name: Logan Powers
+  subteam: Aero
+
+- name: Lian Peng
+  subteam: Mechanical
+
+- name: Amanda Perion
+  subteam: Electrical
+
+- name: Louis Piccione
+  subteam: Mechanical
+
+- name: Mac Preston
+  subteam: Electrical
+
+- name: Patrick Pottorff
+  subteam: Electrical
+
+- name: Sarah Rolniak
+  subteam: Aero
+
+- name: Michael Sanfilippo
+  subteam: Mechanical
+
+- name: Nathan Schick
+  subteam: Mechanical
+
+- name: Keyurpareshkum Shah
+  subteam: Mechanical
 
 - name: Ryan Shereda
   picture: ryan_shereda.jpg
-  major: Aerospace Engineering
-  subteam: Aero Shell
+  subteam: Aero
+
+- name: Vance Smith
+  subteam: Aero
 
 - name: Jordan Stoy
   picture: jordan_stoy.jpg
-  major: Mechanical Engineering
-  subteam: "Chassis &amp; Suspension"
+  subteam: Mechanical
 
 - name: Joel Thompson
   picture: joel_thompson.jpg
-  major: Mechanical Engineering
-  subteam: "Chassis &amp; Suspension"
+  subteam: Mechanical
 
-- name: Katherine Vittini
-  picture: katherine_vittini.jpg
-  major: Computer Science
+- name: Cameron Tschupp
+  subteam: Mechanical
+
+- name: Steffan Werth
+  subteam: Mechanical
+
+- name: Matthew Williams
+  subteam: Aero
 
 - name: Blake Williamson
   picture: blake_williamson.jpg
-  major: Mechanical Engineering
-  subteam: "Chassis &amp; Suspension"
+  subteam: Mechanical
 
 - name: Bo Ching Wong
   picture: bo_ching_wong.jpg
   linkedin: https://www.linkedin.com/in/bochingwong
-  major: Mechanical Engineering
-  subteam: Aero Shell
+  subteam: Aero
+
+- name: Dana Wyckoff
+  subteam: Aero
 
 - name: Bradley Bazuin
   position: Faculty Advisior
