@@ -32,7 +32,7 @@ $standard-padding: 10px;
         @media (min-width: 1500px) { @content; }
     }
     @else {
-        @media (min-width: 992px) { @content; }
+        @media (min-width: $wrapper-width) { @content; }
     }
 }
 

@@ -65,6 +65,11 @@
             margin: 0 0 $standard-margin * 2;
         }
 
+        .intro {
+            text-align: left;
+            margin: 0 auto;
+        }
+
         .countdown {
             margin: $standard-margin * 2 0 0;
         }
@@ -79,9 +84,8 @@
             }
         }
 
-        .intro {
-            text-align: left;
-            margin: 0 auto;
+        .general-info .box:first-of-type {
+            margin: 0 0 $standard-margin * 2;
         }
     }
 
@@ -105,11 +109,10 @@
         }
 
         .general-info .box {
-            width: $wrapper-width / 2;
+            width: ($wrapper-width / 2) - $standard-margin;
             float: left;
 
             &:first-of-type {
-                width: ($wrapper-width / 2) - 20px;
                 margin: 0 $standard-margin * 2 0 0;
             }
         }

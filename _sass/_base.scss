@@ -256,7 +256,8 @@ footer {
 
 @include media-query(tablet) {
     .wrapper {
-        max-width: $wrapper-width;
+        width: $wrapper-width;
+        max-width: 95%;
         margin: 0 auto;
     }
 
@@ -319,6 +320,12 @@ footer {
 }
 
 @include media-query(desktop) {
+    .wrapper {
+        width: $wrapper-width;
+        max-width: $wrapper-width;
+        margin: 0 auto;
+    }
+
     header {
         padding: 10px 20px;
         
