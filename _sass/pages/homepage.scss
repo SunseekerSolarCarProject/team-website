@@ -65,13 +65,17 @@
             margin: 0 0 $standard-margin * 2;
         }
 
-        .general-info .box {
-            width: $wrapper-width / 2;
-            float: left;
+        .countdown {
+            margin: $standard-margin * 2 0 0;
+        }
 
-            &:first-of-type {
-                width: ($wrapper-width / 2) - 20px;
-                margin: 0 $standard-margin * 2 0 0;
+        .countdown__stat {
+            display: inline-block;
+            margin-right: $standard-margin;
+            width: 15%;
+
+            &:last-of-type {
+                margin: 0;
             }
         }
 
@@ -79,9 +83,16 @@
             text-align: left;
             margin: 0 auto;
         }
+    }
+
+    @include media-query(desktop) {
+        .slideshow ul li {
+            height: 550px;
+        }
 
         .countdown {
             float: right;
+            margin: 0;
         }
 
         .countdown__stat {
@@ -92,11 +103,15 @@
                 margin: 0;
             }
         }
-    }
 
-    @include media-query(desktop) {
-        .slideshow ul li {
-            height: 550px;
+        .general-info .box {
+            width: $wrapper-width / 2;
+            float: left;
+
+            &:first-of-type {
+                width: ($wrapper-width / 2) - 20px;
+                margin: 0 $standard-margin * 2 0 0;
+            }
         }
     }
 

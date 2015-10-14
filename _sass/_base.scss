@@ -108,11 +108,12 @@ footer {
 }
 
 section.title,
-main {
-    padding: 10px 10px 0;
+main,
+footer {
+    padding: $standard-padding $standard-padding 0;
 
     .wrapper {
-        padding: 0 0 10px;
+        padding: 0 0 $standard-padding;
 
         *:last-child {
             margin-bottom: 0;
@@ -170,7 +171,6 @@ main {
 footer {
     border-top: 2px solid #E1E1E1;
     text-align: center;
-    padding: 10px;
 
     .social {
         @extend .list-standard;
@@ -261,24 +261,22 @@ footer {
     }
 
     section.title,
-    main {
-        padding: 20px 0 0;
-    
-        .wrapper {
-            padding: 0 0 20px;
-        }
-    }
-    
     main,
     footer {
-        padding: 0;
+        padding: $standard-padding * 2 0 0;
+    }
+
+    section.title,
+    main,
+    footer {
+        .wrapper {
+            padding: 0 $standard-margin * 2 $standard-margin * 2;
+        }
     }
 
     main {
-        padding: 20px 0 0;
-
         h1, h2, h3, h4, h5, h6, p {
-            margin: 0 0 20px;
+            margin: 0 0 $standard-margin * 2;
 
             &.inline {
                 display: inline-block;
@@ -293,7 +291,30 @@ footer {
     }
 
     footer {
-        padding: 20px 0;
+        .other-links {
+            h3 {
+                display: none;
+            }
+
+            ul {
+                li {
+                    background: transparent;
+                    list-style: none;
+                    display: inline;
+                    border-bottom: 0;
+                    border-right: 2px solid #CCC;
+                    padding: 0 10px;
+
+                    a {
+                        display: inline;
+                    }
+
+                    &:last-of-type {
+                        border-right: none;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -348,34 +369,17 @@ footer {
         }
     }
 
+    section.title,
+    main,
+    footer {
+        .wrapper {
+            padding: 0 0 $standard-margin * 2;
+        }
+    }
+
     footer {
         .social {
             margin-bottom: 20px;
-        }
-
-        .other-links {
-            h3 {
-                display: none;
-            }
-
-            ul {
-                li {
-                    background: transparent;
-                    list-style: none;
-                    display: inline;
-                    border-bottom: 0;
-                    border-right: 2px solid #CCC;
-                    padding: 0 10px;
-
-                    a {
-                        display: inline;
-                    }
-
-                    &:last-of-type {
-                        border-right: none;
-                    }
-                }
-            }
         }
     }
 }

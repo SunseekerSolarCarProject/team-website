@@ -41,7 +41,7 @@
         }
     }
 
-    @include media-query(tablet) {
+    @include media-query(desktop) {
         .members__group {
             width: 50%;
             margin: 20px 0;
