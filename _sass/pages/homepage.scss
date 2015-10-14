@@ -7,7 +7,7 @@
         @extend .img;
         background-size: cover;
         height: 200px;
-        margin: 0 -10px 10px;
+        margin: 0 -1 * $standard-margin $standard-margin;
 
         &:nth-child(1) {
             background-image: url('../images/slideshows/homepage/in-front-of-turn-one.jpg');
@@ -26,11 +26,17 @@
         }
     }
 
+    .intro {
+        text-align: center;
+        margin: $standard-margin * 2 0;
+    }
+
     .general-info .box:first-of-type {
-        margin: 0 0 10px;
+        margin: 0 0 $standard-margin;
     }
 
     .countdown {
+        text-align: center;
         margin: 0;
         padding: 0;
     }
@@ -38,8 +44,8 @@
     .countdown__stat {
         background: #E1E1E1;
         list-style: none;
-        padding: 10px;
-        margin: 0 10px 10px 0;
+        padding: $standard-padding;
+        margin: 0 $standard-margin $standard-margin 0;
 
         &:last-of-type {
             margin-bottom: 0;
@@ -56,16 +62,22 @@
     @include media-query(tablet) {
         .slideshow ul li {
             height: 450px;
-            margin: 0 0 20px;
+            margin: 0 0 $standard-margin * 2;
         }
 
         .general-info .box {
-            width: 48%;
+            width: $wrapper-width / 2;
             float: left;
 
             &:first-of-type {
-                margin: 0 20px 0 0;
+                width: ($wrapper-width / 2) - 20px;
+                margin: 0 $standard-margin * 2 0 0;
             }
+        }
+
+        .intro {
+            text-align: left;
+            margin: 0 auto;
         }
 
         .countdown {
@@ -74,7 +86,7 @@
 
         .countdown__stat {
             display: inline;
-            margin-right: 10px;
+            margin-right: $standard-margin;
 
             &:last-of-type {
                 margin: 0;

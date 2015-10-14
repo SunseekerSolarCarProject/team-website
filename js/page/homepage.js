@@ -1,4 +1,4 @@
-require(['jquery', 'slideshow', 'konami'], function($) {
+require(['jquery', 'slideshow', 'konami', 'countdown'], function($) {
     var bigSlide, konamiGoing;
 
     bigSlide    = $('.slideshow').slideshow();
@@ -61,4 +61,6 @@ require(['jquery', 'slideshow', 'konami'], function($) {
             c.append(v);
         }
     });
+
+    $('#asc-2016-countdown').countdown(new Date('July 22, 2016 08:00:00'));
 });

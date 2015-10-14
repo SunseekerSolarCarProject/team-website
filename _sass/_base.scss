@@ -8,13 +8,15 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
+    font-weight: 100;
+    color: $base-font-color;
     position: relative;
     padding: 0;
     margin: 0;
 }
 
 a {
-    color: darken($bronco-gold, 30%);
+    color: darken($bronco-gold, 40%);
 
     &:hover {
         text-decoration: none;
@@ -26,7 +28,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
+    font-weight: 200;
     padding: 0;
 }
 
@@ -254,7 +256,7 @@ footer {
 
 @include media-query(tablet) {
     .wrapper {
-        max-width: 1200px;
+        max-width: $wrapper-width;
         margin: 0 auto;
     }
 

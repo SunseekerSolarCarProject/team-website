@@ -5,7 +5,18 @@
     
     .section-nav {
         @extend .list-standard;
-        display: none;
+        
+        text-align: center;
+        padding: $standard-padding * 2 0;
+
+        ul li {
+            display: inline;
+            margin-right: $standard-margin;
+            
+            a {
+                color: #333;
+            }
+        }
     }
     
     .picture {
@@ -33,15 +44,10 @@
             font-size: 1.1em;
             text-align: center;
             display: block;
-            padding: 20px 0;
-            
+            padding: $standard-padding * 4 0;
+
             ul li {
-                display: inline;
-                margin: 0 20px;
-                
-                a {
-                    color: #333;
-                }
+                margin-right: $standard-margin * 2;
             }
         }
         
