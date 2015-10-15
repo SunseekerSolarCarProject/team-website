@@ -50,6 +50,9 @@
   picture: quinten_bader.jpg
   subteam: Mechanical
 
+- name: Devin Birchfield
+  subteam: Electrical
+
 - name: Andrew Borkowski
   subteam: Electrical
 
@@ -95,7 +98,7 @@
 
 - name: Kai Gray
   picture: kai_gray.jpg
-  subteam: Electrical/CS
+  subteam: Software Development
 
 - name: Daniel Gron
   subteam: Aero
