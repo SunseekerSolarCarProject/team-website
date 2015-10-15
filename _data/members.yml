@@ -15,6 +15,7 @@
 - name: Cameron Knight
   picture: cameron_knight.jpg
   position: Project Manager
+  konami: cameron_knight.png
 
 - name: Margaret Mooney
   picture: margaret_mooney.jpg
@@ -25,6 +26,7 @@
   picture: gregory_bosma.jpg
   linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
   position: Mechanical Lead
+  konami: greg_bosma.png
 
 - name: Krystal York
   position: Electrical Lead
@@ -140,6 +142,7 @@
 - name: Vincent Kucway
   picture: vincent_kucway.jpg
   linkedin: https://www.linkedin.com/in/vincentkucway
+  konami: vince_kucway.png
 
 - name: Nathan LaWarre
   subteam: Electrical
@@ -203,6 +206,7 @@
 - name: Joel Thompson
   picture: joel_thompson.jpg
   subteam: Mechanical
+  konami: joel_thompson.png
 
 - name: Cameron Tschupp
   subteam: Mechanical
@@ -216,6 +220,7 @@
 - name: Blake Williamson
   picture: blake_williamson.jpg
   subteam: Mechanical
+  konami: blake_williamson.png
 
 - name: Bo Ching Wong
   picture: bo_ching_wong.jpg
