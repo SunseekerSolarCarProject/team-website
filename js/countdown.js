@@ -1,9 +1,9 @@
 var secondsInA = {
-    month:  2592000,
-    day:    86400,
-    hour:   3600,
-    minute: 60,
-    second: 1
+    month:  2592000000,
+    day:    86400000,
+    hour:   3600000,
+    minute: 60000,
+    second: 1000
 };
 
 (function ($) {
@@ -11,7 +11,7 @@ var secondsInA = {
         var $this  = $(this),
             $parts = {},
             now    = new Date(),
-            diff   = (then.getTime() - now.getTime()) / 1000,
+            diff   = then.getTime() - now.getTime(),
             methods;
 
         methods = {

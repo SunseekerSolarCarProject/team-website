@@ -21,6 +21,7 @@
   picture: margaret_mooney.jpg
   linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
   position: Assistant Project Manager
+  konami: margaret_mooney.png
 
 - name: Gregory Bosma
   picture: gregory_bosma.jpg
@@ -30,6 +31,7 @@
 
 - name: Krystal York
   position: Electrical Lead
+  konami: krystal_york.png
 
 - name: Nathan Fisher
   picture: nathan_fisher.jpg
@@ -45,6 +47,7 @@
   picture: alec_carpenter.jpg
   linkedin: https://www.linkedin.com/in/aleccarpenter
   position: Webmaster
+  konami: alec_carpenter.png
 
 - name: Andreas Argoudelis
   subteam: Mechanical
@@ -102,6 +105,7 @@
 - name: Kai Gray
   picture: kai_gray.jpg
   subteam: Software Development
+  konami: kai_gray.png
 
 - name: Daniel Gron
   subteam: Aero
@@ -109,6 +113,7 @@
 - name: Joseph Hagye
   picture: joseph_hagye.jpg
   subteam: Material Acquisition
+  konami: joseph_hagye.png
 
 - name: Colin Haynes
   subteam: Aero
