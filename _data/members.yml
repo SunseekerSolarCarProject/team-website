@@ -70,6 +70,7 @@
 
 - name: Alex Brunk
   subteam: Aero
+  konami: alex_brunk.png
 
 - name: Cory Buchholz
   subteam: Aero
@@ -122,6 +123,7 @@
 - name: Ross Hiller
   picture: ross_hiller.jpg
   subteam: Mechanical
+  konami: ross_hiller.png
 
 - name: Michael Hinz
   subteam: Mechanical
@@ -171,7 +173,7 @@
 - name: Nicholas Patzer
   subteam: Mechanical
 
-- name: Logan Powers
+- name: Logan Fichtner Powers
   subteam: Aero
 
 - name: Lian Peng
@@ -191,6 +193,7 @@
 
 - name: Sarah Rolniak
   subteam: Aero
+  konami: sarah_rolniak.png
 
 - name: Michael Sanfilippo
   subteam: Mechanical
