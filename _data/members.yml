@@ -13,62 +13,70 @@
 #  subteam: the group of people they primarily work with
 
 - name: Cameron Knight
-  picture: cameron_knight.jpg
+  picture: cameron_knight.png
   position: Project Manager
   konami: cameron_knight.png
 
 - name: Margaret Mooney
-  picture: margaret_mooney.jpg
+  picture: margaret_mooney.png
   linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
   position: Assistant Project Manager
   konami: margaret_mooney.png
 
 - name: Gregory Bosma
-  picture: gregory_bosma.jpg
+  picture: gregory_bosma.png
   linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
   position: Mechanical Lead
   konami: greg_bosma.png
 
 - name: Krystal York
+  picture: krystal_york.png
+  linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
   position: Electrical Lead
   konami: krystal_york.png
 
 - name: Nathan Fisher
-  picture: nathan_fisher.jpg
+  picture: nathan_fisher.png
   position: Aero Lead
 
 - name: Bryan Harris
-  picture: bryan_harris.jpg
+  picture: bryan_harris.png
   linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
   position: Business Lead
   konami: bryan_harris.png
 
 - name: Alec Carpenter
-  picture: alec_carpenter.jpg
+  picture: alec_carpenter.png
   linkedin: https://www.linkedin.com/in/aleccarpenter
   position: Webmaster
   konami: alec_carpenter.png
 
 - name: Andreas Argoudelis
+  picture: andreas_argoudelis.png
   subteam: Mechanical
 
 - name: Quinten Bader
-  picture: quinten_bader.jpg
+  picture: quinten_bader.png
   subteam: Mechanical
 
 - name: Devin Birchfield
+  picture: devin_birchfield.png
   subteam: Electrical
 
 - name: Andrew Borkowski
+  picture: andrew_borkowski.png
   subteam: Electrical
 
 - name: Molly Bowers
+  picture: molly_bowers.png
   subteam: Mechanical
 
 - name: Derek Braun
+  picture: derek_braun.png
   subteam: Mechanical
 
 - name: Alex Brunk
+  picture: alex_brunk.png
   linkedin: https://www.linkedin.com/pub/alex-brunk/108/163/941
   subteam: Aero
   konami: alex_brunk.png
@@ -77,22 +85,27 @@
   subteam: Aero
 
 - name: Noah Buscher
+  picture: noah_busher.png
   subteam: Mechanical
 
 - name: Nick Byers
-  picture: nick_byers.jpg
+  picture: nick_byers.png
   subteam: Mechanical
 
 - name: Karl Calkins
+  picture: karl_calkins.png
   subteam: Aero
 
 - name: Hayley Carter
+  picture: hayley_carter.png
   subteam: Aero
 
 - name: Colin Ceisel
+  picture: colin_ceisel.png
   subteam: Mechanical
 
 - name: Joshua Clemens
+  picture: joshua_clemens.png
   subteam: Electrical
   konami: josh_clemens.png
 
@@ -100,29 +113,33 @@
   subteam: Electrical
 
 - name: Hector Gembe
+  picture: hector_gembe.png
   subteam: Aero
 
 - name: Chris Gilbert
+  picture: chris_gilbert.png
   subteam: Electrical
 
 - name: Kai Gray
-  picture: kai_gray.jpg
+  picture: kai_gray.png
   subteam: Software Development
   konami: kai_gray.png
 
 - name: Daniel Gron
+  picture: daniel_gron.png
   subteam: Aero
 
 - name: Joseph Hagye
-  picture: joseph_hagye.jpg
+  picture: joseph_hagye.png
   subteam: Material Acquisition
   konami: joseph_hagye.png
 
 - name: Colin Haynes
+  picture: colin_haynes.png
   subteam: Aero
 
 - name: Ross Hiller
-  picture: ross_hiller.jpg
+  picture: ross_hiller.png
   subteam: Mechanical
   konami: ross_hiller.png
 
@@ -130,49 +147,56 @@
   subteam: Mechanical
 
 - name: Brandon Joseph
+  picture: brandon_joseph.png
   subteam: Mechanical
 
 - name: Greg Kaiser
   subteam: Mechanical
 
 - name: Jonathan Kellogg
+  picture: jonathan_kellogg.png
   subteam: Electrical
 
 - name: Austin Key
+  picture: austin_key.png
   subteam: Aero
 
 - name: Dylan Kimball
-  picture: dylan_kimball.jpg
+  picture: dylan_kimball.png
   subteam: Composites
   konami: dylan_kimball.png
 
 - name: Denis KiMuhu
-  picture: denis_kimuhu.jpg
+  picture: denis_kimuhu.png
   subteam: Aero
   konami: denis_kimuhu.png
 
 - name: Vincent Kucway
-  picture: vincent_kucway.jpg
+  picture: vincent_kucway.png
   subteam: Spokesman
   linkedin: https://www.linkedin.com/in/vincentkucway
   konami: vince_kucway.png
 
 - name: Nathan LaWarre
+  picture: nathan_lawarre.png
   subteam: Electrical
 
 - name: Daniel Michael
+  picture: daniel_michael.png
   subteam: Electrical
 
 - name: Christopher Moore
   subteam: Mechanical
 
 - name: Patrick Murphy
+  picture: patrick_murphy.png
   subteam: Aero
 
 - name: Hamid Mehmood Pasha
   subteam: Electrical
 
 - name: Nicholas Patzer
+  picture: nicholas_patzer.png
   subteam: Mechanical
 
 - name: Logan Fichtner Powers
@@ -182,12 +206,15 @@
   subteam: Mechanical
 
 - name: Amanda Perion
+  picture: amanda_perion.png
   subteam: Electrical
 
 - name: Louis Piccione
+  picture: louis_piccione.png
   subteam: Mechanical
 
 - name: Mac Preston
+  picture: mac_preston.png
   subteam: Electrical
 
 - name: Patrick Pottorff
@@ -202,38 +229,42 @@
   subteam: Mechanical
 
 - name: Nathan Schick
+  picture: nathan_schick.png
   subteam: Mechanical
 
 - name: Keyurpareshkum Shah
   subteam: Mechanical
 
 - name: Ryan Shereda
-  picture: ryan_shereda.jpg
+  picture: ryan_shereda.png
   subteam: Aero
 
 - name: Vance Smith
+  picture: vance_smith.png
   subteam: Aero
 
 - name: Jordan Stoy
-  picture: jordan_stoy.jpg
+  picture: jordan_stoy.png
   subteam: Mechanical
 
 - name: Joel Thompson
-  picture: joel_thompson.jpg
+  picture: joel_thompson.png
   subteam: Mechanical
   konami: joel_thompson.png
 
 - name: Cameron Tschupp
+  picture: cameron_tschupp.png
   subteam: Mechanical
 
 - name: Steffan Werth
+  picture: steffan_werth.png
   subteam: Mechanical
 
 - name: Matthew Williams
   subteam: Aero
 
 - name: Blake Williamson
-  picture: blake_williamson.jpg
+  picture: blake_williamson.png
   subteam: Mechanical
   konami: blake_williamson.png
 
