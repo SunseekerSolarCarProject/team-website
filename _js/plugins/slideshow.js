@@ -1,3 +1,5 @@
+var jQuery = require('../lib/jquery/dist/jquery');
+
 (function($) {
     var $show, slides, current, next, stop, config, methods, transitions;
 

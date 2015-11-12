@@ -1,3 +1,5 @@
+var jQuery = require('../lib/jquery/dist/jquery');
+
 /*
  * Konami Code For jQuery Plugin
  * 1.3.0, 7 March 2014

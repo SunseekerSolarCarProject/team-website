@@ -3,6 +3,7 @@
 .jekyll-metadata
 
 sunseeker.*
+Gemfile.lock
 
 /_site
 /_js/lib/*/

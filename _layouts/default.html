@@ -8,8 +8,5 @@
       {{ content }}
     </main>
     {% include footer.html %}
-    {% if page.requirejs %}
-    <script>require(['page/{{ page.requirejs }}']);</script>
-    {% endif %}
   </body>
 </html>
