@@ -81,9 +81,6 @@
   subteam: Aero
   konami: alex_brunk.png
 
-- name: Cory Buchholz
-  subteam: Aero
-
 - name: Noah Buscher
   picture: noah_busher.png
   subteam: Mechanical
@@ -108,9 +105,6 @@
   picture: joshua_clemens.png
   subteam: Electrical
   konami: josh_clemens.png
-
-- name: Justin Diep
-  subteam: Electrical
 
 - name: Hector Gembe
   picture: hector_gembe.png
@@ -144,14 +138,12 @@
   subteam: Mechanical
   konami: ross_hiller.png
 
-- name: Michael Hinz
-  subteam: Mechanical
-
 - name: Brandon Joseph
   picture: brandon_joseph.png
   subteam: Mechanical
 
 - name: Greg Kaiser
+  picture: greg_kaiser.png
   subteam: Mechanical
 
 - name: Jonathan Kellogg
@@ -186,24 +178,12 @@
   picture: daniel_michael.png
   subteam: Electrical
 
-- name: Christopher Moore
-  subteam: Mechanical
-
 - name: Patrick Murphy
   picture: patrick_murphy.png
   subteam: Aero
 
-- name: Hamid Mehmood Pasha
-  subteam: Electrical
-
 - name: Nicholas Patzer
   picture: nicholas_patzer.png
-  subteam: Mechanical
-
-- name: Logan Fichtner Powers
-  subteam: Aero
-
-- name: Lian Peng
   subteam: Mechanical
 
 - name: Amanda Perion
@@ -218,23 +198,14 @@
   picture: mac_preston.png
   subteam: Electrical
 
-- name: Patrick Pottorff
-  subteam: Electrical
-
 - name: Sarah Rolniak
   picture: sarah_rolniak.png
   subteam: Aero
   position: Harbor Freight Liaison
   konami: sarah_rolniak.png
 
-- name: Michael Sanfilippo
-  subteam: Mechanical
-
 - name: Nathan Schick
   picture: nathan_schick.png
-  subteam: Mechanical
-
-- name: Keyurpareshkum Shah
   subteam: Mechanical
 
 - name: Ryan Shereda
@@ -263,6 +234,7 @@
   subteam: Mechanical
 
 - name: Matthew Williams
+  picture: matthew_williams.png
   subteam: Aero
 
 - name: Blake Williamson
