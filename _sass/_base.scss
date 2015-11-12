@@ -150,9 +150,17 @@ main {
         font-style: italic;
         padding: 10px;
 
-        h2, h3 {
+        h3 {
             margin-top: 0;
         }
+
+        h3 {
+            font-weight: 400;
+        }
+    }
+
+    .side-by-side-boxes .box:first-of-type {
+        margin: 0 0 $standard-margin;
     }
 
     .message--notice {
@@ -289,6 +297,10 @@ footer {
         .message {
             padding: 20px;
         }
+
+        .side-by-side-boxes .box:first-of-type {
+            margin: 0 0 $standard-margin * 2;
+        }
     }
 
     footer {
@@ -381,6 +393,15 @@ footer {
     footer {
         .wrapper {
             padding: 0 0 $standard-margin * 2;
+        }
+    }
+
+    main .side-by-side-boxes .box {
+        width: ($wrapper-width / 2) - $standard-margin;
+        float: left;
+
+        &:first-of-type {
+            margin: 0 $standard-margin * 2 0 0;
         }
     }
 

@@ -31,18 +31,15 @@
         margin: $standard-margin * 2 0;
     }
 
-    .general-info .box:first-of-type {
-        margin: 0 0 $standard-margin;
-    }
-
     .countdown {
         text-align: center;
         margin: 0;
         padding: 0;
     }
 
-    .countdown__stat {
+    .countdown__part {
         background: #E1E1E1;
+        text-transform: capitalize;
         list-style: none;
         padding: $standard-padding;
         margin: 0 $standard-margin $standard-margin 0;
@@ -52,7 +49,7 @@
         }
     }
 
-    .countdown__stat__quantity {
+    .countdown__part__value {
         font-family: courier;
         font-weight: bold;
         display: inline-block;
@@ -70,11 +67,11 @@
             margin: 0 auto;
         }
 
-        .countdown {
+        .countdown__container {
             margin: $standard-margin * 2 0 0;
         }
 
-        .countdown__stat {
+        .countdown__part {
             display: inline-block;
             margin-right: $standard-margin;
             width: 15%;
@@ -82,10 +79,6 @@
             &:last-of-type {
                 margin: 0;
             }
-        }
-
-        .general-info .box:first-of-type {
-            margin: 0 0 $standard-margin * 2;
         }
     }
 
@@ -99,21 +92,17 @@
             margin: 0;
         }
 
-        .countdown__stat {
+        .countdown__container {
+            margin: 3px 0 0 0;
+            padding: 0;
+        }
+
+        .countdown__part {
             display: inline;
             margin-right: $standard-margin;
 
             &:last-of-type {
                 margin: 0;
-            }
-        }
-
-        .general-info .box {
-            width: ($wrapper-width / 2) - $standard-margin;
-            float: left;
-
-            &:first-of-type {
-                margin: 0 $standard-margin * 2 0 0;
             }
         }
     }
