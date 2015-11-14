@@ -1,4 +1,4 @@
-var jQuery = require('../lib/jquery/dist/jquery');
+var jQuery = require('jquery');
 
 var numMilliseconds, parts;
 

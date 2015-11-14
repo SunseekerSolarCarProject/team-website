@@ -9,8 +9,9 @@ var config;
 /* Configuration */
 config = {
 	js: {
-		src:  '_js/',
-		dest: 'js/'
+		src:  './_js/',
+		dest: './js/',
+		lib:  './_js/lib/'
 	}
 };
 
@@ -26,6 +27,9 @@ glob('*.js', {cwd: config.js.src}, function (err, files) {
 
 		ws = fs.createWriteStream(config.js.dest + f);
 
-		browserify(config.js.src + f).bundle().pipe(ws);
+		browserify(config.js.src + f)
+			.require(config.js.lib + 'jquery/dist/jquery.js', {expose: 'jquery'})
+			.bundle()
+			.pipe(ws);
 	});
 });

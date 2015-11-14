@@ -1,4 +1,4 @@
-var jQuery = require('../lib/jquery/dist/jquery');
+var $ = require('jquery');
 
 $(window).ready(function() {
     $('.mobile-menu-toggle').on('click', function() {

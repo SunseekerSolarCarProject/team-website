@@ -1,4 +1,4 @@
-var $ = require('./lib/jquery/dist/jquery');
+var $ = require('jquery');
 
 require('./plugins/konami');
 

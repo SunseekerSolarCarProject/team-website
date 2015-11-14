@@ -37,12 +37,17 @@
         padding: 0;
     }
 
+    .countdown__container {
+        margin: 0;
+        padding: 0;
+    }
+
     .countdown__part {
         background: #E1E1E1;
         text-transform: capitalize;
         list-style: none;
         padding: $standard-padding;
-        margin: 0 $standard-margin $standard-margin 0;
+        margin: 0 0 $standard-margin;
 
         &:last-of-type {
             margin-bottom: 0;
