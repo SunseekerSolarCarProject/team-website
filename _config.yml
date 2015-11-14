@@ -10,3 +10,5 @@ include: [.htsecure, .htaccess]
 markdown: kramdown
 
 permalink: /blog/:categories/:year/:month/:day/:title.html
+
+exclude: ["package.json", "bower.json", "README.md", "node_modules", "deploy.js"]
