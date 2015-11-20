@@ -143,7 +143,13 @@ section.title {
 
 main {
     background: #FFF;
-    
+
+    blockquote {
+        font-style: italic;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     blockquote,
     .message {
         background: #F1F1F1;
@@ -154,10 +160,6 @@ main {
             font-style: italic;
             margin: 0 0 $standard-margin;
         }
-    }
-
-    blockquote {
-        font-style: italic;
     }
 
     .side-by-side-boxes .box:first-of-type {
