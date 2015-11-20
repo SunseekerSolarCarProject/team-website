@@ -24,7 +24,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6, p {
-    margin: 0 0 20px;
+    margin: 0 0 $standard-margin;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -147,16 +147,17 @@ main {
     blockquote,
     .message {
         background: #F1F1F1;
-        font-style: italic;
         padding: 10px;
 
         h3 {
-            margin-top: 0;
-        }
-
-        h3 {
             font-weight: 400;
+            font-style: italic;
+            margin: 0 0 $standard-margin;
         }
+    }
+
+    blockquote {
+        font-style: italic;
     }
 
     .side-by-side-boxes .box:first-of-type {
