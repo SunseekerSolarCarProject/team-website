@@ -51,12 +51,13 @@ parts = ['month', 'day', 'hour', 'minute', 'second'];
                 var remain;
 
                 remain = diff;
+                diff  -= numMilliseconds['second'];
 
                 parts.forEach(function (e) {
                     remain = methods.calcValue(e, remain);
                 });
             },
-            calcValue: function (e, remain) {
+            calcValue: function (e, remain) {console.log(remain);
                 var num;
 
                 num = Math.floor(remain / numMilliseconds[e]);
