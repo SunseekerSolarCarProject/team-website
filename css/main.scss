@@ -5,10 +5,13 @@
 
 // Colors
 $bronco-brown: #630;
-$bronco-gold: #FC6;
+$bronco-gold: #FCC30F;
+
+$black: #000;
+$white: #FFF;
 
 // Typography
-$base-font-family: Helvetica;
+$base-font-family: Helvetica, sans-serif;
 $base-font-size:   18px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.3;
@@ -20,8 +23,8 @@ $header-height: $base-font-size * 3;
 // Sizing and Spacing
 $wrapper-width: 1200px;
 
-$standard-margin: 10px;
-$standard-padding: 10px;
+$standard-margin: 20px;
+$standard-padding: 20px;
 
 // Media query mixin
 @mixin media-query($device) {

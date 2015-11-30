@@ -1,29 +1,21 @@
 #homepage {
+    header {
+        background: rgba(255, 255, 255, .9);
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 10;
+    }
+
     main {
         padding-top: 0;
     }
 
-    .slideshow ul li {
+    .showcase {
         @extend .img;
+        background-image: url('../images/homepage/sunny-day-at-parkview-mobile.jpg');
         background-size: cover;
         height: 200px;
-        margin: 0 -1 * $standard-margin $standard-margin;
-
-        &:nth-child(1) {
-            background-image: url('../images/slideshows/homepage/kzoo_holiday_parade_2015.png');
-        }
-
-        &:nth-child(2) {
-            background-image: url('../images/slideshows/homepage/cleaning-the-array.jpg');
-        }
-
-        &:nth-child(3) {
-            background-image: url('../images/slideshows/homepage/racing-away.jpg');
-        }
-
-        &:nth-child(4) {
-            background-image: url('../images/slideshows/homepage/practice-before-the-race.jpg');
-        }
     }
 
     .intro {
@@ -62,9 +54,9 @@
     }
 
     @include media-query(tablet) {
-        .slideshow ul li {
+        .showcase {
+            background-image: url('../images/homepage/sunny-day-at-parkview-tablet.jpg');
             height: 450px;
-            margin: 0 0 $standard-margin * 2;
         }
 
         .intro {
@@ -88,8 +80,8 @@
     }
 
     @include media-query(desktop) {
-        .slideshow ul li {
-            height: 550px;
+        .showcase {
+            height: 600px;
         }
 
         .countdown {
@@ -113,7 +105,7 @@
     }
 
     @include media-query(enormous) {
-        .slideshow ul li {
+        .showcase {
             height: 700px;
         }
     }

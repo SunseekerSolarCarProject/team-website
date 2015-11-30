@@ -1,0 +1,27 @@
+.intro {
+	background: $bronco-gold;
+	color: $bronco-brown;
+
+	a {
+		color: $bronco-brown;
+	}
+}
+
+.block {
+	padding: $standard-padding 0;
+}
+
+p {
+	padding: 0;
+	margin: $standard-margin 0;
+}
+
+* p {
+	&:first-of-type {
+		margin-top: 0;
+	}
+
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}

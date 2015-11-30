@@ -1,10 +1,12 @@
+@import "_components";
+
 html {
     height: 100%;
     position: relative;
 }
 
 body {
-    background: lighten(#F1F1F1, 2%);
+    background: #242424;
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
@@ -15,35 +17,14 @@ body {
     margin: 0;
 }
 
-a {
-    color: darken($bronco-gold, 40%);
-
-    &:hover {
-        text-decoration: none;
-    }
-}
-
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0 0 $standard-margin;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 200;
-    padding: 0;
-}
-
-h1 {
-    font-size: 2em;
-}
-
-h2 {
-    font-size: 1.6em;
+header,
+main {
+    background: $white;
 }
 
 header {
-    background: $bronco-brown;
     line-height: $header-height;
-    padding: 10px;
+    padding: $standard-padding;
 
     .logo {
         @extend .img;
@@ -94,6 +75,7 @@ header {
                     color: $bronco-gold;
                     text-align: center;
                     text-decoration: none;
+                    font-weight: 400;
                     display: block;
                     padding: 0 10px;
                 }
@@ -102,234 +84,29 @@ header {
     }
 }
 
-section.title,
 footer {
-    background: transparent;
-}
-
-section.title,
-main,
-footer {
-    padding: $standard-padding $standard-padding 0;
-
-    .wrapper {
-        padding: 0 0 $standard-padding;
-
-        *:last-child {
-            margin-bottom: 0;
-        }
-    }
-}
-
-section.title {
-    border-bottom: 2px solid #E1E1E1;
-
-    h1 {
-        margin: 0;
-    }
-
-    p {
-        font-size: 1.1em;
-
-        a {
-            color: #000;
-        }
-    }
-
-    .wrapper {
-        padding: 0 0 10px;
-    }
-}
-
-main {
-    background: #FFF;
-
-    blockquote {
-        font-style: italic;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    blockquote,
-    .message {
-        background: #F1F1F1;
-        padding: 10px;
-
-        h3 {
-            font-weight: 400;
-            font-style: italic;
-            margin: 0 0 $standard-margin;
-        }
-    }
-
-    .side-by-side-boxes .box:first-of-type {
-        margin: 0 0 $standard-margin;
-    }
-
-    .message--notice {
-        background: $bronco-gold;
-
-        h3 {
-            text-transform: uppercase;
-        }
-
-        a {
-            color: #000;
-        }
-    }
-}
-
-footer {
-    border-top: 2px solid #E1E1E1;
     text-align: center;
+    color: $white;
 
-    .social {
-        @extend .list-standard;
-
-        margin-bottom: 20px;
-
-        ul li {
-            display: inline;
-
-            a {
-                background-repeat: no-repeat;
-                background-size: 45px 45px;
-                text-indent: -99999px;
-                display: inline-block;
-                margin-right: 20px;
-                width: 45px;
-                height: 45px;
-            }
-
-            &.linkedin {
-                a {
-                    background-image: url('../images/social-icons/linkedin.png');
-                }
-            }
-
-            &.facebook {
-                a {
-                    background-image: url('../images/social-icons/facebook.png');
-                }
-            }
-
-            &.twitter {
-                a {
-                    background-image: url('../images/social-icons/twitter.png');
-                }
-            }
-
-            &.youtube {
-                a {
-                    background-image: url('../images/social-icons/youtube.png');
-                }
-            }
-
-            &.flickr {
-                a {
-                    background-image: url('../images/social-icons/flickr.png');
-                }
-            }
-
-            &.email {
-                a {
-                    background-image: url('../images/social-icons/email.png');
-                }
-            }
-
-            &:last-of-type a {
-                margin-right: 0;
-            }
-        }
-    }
-
-    .other-links {
-        @extend .list-standard;
-
-        ul {
-            li {
-                background: darken(#E1E1E1, 5%);
-                border-bottom: 2px solid #E1E1E1;
-
-                a {
-                    color: #333;
-                    display: block;
-                    padding: 10px 0;
-                }
-
-                &:last-of-type {
-                    border-bottom: 0;
-                }
-            }
-        }
+    a {
+        color: $white;
     }
 }
 
 @include media-query(tablet) {
     .wrapper {
         width: $wrapper-width;
-        max-width: 95%;
+        max-width: 100%;
         margin: 0 auto;
     }
 
-    section.title,
-    main,
-    footer {
-        padding: $standard-padding * 2 0 0;
-    }
-
-    section.title,
-    main,
-    footer {
-        .wrapper {
-            padding: 0 $standard-margin * 2 $standard-margin * 2;
-        }
+    header .clear-logo {
+        display: none;
     }
 
     main {
-        h1, h2, h3, h4, h5, h6, p {
-            margin: 0 0 $standard-margin * 2;
-
-            &.inline {
-                display: inline-block;
-                margin: 0;
-            }
-        }
-
-        blockquote,
-        .message {
-            padding: 20px;
-        }
-
         .side-by-side-boxes .box:first-of-type {
             margin: 0 0 $standard-margin * 2;
-        }
-    }
-
-    footer {
-        .other-links {
-            h3 {
-                display: none;
-            }
-
-            ul {
-                li {
-                    background: transparent;
-                    list-style: none;
-                    display: inline;
-                    border-bottom: 0;
-                    border-right: 2px solid #CCC;
-                    padding: 0 10px;
-
-                    a {
-                        display: inline;
-                    }
-
-                    &:last-of-type {
-                        border-right: none;
-                    }
-                }
-            }
         }
     }
 }
@@ -337,17 +114,10 @@ footer {
 @include media-query(desktop) {
     .wrapper {
         width: $wrapper-width;
-        max-width: $wrapper-width;
         margin: 0 auto;
     }
 
     header {
-        padding: 10px 20px;
-        
-        .clear-logo {
-            clear: none;
-        }
-
         nav {
             float: right;
             margin: 0;
@@ -366,6 +136,7 @@ footer {
                 li {
                     background: transparent;
                     display: inline;
+                    border-bottom: 0;
 
                     a {
                         color: $bronco-gold;
@@ -391,26 +162,12 @@ footer {
         }
     }
 
-    section.title,
-    main,
-    footer {
-        .wrapper {
-            padding: 0 0 $standard-margin * 2;
-        }
-    }
-
     main .side-by-side-boxes .box {
         width: ($wrapper-width / 2) - $standard-margin;
         float: left;
 
         &:first-of-type {
             margin: 0 $standard-margin * 2 0 0;
-        }
-    }
-
-    footer {
-        .social {
-            margin-bottom: 20px;
         }
     }
 }
