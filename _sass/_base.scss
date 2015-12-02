@@ -17,12 +17,8 @@ body {
     margin: 0;
 }
 
-header,
-main {
-    background: $white;
-}
-
 header {
+    background: $white;
     line-height: $header-height;
     padding: $standard-padding;
 
@@ -84,6 +80,10 @@ header {
     }
 }
 
+main {
+    background: $white;
+}
+
 footer {
     text-align: center;
     color: $white;
@@ -139,7 +139,7 @@ footer {
                     border-bottom: 0;
 
                     a {
-                        color: $bronco-gold;
+                        color: $bronco-brown;
                         font-size: .9em;
                         line-height: 1;
                         display: inline-block;
@@ -149,8 +149,7 @@ footer {
 
                         &.active,
                         &:hover {
-                            color: darken($bronco-gold, 15%);
-                            transition: .2s;
+                            color: $bronco-gold;
                         }
                     }
 

@@ -7,7 +7,6 @@
         @extend .list-standard;
         
         text-align: center;
-        padding: $standard-padding * 2 0;
 
         ul li {
             display: inline;
@@ -23,7 +22,6 @@
         @extend .img;
         background-size: cover;
         height: 200px;
-        margin: 0 -1 * $standard-margin $standard-margin;
     
         &.history-block-picture {
             background-image: url('../images/about/1995-running-to-the-future.jpg');
@@ -44,7 +42,6 @@
             font-size: 1.1em;
             text-align: center;
             display: block;
-            padding: $standard-padding * 4 0;
 
             ul li {
                 margin-right: $standard-margin * 2;
@@ -53,7 +50,6 @@
         
         .picture {
             height: 500px;
-            margin: 0 0 $standard-margin * 2;
             
             &:first-of-type {
                 margin-top: 0;

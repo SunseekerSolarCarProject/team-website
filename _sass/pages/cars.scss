@@ -30,7 +30,6 @@
         @extend .img;
         background-size: cover;
         height: 200px;
-        margin: -1 * $standard-margin -1 * $standard-margin $standard-margin;
         
         &.sixteen-car {
             background-image: url('../images/cars/banners/2016.jpg');
@@ -99,7 +98,6 @@
         
         .big-picture {
             height: 500px;
-            margin: -2 * $standard-margin 0 $standard-margin * 2;
         }
     }
     

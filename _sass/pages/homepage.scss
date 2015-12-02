@@ -1,12 +1,4 @@
 #homepage {
-    header {
-        background: rgba(255, 255, 255, .9);
-        position: absolute;
-        width: 100%;
-        box-sizing: border-box;
-        z-index: 10;
-    }
-
     main {
         padding-top: 0;
     }
@@ -19,6 +11,7 @@
     }
 
     .intro {
+        background: $bronco-gold;
         text-align: center;
         margin: $standard-margin * 2 0;
     }
@@ -81,7 +74,7 @@
 
     @include media-query(desktop) {
         .showcase {
-            height: 600px;
+            height: 500px;
         }
 
         .countdown {
