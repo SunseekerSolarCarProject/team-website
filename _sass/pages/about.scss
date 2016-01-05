@@ -2,6 +2,7 @@
     @extend .list-standard;
     
     text-align: center;
+    font-size: .9em;
 
     ul li {
         display: inline;
@@ -34,6 +35,10 @@
 }
 
 @include media-query(tablet) {
+    .about__sectionNav {
+        font-size: 1em;
+    }
+
     .about__picture {
         height: 500px;
     }
