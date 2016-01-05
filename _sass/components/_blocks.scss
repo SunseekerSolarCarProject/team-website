@@ -1,0 +1,41 @@
+.pageIntro {
+	background: lighten($bronco-gold, 20%);
+	color: $bronco-brown;
+	padding: $standard-padding 0;
+
+	a {
+		color: $bronco-brown;
+	}
+}
+
+.message {
+	background: $light-gray;
+	padding: $standard-padding;
+	margin: 0 0 $standard-margin;
+}
+
+@include media-query(tablet) {
+	.sideBySideMessages {
+		margin: 0 0 $standard-margin;
+
+		.message {
+			float: left;
+			width: $wrapper-width / 2;
+			box-sizing: border-box;
+			margin: 0;
+			
+			&:first-of-type {
+				width: ($wrapper-width / 2) - $standard-margin;
+				margin: 0 $standard-margin 0 0;
+			}
+		}
+	}
+}
+
+* *:last-child {
+	margin-bottom: 0;
+}
+
+.clearBoth {
+	clear: both;
+}

@@ -5,8 +5,8 @@ title: Team Blog
 intro: Want to learn more about the team, and see what we're up to? Take a look at some of the posts you will find below, for an inside look at the workings of a solar car team!
 ---
 
-<div class="wrapper block">
-    <ul class="posts">
+<div class="wrapper">
+    <ul class="blog__posts">
         {% for post in site.posts %}
             <li class="posts__post">
                 <div class="posts__post__date">
@@ -17,7 +17,7 @@ intro: Want to learn more about the team, and see what we're up to? Take a look 
                     <h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
                     <p class="excerpt">{{ post.excerpt }}</p>
                 </div>
-                <div class="clear-all"></div>
+                <div class="clearBoth"></div>
             </li>
         {% else %}
             <p class="message">We have not published and posts &mdash; yet. Please stay tuned!</p>

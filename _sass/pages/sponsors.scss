@@ -1,64 +1,59 @@
-#sponsors {
-    .sponsor {
-        .image {
-            text-align: center;
-            height: 150px;
+.sponsors__sponsor,
+.sponsors__list ul li {
+    margin: 0 0 $standard-margin;
 
-            .helper {
-                display: inline-block;
-                vertical-align: middle;
-                height: 100%;
-            }
+    h3 {
+        font-weight: bold;
 
-            img {
-                max-width: 80%;
-                max-height: 100%;
-                vertical-align: middle;
-            }
-        }
-
-        h3 {
-            font-weight: bold;
-
-            small {
-                font-weight: 100;
-                display: block;
-                margin-top: 5px;
-            }
+        small {
+            font-weight: 100;
+            display: block;
+            margin-top: 5px;
         }
     }
+}
 
-    main {
-        @extend .list-standard;
+.sponsor__image {
+    text-align: center;
+    height: 150px;
+
+    .helper {
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
     }
 
-    .sponsor.alone,
-    .sponsor .description,
-    main ul li {
-        background: lighten(#F1F1F1, 2%);
-        padding: 10px;
+    img {
+        max-width: 80%;
+        max-height: 100%;
+        vertical-align: middle;
     }
-    
-    main ul li {
-        margin-bottom: 10px;
+}
+
+.sponsors__list {
+    @extend .list-standard;
+}
+
+.sponsors__sponsor--noLogo,
+.sponsor__description,
+.sponsors__list ul li {
+    background: $light-gray;
+    padding: $standard-padding;
+}
+
+@include media-query(tablet) {
+    .sponsor__image, 
+    .sponsor__description {
+        height: 150px;
+        float: left;
+        box-sizing: border-box;
     }
 
-    @include media-query(tablet) {
-        .sponsor {
-            .image, .description {
-                height: 150px;
-                box-sizing: border-box;
-            }
+    .sponsor__image {
+        width: 25%;
+    }
 
-            .image {
-                float: left;
-                width: 25%;
-            }
-
-            .description {
-                width: 75%;
-                float: right;
-            }
-        }
+    .sponsor__description {
+        width: 75%;
     }
 }

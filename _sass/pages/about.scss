@@ -1,65 +1,46 @@
-#about {
-    main {
-        padding-top: 0;
-    }
+.about__sectionNav {
+    @extend .list-standard;
     
-    .section-nav {
-        @extend .list-standard;
+    text-align: center;
+
+    ul li {
+        display: inline;
+        margin-right: $standard-margin;
         
-        text-align: center;
-
-        ul li {
-            display: inline;
-            margin-right: $standard-margin;
-            
-            a {
-                color: #333;
-            }
+        a {
+            color: #333;
         }
     }
-    
-    .picture {
-        @extend .img;
-        background-size: cover;
-        height: 200px;
-    
-        &.history-block-picture {
-            background-image: url('../images/about/1995-running-to-the-future.jpg');
-        }
-    
-        &.challenge-block-picture {
-            background-image: url('../images/about/crossing-the-line.jpg');
-        }
-    
-        &.mission-block-picture {
-            background-image: url('../images/about/vince-talking.jpg');
-            background-position: center top;
-        }
+}
+
+.about__picture {
+    @extend .img;
+    background-size: cover;
+    height: 200px;
+    margin: $standard-margin 0;
+}
+
+.about__picture--history {
+    background-image: url('../images/about/1995-running-to-the-future.jpg');
+}
+
+.about__picture--challenge {
+    background-image: url('../images/about/crossing-the-line.jpg');
+}
+
+.about__picture--mission {
+    background-image: url('../images/about/vince-talking.jpg');
+    background-position: center top;
+}
+
+@include media-query(tablet) {
+    .about__picture {
+        height: 500px;
     }
+}
 
-    @include media-query(tablet) {
-        .section-nav {
-            font-size: 1.1em;
-            text-align: center;
-            display: block;
-
-            ul li {
-                margin-right: $standard-margin * 2;
-            }
-        }
-        
-        .picture {
-            height: 500px;
-            
-            &:first-of-type {
-                margin-top: 0;
-            }
-        }
-    }
-
-    @include media-query(enormous) {
-        .picture {
-            height: 700px;
-        }
+@include media-query(enormous) {
+    .about__picture {
+        height: 700px;
     }
 }

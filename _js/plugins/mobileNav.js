@@ -1,11 +1,13 @@
 var $ = require('jquery');
 
 $(window).ready(function() {
-    $('.mobile-menu-toggle').on('click', function() {
-        if($('nav ul').css('display') == 'block') {
-            $('nav ul').slideUp();
+    $('.globalNavigation__mobileMenuToggle').on('click', function() {
+        var $menu = $('.globalNavigation ul');
+
+        if($menu.css('display') == 'block') {
+            $menu.slideUp();
         } else {
-            $('nav ul').slideDown();
+            $menu.slideDown();
         }
     });
 });

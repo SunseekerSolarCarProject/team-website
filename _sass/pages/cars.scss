@@ -1,47 +1,46 @@
 #cars {
-    .car {
-        .car-picture {
-            @extend .img;
-            
-            background-size: contain;
-            background-position: center-center;
-            width: 100%;
-            height: 200px;
-            
-            &.sixteen-car {
-                background-image: url("../images/cars/2016.png");
-            }
-            
-            &.ten-car {
-                background-image: url("../images/cars/2010.jpg");
-            }
-            
-            &.five-car {
-                background-image: url("../images/cars/2005.jpg");
-            }
-
-            &.ninety-five-car {
-                background-image: url("../images/cars/1995.jpg");
-            }
-        }
+    .car__picture {
+        @extend .img;
+        
+        background-size: contain;
+        background-position: center-center;
+        width: 100%;
+        height: 200px;
     }
 
-    .big-picture {
+    .car__picture--sixteenCar {
+        background-image: url("../images/cars/2016.png");
+    }
+    
+    .car__picture--tenCar {
+        background-image: url("../images/cars/2010.jpg");
+    }
+    
+    .car__picture--fiveCar {
+        background-image: url("../images/cars/2005.jpg");
+    }
+
+    .car__picture--ninetyFiveCar {
+        background-image: url("../images/cars/1995.jpg");
+    }
+
+    .car__bigPicture {
         @extend .img;
         background-size: cover;
         height: 200px;
+        margin: -1 * $standard-padding 0 $standard-margin;
+    }
         
-        &.sixteen-car {
-            background-image: url('../images/cars/banners/2016.jpg');
-        }
-        
-        &.ten-car {
-            background-image: url('../images/cars/banners/2010.jpg');
-        }
+    .car__bigPicture--sixteenCar {
+        background-image: url('../images/cars/banners/2016.jpg');
+    }
+    
+    .car__bigPicture--tenCar {
+        background-image: url('../images/cars/banners/2010.jpg');
+    }
 
-        &.five-car {
-            background-image: url('../images/cars/banners/2005.jpg');
-        }
+    .car__bigPicture--fiveCar {
+        background-image: url('../images/cars/banners/2005.jpg');
     }
 
     .fast-facts {
@@ -60,13 +59,13 @@
         }
     }
 
-    .specs {
+    .car__specs {
         table {
-            max-width: 100%;
+            width: 100%;
             box-sizing: border-box;
 
             tbody td {
-                padding: 10px 0;
+                padding: $standard-padding / 2 0;
 
                 &:first-child {
                     font-weight: 400;
@@ -74,35 +73,35 @@
                 }
 
                 &:last-child {
-                    padding-left: 10px;
+                    text-align: right;
                 }
             }
         }
     }
 
     @include media-query(tablet) {
-        .car {
-            .car-picture {
-                float: left;
-                width: 25%;
-                height: 150px;
-            }
-            
-            .description {
-                float: left;
-                width: 75%;
-                box-sizing: border-box;
-                padding-left: 20px;
-            }
+        .car__picture,
+        .car__description {
+            float: left;
+        }
+
+        .car__picture {
+            width: 25%;
         }
         
-        .big-picture {
+        .car__description {
+            padding: 0 0 0 $standard-margin;
+            width: 75%;
+            box-sizing: border-box;
+        }
+        
+        .car__bigPicture {
             height: 500px;
         }
     }
     
     @include media-query(enormous) {
-        .big-picture {
+        .car__bigPicture {
             height: 700px;
         }
     }

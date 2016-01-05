@@ -1,22 +1,20 @@
 #homepage {
-    main {
-        padding-top: 0;
+    .primaryContent {
+        padding: 0 0 $standard-padding;
+    }
+
+    .pageIntro {
+        margin: 0 0 $standard-margin;
     }
 
     .showcase {
         @extend .img;
-        background-image: url('../images/homepage/sunny-day-at-parkview-mobile.jpg');
+        background-image: url('../images/homepage/sunny-day-at-parkview-tablet.jpg');
         background-size: cover;
         height: 200px;
     }
 
-    .intro {
-        background: $bronco-gold;
-        text-align: center;
-        margin: $standard-margin * 2 0;
-    }
-
-    .countdown {
+    .countdown__display {
         text-align: center;
         margin: 0;
         padding: 0;
@@ -28,10 +26,10 @@
     }
 
     .countdown__part {
-        background: #E1E1E1;
+        background: $gray;
         text-transform: capitalize;
         list-style: none;
-        padding: $standard-padding;
+        padding: $standard-padding / 4 $standard-padding;
         margin: 0 0 $standard-margin;
 
         &:last-of-type {
@@ -48,27 +46,12 @@
 
     @include media-query(tablet) {
         .showcase {
-            background-image: url('../images/homepage/sunny-day-at-parkview-tablet.jpg');
             height: 450px;
-        }
-
-        .intro {
-            text-align: left;
-            margin: 0 auto;
-        }
-
-        .countdown__container {
-            margin: $standard-margin * 2 0 0;
         }
 
         .countdown__part {
             display: inline-block;
-            margin-right: $standard-margin;
-            width: 15%;
-
-            &:last-of-type {
-                margin: 0;
-            }
+            margin: 0 0 0 $standard-margin;
         }
     }
 
@@ -77,23 +60,17 @@
             height: 500px;
         }
 
-        .countdown {
+        .countdown h3 {
+            display: inline;
+        }
+
+        .countdown__display {
             float: right;
             margin: 0;
         }
 
-        .countdown__container {
-            margin: 3px 0 0 0;
-            padding: 0;
-        }
-
         .countdown__part {
             display: inline;
-            margin-right: $standard-margin;
-
-            &:last-of-type {
-                margin: 0;
-            }
         }
     }
 

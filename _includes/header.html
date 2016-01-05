@@ -1,9 +1,8 @@
-<header>
+<header class="globalHeader">
   <div class="wrapper">
-    <a href="{{ '/' | prepend: site.baseurl }}" class="logo">Sunseeker Solar Car Project</a>
-    <div class="clear-logo"></div>
-    <nav>
-      <div class="mobile-menu-toggle">Menu</div>
+    <a href="{{ '/' | prepend: site.baseurl }}" class="branding">Sunseeker Solar Car Project</a>
+    <nav class="globalNavigation">
+      <div class="globalNavigation__mobileMenuToggle">Menu</div>
       <ul>
         {% for link in site.data.nav %}
         <li><a href="{{ link.url | prepend: site.baseurl }}"{% if page.pageid == link.name %} class="active"{% endif %}>{{ link.label }}</a>
@@ -11,5 +10,4 @@
       </ul>
     </nav>
   </div>
-  <div class="clear-all"></div>
 </header>
