@@ -1,4 +1,4 @@
-@import "components";
+@import 'components';
 
 html {
     height: 100%;
@@ -108,7 +108,7 @@ body {
 @include media-query(tablet) {
     .wrapper {
         width: $wrapper-width;
-        max-width: 100%;
+        padding: 0;
         margin: 0 auto;
     }
 
@@ -133,11 +133,6 @@ body {
 }
 
 @include media-query(desktop) {
-    .wrapper {
-        width: $wrapper-width;
-        margin: 0 auto;
-    }
-
     .globalNavigation {
         float: right;
         margin: 0;
