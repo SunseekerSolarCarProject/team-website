@@ -1,14 +1,12 @@
-#donate {
-    a.donate-button {
-        background: $bronco-brown;
-        text-align: center;
-        text-decoration: none;
-        color: $bronco-gold;
-        box-shadow: inset 0 -15px 15px darken($bronco-brown, 5%);
-        width: 400px;
-        display: block;
-        margin: 0 auto;
-        padding: 10px;
-        border-radius: 10px;
-    }
+a.donate-button {
+    background: $bronco-brown;
+    text-align: center;
+    text-decoration: none;
+    color: $bronco-gold;
+    box-shadow: inset 0 -15px 15px darken($bronco-brown, 5%);
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    border-radius: 10px;
 }
