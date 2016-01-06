@@ -29,7 +29,7 @@
         background: $gray;
         text-transform: capitalize;
         list-style: none;
-        padding: $standard-padding / 4 $standard-padding;
+        padding: $standard-padding / 4 $standard-padding / 2;
         margin: 0 0 $standard-margin;
 
         &:last-of-type {
@@ -49,6 +49,15 @@
             height: 450px;
         }
 
+        .countdown h3 {
+            display: inline;
+        }
+
+        .countdown__display {
+            float: right;
+            margin: 0;
+        }
+
         .countdown__part {
             display: inline-block;
             margin: 0 0 0 $standard-margin;
@@ -58,15 +67,6 @@
     @include media-query(desktop) {
         .showcase {
             height: 500px;
-        }
-
-        .countdown h3 {
-            display: inline;
-        }
-
-        .countdown__display {
-            float: right;
-            margin: 0;
         }
 
         .countdown__part {

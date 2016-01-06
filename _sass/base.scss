@@ -26,7 +26,7 @@ body {
     line-height: $header-height;
 }
 
-.branding {
+.globalHeader__branding {
     @extend .img;
     background-image: url('../images/logo.png');
     display: inline-block;
@@ -93,23 +93,16 @@ body {
     h4 {
         margin: 0;
     }
+
+    a {
+        color: #999;
+    }
 }
 
 .globalFooter__links {
     @extend .list-standard;
 
-    display: inline-block;
-    width: 300px;
-    vertical-align: top;
     margin: 0 0 $standard-margin;
-
-    &:last-of-type {
-        margin: 0;
-    }
-
-    a {
-        color: #999;
-    }
 }
 
 @include media-query(tablet) {
@@ -123,8 +116,19 @@ body {
         text-align: left;
     }
 
+    .globalFooter__links,
+    .globalFooter__thankYou {
+        width: 300px;
+    }
+
     .globalFooter__links {
+        display: inline-block;
+        vertical-align: top;
         margin: 0;
+    }
+
+    .globalFooter__thankYou {
+        float: right;
     }
 }
 
