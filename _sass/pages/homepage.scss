@@ -6,77 +6,77 @@
     .pageIntro {
         margin: 0 0 $standard-margin;
     }
+}
 
+.showcase {
+    @extend .img;
+    background-image: url('../images/homepage/sunny-day-at-parkview.png');
+    background-size: cover;
+    height: 200px;
+}
+
+.countdown__display {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.countdown__container {
+    margin: 0;
+    padding: 0;
+}
+
+.countdown__part {
+    background: $gray;
+    text-transform: capitalize;
+    list-style: none;
+    padding: $standard-padding / 4 $standard-padding / 2;
+    margin: 0 0 $standard-margin;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.countdown__part__value {
+    font-family: courier;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+@include media-query(tablet) {
     .showcase {
-        @extend .img;
-        background-image: url('../images/homepage/sunny-day-at-parkview.png');
-        background-size: cover;
-        height: 200px;
+        height: 450px;
+    }
+
+    .countdown h3 {
+        display: inline;
     }
 
     .countdown__display {
-        text-align: center;
+        float: right;
         margin: 0;
-        padding: 0;
-    }
-
-    .countdown__container {
-        margin: 0;
-        padding: 0;
     }
 
     .countdown__part {
-        background: $gray;
-        text-transform: capitalize;
-        list-style: none;
-        padding: $standard-padding / 4 $standard-padding / 2;
-        margin: 0 0 $standard-margin;
-
-        &:last-of-type {
-            margin-bottom: 0;
-        }
-    }
-
-    .countdown__part__value {
-        font-family: courier;
-        font-weight: bold;
         display: inline-block;
-        margin-right: 10px;
+        margin: 0 0 0 $standard-margin;
+    }
+}
+
+@include media-query(desktop) {
+    .showcase {
+        height: 500px;
     }
 
-    @include media-query(tablet) {
-        .showcase {
-            height: 450px;
-        }
-
-        .countdown h3 {
-            display: inline;
-        }
-
-        .countdown__display {
-            float: right;
-            margin: 0;
-        }
-
-        .countdown__part {
-            display: inline-block;
-            margin: 0 0 0 $standard-margin;
-        }
+    .countdown__part {
+        display: inline;
     }
+}
 
-    @include media-query(desktop) {
-        .showcase {
-            height: 500px;
-        }
-
-        .countdown__part {
-            display: inline;
-        }
-    }
-
-    @include media-query(enormous) {
-        .showcase {
-            height: 700px;
-        }
+@include media-query(enormous) {
+    .showcase {
+        height: 700px;
     }
 }
