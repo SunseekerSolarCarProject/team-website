@@ -1,11 +1,9 @@
-#homepage {
-    .primaryContent {
-        padding: 0 0 $standard-padding;
-    }
+.primaryContent--homepage {
+    padding: 0 0 $standard-padding;
+}
 
-    .pageIntro {
-        margin: 0 0 $standard-margin;
-    }
+.pageIntro--homepage {
+    margin: 0 0 $standard-margin;
 }
 
 .showcase {

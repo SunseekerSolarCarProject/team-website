@@ -57,7 +57,7 @@ parts = ['month', 'day', 'hour', 'minute', 'second'];
                     remain = methods.calcValue(e, remain);
                 });
             },
-            calcValue: function (e, remain) {console.log(remain);
+            calcValue: function (e, remain) {
                 var num;
 
                 num = Math.floor(remain / numMilliseconds[e]);

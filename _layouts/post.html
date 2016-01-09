@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     {% include head.html %}
-    <body{% if page.pageid %} id="{{ page.pageid }}"{% endif %}>
+    <body>
         {% include header.html %}
         <div class="pageIntro">
             <div class="wrapper">
@@ -9,7 +9,7 @@
                 Posted on {{ page.date | date: '%B %d, %Y' }} by {{ page.author }}
             </div>
         </div>
-        <main class="primaryContent">
+        <main class="primaryContent{% if page.pageid %} primaryContent--{{ page.pageid }}{% endif %}">
             <div class="wrapper">
                 {{ content }}
             </div>
