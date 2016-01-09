@@ -14,7 +14,7 @@
 	margin: 0 0 $standard-margin;
 }
 
-@include media-query(tablet) {
+@include media-query(desktop) {
 	.sideBySideMessages {
 		margin: 0 0 $standard-margin;
 

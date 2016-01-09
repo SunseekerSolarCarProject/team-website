@@ -39,7 +39,7 @@ $standard-padding: 20px;
 
 @mixin media-query($device) {
     @if $device == tablet {
-        @media (min-width: 1200px) { @content; }
+        @media (min-width: 738px) { @content; }
     }
     @elseif $device == enormous {
         @media (min-width: 1500px) { @content; }
