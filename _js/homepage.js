@@ -1,14 +1,12 @@
 var $ = require('jquery');
 
-require('./plugins/slideshow');
 require('./plugins/konami');
 require('./plugins/countdown');
 
+var konamiGoing, $showcase;
 
-var bigSlide, konamiGoing;
-
-bigSlide    = $('.slideshow').slideshow();
 konamiGoing = false;
+$showcase   = $('.showcase');
 
 $(window).konami({
     cheat: function() {
@@ -17,54 +15,54 @@ $(window).konami({
 
         konamiGoing = true;
 
-        var c, v, sm4v, smov, bg, ht;
+        var c, v, sm4v, smov, bg;
 
-        bigSlide.stop();
         window.scrollTo(0, 0);
 
-        c      = bigSlide.current();
         v      = $('<video>');
         smov   = $('<source>');
         sm4v   = $('<source>');
         swebm  = $('<source>');
-        bg     = c.css('background-image');
-        ht     = c.css('height');
+        bg     = $showcase.css('background');
 
-        c.css('height', '720px');
-        c.css('background-color', '#000');
-        c.css('background-image', 'none');
-        c.css('text-indent', '0px');
-        c.text('');
+        $showcase.css('background', '#000');
 
-        v.attr('width', '100%');
-        v.attr('height', '720');
-        v.attr('controls', 'true');
-        v.attr('autoplay', 'true');
+        v.css({
+            width: '100%',
+            height: $showcase.css('height'),
+        });
+
+        v.attr({
+            controls: 'true',
+            autoplay: 'true'
+        });
 
         v.bind('ended', function() {
             v.remove();
-
-            c.css('background-color', 'transparent');
-            c.css('background-image', bg);
-            c.css('height', ht);
-
+            $showcase.css('background', bg);
             konamiGoing = false;
-            bigSlide.start();
         });
 
-        smov.attr('src', 'videos/DriverStyle.mov');
-        smov.attr('type', 'video/quicktime');
+        smov.attr({
+            src: 'videos/DriverStyle.mov',
+            type: 'video/quicktime'
+        });
 
-        sm4v.attr('src', 'videos/DriverStyle.m4v');
-        sm4v.attr('type', 'video/m4v');
+        sm4v.attr({
+            src: 'videos/DriverStyle.m4v',
+            type: 'video/m4v'
+        });
 
-        swebm.attr('src', 'videos/DriverStyle.webm');
-        swebm.attr('type', 'video/webm');
+        swebm.attr({
+            src: 'videos/DriverStyle.webm',
+            type: 'video/webm'
+        });
 
         v.append(smov);
         v.append(sm4v);
         v.append(swebm);
-        c.append(v);
+
+        $showcase.append(v);
     }
 });
 

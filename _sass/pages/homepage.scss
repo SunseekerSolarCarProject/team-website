@@ -10,7 +10,9 @@
     @extend .img;
     background-image: url('../images/homepage/sunny-day-at-parkview.png');
     background-size: cover;
+    text-indent: 0;
     height: 200px;
+    content: " ";
 }
 
 .countdown__display {
@@ -75,6 +77,7 @@
 
 @include media-query(enormous) {
     .showcase {
+        background-position-y: -350px;
         height: 700px;
     }
 }
