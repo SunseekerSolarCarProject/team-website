@@ -82,10 +82,6 @@
   subteam: Aero
   konami: alex_brunk.png
 
-- name: Noah Buscher
-  picture: noah_busher.png
-  subteam: Mechanical
-
 - name: Nick Byers
   picture: nick_byers.png
   subteam: Mechanical
@@ -107,10 +103,6 @@
   subteam: Electrical
   konami: josh_clemens.png
 
-- name: Hector Gembe
-  picture: hector_gembe.png
-  subteam: Aero
-
 - name: Chris Gilbert
   picture: chris_gilbert.png
   subteam: Electrical
@@ -124,11 +116,6 @@
 - name: Daniel Gron
   picture: daniel_gron.png
   subteam: Aero
-
-- name: Joseph Hagye
-  picture: joseph_hagye.png
-  subteam: Material Acquisition
-  konami: joseph_hagye.png
 
 - name: Colin Haynes
   picture: colin_haynes.png
