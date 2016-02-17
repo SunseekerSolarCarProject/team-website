@@ -51,10 +51,6 @@
   position: Webmaster
   konami: alec_carpenter.png
 
-- name: Andreas Argoudelis
-  picture: andreas_argoudelis.png
-  subteam: Mechanical
-
 - name: Quinten Bader
   picture: quinten_bader.png
   subteam: Mechanical
@@ -114,7 +110,7 @@
   linkedin: https://www.linkedin.com/in/kai-gray-546706b6
   konami: kai_gray.png
 
-- name: Daniel Gron
+- name: Daniel Groń
   picture: daniel_gron.png
   subteam: Aero
 
@@ -138,10 +134,6 @@
 - name: Jonathan Kellogg
   picture: jonathan_kellogg.png
   subteam: Electrical
-
-- name: Austin Key
-  picture: austin_key.png
-  subteam: Aero
 
 - name: Dylan Kimball
   picture: dylan_kimball.png
@@ -178,10 +170,6 @@
   picture: amanda_perion.png
   subteam: Electrical
 
-- name: Louis Piccione
-  picture: louis_piccione.png
-  subteam: Mechanical
-
 - name: Mac Preston
   picture: mac_preston.png
   subteam: Electrical
@@ -191,14 +179,6 @@
   subteam: Aero
   position: Harbor Freight Liaison
   konami: sarah_rolniak.png
-
-- name: Nathan Schick
-  picture: nathan_schick.png
-  subteam: Mechanical
-
-- name: Ryan Shereda
-  picture: ryan_shereda.png
-  subteam: Aero
 
 - name: Vance Smith
   picture: vance_smith.png
@@ -234,7 +214,7 @@
 - name: Bo Ching Wong
   picture: bo_ching_wong.jpg
   linkedin: https://www.linkedin.com/in/bochingwong
-  subteam: Aero
+  subteam: Business
 
 - name: Dana Wyckoff
   picture: dana_wyckoff.png
