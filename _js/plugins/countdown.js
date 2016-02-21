@@ -1,41 +1,59 @@
 var jQuery = require('jquery');
 
-var numMilliseconds, parts;
+var resolutions;
 
-numMilliseconds = {
-    month:  2592000000,
-    day:    86400000,
-    hour:   3600000,
-    minute: 60000,
-    second: 1000
+resolutions = {
+    month: {
+        duration: 2592000000,
+        units: 'Months'
+    },
+    day: {
+        duration: 86400000,
+        units: 'Days'
+    },
+    hour: {
+        duration: 3600000,
+        units: 'Hours'
+    },
+    minute: {
+        duration: 60000,
+        units: 'Minutes'
+    },
+    second: {
+        duration: 1000,
+        units: 'Seconds'
+    }
 };
 
-parts = ['month', 'day', 'hour', 'minute', 'second'];
-
 (function ($) {
-    $.fn.countdown = function (then, config) {
-        var $this, diff, $values, methods;
+    $.fn.countdown = function (then, opts) {
+        var $this, $values, diff, methods;
 
         $this   = $(this);
-        diff    = then - Date.now();
         $values = {};
+        diff    = then - Date.now();
+
+        options = $.extend({
+            resolution: 'second'
+        }, opts);
+
         methods = {
             initialize: function () {
-                var $container;
+                var $container, p;
 
                 $container = $('<ul class="countdown__container"></ul>');
                 $container.appendTo($this);
 
-                parts.forEach(function (e) {
+                for (p in resolutions) {
                     var $value, $part;
 
                     $value     = $('<span class="countdown__part__value">0</span>');
-                    $values[e] = $value;
-                    $part      = $('<li class="countdown__part">' + e + 's</li>');
+                    $values[p] = $value;
+                    $part      = $('<li class="countdown__part">' + resolutions[p].units + '</li>');
 
                     $value.prependTo($part);
                     $part.appendTo($container);
-                });
+                }
 
                 methods.countDown();
             },
@@ -45,25 +63,25 @@ parts = ['month', 'day', 'hour', 'minute', 'second'];
                 if (diff <= 0)
                     return;
 
-                setTimeout(methods.countDown, numMilliseconds.second);
+                setTimeout(methods.countDown, resolutions[options.resolution].duration);
             },
             render: function () {
-                var remain;
+                var remain, p;
 
                 remain = diff;
-                diff  -= numMilliseconds['second'];
+                diff  -= resolutions[options.resolution].duration;
 
-                parts.forEach(function (e) {
-                    remain = methods.calcValue(e, remain);
-                });
+                for (p in resolutions) {
+                    remain = methods.calcValue(p, remain);
+                }
             },
             calcValue: function (e, remain) {
                 var num;
 
-                num = Math.floor(remain / numMilliseconds[e]);
+                num = Math.floor(remain / resolutions[e].duration);
                 $values[e].text(num < 10 ? '0' + num : num);
 
-                return remain % numMilliseconds[e];
+                return remain % resolutions[e].duration;
             }
         };
 
