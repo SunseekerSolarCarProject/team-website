@@ -27,7 +27,7 @@ resolutions = {
 
 (function ($) {
     $.fn.countdown = function (then, opts) {
-        var $this, $values, diff, methods;
+        var $this, $values, diff, options, methods;
 
         $this   = $(this);
         $values = {};
