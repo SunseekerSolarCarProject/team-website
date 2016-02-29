@@ -5,49 +5,47 @@ title: Meet the Team
 intro: The following individuals make up the 2015-16 Sunseeker Solar Car Project.
 js: team
 ---
-<div class="wrapper">
-  <div class="members__group">
-    {% for member in site.data.members %}
-      {% capture mod2 %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
-      {% capture mod4 %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
+<div class="members__group">
+  {% for member in site.data.members %}
+    {% capture mod2 %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
+    {% capture mod4 %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
 
-      {% if forloop.index0 != 0 %}
-        {% if mod2 == '0' %}
-          <div class="clearBoth"></div></div>
-          {% if mod4 == '0' %}
-            <div class="clearBoth"></div>
-          {% endif %}
-          <div class="members__group">
+    {% if forloop.index0 != 0 %}
+      {% if mod2 == '0' %}
+        <div class="clearBoth"></div></div>
+        {% if mod4 == '0' %}
+          <div class="clearBoth"></div>
         {% endif %}
+        <div class="members__group">
       {% endif %}
+    {% endif %}
 
-      <div class="members__member">
-        <img src="{{ '/images/team-members/1516/' | prepend: site.baseurl }}{% if member.picture %}{{ member.picture }}{% else %}../no-picture.png{% endif %}"{% if member.konami%}data-konami-picture="{{ '/images/team-members/konami/' | prepend: site.baseurl }}{{ member.konami }}"{% endif %} alt="{{ member.name }}'s Picture">
-        <strong>
-          {{ member.name }}
-          {% if member.linkedin %}
-            <a href="{{ member.linkedin }}" target="_blank" class="linkedin">LinkedIn Profile</a>
-          {% endif %}
-        </strong>
-        <ul class="member__data">
-          {% if member.position %}
-            <li class="member__block__info">{{ member.position }}</li>
-          {% endif %}
-          {% if member.company %}
-            <li class="member__block__info">{{ member.company }}</li>
-          {% endif %}
-          {% if member.department %}
-            <li class="member__block__info">{{ member.department }}</li>
-          {% endif %}
-          {% if member.major %}
-            <li class="member__block__info">{{ member.major }}</li>
-          {% endif %}
-          {% if member.subteam %}
-            <li class="member__block__info">{{ member.subteam }}</li>
-          {% endif %}
-        </ul>
-      </div>
-    {% endfor %}
-  </div>
-  <div class="clearBoth"></div>
+    <div class="members__member">
+      <img src="{{ '/images/team-members/1516/' | prepend: site.baseurl }}{% if member.picture %}{{ member.picture }}{% else %}../no-picture.png{% endif %}"{% if member.konami%}data-konami-picture="{{ '/images/team-members/konami/' | prepend: site.baseurl }}{{ member.konami }}"{% endif %} alt="{{ member.name }}'s Picture">
+      <strong>
+        {{ member.name }}
+        {% if member.linkedin %}
+          <a href="{{ member.linkedin }}" target="_blank" class="linkedin">LinkedIn Profile</a>
+        {% endif %}
+      </strong>
+      <ul class="member__data">
+        {% if member.position %}
+          <li class="member__block__info">{{ member.position }}</li>
+        {% endif %}
+        {% if member.company %}
+          <li class="member__block__info">{{ member.company }}</li>
+        {% endif %}
+        {% if member.department %}
+          <li class="member__block__info">{{ member.department }}</li>
+        {% endif %}
+        {% if member.major %}
+          <li class="member__block__info">{{ member.major }}</li>
+        {% endif %}
+        {% if member.subteam %}
+          <li class="member__block__info">{{ member.subteam }}</li>
+        {% endif %}
+      </ul>
+    </div>
+  {% endfor %}
 </div>
+<div class="clearBoth"></div>

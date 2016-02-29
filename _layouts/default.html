@@ -5,7 +5,9 @@
     {% include header.html %}
     {% include title.html %}
     <main class="primaryContent{% if page.pageid %} primaryContent--{{ page.pageid }}{% endif %}">
-      {{ content }}
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </main>
     {% include footer.html %}
   </body>
