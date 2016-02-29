@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html>
-    {% include head.html %}
-    <body>
-        {% include header.html %}
-        <div class="pageIntro">
-            <div class="wrapper">
-                <h1>{{ page.title }}</h1>
-                Posted on {{ page.date | date: '%B %d, %Y' }} by {{ page.author }}
-            </div>
-        </div>
-        <main class="primaryContent{% if page.pageid %} primaryContent--{{ page.pageid }}{% endif %}">
-            <div class="wrapper">
-                {{ content }}
-            </div>
-        </main>
-        {% include footer.html %}
-    </body>
-</html>
+{% capture post_title %}
+<div class="pageIntro">
+  <div class="wrapper">
+    <h1>{{ page.title }}</h1>
+    Posted on {{ page.date | date: '%B %d, %Y' }} by {{ page.author }}
+  </div>
+</div>
+{% endcapture %}
+
+{% capture wrapped_content %}<div class="wrapper">{{ content }}</div>{% endcapture %}
+
+{% include base.html title=post_title content=wrapped_content  %}
+
