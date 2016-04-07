@@ -68,10 +68,6 @@
   picture: molly_bowers.png
   subteam: Mechanical
 
-- name: Derek Braun
-  picture: derek_braun.png
-  subteam: Mechanical
-
 - name: Alex Brunk
   picture: alex_brunk.png
   linkedin: https://www.linkedin.com/pub/alex-brunk/108/163/941
@@ -122,10 +118,6 @@
   picture: ross_hiller.png
   subteam: Mechanical
   konami: ross_hiller.png
-
-- name: Brandon Joseph
-  picture: brandon_joseph.png
-  subteam: Mechanical
 
 - name: Greg Kaiser
   picture: greg_kaiser.png
@@ -179,13 +171,10 @@
   subteam: Aero
   konami: sarah_rolniak.png
 
-- name: Vance Smith
-  picture: vance_smith.png
-  subteam: Aero
-
 - name: Jordan Stoy
   picture: jordan_stoy.png
   subteam: Mechanical
+  konami: jordan_stoy.png
 
 - name: Joel Thompson
   picture: joel_thompson.png
