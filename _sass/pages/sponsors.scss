@@ -41,27 +41,21 @@
     padding: $standard-padding;
 }
 
-.sponsors__tier {
-    margin: 0 0 $standard-margin;
-    
-    h3{
-        font-weight: bold;
-
-        small {
-            font-weight: 100;
-            display: block;
-            margin-top: 5px;
-        }
-    }
-    
-    background: $light_gray;
+.tier {
+    background-color: $light-gray;
     padding: $standard-padding;
+    margin-bottom: $standard-margin;
+}
+
+sup a {
+    color: $bronco-brown;
+    text-decoration: none;
 }
 
 @include media-query(tablet) {
     .sponsor__image, 
     .sponsor__description {
-        height: 150px;
+        min-height: 150px;
         float: left;
         box-sizing: border-box;
     }
