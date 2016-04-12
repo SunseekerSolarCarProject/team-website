@@ -22,6 +22,7 @@
   linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
   position: Assistant Project Manager
   konami: margaret_mooney.png
+  quote: 'I went to school to work on my oral skills.'
 
 - name: Gregory Bosma
   picture: gregory_bosma.png
@@ -34,16 +35,19 @@
   linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
   position: Electrical Lead
   konami: krystal_york.png
+  quote: 'Who is this Mitchel Keil?'
 
 - name: Nathan Fisher
   picture: nathan_fisher.png
   position: Aero Lead
+  quote: 'I forgot to tell you the meeting is canceled.'
 
 - name: Bryan Harris
   picture: bryan_harris.png
   linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
   position: Business Lead
   konami: bryan_harris.png
+  quote: 'Is Europe techincally a continent?'
 
 - name: Alec Carpenter
   picture: alec_carpenter.png
@@ -77,6 +81,7 @@
   linkedin: https://www.linkedin.com/pub/alex-brunk/108/163/941
   subteam: Aero
   konami: alex_brunk.png
+  quote: 'Is this thing hot? Ow!'
 
 - name: Nick Byers
   picture: nick_byers.png
@@ -99,6 +104,7 @@
   linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
   subteam: Electrical
   konami: josh_clemens.png
+  quote: 'I say a lot of stupid stuff.'
 
 - name: Chris Gilbert
   picture: chris_gilbert.png
@@ -113,6 +119,7 @@
 - name: Daniel Groń
   picture: daniel_gron.png
   subteam: Aero
+  quote: "I think this is the 10' car."
 
 - name: Colin Haynes
   picture: colin_haynes.png
@@ -122,6 +129,7 @@
   picture: ross_hiller.png
   subteam: Mechanical
   konami: ross_hiller.png
+  quote: 'Which way?'
 
 - name: Michael Hinz
   picture: michael_hinz.png
@@ -186,6 +194,7 @@
   picture: jordan_stoy.png
   subteam: Mechanical
   konami: jordan_stoy.png
+  quote: "Gonna git me sum kadoba."
 
 - name: Joel Thompson
   picture: joel_thompson.png
@@ -208,7 +217,8 @@
 - name: Blake Williamson
   picture: blake_williamson.png
   subteam: Mechanical
-  konami: blake_williamson.png
+  konami: blake_williamson_2.png
+  quote: 'Make Sunseeker great again!'
 
 - name: Bo Ching Wong
   picture: bo_ching_wong.jpg
@@ -218,15 +228,17 @@
 - name: Dana Wyckoff
   picture: dana_wyckoff.png
   subteam: Aero
+  quote: "I don't like people."
 
 - name: Bradley Bazuin
   position: Faculty Advisior
   department: Electrical Engineering
   picture: bradley_bazuin.jpg
+  quote: 'SAVE THE MILLIAMPS!'
 
 - name: Mitchel Keil
   position: Faculty Advisior
-  department: IME
+  department: EDMMS
   picture: mitchel_keil.png
 
 - name: Robert Galman
@@ -234,7 +246,6 @@
   linkedin: https://www.linkedin.com/pub/robert-galman/b9/9a5/b0a
   department: Electrical Engineering
   position: Industry Advisor
-  company: Elecyr
 
 - name: Andrew Day
   picture: andrew_day.jpg

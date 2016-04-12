@@ -21,10 +21,20 @@ $(window).konami({
             $this.fadeOut(function () {
                 $this.attr('src', $this.data('konami-picture'));
 
+                $('.member__data').each(function () {
+                    if ($(this).find('.member__block__info--quote').length)
+                        $(this).find('.member__block__info').hide();
+
+                    $('.member__block__info--quote').show();
+                });
+
                 $this.fadeIn(function () {
                     setTimeout(function () {
                         $this.fadeOut(function () {
                             $this.attr('src', src);
+
+                            $('.member__block__info').show();
+                            $('.member__block__info--quote').hide();
 
                             $this.fadeIn(function () {
                                 enabled = false;

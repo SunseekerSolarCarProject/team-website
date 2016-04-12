@@ -44,6 +44,9 @@ js: team
         {% if member.subteam %}
           <li class="member__block__info">{{ member.subteam }}</li>
         {% endif %}
+        {% if member.quote %}
+          <li class="member__block__info member__block__info--quote">{{ member.quote }}</li>
+        {% endif %}
       </ul>
     </div>
   {% endfor %}

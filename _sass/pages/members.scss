@@ -36,6 +36,10 @@
     }
 }
 
+.member__block__info--quote {
+    display: none;
+} 
+
 @include media-query(desktop) {
     .members__group {
         width: 50%;
