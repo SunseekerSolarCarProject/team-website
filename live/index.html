@@ -2,12 +2,31 @@
 layout: default
 pageid: live
 title: Follow Us Live!
-intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, through many of the nation's National Parks as a part of the 2016 American Solar Challenge. Follow us here for up to the minute statistics and updates!
+intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, through many of the nation's National Parks, as a part of the 2016 American Solar Challenge. Follow us here for up to the minute statistics and updates!
 ---
 
 <div class="live__map" id="map"></div>
 
-<div class="wrapper"></div>
+<div class="wrapper">
+    <div class="left">
+        <div class="live__stats">
+            <dl>
+                <dt>Location</dt>
+                <dd></dd>
+                <dt>Speed</dt>
+                <dd></dd>
+                <dt>Weather</dt>
+                <dd></dd>
+                <dt>Duration</dt>
+                <dd></dd>
+            </dl>
+        </div>
+    </div>
+    <div class="right">
+
+    </div>
+    <div class="clearBoth"></div>
+</div>
 
 
 <script>
@@ -31,7 +50,7 @@ intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, throug
         });
 
         ascRoute = new google.maps.KmlLayer({
-            url: '{{ "/live/asc_2016_route.kml" | prepend: site.baseurl | prepend: site.url }}',
+            url: '{{ "/live/doc.kml" | prepend: site.baseurl | prepend: site.url }}',
             map: map
         });
     }

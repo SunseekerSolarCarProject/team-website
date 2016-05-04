@@ -1,5 +1,9 @@
 .live__map {
     width: 100%;
     height: 500px;
-    margin: -1 * $standard-margin 0 0;
+    margin: -1 * $standard-margin 0 $standard-margin;
+}
+
+.live__stats {
+    @extend .message;
 }
