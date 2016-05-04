@@ -1,0 +1,27 @@
+---
+layout: default
+pageid: live
+title: Follow Us Live!
+intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, through many of the nation's National Parks as a part of the 2016 American Solar Challenge. Follow us here for up to the minute statistics and updates!
+---
+
+<div class="live__map" id="map"></div>
+
+<div class="wrapper"></div>
+
+
+<script>
+    function initMap () {
+        var map, usaLoc, ascRoute;
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        ascRoute = new google.maps.KmlLayer({
+            url: '{{ "/live/asc_2016_route.kml" | prepend: site.baseurl | prepend: site.url }}',
+            map: map
+        });
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_api_key }}&amp;callback=initMap" async defer></script>
