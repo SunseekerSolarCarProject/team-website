@@ -31,22 +31,10 @@ intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, throug
 
 <script>
     function initMap () {
-        var map, usaLoc, ascRoute;
+        var map, ascRoute;
 
         map = new google.maps.Map(document.getElementById('map'), {
             mapTypeId: google.maps.MapTypeId.ROADMAP
-        });
-
-        usaLoc = new google.maps.Geocoder();
-
-        /*
-         * Source to load USA map: http://stackoverflow.com/a/2936979/1526173
-         */
-        usaLoc.geocode({'address': 'US'}, function (results, status) {
-            var ne = results[0].geometry.viewport.getNorthEast();
-            var sw = results[0].geometry.viewport.getSouthWest();
-
-            map.fitBounds(results[0].geometry.viewport);               
         });
 
         ascRoute = new google.maps.KmlLayer({
