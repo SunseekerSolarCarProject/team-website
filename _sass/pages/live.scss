@@ -1,9 +1,37 @@
 .live__map {
     width: 100%;
-    height: 500px;
+    height: 250px;
     margin: -1 * $standard-margin 0 $standard-margin;
 }
 
 .live__stats {
+    
+}
+
+.stats__stat {
     @extend .message;
+
+    text-align: center;
+    padding: 30px 0;
+}
+
+.stat__label {
+    font-weight: 400;
+    margin: $standard-margin 0 0;
+}
+
+@include media-query(desktop) {
+    .live__map {
+        height: 500px;
+    }
+
+    .stats__stat {
+        width: ($wrapper-width / 4) - $standard-margin;
+        margin: 0 0 0 $standard-margin;
+        display: inline-block;
+
+        &:first-of-type {
+            margin: 0;
+        }
+    }
 }

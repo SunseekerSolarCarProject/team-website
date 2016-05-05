@@ -8,28 +8,31 @@ intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, throug
 <div class="live__map" id="map"></div>
 
 <div class="wrapper">
-    <div class="left">
-        <div class="live__stats">
-            <dl>
-                <dt>Location</dt>
-                <dd></dd>
-                <dt>Speed</dt>
-                <dd></dd>
-                <dt>Weather</dt>
-                <dd></dd>
-                <dt>Duration</dt>
-                <dd></dd>
-            </dl>
+    <div class="live__stats">
+        <div class="stats__stat">
+            <div class="stat__value" id="location">&mdash;</div>
+            <div class="stat__label">Location</div>
+        </div>
+        <div class="stats__stat">
+            <div class="stat__value" id="speed">&mdash;</div>
+            <div class="stat__label">Speed (approx.)</div>
+        </div>
+        <div class="stats__stat">
+            <div class="stat__value" id="weather">&mdash;</div>
+            <div class="stat__label">Weather</div>
+        </div>
+        <div class="stats__stat">
+            <div class="stat__value" id="time">&mdash;</div>
+            <div class="stat__label">Time Elapsed</div>
         </div>
     </div>
-    <div class="right">
-
-    </div>
-    <div class="clearBoth"></div>
 </div>
 
 
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
 <script>
+    var solarCar;
+
     function initMap () {
         var map, ascRoute;
 
@@ -41,6 +44,31 @@ intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, throug
             url: '{{ "/live/doc.kml" | prepend: site.baseurl | prepend: site.url }}',
             map: map
         });
+
+        solarCar = new google.maps.Marker({
+            position: new google.maps.LatLng(0, 0),
+            map: map
+        });
+
+        refreshData();
+    }
+
+    function refreshData () {
+        $.get('{{ "/live/location.php" | prepend: site.baseurl }}', function (r) {
+            try {
+                var data = JSON.parse(r);
+            } catch (e) {
+                return;
+            }
+
+            solarCar.setPosition(new google.maps.LatLng(data.lat, data.lng));
+
+            $('#location').text(data.location);
+            $('#speed').text(data.speed + ' mph');
+            $('#weather').text(data.weather + ' and ' + data.temp + ' °F');
+        });
+
+        setTimeout(refreshData, 1000);
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_api_key }}&amp;callback=initMap" async defer></script>
