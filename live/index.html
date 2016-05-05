@@ -45,11 +45,6 @@ intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, throug
             map: map
         });
 
-        solarCar = new google.maps.Marker({
-            position: new google.maps.LatLng(0, 0),
-            map: map
-        });
-
         refreshData();
     }
 
@@ -68,7 +63,7 @@ intro: We're racing from Northern Ohio to Mount Rushmore in South Dakota, throug
             $('#weather').text(data.weather + ' and ' + data.temp + ' °F');
         });
 
-        setTimeout(refreshData, 1000);
+        setTimeout(refreshData, 30000);
     }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_api_key }}&amp;callback=initMap" async defer></script>

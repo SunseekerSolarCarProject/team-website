@@ -79,7 +79,7 @@ layout: wrapped
                     tx     = (time - data.time) / 1000;
                     meters = resp['rows'][0]['elements'][0]['distance']['value'];
 
-                    data.speed = Math.ceil(Math.ceil(meters / tx) * 0.44704);
+                    data.speed = Math.floor(Math.floor(meters / tx) * 0.44704);
                 }
 
                 determineCity();
