@@ -5,7 +5,7 @@ layout: wrapped
 <script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_api_key }}"></script>
 <script>
     if ("geolocation" in navigator) {
-        var data, lat, lng, time;
+        var data, lat, lng, time, tx;
 
         data = {
             lat: 42.291707,
@@ -74,7 +74,7 @@ layout: wrapped
                 data.speed = 0;
 
                 if (status == google.maps.DistanceMatrixStatus.OK) {
-                    var tx, meters;
+                    var meters;
 
                     tx     = (time - data.time) / 1000;
                     meters = resp['rows'][0]['elements'][0]['distance']['value'];
@@ -105,9 +105,5 @@ layout: wrapped
             }
         }).complete(loadNewData);
     }
-
-    // setTimeout(function () {
-    //     window.location = window.location;
-    // }, 20000);
 </script>
 <p>Hello there...</p>
