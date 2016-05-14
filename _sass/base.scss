@@ -124,6 +124,10 @@ body {
         height: 48px;
     }
 
+    &:last-of-type {
+        margin: 0;
+    }
+
     &.globalFooter__socialMedia__link--facebook {
         background-image: url('../images/social-icons/facebook.png');
     }
