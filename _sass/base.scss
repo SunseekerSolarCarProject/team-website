@@ -88,7 +88,7 @@ body {
 
 .globalFooter {
     color: $white;
-    padding: $standard-padding 0;
+    padding: 0 0 $standard-padding;
     text-align: center;
 
     h4 {
@@ -97,6 +97,47 @@ body {
 
     a {
         color: #999;
+    }
+}
+
+.globalFooter__socialMedia {
+    background-color: $black;
+    text-align: center;
+    padding: $standard-padding;
+    margin: 0 0 $standard-margin;
+
+    @extend .list-standard;
+}
+
+.globalFooter__socialMedia__link {
+    background-size: cover;
+    text-indent: -99999px;
+    margin: 0 $standard-margin 0 0 !important;
+    display: inline-block;
+
+    a {
+        display: block;
+    }
+
+    &, a {
+        width: 48px;
+        height: 48px;
+    }
+
+    &.globalFooter__socialMedia__link--facebook {
+        background-image: url('../images/social-icons/facebook.png');
+    }
+
+    &.globalFooter__socialMedia__link--flickr {
+        background-image: url('../images/social-icons/flickr.png');
+    }
+
+    &.globalFooter__socialMedia__link--twitter {
+        background-image: url('../images/social-icons/twitter.png');
+    }
+
+    &.globalFooter__socialMedia__link--github {
+        background-image: url('../images/social-icons/github.png');
     }
 }
 
