@@ -66,4 +66,4 @@ $(window).konami({
     }
 });
 
-$('#asc-2016-countdown').countdown(new Date('July 22, 2016 08:00:00'));
+$('#asc-2016-countdown').countdown(new Date('July 30, 2016 08:00:00'));
