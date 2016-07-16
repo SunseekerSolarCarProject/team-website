@@ -4,9 +4,9 @@
   <body>
     {% include header.html %}
     {% if include.title %}{{ include.title }}{% else %}{% include title.html %}{% endif %}
-    <main class="primaryContent{% if page.pageid %} primaryContent--{{ page.pageid }}{% endif %}">
+    <div class="primaryContent{% if page.pageid %} primaryContent--{{ page.pageid }}{% endif %}">
       {% if include.content %}{{ include.content }}{% else %}{{ content }}{% endif %}
-    </main>
+    </div>
     {% include footer.html %}
   </body>
 </html>
