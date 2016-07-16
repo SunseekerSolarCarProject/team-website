@@ -11,4 +11,4 @@ markdown: kramdown
 
 permalink: /blog/:categories/:year/:month/:day/:title.html
 
-exclude: ["package.json", "bower.json", "README.md", "node_modules", "deploy.js"]
+exclude: ["package.json", "bower.json", "README.md", "node_modules", "deploy.js", "Gemfile", "Gemfile.lock"]
