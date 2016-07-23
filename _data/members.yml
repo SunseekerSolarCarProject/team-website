@@ -53,6 +53,7 @@
 - name: Molly Bowers
   picture: molly_bowers.png
   subteam: Mechanical
+  konami: molly_bowers.png
 
 - name: Alex Brunk
   picture: alex_brunk.png
@@ -101,7 +102,7 @@
   picture: jordan_stoy.png
   subteam: Mechanical
   konami: jordan_stoy.png
-  quote: "Gonna git me sum kadoba."
+  quote: "I'm taking a five minute break."
 
 - name: Joel Thompson
   picture: joel_thompson.png
