@@ -37,11 +37,6 @@
   konami: krystal_york.png
   quote: 'Who is this Mitchel Keil?'
 
-- name: Nathan Fisher
-  picture: nathan_fisher.png
-  position: Aero Lead
-  quote: 'I forgot to tell you the meeting is canceled.'
-
 - name: Bryan Harris
   picture: bryan_harris.png
   linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
@@ -55,25 +50,8 @@
   position: Webmaster
   konami: alec_carpenter.png
 
-- name: Quinten Bader
-  picture: quinten_bader.png
-  subteam: Mechanical
-  konami: quinten_bader.png
-
-- name: Devin Birchfield
-  picture: devin_birchfield.png
-  subteam: Electrical
-
-- name: Andrew Borkowski
-  picture: andrew_borkowski.png
-  subteam: Electrical
-
 - name: Molly Bowers
   picture: molly_bowers.png
-  subteam: Mechanical
-
-- name: Derek Braun
-  picture: derek_braun.png
   subteam: Mechanical
 
 - name: Alex Brunk
@@ -82,22 +60,6 @@
   subteam: Aero
   konami: alex_brunk.png
   quote: 'Is this thing hot? Ow!'
-
-- name: Nick Byers
-  picture: nick_byers.png
-  subteam: Mechanical
-
-- name: Karl Calkins
-  picture: karl_calkins.png
-  subteam: Aero
-
-- name: Hayley Carter
-  picture: hayley_carter.png
-  subteam: Aero
-
-- name: Colin Ceisel
-  picture: colin_ceisel.png
-  subteam: Mechanical
 
 - name: Joshua Clemens
   picture: joshua_clemens.png
@@ -116,33 +78,6 @@
   linkedin: https://www.linkedin.com/in/kai-gray-546706b6
   konami: kai_gray.png
 
-- name: Daniel Groń
-  picture: daniel_gron.png
-  subteam: Aero
-  quote: "I think this is the 10' car."
-
-- name: Colin Haynes
-  picture: colin_haynes.png
-  subteam: Aero
-
-- name: Ross Hiller
-  picture: ross_hiller.png
-  subteam: Mechanical
-  konami: ross_hiller.png
-  quote: 'Which way?'
-
-- name: Michael Hinz
-  picture: michael_hinz.png
-  subteam: Mechanical
-
-- name: Greg Kaiser
-  picture: greg_kaiser.png
-  subteam: Mechanical
-
-- name: Jonathan Kellogg
-  picture: jonathan_kellogg.png
-  subteam: Electrical
-
 - name: Dylan Kimball
   picture: dylan_kimball.png
   subteam: Composites
@@ -153,37 +88,9 @@
   subteam: Aero
   konami: denis_kimuhu.png
 
-- name: Vincent Kucway
-  picture: vincent_kucway.png
-  linkedin: https://www.linkedin.com/in/vincentkucway
-  konami: vince_kucway.png
-
-- name: Nathan LaWarre
-  picture: nathan_lawarre.png
-  subteam: Electrical
-
-- name: Daniel Michael
-  picture: daniel_michael.png
-  subteam: Electrical
-
-- name: Carlie Moon
-  picture: carlie_moon.png
-
-- name: Patrick Murphy
-  picture: patrick_murphy.png
-  subteam: Aero
-
 - name: Nicholas Patzer
   picture: nicholas_patzer.png
   subteam: Mechanical
-
-- name: Amanda Perion
-  picture: amanda_perion.png
-  subteam: Electrical
-
-- name: Mac Preston
-  picture: mac_preston.png
-  subteam: Electrical
 
 - name: Sarah Rolniak
   picture: sarah_rolniak.png
@@ -200,19 +107,6 @@
   picture: joel_thompson.png
   subteam: Mechanical
   konami: joel_thompson.png
-
-- name: Cameron Tschupp
-  picture: cameron_tschupp.png
-  subteam: Mechanical
-  konami: cameron_tschupp.png
-
-- name: Steffan Werth
-  picture: steffan_werth.png
-  subteam: Mechanical
-
-- name: Matthew Williams
-  picture: matthew_williams.png
-  subteam: Aero
 
 - name: Blake Williamson
   picture: blake_williamson.png
