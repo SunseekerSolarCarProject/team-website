@@ -1,0 +1,167 @@
+# The following lists the available fields.
+# Please order them the same for each member
+# as they appear below, for the sake of
+# consistency. They will appear in the same
+# order on the live rendered page.
+#
+# - name: First Last
+#   picture: first_name.img
+#   linkedin: public LinkedIn profile URL
+#   company: an alum's place of employment
+
+config:
+  pics_dir: /images/team-members/alumni/
+people:
+  - name: Joshua Allen
+    company: Getman Corporation
+
+  - name: Lyth Alobiedat
+
+  - name: Roger Anthony
+
+  - name: Erik Boettcher
+
+  - name: Mike Booms
+
+  - name: Alec Carpenter
+    picture: alec_carpenter.png
+    linkedin: https://www.linkedin.com/in/aleccarpenter
+    company: Quicken Loans
+
+  - name: Andrew Day
+    picture: andrew_day.jpg
+    company: Toyota Boshoku America
+
+  - name: Megan Derwich
+
+  - name: Kevin Dugal
+
+  - name: Ira Foster
+
+  - name: Robert Galman
+    picture: robert_galman.jpg
+    linkedin: https://www.linkedin.com/pub/robert-galman/b9/9a5/b0a
+    company: General Motors
+
+  - name: Ben Galster
+
+  - name: Tim Gaston
+
+  - name: Dan Geerlings
+
+  - name: Chris Gore
+    company: Kiip
+
+  - name: Brendan Hill
+
+  - name: Joseph Hagye
+    picture: joseph_hagye.jpg
+    company: General Motors
+
+  - name: Lindsay Hatter
+
+  - name: Carl Hawkins
+
+  - name: Alex Hessler
+
+  - name: Kenwood Hoben
+
+  - name: Alex Hoeksema
+
+  - name: Byron Izenbaard
+    company: Stryker Corporation
+
+  - name: Matt Johnson
+
+  - name: Kevin Kalchik
+
+  - name: John Karakula
+
+  - name: Joe Kawka
+
+  - name: Trent Kenworthy
+
+  - name: Nathan Kesler
+
+  - name: Ed Killip
+
+  - name: Nicholas Killoran
+
+  - name: Denis KiMuhu
+    picture: denis_kimuhu.png
+
+  - name: Cameron Knight
+    picture: cameron_knight.png
+    company: General Motors
+
+  - name: David Ludens
+
+  - name: Marie Maddix
+
+  - name: Madeline McAuley
+
+  - name: Gabo Motlhabane
+
+  - name: Nick Munyan
+
+  - name: Eric Nederhoed
+
+  - name: Danielle O'Connell
+
+  - name: Andrew Oman
+
+  - name: Andrew O'Neill
+
+  - name: Mitch Panek
+
+  - name: Tom Platte
+
+  - name: James Plocinik
+
+  - name: Courtney Rawlings
+
+  - name: Justin Rensch
+
+  - name: Luke Richard
+
+  - name: Tony Rizzo
+
+  - name: Melanie Roberts
+
+  - name: Chris Rocker
+
+  - name: Adrian Sargent
+
+  - name: Jake Sanford
+
+  - name: Charlie Schlansker
+    picture: charlie_schlansker.jpg
+    company: Fiat Chrysler Automobiles
+
+  - name: Ryan Schwartz
+
+  - name: Carla Siler
+
+  - name: Ian Smith
+
+  - name: Troy Smits
+
+  - name: Hillary Sulla
+
+  - name: Edmond Tan
+
+  - name: David Tindle
+
+  - name: Joel Thompson
+    picture: joel_thompson.png
+    company: General Motors
+
+  - name: Benson VandeStreek
+
+  - name: Helio Vogel
+
+  - name: Jesse Wick
+
+  - name: Bailey Windle
+
+  - name: Steven Yurk

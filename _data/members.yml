@@ -4,142 +4,119 @@
 # consistency. They will appear in the same
 # order on the live rendered page.
 #
-#- name: First Last
-#  picture: first_name.img
-#  linkedin: public LinkedIn profile URL
-#  position: their title on the team
-#  company: an industry advisor's place of employment
-#  department: faculty/industry advisor "major"
-#  subteam: the group of people they primarily work with
+# - name: First Last
+#   picture: first_name.img
+#   linkedin: public LinkedIn profile URL
+#   position: their title on the team
+#   company: an industry advisor's place of employment
+#   department: faculty/industry advisor "major"
+#   subteam: the group of people they primarily work with
 
-- name: Cameron Knight
-  picture: cameron_knight.png
-  position: Project Manager
-  konami: cameron_knight.png
+config:
+  pics_dir: /images/team-members/1617/
+people:
+  - name: Margaret Mooney
+    picture: margaret_mooney.png
+    linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
+    position: Project Manager
+    konami: margaret_mooney.png
+    quote: 'I went to school to work on my oral skills.'
 
-- name: Margaret Mooney
-  picture: margaret_mooney.png
-  linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
-  position: Assistant Project Manager
-  konami: margaret_mooney.png
-  quote: 'I went to school to work on my oral skills.'
+  - name: Joshua Clemens
+    picture: joshua_clemens.png
+    linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
+    position: Assistant Project Manager
+    konami: josh_clemens.png
+    quote: 'I say a lot of stupid stuff.'
 
-- name: Gregory Bosma
-  picture: gregory_bosma.png
-  linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
-  position: Mechanical Lead
-  konami: greg_bosma.png
+  - name: Krystal York
+    picture: krystal_york.png
+    linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
+    position: Electrical Lead
+    konami: krystal_york.png
+    quote: 'Who is this Mitchel Keil?'
 
-- name: Krystal York
-  picture: krystal_york.png
-  linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
-  position: Electrical Lead
-  konami: krystal_york.png
-  quote: 'Who is this Mitchel Keil?'
+  - name: Alex Brunk
+    picture: alex_brunk.png
+    linkedin: https://www.linkedin.com/pub/alex-brunk/108/163/941
+    position: Aero Lead
+    konami: alex_brunk.png
+    quote: 'Is this thing hot? Ow!'
 
-- name: Bryan Harris
-  picture: bryan_harris.png
-  linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
-  position: Business Lead
-  konami: bryan_harris.png
-  quote: 'Is Europe techincally a continent?'
+  - name: Blake Williamson
+    picture: blake_williamson.png
+    position: Mechanical Lead
+    konami: blake_williamson_2.png
+    quote: 'Make Sunseeker great again!'
 
-- name: Alec Carpenter
-  picture: alec_carpenter.png
-  linkedin: https://www.linkedin.com/in/aleccarpenter
-  position: Webmaster
-  konami: alec_carpenter.png
+  - name: Bo Ching Wong
+    picture: bo_ching_wong.jpg
+    linkedin: https://www.linkedin.com/in/bochingwong
+    subteam: Business Lead
 
-- name: Molly Bowers
-  picture: molly_bowers.png
-  subteam: Mechanical
-  konami: molly_bowers.png
+  - name: Kai Gray
+    picture: kai_gray.png
+    position: Webmaster
+    linkedin: https://www.linkedin.com/in/kai-gray-546706b6
+    konami: kai_gray.png
 
-- name: Alex Brunk
-  picture: alex_brunk.png
-  linkedin: https://www.linkedin.com/pub/alex-brunk/108/163/941
-  subteam: Aero
-  konami: alex_brunk.png
-  quote: 'Is this thing hot? Ow!'
+  - name: Gregory Bosma
+    picture: gregory_bosma.png
+    linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
+    subteam: Mechanical
+    konami: greg_bosma.png
 
-- name: Joshua Clemens
-  picture: joshua_clemens.png
-  linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
-  subteam: Electrical
-  konami: josh_clemens.png
-  quote: 'I say a lot of stupid stuff.'
+  - name: Molly Bowers
+    picture: molly_bowers.png
+    position: Driver
+    subteam: Mechanical
+    konami: molly_bowers.png
 
-- name: Chris Gilbert
-  picture: chris_gilbert.png
-  subteam: Electrical
+  - name: Bryan Harris
+    picture: bryan_harris.png
+    linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
+    subteam: Mechanical
+    konami: bryan_harris.png
+    quote: 'Is Europe techincally a continent?'
 
-- name: Kai Gray
-  picture: kai_gray.png
-  position: Webminion
-  linkedin: https://www.linkedin.com/in/kai-gray-546706b6
-  konami: kai_gray.png
+  - name: Chris Gilbert
+    picture: chris_gilbert.png
+    subteam: Electrical
 
-- name: Dylan Kimball
-  picture: dylan_kimball.png
-  subteam: Composites
-  konami: dylan_kimball.png
+  - name: Dylan Kimball
+    picture: dylan_kimball.png
+    subteam: Composites
+    konami: dylan_kimball.png
 
-- name: Denis KiMuhu
-  picture: denis_kimuhu.png
-  subteam: Aero
-  konami: denis_kimuhu.png
+  - name: Nicholas Patzer
+    picture: nicholas_patzer.png
+    position: Driver
+    subteam: Mechanical
 
-- name: Nicholas Patzer
-  picture: nicholas_patzer.png
-  subteam: Mechanical
+  - name: Sarah Rolniak
+    picture: sarah_rolniak.png
+    position: Driver
+    subteam: Aero
+    konami: sarah_rolniak.png
 
-- name: Sarah Rolniak
-  picture: sarah_rolniak.png
-  subteam: Aero
-  konami: sarah_rolniak.png
+  - name: Jordan Stoy
+    picture: jordan_stoy.png
+    subteam: Mechanical
+    konami: jordan_stoy.png
+    quote: "I'm taking a five minute break."
 
-- name: Jordan Stoy
-  picture: jordan_stoy.png
-  subteam: Mechanical
-  konami: jordan_stoy.png
-  quote: "I'm taking a five minute break."
+  - name: Dana Wyckoff
+    picture: dana_wyckoff.png
+    subteam: Aero
+    quote: "I don't like people."
 
-- name: Joel Thompson
-  picture: joel_thompson.png
-  subteam: Mechanical
-  konami: joel_thompson.png
+  - name: Bradley Bazuin
+    position: Faculty Advisior
+    department: Electrical Engineering
+    picture: bradley_bazuin.jpg
 
-- name: Blake Williamson
-  picture: blake_williamson.png
-  subteam: Mechanical
-  konami: blake_williamson_2.png
-  quote: 'Make Sunseeker great again!'
-
-- name: Bo Ching Wong
-  picture: bo_ching_wong.jpg
-  linkedin: https://www.linkedin.com/in/bochingwong
-  subteam: Business
-
-- name: Dana Wyckoff
-  picture: dana_wyckoff.png
-  subteam: Aero
-  quote: "I don't like people."
-
-- name: Bradley Bazuin
-  position: Faculty Advisior
-  department: Electrical Engineering
-  picture: bradley_bazuin.jpg
-  quote: 'SAVE THE MILLIAMPS!'
-
-- name: Mitchel Keil
-  position: Faculty Advisior
-  department: EDMMS
-  picture: mitchel_keil.png
-  konami: mitchel_keil.png
-
-- name: Robert Galman
-  picture: robert_galman.jpg
-  linkedin: https://www.linkedin.com/pub/robert-galman/b9/9a5/b0a
-  department: Electrical Engineering
-  position: Industry Advisor
-  company: General Motors
+  - name: Mitchel Keil
+    position: Faculty Advisior
+    department: EDMMS
+    picture: mitchel_keil.png
+    konami: mitchel_keil.png
