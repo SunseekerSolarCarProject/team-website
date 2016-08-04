@@ -1,47 +1,65 @@
+{% capture count %}0{% endcapture %}
+{% capture notPictured %}{% endcapture %}
 <div class="members__group">
   {% for member in members.people %}
-    {% capture mod2 %}{{ forloop.index0 | modulo:2 }}{% endcapture %}
-    {% capture mod4 %}{{ forloop.index0 | modulo:4 }}{% endcapture %}
+    {% if member.picture %}
+      {% capture mod2 %}{{ count | modulo:2 }}{% endcapture %}
+      {% capture mod4 %}{{ count | modulo:4 }}{% endcapture %}
 
-    {% if forloop.index0 != 0 %}
-      {% if mod2 == '0' %}
-        <div class="clearBoth"></div></div>
-        {% if mod4 == '0' %}
-          <div class="clearBoth"></div>
+      {% if count != '0' %}
+        {% if mod2 == '0' %}
+          <div class="clearBoth"></div></div>
+          {% if mod4 == '0' %}
+            <div class="clearBoth"></div>
+          {% endif %}
+          <div class="members__group">
         {% endif %}
-        <div class="members__group">
       {% endif %}
-    {% endif %}
 
-    <div class="members__member">
-      <img src="{{ members.config.pics_dir | prepend: site.baseurl }}{% if member.picture %}{{ member.picture }}{% else %}../no-picture.png{% endif %}"{% if member.konami%}data-konami-picture="{{ '/images/team-members/konami/' | prepend: site.baseurl }}{{ member.konami }}"{% endif %} alt="{{ member.name }}'s Picture">
-      <strong>
-        {{ member.name }}
-        {% if member.linkedin %}
-          <a href="{{ member.linkedin }}" target="_blank" class="linkedin">LinkedIn Profile</a>
-        {% endif %}
-      </strong>
-      <ul class="member__data">
-        {% if member.position %}
-          <li class="member__block__info">{{ member.position }}</li>
-        {% endif %}
-        {% if member.company %}
-          <li class="member__block__info">{{ member.company }}</li>
-        {% endif %}
-        {% if member.department %}
-          <li class="member__block__info">{{ member.department }}</li>
-        {% endif %}
-        {% if member.major %}
-          <li class="member__block__info">{{ member.major }}</li>
-        {% endif %}
-        {% if member.subteam %}
-          <li class="member__block__info">{{ member.subteam }}</li>
-        {% endif %}
-        {% if member.quote %}
-          <li class="member__block__info member__block__info--quote">{{ member.quote }}</li>
-        {% endif %}
-      </ul>
-    </div>
+      <div class="members__member">
+        <img src="{{ members.config.pics_dir | prepend: site.baseurl }}{% if member.picture %}{{ member.picture }}{% else %}../no-picture.png{% endif %}"{% if member.konami%}data-konami-picture="{{ '/images/team-members/konami/' | prepend: site.baseurl }}{{ member.konami }}"{% endif %} alt="{{ member.name }}'s Picture">
+        <strong>
+          {{ member.name }}
+          {% if member.linkedin %}
+            <a href="{{ member.linkedin }}" target="_blank" class="linkedin">LinkedIn Profile</a>
+          {% endif %}
+        </strong>
+        <ul class="member__data">
+          {% if member.position %}
+            <li class="member__block__info">{{ member.position }}</li>
+          {% endif %}
+          {% if member.company %}
+            <li class="member__block__info">{{ member.company }}</li>
+          {% endif %}
+          {% if member.department %}
+            <li class="member__block__info">{{ member.department }}</li>
+          {% endif %}
+          {% if member.major %}
+            <li class="member__block__info">{{ member.major }}</li>
+          {% endif %}
+          {% if member.subteam %}
+            <li class="member__block__info">{{ member.subteam }}</li>
+          {% endif %}
+          {% if member.quote %}
+            <li class="member__block__info member__block__info--quote">{{ member.quote }}</li>
+          {% endif %}
+        </ul>
+      </div>
+      {% capture count %}{{ count | plus:1 }}{% endcapture %}
+    {% else %}
+      {% capture notPictured %}{{ notPictured }}{{ member.name }},{% endcapture %}
+    {% endif %}
   {% endfor %}
 </div>
 <div class="clearBoth"></div>
+
+{% assign names = notPictured | split:"," %}
+
+{% if names.size > 0 %}
+  <h2>Not Pictured</h2>
+  <ul>
+    {% for name in names %}
+      <li>{{ name }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
