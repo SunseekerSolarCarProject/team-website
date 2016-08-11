@@ -28,6 +28,9 @@
           {% if member.position %}
             <li class="member__block__info">{{ member.position }}</li>
           {% endif %}
+          {% if member.years %}
+            <li class="member__block__info">{{ member.years }}</li>
+          {% endif %}
           {% if member.company %}
             <li class="member__block__info">{{ member.company }}</li>
           {% endif %}
@@ -56,10 +59,10 @@
 {% assign names = notPictured | split:"," %}
 
 {% if names.size > 0 %}
-  <h2>Not Pictured</h2>
-  <ul>
-    {% for name in names %}
-      <li>{{ name }}</li>
-    {% endfor %}
-  </ul>
+  <div class="message">
+    <h3>Not Pictured</h3>
+    <p>
+      {% for name in names %}{% if forloop.index > 1 %}, {% endif %}{{ name }}{% endfor %}
+    </p>
+  </div>
 {% endif %}

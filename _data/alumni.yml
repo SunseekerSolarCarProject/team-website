@@ -7,41 +7,118 @@
 # - name: First Last
 #   picture: first_name.img
 #   linkedin: public LinkedIn profile URL
-#   company: an alum's place of employment
+#   years: 199X - 20XX
 
 config:
   pics_dir: /images/team-members/alumni/
 people:
+  - name: Chris Abate
+
+  - name: Steve Ahles
+
   - name: Joshua Allen
-    company: Getman Corporation
+    picture: joshua_allen.png
 
   - name: Lyth Alobiedat
 
+  - name: Krystal Anderson
+
+  - name: Ron Andrade
+
   - name: Roger Anthony
+
+  - name: Kim Arnold
+
+  - name: Travis Bailey
+
+  - name: Bob Barta
+
+  - name: Mike Ball
+
+  - name: Steve Beattie
+
+  - name: Matt Belanger
+
+  - name: Dave Berels
+
+  - name: Brenda Berkompas
+
+  - name: Jim Blackwell
+
+  - name: Brian Boardman
 
   - name: Erik Boettcher
 
   - name: Mike Booms
 
+  - name: Jason Booth
+
+  - name: Jeff Bordner
+
+  - name: William Borst
+
+  - name: Dennis Boylon
+
+  - name: Ashley Brinn
+
+  - name: Bart Cann
+
   - name: Alec Carpenter
     picture: alec_carpenter.png
     linkedin: https://www.linkedin.com/in/aleccarpenter
-    company: Quicken Loans
+    years: 2012 - 2016
+
+  - name: Rob Cavanagh
+
+  - name: Edwin Cheong
+
+  - name: Lik Tek Chin
+
+  - name: Jason Chinavare
+
+  - name: Jesse Coeling
+
+  - name: Mark Coffill
+
+  - name: Jim Cotton
+
+  - name: Jim Cowart
+
+  - name: Jane Dalrymple
+
+  - name: Dan Dangremond
 
   - name: Andrew Day
     picture: andrew_day.jpg
-    company: Toyota Boshoku America
+
+  - name: Terry DeKoninck
 
   - name: Megan Derwich
 
+  - name: Mike Door
+
   - name: Kevin Dugal
+
+  - name: Ben Edinger
+
+  - name: Allen Eichenberg
+
+  - name: Mark Ely
+
+  - name: Russ Ferguson
+
+  - name: Bruce Fessenden
+
+  - name: Brian Finstrom
+
+  - name: Demian Flores
 
   - name: Ira Foster
 
   - name: Robert Galman
     picture: robert_galman.jpg
     linkedin: https://www.linkedin.com/pub/robert-galman/b9/9a5/b0a
-    company: General Motors
+    years: 2010 - 2015
 
   - name: Ben Galster
 
@@ -49,29 +126,60 @@ people:
 
   - name: Dan Geerlings
 
-  - name: Chris Gore
-    company: Kiip
+  - name: Jeff Giacobbe
 
-  - name: Brendan Hill
+  - name: Anne Godwin
+
+  - name: Chris Gore
+
+  - name: Lucio Gorena
+
+  - name: Ken Gross
+
+  - name: Larry Haeske
+
+  - name: Rob Haeske
+
+  - name: Rob Hamelink
+
+  - name: Brey Hansford
+
+  - name: Karen Haubert
+    picture: karen_haubert.png
+    years: 2013 - 2014
+
+  - name: Kurt Hayden
 
   - name: Joseph Hagye
     picture: joseph_hagye.jpg
-    company: General Motors
 
   - name: Lindsay Hatter
 
   - name: Carl Hawkins
 
+  - name: Skip Herold
+
   - name: Alex Hessler
+
+  - name: Brendan Hill
 
   - name: Kenwood Hoben
 
   - name: Alex Hoeksema
 
+  - name: Steve Houtman
+
+  - name: Scott Howe
+
   - name: Byron Izenbaard
-    company: Stryker Corporation
+
+  - name: Fred James
 
   - name: Matt Johnson
+
+  - name: Jeff Jones
+
+  - name: Nick Kaiser
 
   - name: Kevin Kalchik
 
@@ -83,22 +191,55 @@ people:
 
   - name: Nathan Kesler
 
+  - name: Heather Ketchel
+
+  - name: Everett Kettle
+
+  - name: Aida Kiilu
+
+  - name: Bob Kildea
+
   - name: Ed Killip
 
   - name: Nicholas Killoran
 
   - name: Denis KiMuhu
     picture: denis_kimuhu.png
+    years: 2012 - 2016
+
+  - name: Geoff Klein
 
   - name: Cameron Knight
     picture: cameron_knight.png
-    company: General Motors
+    years: 2013 - 2016
+
+  - name: Jon Knorr
+
+  - name: Roger Krontz
+
+  - name: Ken Ladd
+
+  - name: Kerri Lake
+
+  - name: Chan Sin Lee
 
   - name: David Ludens
 
   - name: Marie Maddix
 
+  - name: Usman Mangla
+
+  - name: Kevin Marsh
+
+  - name: George Marutz
+
+  - name: Jim Mazak
+
   - name: Madeline McAuley
+
+  - name: David McClain
+
+  - name: Marissa Melchior
 
   - name: Gabo Motlhabane
 
@@ -106,17 +247,34 @@ people:
 
   - name: Eric Nederhoed
 
+  - name: Dean Notter
+
   - name: Danielle O'Connell
 
   - name: Andrew Oman
 
   - name: Andrew O'Neill
 
+  - name: Sarah O'Neill
+
+  - name: Jay Orwin
+
   - name: Mitch Panek
+
+  - name: Aimie Pardas
+
+  - name: Erik Pederson
+    years: 1993 - 1995
+
+  - name: Jon St. Pierre
 
   - name: Tom Platte
 
   - name: James Plocinik
+
+  - name: Jon Rathbun
+
+  - name: Pete Rathsack
 
   - name: Courtney Rawlings
 
@@ -124,27 +282,42 @@ people:
 
   - name: Luke Richard
 
+  - name: Cathy Riisnaes
+
   - name: Tony Rizzo
 
   - name: Melanie Roberts
 
   - name: Chris Rocker
 
+  - name: Randy Rop
+
   - name: Adrian Sargent
 
   - name: Jake Sanford
 
+  - name: Jeff Scheuren
+
   - name: Charlie Schlansker
     picture: charlie_schlansker.jpg
-    company: Fiat Chrysler Automobiles
 
   - name: Ryan Schwartz
+
+  - name: Brian Seymour
+
+  - name: Rob Sherwood
 
   - name: Carla Siler
 
   - name: Ian Smith
 
   - name: Troy Smits
+
+  - name: Jeff Spray
+
+  - name: Mike Stavropoulos
+
+  - name: Mike Steffler
 
   - name: Hillary Sulla
 
@@ -154,13 +327,30 @@ people:
 
   - name: Joel Thompson
     picture: joel_thompson.png
-    company: General Motors
+    years: 2012 - 2016
+
+  - name: Niki Thurkow
+
+  - name: John Turley
 
   - name: Benson VandeStreek
 
+  - name: Greg VanderWell
+
+  - name: Sarah Vicary
+    picture: sarah_vicary.png
+
   - name: Helio Vogel
 
+  - name: Mark Welch
+
+  - name: Andy White
+
   - name: Jesse Wick
+
+  - name: Kevin Wiig
+
+  - name: Chris Winczewski
 
   - name: Bailey Windle
 
