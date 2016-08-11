@@ -62,7 +62,7 @@
   <div class="message">
     <h3>Not Pictured</h3>
     <p>
-      {% for name in names %}{% if forloop.index > 1 %}, {% endif %}{{ name }}{% endfor %}
+      {% for name in names %}{% if forloop.first != true %}, {% if forloop.last == true %}and {% endif %}{% endif %}{{ name }}{% endfor %}
     </p>
   </div>
 {% endif %}
