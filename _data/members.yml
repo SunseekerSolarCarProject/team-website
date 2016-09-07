@@ -54,6 +54,12 @@ people:
     linkedin: https://www.linkedin.com/in/bochingwong
     subteam: Business Lead
 
+  - name: Kai Gray
+    picture: kai_gray.png
+    linkedin: https://www.linkedin.com/in/kai-gray-546706b6
+    position: Webmaster
+    konami: kai_gray.png
+
   - name: Gregory Bosma
     picture: gregory_bosma.png
     linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
@@ -76,12 +82,6 @@ people:
   - name: Chris Gilbert
     picture: chris_gilbert.png
     subteam: Electrical
-
-  - name: Kai Gray
-    picture: kai_gray.png
-    linkedin: https://www.linkedin.com/in/kai-gray-546706b6
-    subteam: Computing
-    konami: kai_gray.png
 
   - name: Dylan Kimball
     picture: dylan_kimball.png
