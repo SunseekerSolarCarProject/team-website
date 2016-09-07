@@ -8,6 +8,7 @@
 #   picture: first_name.img
 #   linkedin: public LinkedIn profile URL
 #   years: 199X - 20XX
+#   position: Former Something-or-other
 
 config:
   pics_dir: /images/team-members/alumni/
@@ -18,6 +19,7 @@ people:
 
   - name: Joshua Allen
     picture: joshua_allen.png
+    position: Former Project Manager
 
   - name: Lyth Alobiedat
 
@@ -67,6 +69,7 @@ people:
     picture: alec_carpenter.png
     linkedin: https://www.linkedin.com/in/aleccarpenter
     years: 2012 - 2016
+    position: Former Webmaster
 
   - name: Rob Cavanagh
 
@@ -90,6 +93,7 @@ people:
 
   - name: Andrew Day
     picture: andrew_day.jpg
+    position: Former Project Manager
 
   - name: Terry DeKoninck
 
@@ -119,6 +123,7 @@ people:
     picture: robert_galman.jpg
     linkedin: https://www.linkedin.com/pub/robert-galman/b9/9a5/b0a
     years: 2010 - 2015
+    position: Former Electrical Lead
 
   - name: Ben Galster
 
@@ -164,6 +169,7 @@ people:
   - name: Brendan Hill
 
   - name: Kenwood Hoben
+    position: Former Webmaster
 
   - name: Alex Hoeksema
 
@@ -206,12 +212,14 @@ people:
   - name: Denis KiMuhu
     picture: denis_kimuhu.png
     years: 2012 - 2016
+    position: Former Aero Lead
 
   - name: Geoff Klein
 
   - name: Cameron Knight
     picture: cameron_knight.png
     years: 2013 - 2016
+    position: Former Project Manager
 
   - name: Jon Knorr
 
@@ -328,6 +336,7 @@ people:
   - name: Joel Thompson
     picture: joel_thompson.png
     years: 2012 - 2016
+    position: Former Mechanical Lead
 
   - name: Niki Thurkow
 
