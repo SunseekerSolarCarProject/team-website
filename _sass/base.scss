@@ -54,15 +54,19 @@ body {
                 margin: 0;
             }
         }
-
     }
+}
 
-    a {
-        background-color: darken($bronco-brown, 5%);
-        color: $bronco-gold;
-        text-decoration: none;
-        display: block;
-        padding: $standard-padding / 2;
+.globalNavigation__link {
+    background-color: darken($bronco-brown, 5%);
+    color: $bronco-gold;
+    text-decoration: none;
+    display: block;
+    padding: $standard-padding / 2;
+
+    &.globalNavigation__link--live {
+        background-color: $bronco-gold;
+        color: $bronco-brown;
     }
 }
 
@@ -175,18 +179,27 @@ body {
                 margin: 0 0 0 $standard-margin;
             }
         }
+    }
 
-        a {
-            background: transparent;
-            font-weight: 100;
-            line-height: $header-height;
-            padding: 0;
-            display: inline;
+    .globalNavigation__link {
+        background: transparent;
+        font-weight: 100;
+        line-height: $header-height;
+        padding: 0;
+        display: inline;
 
-            &.active,
+        &.globalNavigation__link--active,
+        &:hover {
+            text-decoration: underline;
+            transition: .2s;
+        }
+
+        &.globalNavigation__link--live {
+            padding: $standard-padding / 4;
+
+            &.globalNavigation__link--active,
             &:hover {
-                text-decoration: underline;
-                transition: .2s;
+                text-decoration: none;
             }
         }
     }

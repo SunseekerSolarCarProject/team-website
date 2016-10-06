@@ -1,0 +1,74 @@
+---
+layout: default
+pageid: live
+title: Follow Us Live!
+intro: As a part of the <a href="http://americansolarchallenge.org/the-competition/ascfsgp-2016/" target="_blank">2016 American Solar Challenge</a>, we'll be racing from <a href="http://www.nps.gov/cuva/index.htm" target="_blank">Cuyahoga Valley National Park</a> in Ohio to <a href="http://www.nps.gov/wica/index.htm" target="_blank">Wind Cave National Park</a> in South Dakota, passing through many more of the nation's National Parks. Follow us here for up to the minute statistics and updates!
+---
+
+<div class="live__map" id="map"></div>
+
+<div class="wrapper">
+    <div class="live__stats">
+        <div class="stats__stat">
+            <div class="stat__value" id="location">&mdash;</div>
+            <div class="stat__label">Location</div>
+        </div>
+        <div class="stats__stat">
+            <div class="stat__value" id="speed">&mdash;</div>
+            <div class="stat__label">Speed (approx.)</div>
+        </div>
+        <div class="stats__stat">
+            <div class="stat__value" id="weather">&mdash;</div>
+            <div class="stat__label">Weather</div>
+        </div>
+        <div class="stats__stat">
+            <div class="stat__value" id="time">&mdash;</div>
+            <div class="stat__label">Time Elapsed</div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+<script>
+    var solarCar;
+
+    function initMap () {
+        var map, ascRoute;
+
+        map = new google.maps.Map(document.getElementById('map'), {
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        ascRoute = new google.maps.KmlLayer({
+            url: '{{ "/live/doc.kml" | prepend: site.baseurl | prepend: site.url }}',
+            map: map
+        });
+
+        solarCar = new google.maps.Marker({
+            position: new google.maps.LatLng(0, 0),
+            map: map
+        });
+
+        refreshData();
+    }
+
+    function refreshData () {
+        $.get('{{ "/live/location.php" | prepend: site.baseurl }}', function (r) {
+            try {
+                var data = JSON.parse(r);
+            } catch (e) {
+                return;
+            }
+
+            solarCar.setPosition(new google.maps.LatLng(data.lat, data.lng));
+
+            $('#location').text(data.location);
+            $('#speed').text(data.speed + ' mph');
+            $('#weather').text(data.weather + ' and ' + data.temp + ' °F');
+        });
+
+        setTimeout(refreshData, 30000);
+    }
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_api_key }}&amp;callback=initMap" async defer></script>

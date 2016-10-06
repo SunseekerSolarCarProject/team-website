@@ -21,3 +21,7 @@
 - name: blog
   label: Blog
   url: /blog
+
+- name: live
+  label: Follow Us Live!
+  url: /live

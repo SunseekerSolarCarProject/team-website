@@ -30,6 +30,23 @@
 			}
 		}
 	}
+
+	.left,
+	.right {
+		width: 50%;
+	}
+
+	.left {
+		float: left;
+	}
+
+	.left--thirty {
+		width: 30%;
+	}
+
+	.right {
+		float: right;
+	}
 }
 
 * *:last-child {

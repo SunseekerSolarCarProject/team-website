@@ -1,13 +1,13 @@
 <header class="globalHeader">
-  <div class="wrapper">
-    <a href="{{ '/' | prepend: site.baseurl }}" class="globalHeader__branding">Sunseeker Solar Car Project</a>
-    <nav class="globalNavigation">
-      <div class="globalNavigation__mobileMenuToggle">Menu</div>
-      <ul>
-        {% for link in site.data.nav %}
-        <li><a href="{{ link.url | prepend: site.baseurl }}"{% if page.pageid == link.name %} class="active"{% endif %}>{{ link.label }}</a>
-        {% endfor %}
-      </ul>
-    </nav>
-  </div>
+    <div class="wrapper">
+        <a href="{{ '/' | prepend: site.baseurl }}" class="globalHeader__branding">Sunseeker Solar Car Project</a>
+        <nav class="globalNavigation">
+            <div class="globalNavigation__mobileMenuToggle">Menu</div>
+            <ul>
+                {% for link in site.data.nav %}
+                <li><a href="{{ link.url | prepend: site.baseurl }}" class="globalNavigation__link globalNavigation__link--{{ link.name }}{% if page.pageid == link.name %} globalNavigation__link--active{% endif %}">{{ link.label }}</a>
+                {% endfor %}
+            </ul>
+        </nav>
+    </div>
 </header>

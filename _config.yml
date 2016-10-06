@@ -12,3 +12,6 @@ markdown: kramdown
 permalink: /blog/:categories/:year/:month/:day/:title.html
 
 exclude: ["package.json", "bower.json", "README.md", "node_modules", "deploy.js", "Gemfile", "Gemfile.lock"]
+
+maps_api_key: AIzaSyCFvzP8a4-kLuF6RCrUBK3GRKcq21HPDCA
+weather_api_key: 275bc25459dc4a698f115622160505

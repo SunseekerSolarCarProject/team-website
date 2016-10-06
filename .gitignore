@@ -9,3 +9,5 @@ Gemfile.lock
 /_js/lib/*/
 /js
 /node_modules
+
+/live/data.txt

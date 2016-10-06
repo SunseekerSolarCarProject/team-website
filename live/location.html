@@ -1,0 +1,109 @@
+---
+layout: wrapped
+---
+<script src="https://code.jquery.com/jquery-1.12.3.min.js" integrity="sha256-aaODHAgvwQW1bFOGXMeX+pC4PZIPsvn2h1sArYOhgXQ=" crossorigin="anonymous"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key={{ site.maps_api_key }}"></script>
+<script>
+    if ("geolocation" in navigator) {
+        var data, lat, lng, time, tx;
+
+        data = {
+            lat: 42.291707,
+            lng: -85.587229,
+            speed: 0,
+            weather: 'Sunny',
+            temp: 0,
+            location: 'Kalamazoo, MI, USA',
+            time: 0
+        };
+
+        function waitToReload () {
+            setTimeout(loadNewData, 25000);
+        }
+
+        function saveData () {
+            data.lat  = lat;
+            data.lng  = lng;
+            data.time = time;
+
+            $.post('{{ "/live/location.php" | prepend: site.baseurl }}', data).complete(waitToReload);
+        }
+
+        function determineWeather () {
+            var url = 'https://api.apixu.com/v1/current.json?key={{ site.weather_api_key }}&q=' + lat + ',' + lng;
+
+            $.ajax(url, {
+                success: function (resp) {
+                    data.weather = resp.current.condition.text;
+                    data.temp    = resp.current.temp_f;
+                }
+            }).complete(saveData);
+        }
+
+        function determineCity () {
+            var geocoder = new google.maps.Geocoder();
+
+            geocoder.geocode({
+                location: {
+                    lat: lat,
+                    lng: lng
+                }
+            }, function (resp, status) {
+                if (status === google.maps.GeocoderStatus.OK) {
+                    data.location = resp[1].formatted_address;
+                }
+
+                determineWeather();
+            });
+        }
+
+        function calculateSpeed () {
+            var dist = new google.maps.DistanceMatrixService();
+
+            dist.getDistanceMatrix({
+                origins: [{
+                    lat: parseFloat(data.lat),
+                    lng: parseFloat(data.lng)
+                }],
+                'destinations': [{
+                    lat: lat,
+                    lng: lng
+                }],
+                travelMode: google.maps.TravelMode.DRIVING
+            }, function (resp, status) {
+                data.speed = 0;
+
+                if (status == google.maps.DistanceMatrixStatus.OK) {
+                    var meters;
+
+                    tx     = (time - data.time) / 1000;
+                    meters = resp['rows'][0]['elements'][0]['distance']['value'];
+
+                    data.speed = Math.floor(Math.floor(meters / tx) * 0.44704);
+                }
+
+                determineCity();
+            });
+        }
+
+        function loadNewData () {
+            time = Date.now();
+
+            navigator.geolocation.getCurrentPosition(function (position) {
+                lat = position.coords.latitude;
+                lng = position.coords.longitude;
+
+                calculateSpeed();
+            });
+        }
+
+        $.ajax('data.txt', {
+            success: function (resp) {
+                try {
+                    data = JSON.parse(resp);
+                } catch (e) { }
+            }
+        }).complete(loadNewData);
+    }
+</script>
+<p>Hello there...</p>
