@@ -21,7 +21,3 @@
 - name: donate
   label: Donate
   url: /sponsors/become-a-sponsor
-
-- name: blog
-  label: Blog
-  url: /blog
