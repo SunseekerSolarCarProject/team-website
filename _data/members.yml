@@ -15,19 +15,12 @@
 config:
   pics_dir: /images/team-members/1617/
 people:
-  - name: Margaret Mooney
-    picture: margaret_mooney.png
-    linkedin: https://www.linkedin.com/pub/margaret-mooney/b8/94a/58a
-    position: Project Manager
-    konami: margaret_mooney.png
-    quote: 'I went to school to work on my oral skills.'
 
-  - name: Joshua Clemens
-    picture: joshua_clemens.png
-    linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
-    position: Assistant Project Manager
-    konami: josh_clemens.png
-    quote: 'I say a lot of stupid stuff.'
+#  - name: Pending...
+#    position: Project Manager
+
+#  - name: Pending...
+#    position: Assistant Project Manager
 
   - name: Krystal York
     picture: krystal_york.png
@@ -71,6 +64,12 @@ people:
     position: Driver
     subteam: Mechanical
     konami: molly_bowers.png
+
+  - name: Joshua Clemens
+    picture: joshua_clemens.png
+    linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
+    konami: josh_clemens.png
+    quote: 'I say a lot of stupid stuff.'
 
   - name: Bryan Harris
     picture: bryan_harris.png
