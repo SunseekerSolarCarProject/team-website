@@ -16,23 +16,19 @@ config:
   pics_dir: /images/team-members/1617/
 people:
 
-#  - name: Pending...
-#    position: Project Manager
-
-#  - name: Pending...
-#    position: Assistant Project Manager
-
   - name: Krystal York
     picture: krystal_york.png
     linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
-    position: Electrical Lead
-    konami: krystal_york.png
+    position: Project Manager
+    subteam: Electrical Lead
+    konami: dylan_kimball1.png
     quote: 'Who is this Mitchel Keil?'
 
   - name: Alex Brunk
     picture: alex_brunk.png
     linkedin: https://www.linkedin.com/pub/alex-brunk/108/163/941
-    position: Aero Lead
+    position: Assistant Project Manager
+    subteam: Aero Lead
     konami: alex_brunk.png
     quote: 'Is this thing hot? Ow!'
 
@@ -45,7 +41,12 @@ people:
   - name: Bo Ching Wong
     picture: bo_ching_wong.jpg
     linkedin: https://www.linkedin.com/in/bochingwong
-    subteam: Business Lead
+    position: Business Lead
+
+  - name: Sarah Rolniak
+    picture: sarah_rolniak.png
+    position: Driver Lead
+    konami: sarah_rolniak.png
 
   - name: Kai Gray
     picture: kai_gray.png
@@ -68,6 +69,7 @@ people:
   - name: Joshua Clemens
     picture: joshua_clemens.png
     linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
+    subteam: Electrical
     konami: josh_clemens.png
     quote: 'I say a lot of stupid stuff.'
 
@@ -84,19 +86,13 @@ people:
 
   - name: Dylan Kimball
     picture: dylan_kimball.png
-    subteam: Composites
+    position: Composites
     konami: dylan_kimball.png
 
   - name: Nicholas Patzer
     picture: nicholas_patzer.png
     position: Driver
     subteam: Mechanical
-
-  - name: Sarah Rolniak
-    picture: sarah_rolniak.png
-    position: Driver
-    subteam: Aero
-    konami: sarah_rolniak.png
 
   - name: Jordan Stoy
     picture: jordan_stoy.png
