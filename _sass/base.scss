@@ -24,6 +24,10 @@ body {
 .globalHeader {
     background: $bronco-brown;
     line-height: $header-height;
+
+    .wrapper {
+        padding: 0;
+    }
 }
 
 .globalHeader__branding {
@@ -32,6 +36,7 @@ body {
     display: inline-block;
     width: 166px;
     height: $header-height;
+    margin-left: $standard-margin;
 }
 
 .globalNavigation {
@@ -45,16 +50,10 @@ body {
         width: 100%;
         box-sizing: border-box;
         display: none;
-        padding: 0 0 $standard-padding;
 
-        li {
-            margin: $standard-margin / 2 0 0;
-
-            &:first-of-type {
-                margin: 0;
-            }
+        &.expanded {
+            display: block;
         }
-
     }
 
     a {
@@ -62,22 +61,29 @@ body {
         color: $bronco-gold;
         text-decoration: none;
         display: block;
-        padding: $standard-padding / 2;
+        padding: $standard-padding;
+        border-top: 1px solid $bronco-brown;
     }
 }
 
 .globalNavigation__mobileMenuToggle {
-    background: lighten($bronco-brown, 5%);
     color: $bronco-gold;
     font-weight: 400;
+    font-size: 2em;
     line-height: 1em;
     cursor: pointer;
     position: absolute;
-    top: ($header-height / 2) - $standard-padding;
+    top: ($header-height / 2) - $standard-padding * 1.25;
     right: $standard-padding;
-    border: 1px solid $bronco-gold;
-    border-radius: 10px;
     padding: $standard-padding / 2;
+}
+
+.mobileMenuToggle--closed {
+    content: "&#9776;";
+}
+
+.mobileMenuToggle--open {
+    content: "&#10005;";
 }
 
 .primaryContent {
