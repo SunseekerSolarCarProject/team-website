@@ -50,6 +50,7 @@ body {
         width: 100%;
         box-sizing: border-box;
         display: none;
+        padding-bottom: $standard-padding;
 
         &.expanded {
             display: block;
@@ -63,6 +64,14 @@ body {
         display: block;
         padding: $standard-padding;
         border-top: 1px solid $bronco-brown;
+
+        &.donate {
+            background: transparent;
+            text-align: center;
+            border: 2px solid $bronco-gold;
+            margin: $standard-margin $standard-margin 0;
+            padding: $standard-padding;
+        }
     }
 }
 
@@ -196,8 +205,8 @@ body {
             }
 
             &.donate {
-                border: 2px solid $bronco-gold;
                 padding: $standard-padding / 3;
+                margin: 0;
 
                 &.active,
                 &:hover {
