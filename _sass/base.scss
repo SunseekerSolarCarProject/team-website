@@ -188,6 +188,18 @@ body {
                 text-decoration: underline;
                 transition: .2s;
             }
+
+            &.donate {
+                border: 2px solid $bronco-gold;
+                padding: $standard-padding / 3;
+
+                &.active,
+                &:hover {
+                    background-color: $bronco-gold;
+                    color: $bronco-brown;
+                    text-decoration: none;
+                }
+            }
         }
     }
 
