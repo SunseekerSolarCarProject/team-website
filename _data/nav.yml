@@ -21,3 +21,4 @@
 - name: donate
   label: Donate
   url: /sponsors/become-a-sponsor
+  class: donate
