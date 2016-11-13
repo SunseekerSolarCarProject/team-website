@@ -21,6 +21,10 @@ body {
     padding: 0 $standard-padding;
 }
 
+.clear {
+    clear: both;
+}
+
 .globalHeader {
     background: $bronco-brown;
     line-height: $header-height;

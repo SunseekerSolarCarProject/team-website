@@ -1,19 +1,37 @@
 ---
 layout: wrapped
 pageid: donate
+js: donate
 title: Become a Sponsor
-intro: We have below, our four sponsorship tiers. All sponsors are placed within a tier based upon the cumulative value of their donations. If you are ready to make a donation, you may do so via the secure <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&amp;gid=2&amp;pgid=418&amp;cid=1173&amp;bledit=1&amp;dids=158" target="_blank">WMU Foundation Giving Portal</a>.</p><p>However, we are also in need of, and accept donations of materials, tools, and services. If you are interested in making a non-monetary donation, please send an email to <a href="mailto:sunseeker@wmich.edu">sunseeker@wmich.edu</a> so that we may coordinate.
+intro: We rely heavily upon the kindness and generosity of our sponsors, if you would like to help us continue to build, race, and learn, please consider making a donation!
 ---
-<h2>Sponsorship Tiers</h2>
+
+<div class="makingDonation">
+  <h2>Making a Donation</h2>
+
+  <p>All monetary donations can be made through Western Michigan University's secure, online <a href="{{ site.foundation_url }}" target="_blank">giving portal</a> by choosing an amount. If you have any questions, or would like to donate something other than money, please let us know by sending an email to <a href="mailto:sunseeker@wmich.edu">sunseeker@wmich.edu</a>.</p>
+
+  <p>Continue reading below for more information regarding the perks of being a sponsor!</p>
+</div>
+
+<div class="chooseDonation">
+  <h3>Choose your donation</h3>
+  <div class="donationAmounts">
+    <ul>{% for amount in site.donation_amounts %}<li class="donationAmounts__amount"><div class="donationAmounts__amount__clickable" data-amount="{{ amount }}">${{ amount }}</div></li>{% endfor %}<li class="donationAmounts__amount donationAmounts__amount--other"><input type="text" placeholder="Other Amount" /></li></ul>
+  </div>
+  <button id="makeDonation" class="chooseDonation__continue" data-url="{{ site.foundation_url }}&amp;amount=">Continue</button>
+</div>
+
+<h2 class="clear">Sponsorship Tiers</h2>
 
 <div class="tier">
   <h3 class="tier__name">Platinum</h3>
   <div class="tier__description">
-    <p>Donation(s) of at least $10,000.</p>
+    <p>Donations valued at no less than $10,000.</p>
     <ul>
-      <li>Logo placed on the exterior of the Solar Car.<sup><a href="#exterior">1</a></sup></li>
+      <li>Logo placed on the exterior of the car.<sup><a href="#exterior">1</a></sup></li>
       <li>Larger area reserved for logo on the car.</li>
-      <li>Logo placed on Sunseeker website<sup><a href="#website">3</a></sup>, with the option to have a short description of your company.<sup><a href="#description">4</a></sup></li>
+      <li>Logo placed on website<sup><a href="#website">3</a></sup>, with the option to have a short description of your organization.<sup><a href="#description">4</a></sup></li>
     </ul>
   </div>
   <div class="clearBoth"></div>
@@ -23,10 +41,10 @@ intro: We have below, our four sponsorship tiers. All sponsors are placed within
 <div class="tier">
   <h3 class="tier__name">Gold</h3>
   <div class="tier__description">
-    <p>Donation(s) ranging from $5,000, upto $9,999.</p>
+    <p>Donations valued from $5,000 and up to $9,999.</p>
     <ul>
       <li>Logo placed on the exterior of the Solar Car.<sup><a href="#exterior">1</a></sup></li>
-      <li>Logo placed on Sunseeker website.<sup><a href="#website">3</a></sup></li>
+      <li>Logo placed on website.<sup><a href="#website">3</a></sup></li>
     </ul>
   </div>
   <div class="clearBoth"></div>
@@ -35,10 +53,10 @@ intro: We have below, our four sponsorship tiers. All sponsors are placed within
 <div class="tier">
   <h3 class="tier__name">Silver</h3>
   <div class="tier__description">
-    <p>Donation(s) ranging from $1,000, upto $4,999.</p>
+    <p>Donations valued from $1,000 and up to $4,999.</p>
     <ul>
       <li>Logo placed on the interior of the Solar Car.<sup><a href="#interior">2</a></sup></li>
-      <li>Logo placed on Sunseeker website.<sup><a href="#website">3</a></sup></li>
+      <li>Logo placed on website.<sup><a href="#website">3</a></sup></li>
     </ul>
   </div>
   <div class="clearBoth"></div>
@@ -47,21 +65,21 @@ intro: We have below, our four sponsorship tiers. All sponsors are placed within
 <div class="tier">
   <h3 class="tier__name">Bronze</h3>
   <div class="tier__description">
-    <p>Donation(s) of, or less than $999.</p>
+    <p>Donations valued at no more than $999.</p>
     <ul>
-      <li>Logo placed on Sunseeker website.<sup><a href="#website">3</a></sup></li>
+      <li>Logo placed on website.<sup><a href="#website">3</a></sup></li>
     </ul>
   </div>
   <div class="clearBoth"></div>
 </div>
 
-<h3>Perk Details</h3>
-<ol>
-  <li><a name="exterior">Logo on Exterior</a> &mdash; Your logo is placed on the outer shell of the car. Size is based on the sponsor tier you qualify for.</li>
-  <li><a name="interior">Logo on Interior</a> &mdash; Interior placement will be located relative to donated part/material location. Logos may be visible while the array is removed. Array removal is common while on display or during maintenance.</li>
-  <li><a name="website">Logo on Website</a> &mdash; Logo and company name will be found on the sponsor page</li>
-  <li><a name = "description">Sponsor Description</a> &mdash; Descriptions are to be requested and provided by the sponsor. Max description size is limited to 400 characters.</li>
-  <!--<li>Individual Donators</li>
-  <p>Your name will be placed on the Sunseeker Website under the type of donation you made.</p>-->
-</ol>
+<h3>Additional Information</h3>
 
+<p>All donations are welcome, if you are donating something besides or in addition to cash, we ask that you also provide a value for the goods and/or services. We will need a value to properly place you or your organization into a sponsorship tier. If you make multiple donations, the cumulative value will determine your sponsorship tier.</p>
+
+<ol>
+  <li><a name="exterior">Logo on exterior</a> &mdash; The placement will be on the exterior of the most recent solar car. The size of the logo being determined based on sponsorship tier.</li>
+  <li><a name="interior">Logo on interior</a> &mdash; The placement will be nearest to the parts/materials donated. The interior of the car, besides the cockpit, is frequently exposed when maintenance is being performed, or when the car is being displayed in general.</li>
+  <li><a name="website">Logo on website</a> &mdash; Will be placed on the <a href="{{ "/sponsors" | prepend: site.baseurl }}">Our Sponsors</a> page with company name and location. We ask that you provide the following: a logo, company name, and its location.</li>
+  <li><a name = "description">Sponsor description</a> &mdash; A description of no more than 400 characters may be provided to be displaed on the <a href="{{ "/sponsors" | prepend: site.baseurl }}">Our Sponsors</a> page next to your logo and company name.</li>
+</ol>
