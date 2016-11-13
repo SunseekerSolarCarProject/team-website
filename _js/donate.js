@@ -11,7 +11,7 @@ $(window).ready(function() {
         var $this = $(this);
         var before = $this.val();
 
-        amount = before.replace(/\D/g, '');
+        amount = before.replace(/[^0-9.]/g, '');
 
         if (amount != before) {
             $this.val(amount);
