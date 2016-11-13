@@ -9,6 +9,8 @@ var amount;
 $(window).ready(function() {
     $otherAmount = $('.donationAmounts__amount--other input');
     $otherAmount.keyup(function() {
+        toggleActiveAmount(null);
+        
         var $this = $(this);
         var newOther = $this.val();
 
@@ -16,10 +18,6 @@ $(window).ready(function() {
             amount = other = newOther;
         } else {
             $this.val(other);
-        }
-
-        if (amount > 0) {
-            toggleActiveAmount(null);
         }
     });
 
@@ -35,8 +33,18 @@ $(window).ready(function() {
 
     $('.donationAmounts__amount__clickable').each(function() {
         $(this).on('click', function() {
-            toggleActiveAmount($(this));
-            amount = $activeDonationAmount.data('amount');
+            var $this = $(this);
+
+            if ($this.is($activeDonationAmount)) {
+                $this = null;
+                amount = other;
+            }
+
+            toggleActiveAmount($this);
+
+            if ($this) {
+                amount = $this.data('amount');
+            }
         });
     });
 });
