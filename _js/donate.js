@@ -9,9 +9,13 @@ $(window).ready(function() {
     $otherAmount = $('.donationAmounts__amount--other input');
     $otherAmount.keyup(function() {
         var $this = $(this);
-        amount = $this.val().replace(/\D/g, '');
+        var before = $this.val();
 
-        $this.val(amount);
+        amount = below.replace(/\D/g, '');
+
+        if (amount != before) {
+            $this.val(amount);
+        }
 
         if (amount > 0) {
             toggleActiveAmount(null);
