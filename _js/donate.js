@@ -3,18 +3,19 @@ var $ = require('jquery');
 var $activeDonationAmount;
 var $otherAmount;
 var $continue;
+var other = '';
 var amount;
 
 $(window).ready(function() {
     $otherAmount = $('.donationAmounts__amount--other input');
     $otherAmount.keyup(function() {
         var $this = $(this);
-        var before = $this.val();
+        var newOther = $this.val();
 
-        amount = before.replace(/\D/g, '');
-
-        if (amount != before) {
-            $this.val(amount);
+        if (newOther == '' || $.isNumeric(newOther)) {
+            amount = other = newOther;
+        } else {
+            $this.val(other);
         }
 
         if (amount > 0) {
