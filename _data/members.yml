@@ -13,14 +13,13 @@
 #   subteam: the group of people they primarily work with
 
 config:
-  pics_dir: /images/team-members/1617/
+  pics_dir: /images/team-members/1718/
 people:
 
   - name: Krystal York
     picture: krystal_york.png
     linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
     position: Project Manager
-    subteam: Electrical Lead
     konami: dylan_kimball1.png
     quote: 'Who is this Mitchel Keil?'
 
@@ -32,6 +31,10 @@ people:
     konami: alex_brunk.png
     quote: 'Is this thing hot? Ow!'
 
+  - name: Bradon Robbins
+    picture: brandon_robbins.png
+    position: Electrical Lead
+
   - name: Blake Williamson
     picture: blake_williamson.png
     position: Mechanical Lead
@@ -39,7 +42,7 @@ people:
     quote: 'Make Sunseeker great again!'
 
   - name: Bo Ching Wong
-    picture: bo_ching_wong.jpg
+    picture: bo_ching_wong.png
     linkedin: https://www.linkedin.com/in/bochingwong
     position: Business Lead
 
@@ -54,6 +57,22 @@ people:
     position: Webmaster
     konami: kai_gray.png
 
+  - name: Talal Arshad
+    picture: talal_arshad.png
+    subteam: Aero
+
+  - name: Quintan Bader
+    picture: quintan_badar.png
+    subteam: Mechanical
+
+  - name: Devin Berchfield
+    picture: devin_berchfield.png
+    subteam: Electrical
+
+  - name: Noah Bishop
+    picture: noah_bishop.png
+    subteam: Electrical
+
   - name: Gregory Bosma
     picture: gregory_bosma.png
     linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
@@ -66,12 +85,49 @@ people:
     subteam: Mechanical
     konami: molly_bowers.png
 
+  - name: Brody Brewis
+    picture: brody_brewis.png
+    subteam: Mechanical
+
+  - name: Nate Bunton
+    picture: nate_bunton.png
+
+  - name: Karl Calkins
+    picture: karl_calkins.png
+    subteam: Aero
+
+  - name: Colin Ceisel
+    picture: colin_ceisel.png
+    subteam: Mechanical
+
+  - name: Elie Chahine
+    picture: elie_chahine.png
+    subteam: Mechanical
+
   - name: Joshua Clemens
     picture: joshua_clemens.png
     linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
     subteam: Electrical
     konami: josh_clemens.png
     quote: 'I say a lot of stupid stuff.'
+
+  - name: Ben Eckert
+    picture: ben_eckert.png
+
+  - name: Kyle Erickson
+    picture: kyle_erickson.png
+    subteam: Electrical
+
+  - name: Austin Gilbert
+    picture: austin_gilbert.png
+
+  - name: Chris Gilbert
+    picture: chris_gilbert.png
+    subteam: Electrical
+
+  - name: Daniel Gron
+    picture: daniel_gron.png
+    subteam: Mechanical
 
   - name: Bryan Harris
     picture: bryan_harris.png
@@ -80,19 +136,98 @@ people:
     konami: bryan_harris.png
     quote: 'Is Europe techincally a continent?'
 
-  - name: Chris Gilbert
-    picture: chris_gilbert.png
+  - name: Colin Haynes
+    picture: colin_haynes.png
+    subteam: Mechanical
+
+  - name: Yara Hazem
+    picture: yara_hazem.png
     subteam: Electrical
+
+  - name: Mitchell Hiller
+    picture: mitchell_hiller.png
+    subteam: Mechanical
+
+  - name: Ross Hiller
+    picture: ross_hiller.png
+    subteam: Mechanical
+
+  - name: Micheal Hinz
+    picture: micheal_hinz.png
+    subteam: Mechanical
+
+  - name: John Hungerford
+    picture: john_hungerford.png
+    subteam: Mechanical
+
+  - name: John Kaiser
+    picture: john_kaiser.png
+    subteam: Mechanical
+
+  - name: Jonathan Kellogg
+    picture: jonathan_kellogg.png
+    subteam: Electrical
+
+  - name: Rashiha Khan
+    picture: rashiha_khan.png
+    subteam: Aero
 
   - name: Dylan Kimball
     picture: dylan_kimball.png
     position: Composites
     konami: dylan_kimball.png
 
+  - name: Anil Kumar Kosha
+    picture: anil_kosha.png
+    subteam: Mechanical
+
+  - name: Cherylyn Lamphear
+    picture: cherylyn_lamphear.png
+    subteam: Business
+
+  - name: Saleh Mohammed
+    picture: saleh_mohammed.png
+
+  - name: Carlie Moon
+    picture: carlie_moon.png
+    subteam: Mechanical
+
+  - name: Daniel Mozel
+    picture: daniel_mozel.png
+    subteam: Mechanical
+
+  - name: Patrick Murphy
+    picture: patrick_murphy.png
+    subteam: Aero
+
   - name: Nicholas Patzer
     picture: nicholas_patzer.png
     position: Driver
+    subteam: Aero
+
+  - name: Amanda Perion
+    picture: amanda_perion.png
+    subteam: Electrical
+
+  - name: Hannah Phommavongsa
+    picture: hannah_phommavongsa.png
+    subteam: Electrical
+
+  - name: Ryan Shereda
+    picture: ryan_shereda.png
+    subteam: Aero
+
+  - name: Jacob Smith
+    picture: jacob_smith.png
     subteam: Mechanical
+
+  - name: Cordero Soto
+    picture: cordero_soto.png
+    subteam: Electrical
+
+  - name: Steven Spannagel
+    picture: steven_spannagel.png
+    subteam: Electrical
 
   - name: Jordan Stoy
     picture: jordan_stoy.png
@@ -100,10 +235,22 @@ people:
     konami: jordan_stoy.png
     quote: "I'm taking a five minute break."
 
+  - name: Regen Thorpe
+    picture: regen_thorpe.png
+    subteam: Electrical
+
   - name: Dana Wyckoff
     picture: dana_wyckoff.png
     subteam: Aero
     quote: "I don't like people."
+
+  - name: Yu Yan
+    picture: yu_yan.png
+    subteam: Business
+
+  - name: Cortney York
+    picture: cortney_york.png
+    subteam: Electrical
 
   - name: Bradley Bazuin
     position: Faculty Advisior
