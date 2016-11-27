@@ -2,10 +2,11 @@
   <div class="wrapper">
     <a href="{{ '/' | prepend: site.baseurl }}" class="globalHeader__branding">Sunseeker Solar Car Project</a>
     <nav class="globalNavigation">
-      <div class="globalNavigation__mobileMenuToggle">Menu</div>
+      <div class="globalNavigation__mobileMenuToggle mobileMenuToggle--closed" data-expanded="&#10005;" data-collapsed="&#9776;">&#9776;</div>
       <ul>
         {% for link in site.data.nav %}
-        <li><a href="{{ link.url | prepend: site.baseurl }}"{% if page.pageid == link.name %} class="active"{% endif %}>{{ link.label }}</a>
+          {% capture className %}{% if link.class %}{{ link.class }}{% endif %} {% if page.pageid == link.name %}active{% endif %}{% endcapture %}
+          <li><a href="{{ link.url | prepend: site.baseurl }}"{% if className %} class="{{ className }}"{% endif %}>{{ link.label }}</a>
         {% endfor %}
       </ul>
     </nav>
