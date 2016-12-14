@@ -111,9 +111,6 @@ people:
     konami: josh_clemens.png
     quote: 'I say a lot of stupid stuff.'
 
-  - name: Ben Eckert
-    picture: ben_eckert.png
-
   - name: Kyle Erickson
     picture: kyle_erickson.png
     subteam: Electrical
@@ -168,18 +165,10 @@ people:
     picture: jonathan_kellogg.png
     subteam: Electrical
 
-  - name: Rashiha Khan
-    picture: rashiha_khan.png
-    subteam: Aero
-
   - name: Dylan Kimball
     picture: dylan_kimball.png
     position: Composites
     konami: dylan_kimball.png
-
-  - name: Anil Kumar Kosha
-    picture: anil_kosha.png
-    subteam: Mechanical
 
   - name: Cherylyn Lamphear
     picture: cherylyn_lamphear.png
@@ -187,6 +176,7 @@ people:
 
   - name: Saleh Mohammed
     picture: saleh_mohammed.png
+    subteam: Mechanical
 
   - name: Carlie Moon
     picture: carlie_moon.png
@@ -228,6 +218,7 @@ people:
   - name: Steven Spannagel
     picture: steven_spannagel.png
     subteam: Electrical
+    quote: "I'm the Head Honcho."
 
   - name: Jordan Stoy
     picture: jordan_stoy.png
@@ -235,7 +226,7 @@ people:
     konami: jordan_stoy.png
     quote: "I'm taking a five minute break."
 
-  - name: Regen Thorpe
+  - name: Regan Thorpe
     picture: regen_thorpe.png
     subteam: Electrical
 
