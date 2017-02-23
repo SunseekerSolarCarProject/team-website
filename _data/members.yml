@@ -57,17 +57,9 @@ people:
     position: Webmaster
     konami: kai_gray.png
 
-  - name: Talal Arshad
-    picture: talal_arshad.png
-    subteam: Aero
-
   - name: Quintan Bader
     picture: quintan_badar.png
     subteam: Mechanical
-
-  - name: Devin Berchfield
-    picture: devin_berchfield.png
-    subteam: Electrical
 
   - name: Noah Bishop
     picture: noah_bishop.png
@@ -104,19 +96,13 @@ people:
     picture: elie_chahine.png
     subteam: Mechanical
 
-  - name: Joshua Clemens
-    picture: joshua_clemens.png
-    linkedin: https://www.linkedin.com/in/joshua-clemens-1849bb108
-    subteam: Electrical
-    konami: josh_clemens.png
-    quote: 'I say a lot of stupid stuff.'
-
   - name: Kyle Erickson
     picture: kyle_erickson.png
     subteam: Electrical
 
   - name: Austin Gilbert
     picture: austin_gilbert.png
+    subteam: Electrical
 
   - name: Chris Gilbert
     picture: chris_gilbert.png
@@ -142,10 +128,6 @@ people:
     picture: ross_hiller.png
     subteam: Mechanical
 
-  - name: Micheal Hinz
-    picture: micheal_hinz.png
-    subteam: Mechanical
-
   - name: John Hungerford
     picture: john_hungerford.png
     subteam: Mechanical
@@ -166,10 +148,6 @@ people:
   - name: Cherylyn Lamphear
     picture: cherylyn_lamphear.png
     subteam: Business
-
-  - name: Saleh Mohammed
-    picture: saleh_mohammed.png
-    subteam: Mechanical
 
   - name: Carlie Moon
     picture: carlie_moon.png
@@ -192,10 +170,6 @@ people:
     picture: amanda_perion.png
     subteam: Electrical
 
-  - name: Hannah Phommavongsa
-    picture: hannah_phommavongsa.png
-    subteam: Electrical
-
   - name: Ryan Shereda
     picture: ryan_shereda.png
     subteam: Aero
@@ -203,10 +177,6 @@ people:
   - name: Jacob Smith
     picture: jacob_smith.png
     subteam: Mechanical
-
-  - name: Cordero Soto
-    picture: cordero_soto.png
-    subteam: Electrical
 
   - name: Steven Spannagel
     picture: steven_spannagel.png
