@@ -1,6 +1,7 @@
 var $ = require('jquery');
 
 require('./plugins/konami');
+require('./plugins/countdown');
 
 var konamiGoing, $showcase;
 
@@ -64,3 +65,5 @@ $(window).konami({
         $showcase.append(v);
     }
 });
+
+$('#asc-2016-countdown').countdown(new Date('July 3, 2017 08:00:00'));
