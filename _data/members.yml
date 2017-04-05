@@ -112,6 +112,7 @@ people:
 
   - name: Yara Hazem
     picture: yara_hazem.png
+    linkedin: https://www.linkedin.com/in/yara-hazem-595a44b6
     subteam: Electrical
 
   - name: Mitchell Hiller
@@ -184,8 +185,10 @@ people:
     quote: "I'm taking a five minute break."
 
   - name: Regan Thorpe
-    picture: regen_thorpe.png
+    picture: regan_thorpe.png
+    linkedin: https://www.linkedin.com/in/regan-thorpe/
     subteam: Electrical
+
 
   - name: Dana Wyckoff
     picture: dana_wyckoff.png
