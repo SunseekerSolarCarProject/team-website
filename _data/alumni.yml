@@ -59,6 +59,12 @@ people:
 
   - name: William Borst
 
+  - name: Gregory Bosma
+    picture: gregory_bosma.png
+    linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
+    years: 2013 - 2017
+    position: Former Mechanical Lead
+
   - name: Dennis Boylon
 
   - name: Ashley Brinn
@@ -98,6 +104,7 @@ people:
   - name: Terry DeKoninck
 
   - name: Megan Derwich
+    picture: megan_derwich.png
 
   - name: Mike Door
 
@@ -133,6 +140,9 @@ people:
 
   - name: Jeff Giacobbe
 
+  - name: Chris Gilbert
+    picture: chris_gilbert.png
+
   - name: Anne Godwin
 
   - name: Chris Gore
@@ -155,7 +165,7 @@ people:
   - name: Bryan Harris
     picture: bryan_harris.png
     linkedin: https://www.linkedin.com/pub/bryan-harris/5b/59/151
-    years: 
+    years:
     position: Former Project Manager
 
   - name: Lindsay Hatter
@@ -173,6 +183,9 @@ people:
   - name: Alex Hessler
 
   - name: Brendan Hill
+
+  - name: Ross Hiller
+    picture: ross_hiller.png
 
   - name: Kenwood Hoben
     position: Former Webmaster

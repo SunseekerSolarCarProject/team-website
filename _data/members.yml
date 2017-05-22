@@ -20,7 +20,7 @@ people:
     picture: krystal_york.png
     linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
     position: Project Manager
-    konami: dylan_kimball1.png
+    konami: krystal_york.png
     quote: 'Who is this Mitchel Keil?'
 
   - name: Alex Brunk
@@ -59,12 +59,6 @@ people:
     picture: noah_bishop.png
     subteam: Electrical
 
-  - name: Gregory Bosma
-    picture: gregory_bosma.png
-    linkedin: https://www.linkedin.com/pub/gregory-bosma/75/b45/994
-    subteam: Mechanical
-    konami: greg_bosma.png
-
   - name: Molly Bowers
     picture: molly_bowers.png
     position: Driver
@@ -86,20 +80,12 @@ people:
     picture: colin_ceisel.png
     subteam: Mechanical
 
-  - name: Elie Chahine
-    picture: elie_chahine.png
-    subteam: Mechanical
-
   - name: Kyle Erickson
     picture: kyle_erickson.png
     subteam: Electrical
 
   - name: Austin Gilbert
     picture: austin_gilbert.png
-    subteam: Electrical
-
-  - name: Chris Gilbert
-    picture: chris_gilbert.png
     subteam: Electrical
 
   - name: Daniel Gron
@@ -119,10 +105,6 @@ people:
     picture: mitchell_hiller.png
     subteam: Mechanical
 
-  - name: Ross Hiller
-    picture: ross_hiller.png
-    subteam: Mechanical
-
   - name: John Hungerford
     picture: john_hungerford.png
     subteam: Mechanical
@@ -131,19 +113,6 @@ people:
     picture: john_kaiser.png
     subteam: Mechanical
 
-  - name: Jonathan Kellogg
-    picture: jonathan_kellogg.png
-    subteam: Electrical
-
-  - name: Dylan Kimball
-    picture: dylan_kimball.png
-    position: Composites
-    konami: dylan_kimball.png
-
-  - name: Cherylyn Lamphear
-    picture: cherylyn_lamphear.png
-    subteam: Business
-
   - name: Carlie Moon
     picture: carlie_moon.png
     subteam: Mechanical
@@ -151,10 +120,6 @@ people:
   - name: Daniel Mozel
     picture: daniel_mozel.png
     subteam: Mechanical
-
-  - name: Patrick Murphy
-    picture: patrick_murphy.png
-    subteam: Aero
 
   - name: Nicholas Patzer
     picture: nicholas_patzer.png
@@ -165,9 +130,9 @@ people:
     picture: amanda_perion.png
     subteam: Electrical
 
-  - name: Ryan Shereda
-    picture: ryan_shereda.png
-    subteam: Aero
+  - name: Katy Ross
+    picture: katy_ross.png
+    subteam: Electrical
 
   - name: Jacob Smith
     picture: jacob_smith.png
@@ -189,15 +154,10 @@ people:
     linkedin: https://www.linkedin.com/in/regan-thorpe/
     subteam: Electrical
 
-
   - name: Dana Wyckoff
     picture: dana_wyckoff.png
     subteam: Aero
     quote: "I don't like people."
-
-  - name: Yu Yan
-    picture: yu_yan.png
-    subteam: Business
 
   - name: Cortney York
     picture: cortney_york.png
