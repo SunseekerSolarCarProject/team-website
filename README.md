@@ -34,3 +34,5 @@ $ node deploy.js
 ```
 
 This script must be run after each modification made to any of the JavaScript files.
+
+only upload the _site folder when adding changes to Western Server
