@@ -16,40 +16,42 @@ config:
   pics_dir: /images/team-members/1718/
 people:
 
-  - name: Krystal York
-    picture: krystal_york.png
-    linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
+  - name: Nicholas Patzer
+    picture: nicholas_patzer.png
     position: Project Manager
-    konami: krystal_york.png
-    quote: 'Who is this Mitchel Keil?'
+
+  - name: Regan Thorpe
+    picture: regan_thorpe.png
+    linkedin: https://www.linkedin.com/in/regan-thorpe/
+    position: Assistant Project Manager
+
+  - name: Molly Bowers
+    picture: molly_bowers.png
+    position: Mechanical Lead
+    konami: molly_bowers.png
 
   - name: Alex Brunk
     picture: alex_brunk.png
     linkedin: https://www.linkedin.com/pub/alex-brunk/108/163/941
-    position: Assistant Project Manager
-    subteam: Aero Lead
+    position: Aero Lead
     konami: alex_brunk.png
     quote: 'Is this thing hot? Ow!'
 
-  - name: Brandon Robbins
-    picture: brandon_robbins.png
+  - name: Austin Gilbert
+    picture: austin_gilbert.png
     position: Electrical Lead
 
-  - name: Bo Ching Wong
-    picture: bo_ching_wong.png
-    linkedin: https://www.linkedin.com/in/bochingwong
+  - name: Kai Gray
+    picture: kai_gray.png
+    linkedin: https://www.linkedin.com/in/kai-gray-546706b6
     position: Business Lead
+    subteam: Webmaster
+    konami: kai_gray.png
 
   - name: Sarah Rolniak
     picture: sarah_rolniak.png
     position: Driver Lead
     konami: sarah_rolniak.png
-
-  - name: Kai Gray
-    picture: kai_gray.png
-    linkedin: https://www.linkedin.com/in/kai-gray-546706b6
-    position: Webmaster
-    konami: kai_gray.png
 
   - name: Quintan Bader
     picture: quintan_badar.png
@@ -58,12 +60,6 @@ people:
   - name: Noah Bishop
     picture: noah_bishop.png
     subteam: Electrical
-
-  - name: Molly Bowers
-    picture: molly_bowers.png
-    position: Driver
-    subteam: Mechanical
-    konami: molly_bowers.png
 
   - name: Brody Brewis
     picture: brody_brewis.png
@@ -82,10 +78,6 @@ people:
 
   - name: Kyle Erickson
     picture: kyle_erickson.png
-    subteam: Electrical
-
-  - name: Austin Gilbert
-    picture: austin_gilbert.png
     subteam: Electrical
 
   - name: Daniel Gron
@@ -121,13 +113,12 @@ people:
     picture: daniel_mozel.png
     subteam: Mechanical
 
-  - name: Nicholas Patzer
-    picture: nicholas_patzer.png
-    position: Driver
-    subteam: Aero
-
   - name: Amanda Perion
     picture: amanda_perion.png
+    subteam: Electrical
+
+  - name: Brandon Robbins
+    picture: brandon_robbins.png
     subteam: Electrical
 
   - name: Katy Ross
@@ -149,10 +140,10 @@ people:
     konami: jordan_stoy.png
     quote: "I'm taking a five minute break."
 
-  - name: Regan Thorpe
-    picture: regan_thorpe.png
-    linkedin: https://www.linkedin.com/in/regan-thorpe/
-    subteam: Electrical
+  - name: Bo Ching Wong
+    picture: bo_ching_wong.png
+    linkedin: https://www.linkedin.com/in/bochingwong
+    subteam: Business
 
   - name: Dana Wyckoff
     picture: dana_wyckoff.png
