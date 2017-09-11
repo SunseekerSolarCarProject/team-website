@@ -53,20 +53,9 @@ people:
     position: Driver Lead
     konami: sarah_rolniak.png
 
-  - name: Quintan Bader
-    picture: quintan_badar.png
-    subteam: Mechanical
-
   - name: Noah Bishop
     picture: noah_bishop.png
     subteam: Electrical
-
-  - name: Brody Brewis
-    picture: brody_brewis.png
-    subteam: Mechanical
-
-  - name: Nate Bunton
-    picture: nate_bunton.png
 
   - name: Karl Calkins
     picture: karl_calkins.png
@@ -84,38 +73,9 @@ people:
     picture: daniel_gron.png
     subteam: Mechanical
 
-  - name: Colin Haynes
-    picture: colin_haynes.png
-    subteam: Mechanical
-
-  - name: Yara Hazem
-    picture: yara_hazem.png
-    linkedin: https://www.linkedin.com/in/yara-hazem-595a44b6
-    subteam: Electrical
-
-  - name: Mitchell Hiller
-    picture: mitchell_hiller.png
-    subteam: Mechanical
-
   - name: John Hungerford
     picture: john_hungerford.png
     subteam: Mechanical
-
-  - name: John Kaiser
-    picture: john_kaiser.png
-    subteam: Mechanical
-
-  - name: Carlie Moon
-    picture: carlie_moon.png
-    subteam: Mechanical
-
-  - name: Daniel Mozel
-    picture: daniel_mozel.png
-    subteam: Mechanical
-
-  - name: Amanda Perion
-    picture: amanda_perion.png
-    subteam: Electrical
 
   - name: Brandon Robbins
     picture: brandon_robbins.png
@@ -149,10 +109,6 @@ people:
     picture: dana_wyckoff.png
     subteam: Aero
     quote: "I don't like people."
-
-  - name: Cortney York
-    picture: cortney_york.png
-    subteam: Electrical
 
   - name: Bradley Bazuin
     position: Faculty Advisior
