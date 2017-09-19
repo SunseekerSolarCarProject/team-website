@@ -53,10 +53,6 @@ people:
     position: Driver Lead
     konami: sarah_rolniak.png
 
-  - name: Noah Bishop
-    picture: noah_bishop.png
-    subteam: Electrical
-
   - name: Karl Calkins
     picture: karl_calkins.png
     subteam: Aero
@@ -65,12 +61,12 @@ people:
     picture: colin_ceisel.png
     subteam: Mechanical
 
-  - name: Kyle Erickson
-    picture: kyle_erickson.png
-    subteam: Electrical
-
   - name: Daniel Gron
     picture: daniel_gron.png
+    subteam: Mechanical
+
+  - name: Colin Haynes
+    picture: colin_haynes.png
     subteam: Mechanical
 
   - name: John Hungerford
@@ -81,24 +77,9 @@ people:
     picture: brandon_robbins.png
     subteam: Electrical
 
-  - name: Katy Ross
-    picture: katy_ross.png
-    subteam: Electrical
-
   - name: Jacob Smith
     picture: jacob_smith.png
     subteam: Mechanical
-
-  - name: Steven Spannagel
-    picture: steven_spannagel.png
-    subteam: Electrical
-    quote: "I'm the Head Honcho."
-
-  - name: Jordan Stoy
-    picture: jordan_stoy.png
-    subteam: Mechanical
-    konami: jordan_stoy.png
-    quote: "I'm taking a five minute break."
 
   - name: Bo Ching Wong
     picture: bo_ching_wong.png
