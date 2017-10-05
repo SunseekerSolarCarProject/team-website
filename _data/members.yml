@@ -41,17 +41,15 @@ people:
     picture: austin_gilbert.png
     position: Electrical Lead
 
-  - name: Kai Gray
-    picture: kai_gray.png
-    linkedin: https://www.linkedin.com/in/kai-gray-546706b6
-    position: Business Lead
-    subteam: Webmaster
-    konami: kai_gray.png
-
   - name: Sarah Rolniak
     picture: sarah_rolniak.png
     position: Driver Lead
     konami: sarah_rolniak.png
+
+  - name: Justin True
+    picture: justin_true.png
+    subteam: Webmaster
+    konami: justin_true.png
 
   - name: Karl Calkins
     picture: karl_calkins.png
