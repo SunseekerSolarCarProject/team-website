@@ -1,6 +1,6 @@
 .car__picture {
     @extend .img;
-    
+
     background-size: contain;
     background-position: center-center;
     width: 100%;
@@ -29,9 +29,9 @@
     height: 200px;
     margin: -1 * $standard-padding 0 $standard-margin;
 }
-    
+
 .car__bigPicture--sixteenCar {
-    background-image: url('../images/cars/banners/2016.jpg');
+    background-image: url('../images/cars/banners/2016.png');
 }
 
 .car__bigPicture--tenCar {
@@ -87,13 +87,13 @@
     .car__picture {
         width: 25%;
     }
-    
+
     .car__description {
         padding: 0 0 0 $standard-margin;
         width: 75%;
         box-sizing: border-box;
     }
-    
+
     .car__bigPicture {
         height: 500px;
     }
@@ -103,4 +103,4 @@
     .car__bigPicture {
         height: 700px;
     }
-}       
+}
