@@ -40,6 +40,7 @@ people:
   - name: Austin Gilbert
     picture: austin_gilbert.png
     position: Electrical Lead
+    konami: austin_gilbert.png
 
   - name: Sarah Rolniak
     picture: sarah_rolniak.png
@@ -50,6 +51,7 @@ people:
     picture: justin_true.png
     subteam: Webmaster
     konami: justin_true.png
+    quote: 'Just turn it off and back on again'
 
   - name: Karl Calkins
     picture: karl_calkins.png
