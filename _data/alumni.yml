@@ -399,3 +399,33 @@ people:
     position: Former Project Manager
 
   - name: Steven Yurk
+
+  - name: Karl Calkins
+    picture: karl_calkins.png
+    subteam: Former Aero
+
+  - name: Colin Ceisel
+    picture: colin_ceisel.png
+    subteam: Former Mechanical
+
+  - name: Daniel Gron
+    picture: daniel_gron.png
+    subteam: Former Mechanical
+
+  - name: John Hungerford
+    picture: john_hungerford.png
+    subteam: Former Mechanical
+
+  - name: Jacob Smith
+    picture: jacob_smith.png
+    subteam: Former Mechanical
+
+  - name: Bo Ching Wong
+    picture: bo_ching_wong.png
+    linkedin: https://www.linkedin.com/in/bochingwong
+    subteam: Former Business
+
+  - name: Dana Wyckoff
+    picture: dana_wyckoff.png
+    subteam: Former Aero
+    quote: "I don't like people."

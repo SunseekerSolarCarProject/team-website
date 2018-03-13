@@ -17,7 +17,7 @@ config:
 people:
 
   - name: Nicholas Patzer
-    picture: nicholas_patzer.png
+    picture: nicholas_patzer.jpg
     position: Project Manager
 
   - name: Regan Thorpe
@@ -26,7 +26,7 @@ people:
     position: Assistant Project Manager
 
   - name: Molly Bowers
-    picture: molly_bowers.png
+    picture: molly_bowers.jpg
     position: Mechanical Lead
     konami: molly_bowers.png
 
@@ -37,10 +37,9 @@ people:
     konami: alex_brunk.png
     quote: 'Is this thing hot? Ow!'
 
-  - name: Austin Gilbert
-    picture: austin_gilbert.png
+  - name: Dylan Gritzmaker
+    picture: dylan_gritzmaker.jpg
     position: Electrical Lead
-    konami: austin_gilbert.png
 
   - name: Sarah Rolniak
     picture: sarah_rolniak.png
@@ -48,48 +47,39 @@ people:
     konami: sarah_rolniak.png
 
   - name: Justin True
-    picture: justin_true.png
+    picture: justin_true.jpg
     subteam: Webmaster
     konami: justin_true.png
     quote: 'Just turn it off and back on again'
-
-  - name: Karl Calkins
-    picture: karl_calkins.png
-    subteam: Aero
-
-  - name: Colin Ceisel
-    picture: colin_ceisel.png
-    subteam: Mechanical
-
-  - name: Daniel Gron
-    picture: daniel_gron.png
-    subteam: Mechanical
 
   - name: Colin Haynes
     picture: colin_haynes.png
     subteam: Mechanical
 
-  - name: John Hungerford
-    picture: john_hungerford.png
-    subteam: Mechanical
-
   - name: Brandon Robbins
-    picture: brandon_robbins.png
+    picture: brandon_robbins.jpg
     subteam: Electrical
 
-  - name: Jacob Smith
-    picture: jacob_smith.png
-    subteam: Mechanical
+  - name: Austin Gilbert
+    picture: austin_gilbert.jpg
+    position: Electrical
+    konami: austin_gilbert.png
 
-  - name: Bo Ching Wong
-    picture: bo_ching_wong.png
-    linkedin: https://www.linkedin.com/in/bochingwong
-    subteam: Business
+  - name: Alban Shekaj
+    picture: alban_shekaj.jpg
+    position: Mechanical
 
-  - name: Dana Wyckoff
-    picture: dana_wyckoff.png
-    subteam: Aero
-    quote: "I don't like people."
+  - name: Kyle Lyman
+    picture: kyle_lyman.jpg
+    position: Mechanical/Aero
+
+  - name: Mattias Stremler
+    picture: mattias_stremler.jpg
+    position: Mechanical/Aero
+
+  - name: Emily Buffum
+    picture: emily_buffum.jpg
+    position: Mechanical
 
   - name: Bradley Bazuin
     position: Faculty Advisior
