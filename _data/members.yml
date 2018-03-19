@@ -52,34 +52,34 @@ people:
     konami: justin_true.png
     quote: 'Just turn it off and back on again'
 
-  - name: Colin Haynes
-    picture: colin_haynes.png
-    subteam: Mechanical
-
-  - name: Brandon Robbins
-    picture: brandon_robbins.jpg
-    subteam: Electrical
+  - name: Emily Buffum
+    picture: emily_buffum.jpg
+    position: Mechanical
 
   - name: Austin Gilbert
     picture: austin_gilbert.jpg
     position: Electrical
     konami: austin_gilbert.png
 
-  - name: Alban Shekaj
-    picture: alban_shekaj.jpg
-    position: Mechanical
+  - name: Colin Haynes
+    picture: colin_haynes.png
+    subteam: Mechanical
 
   - name: Kyle Lyman
     picture: kyle_lyman.jpg
     position: Mechanical/Aero
 
+  - name: Brandon Robbins
+    picture: brandon_robbins.jpg
+    subteam: Electrical
+
+  - name: Alban Shekaj
+    picture: alban_shekaj.jpg
+    position: Mechanical
+
   - name: Mattias Stremler
     picture: mattias_stremler.jpg
     position: Mechanical/Aero
-
-  - name: Emily Buffum
-    picture: emily_buffum.jpg
-    position: Mechanical
 
   - name: Bradley Bazuin
     position: Faculty Advisior
