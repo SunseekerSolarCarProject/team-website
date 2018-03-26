@@ -48,17 +48,26 @@ people:
 
   - name: Justin True
     picture: justin_true.jpg
-    subteam: Webmaster
+    position: Webmaster
     konami: justin_true.png
     quote: 'Just turn it off and back on again'
 
+  - name: Bo Ching Wong
+    picture: bo_ching_wong.png
+    linkedin: https://www.linkedin.com/in/bochingwong
+    subteam: Business
+
   - name: Emily Buffum
     picture: emily_buffum.jpg
-    position: Mechanical
+    subteam: Mechanical
+
+  - name: Colin Ceisel
+    picture: colin_ceisel.png
+    subteam: Mechanical
 
   - name: Austin Gilbert
     picture: austin_gilbert.jpg
-    position: Electrical
+    subteam: Electrical
     konami: austin_gilbert.png
 
   - name: Colin Haynes
@@ -67,7 +76,7 @@ people:
 
   - name: Kyle Lyman
     picture: kyle_lyman.jpg
-    position: Mechanical/Aero
+    subteam: Mechanical/Aero
 
   - name: Brandon Robbins
     picture: brandon_robbins.jpg
@@ -75,11 +84,11 @@ people:
 
   - name: Alban Shekaj
     picture: alban_shekaj.jpg
-    position: Mechanical
+    subteam: Mechanical
 
   - name: Mattias Stremler
     picture: mattias_stremler.jpg
-    position: Mechanical/Aero
+    subteam: Mechanical/Aero
 
   - name: Bradley Bazuin
     position: Faculty Advisior
