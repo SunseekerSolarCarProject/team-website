@@ -69,6 +69,9 @@ people:
 
   - name: Ashley Brinn
 
+  - name: Karl Calkins
+    picture: karl_calkins.png
+
   - name: Bart Cann
 
   - name: Alec Carpenter
@@ -155,6 +158,9 @@ people:
     years: 2014 - 2017
     position: Former Webmaster
 
+  - name: Daniel Gron
+    picture: daniel_gron.png
+
   - name: Ken Gross
 
   - name: Larry Haeske
@@ -201,6 +207,9 @@ people:
   - name: Steve Houtman
 
   - name: Scott Howe
+
+  - name: John Hungerford
+    picture: john_hungerford.png
 
   - name: Byron Izenbaard
 
@@ -346,6 +355,9 @@ people:
 
   - name: Ian Smith
 
+  - name: Jacob Smith
+    picture: jacob_smith.png
+
   - name: Troy Smits
 
   - name: Jeff Spray
@@ -393,39 +405,13 @@ people:
 
   - name: Bailey Windle
 
+  - name: Dana Wyckoff
+    picture: dana_wyckoff.png
+    quote: "I don't like people."
+
   - name: Krystal York
     picture: krystal_york.png
     linkedin: https://www.linkedin.com/pub/krystal-york/91/5a9/27
     position: Former Project Manager
 
   - name: Steven Yurk
-
-  - name: Karl Calkins
-    picture: karl_calkins.png
-    subteam: Former Aero
-
-  - name: Colin Ceisel
-    picture: colin_ceisel.png
-    subteam: Former Mechanical
-
-  - name: Daniel Gron
-    picture: daniel_gron.png
-    subteam: Former Mechanical
-
-  - name: John Hungerford
-    picture: john_hungerford.png
-    subteam: Former Mechanical
-
-  - name: Jacob Smith
-    picture: jacob_smith.png
-    subteam: Former Mechanical
-
-  - name: Bo Ching Wong
-    picture: bo_ching_wong.png
-    linkedin: https://www.linkedin.com/in/bochingwong
-    subteam: Former Business
-
-  - name: Dana Wyckoff
-    picture: dana_wyckoff.png
-    subteam: Former Aero
-    quote: "I don't like people."
