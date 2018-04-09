@@ -13,6 +13,7 @@
   },
   "homepage": "https://github.com/gunnar94/team-website#readme",
   "devDependencies": {
+    "bower": "^1.8.4",
     "browserify": "^12.0.1",
     "glob": "^6.0.1"
   }
