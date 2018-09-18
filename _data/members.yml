@@ -16,8 +16,8 @@ config:
   pics_dir: /images/team-members/1718/
 people:
 
-  - name: Nicholas Patzer
-    picture: nicholas_patzer.jpg
+  - name: Kyle Lyman
+    picture: kyle_lyman.jpg
     position: Project Manager
 
   - name: Regan Thorpe
@@ -25,10 +25,14 @@ people:
     linkedin: https://www.linkedin.com/in/regan-thorpe/
     position: Assistant Project Manager
 
-  - name: Molly Bowers
-    picture: molly_bowers.jpg
+  - name: Nicholas Patzer
+    picture: nicholas_patzer.jpg
     position: Mechanical Lead
-    konami: molly_bowers.png
+
+  - name: Austin Gilbert
+    picture: austin_gilbert.jpg
+    position: Electrical Lead
+    konami: austin_gilbert.png
 
   - name: Alex Brunk
     picture: alex_brunk.png
@@ -37,25 +41,16 @@ people:
     konami: alex_brunk.png
     quote: 'Is this thing hot? Ow!'
 
-  - name: Dylan Gritzmaker
-    picture: dylan_gritzmaker.jpg
-    position: Electrical Lead
-
-  - name: Sarah Rolniak
-    picture: sarah_rolniak.png
-    position: Driver Lead
-    konami: sarah_rolniak.png
-
   - name: Justin True
     picture: justin_true.jpg
     position: Webmaster
     konami: justin_true.png
     quote: 'Just turn it off and back on again'
 
-  - name: Bo Ching Wong
-    picture: bo_ching_wong.png
-    linkedin: https://www.linkedin.com/in/bochingwong
-    subteam: Business
+  - name: Molly Bowers
+    picture: molly_bowers.jpg
+    subteam: Mechanical
+    konami: molly_bowers.png
 
   - name: Emily Buffum
     picture: emily_buffum.jpg
@@ -65,22 +60,9 @@ people:
     picture: colin_ceisel.png
     subteam: Mechanical
 
-  - name: Austin Gilbert
-    picture: austin_gilbert.jpg
-    subteam: Electrical
-    konami: austin_gilbert.png
-
   - name: Colin Haynes
     picture: colin_haynes.png
     subteam: Mechanical
-
-  - name: Kyle Lyman
-    picture: kyle_lyman.jpg
-    subteam: Mechanical/Aero
-
-  - name: Brandon Robbins
-    picture: brandon_robbins.jpg
-    subteam: Electrical
 
   - name: Alban Shekaj
     picture: alban_shekaj.jpg
