@@ -158,6 +158,10 @@ people:
     years: 2014 - 2017
     position: Former Webmaster
 
+  - name: Dylan Gritzmaker
+    picture: dylan_gritzmaker.jpg
+    position: Former Electrical Lead
+
   - name: Daniel Gron
     picture: daniel_gron.png
 
@@ -330,9 +334,18 @@ people:
 
   - name: Tony Rizzo
 
+  - name: Brandon Robbins
+    picture: brandon_robbins.jpg
+    position: Former Electrical Lead
+
   - name: Melanie Roberts
 
   - name: Chris Rocker
+
+  - name: Sarah Rolniak
+    picture: sarah_rolniak.png
+    position: Former Driver Lead
+    konami: sarah_rolniak.png
 
   - name: Randy Rop
 
@@ -404,6 +417,11 @@ people:
   - name: Chris Winczewski
 
   - name: Bailey Windle
+
+  - name: Bo Ching Wong
+    picture: bo_ching_wong.png
+    linkedin: https://www.linkedin.com/in/bochingwong
+    subteam: Former Business Lead
 
   - name: Dana Wyckoff
     picture: dana_wyckoff.png
