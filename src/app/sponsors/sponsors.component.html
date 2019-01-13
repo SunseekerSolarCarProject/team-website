@@ -1,0 +1,117 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="img-container">
+        <img [src]="image" class="banner">
+        <div class="img-overlay">
+        </div>
+    </div>
+    <div class="row">
+        <div class="button" [routerLink]="['/donate']">Become a Sponsor</div>
+        <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158" class="button">WMU Giving Portal</a>
+        <div *ngIf="current" (click)="changeTab('past')" class="button">Past Sponsors</div>
+        <div *ngIf="!current" (click)="changeTab('current')" class="button">Current Sponsors</div>
+    </div>
+
+    <div class="current-sponsors" *ngIf="current">
+        <span class="header">
+            Platinum Sponsors
+        </span>
+        <div class="sponsor" *ngFor="let s of sponsors.platinum">
+            <img [src]="s.logo" class="logo">
+            <div class="info">
+                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+                <p class="text" [innerText]="s.location"></p>
+                <p class="text" [innerHTML]="s.description"></p>
+            </div>
+        </div>
+        <span class="header">
+            Gold Sponsors
+        </span>
+        <div class="sponsor" *ngFor="let s of sponsors.gold">
+            <img [src]="s.logo" class="logo">
+            <div class="info">
+                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+                <p class="text" [innerText]="s.location"></p>
+                <p class="text" [innerText]="s.description"></p>
+            </div>
+        </div>
+        <span class="header">
+            Silver Sponsors
+        </span>
+        <div class="sponsor" *ngFor="let s of sponsors.silver">
+            <img [src]="s.logo" class="logo">
+            <div class="info">
+                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+                <p class="text" [innerText]="s.location"></p>
+                <p class="text" [innerText]="s.description"></p>
+            </div>
+        </div>
+        <span class="header">
+            Bronze Sponsors
+        </span>
+        <div class="sponsor" *ngFor="let s of sponsors.bronze">
+            <img [src]="s.logo" class="logo">
+            <div class="info">
+                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+                <p class="text" [innerText]="s.location"></p>
+                <p class="text" [innerText]="s.description"></p>
+            </div>
+        </div>
+        <span class="header">
+            Individual Sponsors
+        </span>
+        <div class="sponsor" *ngFor="let s of sponsors.individual">
+            <img [src]="s.logo" class="logo">
+            <div class="info">
+                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+                <p class="text" [innerText]="s.location"></p>
+                <p class="text" [innerText]="s.description"></p>
+            </div>
+        </div>
+        <div class="sponsor">
+            <img src="assets/_images/sponsors/trailer.png" class="logo">
+            <div class="info">
+                <p *ngFor="let n of sponsors.trailer" class="text" [innerText]="n"></p>
+            </div>
+        </div>
+    </div>
+    <div class="past-sponsors" *ngIf="!current">
+        <span class="header">
+            Platinum Sponsors
+        </span>
+        <div class="info" *ngFor="let s of past.platinum">
+            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+        </div>
+        <span class="header">
+            Gold Sponsors
+        </span>
+        <div class="info" *ngFor="let s of past.gold">
+            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+        </div>
+        <span class="header">
+            Silver Sponsors
+        </span>
+        <div class="info" *ngFor="let s of past.silver">
+            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+        </div>
+        <span class="header">
+            Bronze Sponsors
+        </span>
+        <div class="info" *ngFor="let s of past.bronze">
+            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+        </div>
+        <span class="header">
+            WMU Bronco Sponsors
+        </span>
+        <div class="info" *ngFor="let s of past.bronco">
+            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+        </div>
+        <span class="header">
+            Solar Cell Sponsors
+        </span>
+        <div class="info" *ngFor="let s of past.solarcell">
+            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

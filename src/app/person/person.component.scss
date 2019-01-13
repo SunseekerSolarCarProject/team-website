@@ -1,0 +1,56 @@
+
+.name{
+    font-size: 22pt;
+    text-align: center;
+    font-weight: bold;
+}
+
+.title{
+    font-size: 16pt;
+    text-align: center;
+}
+
+.overlay{
+    background-color: rgba(255, 203, 12, 0.75);
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    transition: all 0.5s;
+    border-radius: 5px;
+    z-index: 2;
+}
+
+.person{
+    position: relative;
+    .picture{
+        z-index: 1;
+    }
+    .funny{
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    img{
+        border-radius: 5px;
+        -webkit-transition: all 1s ease-in-out 0s;
+        transition: all 1s ease-in-out 0s;
+    }
+}
+
+.person:hover .overlay{
+    opacity: 1;
+}
+
+.transparent{
+    opacity: 0;
+}
+
+
