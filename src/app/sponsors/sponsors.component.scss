@@ -1,0 +1,64 @@
+.current-sponsors, .past-sponsors{
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sponsor{
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    background-color: whitesmoke;
+    flex-grow: 1;
+    padding: 20px;
+    margin: 20px;
+}
+
+.header{
+    font-size: 20pt;
+    text-decoration: underline;
+}
+
+.logo{
+    width: 200px;
+    height: auto;
+}
+
+.link{
+    color: black;
+    text-decoration: underline;
+    font-size: 14pt;
+}
+
+.non-link{
+    color: black;
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+.text{
+    font-size: 12pt;
+}
+
+.button{
+    background-color: #ffcb0c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    div, a{
+        width: 250px;
+        text-align: center;
+    }
+}

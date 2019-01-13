@@ -1,0 +1,51 @@
+<app-header></app-header>
+<div class="container-fluid">
+
+    <div>
+        <div *ngIf="history">
+            <div class="img-container">
+                <img [src]="historyInfo.image" class="banner">
+                <div class="img-overlay">
+                </div>
+            </div>
+            <div class="container">
+                <div class="page-header">
+                    <h1 [innerText]="historyInfo.title"></h1>
+                </div>
+                <span class="text" [innerHTML]="historyInfo.info"></span>
+            </div>
+        </div>
+        <div *ngIf="challenge">
+            <div class="img-container">
+                <img [src]="challengeInfo.image" class="banner">
+                <div class="img-overlay">
+                </div>
+            </div>
+            <div class="container">
+                <div class="page-header">
+                    <h1 [innerText]="challengeInfo.ascTitle"></h1>
+                </div>
+                <span class="text" [innerHTML]="challengeInfo.ascInfo"></span>
+                <div class="page-header">
+                    <h1 [innerText]="challengeInfo.worldTitle"></h1>
+                </div>
+                <span class="text" [innerHTML]="challengeInfo.worldInfo"></span>
+            </div>
+        </div>
+        <div *ngIf="mission">
+            <div class="img-container">
+                <img [src]="missionInfo.image" class="banner">
+                <div class="img-overlay">
+                </div>
+            </div>
+            <div class="container">
+                <div class="page-header">
+                    <h1 [innerText]="missionInfo.title"></h1>
+                </div>
+                <span class="text" [innerHTML]="missionInfo.info"></span>
+            </div>
+        </div>
+    </div>
+    <div class="spacer"></div>
+</div>
+<app-footer></app-footer>

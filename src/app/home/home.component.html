@@ -1,0 +1,62 @@
+<app-header></app-header>
+<div class="container-fluid">
+    <div class="img-container">
+        <img [src]="image" class="banner">
+        <div class="img-overlay">
+            <img class="overlay-title logo" [src]="logo">
+        </div>
+    </div>
+    
+
+    <div class="page-header">
+        <h1 [innerText]="info.title"></h1>
+        <div class="container info-container" [innerHTML]="info.info"></div>
+    </div>
+
+    <div class="section-header">
+        <h1>Calendar</h1>
+    </div>
+
+    <br>
+    <br>
+    <div class="container">
+        <iframe class="calendar" src="https://outlook.office365.com/owa/calendar/24842366fa7a4cfd96f224e8d2fa5550@wmich.edu/3bb530a7f34c40e78d567852e9c1e1ec9772386110341939798/calendar.html"
+            frameborder="0">
+        </iframe>
+    </div>
+    <hr>
+    <div class="container">
+        <h1 class="center">
+            Meeting Times | {{meetingTimes.semester}}
+        </h1>
+        <div class="meeting-time bottom-border">
+            <span>
+                <span class="glyphicon glyphicon-user"></span> &nbsp; General Team Meeting
+            </span>
+            <span>
+                {{meetingTimes.general.day}} {{meetingTimes.general.time}} | {{meetingTimes.general.building}} {{meetingTimes.general.room}}
+            </span>
+        </div>
+        <div class="meeting-time bottom-border">
+            <span>
+                <span class="glyphicon glyphicon-cog"></span> &nbsp; Mechanical Team Meeting
+            </span>
+            <span>
+                    {{meetingTimes.mechanical.day}} {{meetingTimes.mechanical.time}} | {{meetingTimes.mechanical.building}} {{meetingTimes.mechanical.room}}
+            </span>
+        </div>
+        <div class="meeting-time">
+            <span>
+                <span class="glyphicon glyphicon-flash"></span> &nbsp; Electrical Team Meeting
+            </span>
+            <span>
+                    {{meetingTimes.electrical.day}} {{meetingTimes.electrical.time}} | {{meetingTimes.electrical.building}} {{meetingTimes.electrical.room}}
+            </span>
+        </div>
+    </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<app-footer></app-footer>

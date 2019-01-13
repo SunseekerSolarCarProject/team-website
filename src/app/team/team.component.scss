@@ -1,0 +1,52 @@
+.image{
+    width: 100%;
+}
+
+.text{
+    font-size: 16pt;
+}
+
+.tree{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.leads, .people{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.lead, .person{
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-top: 15px;
+}
+
+.titles{
+    text-decoration: underline;
+}
+
+.line{
+    height: 1px;
+    width: 100%;
+    background-color: #414042;
+}
+
+.not-pictured{
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-size: 14pt;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: solid 0.5px lightgray;
+    padding: 30px;
+}
+
+.spacer{
+    height: 50px;
+    width: 100%;
+}
