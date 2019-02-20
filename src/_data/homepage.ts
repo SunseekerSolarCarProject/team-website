@@ -18,23 +18,49 @@ export const HomeInfo = {
 };
 
 export const MeetingTimes = {
-    semester: 'Spring Semester',
+    semester: 'Spring Semester 2019',
     general: {
         day: 'Wednesdays',
         time: '6:00 P.M.',
         building: 'Parkview',
-        room: 'B-211'
+        room: 'E-101'
     },
     mechanical: {
-        day: 'Wednesdays',
+        day: 'Mondays',
+        time: '5:30 P.M.',
+        building: 'Parkview',
+        room: 'E-101'
+    },
+    cs: {
+        day: null,
         time: '7:00 P.M.',
         building: 'Parkview',
         room: 'E-101'
     },
-    electrical: {
-        day: 'Tuesdays',
-        time: '7:00 P.M.',
+    business: {
+        day: 'Tuesday',
+        time: '6:00 P.M.',
         building: 'Parkview',
-        room: 'A-213'
+        room: 'E-101'
+    },
+    electrical: {
+        battery: {
+            day: 'Mondays',
+            time: '6:00 P.M.',
+            building: 'Parkview',
+            room: 'A-216'
+        },
+        solar: {
+            day: 'Mondays',
+            time: '6:00 P.M.',
+            building: 'Parkview',
+            room: 'A-216'
+        },
+        pcb: {
+            day: 'Thursdays',
+            time: '6:00 P.M.',
+            building: 'Parkview',
+            room: 'A-216'
+        }
     }
 };

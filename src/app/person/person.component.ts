@@ -27,6 +27,7 @@ export class PersonComponent implements OnInit {
                 }, 5000);
             }
         });
+        console.log(this.person);
     }
 
     get isFunnyPic() {
