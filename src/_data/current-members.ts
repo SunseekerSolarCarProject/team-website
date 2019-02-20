@@ -71,10 +71,73 @@ export const CurrentMembers = {
     },
     members: [
         {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Will Barringer',
+            title: 'Battery Captain',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
             picture: 'assets/_images/team-members/team/colin_haynes.png',
             name: 'Colin Haynes',
-            subteam: 'Mechanical',
+            title: 'Mechanical',
             linkedin: 'https://www.linkedin.com/in/colin-haynes-85236114a/',
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Erik Larson',
+            title: 'Solar Captain',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Abby Macchiarolo',
+            title: 'Buisness',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Andrew Mccabe',
+            title: 'Battery Team',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Derrick Oldenkamp',
+            title: 'PCB Captain',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Katy Ross',
+            title: 'Solar Captain',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Britton Williams',
+            title: 'Solar Team',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Alysia Zimmerman',
+            title: 'Solar Captain',
+            linkedin: null,
+            funnyPic: null
+        },
+        {
+            picture: 'assets/_images/team-members/team/unknown.png',
+            name: 'Courtney York',
+            subteam: 'Buisness',
+            linkedin: null,
             funnyPic: null
         }
     ],
