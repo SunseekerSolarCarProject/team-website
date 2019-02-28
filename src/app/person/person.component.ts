@@ -1,4 +1,5 @@
 import { Component, OnInit, Input, Renderer2 } from '@angular/core';
+import { imagePath } from '../database.service';
 
 @Component({
     selector: 'app-person',
@@ -12,6 +13,8 @@ export class PersonComponent implements OnInit {
     funny = false;
 
     inputBuffer = [];
+
+    imagePath = imagePath;
 
     constructor(private renderer: Renderer2) { }
 
@@ -27,7 +30,6 @@ export class PersonComponent implements OnInit {
                 }, 5000);
             }
         });
-        console.log(this.person);
     }
 
     get isFunnyPic() {

@@ -1,6 +1,6 @@
 <div class="person">
-    <img class="funny" [class.transparent]='!isFunnyPic' [src]="person.funnyPic" width="280px" height="350px">
-    <img class="picture" [class.transparent]='isFunnyPic' [src]="person.picture" width="280px" height="350px">
+    <img class="funny" [class.transparent]='!isFunnyPic' [src]="imagePath + person.funnyPic" width="280px" height="350px">
+    <img class="picture" [class.transparent]='isFunnyPic' [src]="imagePath + person.picture" width="280px" height="350px">
     <div class="overlay">
         <p [innerText]="person.name" class="name"></p>
         <p *ngIf="person.title" [innerText]="person.title" class="title"></p>

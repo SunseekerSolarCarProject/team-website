@@ -1,48 +1,48 @@
 <app-header></app-header>
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="isLoaded">
 
     <div>
         <div *ngIf="history">
             <div class="img-container">
-                <img [src]="historyInfo.image" class="banner">
+                <img [src]="imagePath + aboutus.history.image" class="banner">
                 <div class="img-overlay">
                 </div>
             </div>
             <div class="container">
                 <div class="page-header">
-                    <h1 [innerText]="historyInfo.title"></h1>
+                    <h1 [innerText]="aboutus.history.title"></h1>
                 </div>
-                <span class="text" [innerHTML]="historyInfo.info"></span>
+                <span class="text" [innerHTML]="aboutus.history.info"></span>
             </div>
         </div>
         <div *ngIf="challenge">
             <div class="img-container">
-                <img [src]="challengeInfo.image" class="banner">
+                <img [src]="imagePath + aboutus.challenge.image" class="banner">
                 <div class="img-overlay">
                 </div>
             </div>
             <div class="container">
                 <div class="page-header">
-                    <h1 [innerText]="challengeInfo.ascTitle"></h1>
+                    <h1 [innerText]="aboutus.challenge.ascTitle"></h1>
                 </div>
-                <span class="text" [innerHTML]="challengeInfo.ascInfo"></span>
+                <span class="text" [innerHTML]="aboutus.challenge.ascInfo"></span>
                 <div class="page-header">
-                    <h1 [innerText]="challengeInfo.worldTitle"></h1>
+                    <h1 [innerText]="aboutus.challenge.worldTitle"></h1>
                 </div>
-                <span class="text" [innerHTML]="challengeInfo.worldInfo"></span>
+                <span class="text" [innerHTML]="aboutus.challenge.worldInfo"></span>
             </div>
         </div>
         <div *ngIf="mission">
             <div class="img-container">
-                <img [src]="missionInfo.image" class="banner">
+                <img [src]="imagePath + aboutus.mission.image" class="banner">
                 <div class="img-overlay">
                 </div>
             </div>
             <div class="container">
                 <div class="page-header">
-                    <h1 [innerText]="missionInfo.title"></h1>
+                    <h1 [innerText]="aboutus.mission.title"></h1>
                 </div>
-                <span class="text" [innerHTML]="missionInfo.info"></span>
+                <span class="text" [innerHTML]="aboutus.mission.info"></span>
             </div>
         </div>
     </div>

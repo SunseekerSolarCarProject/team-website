@@ -1,19 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { Carlist, CarImage } from '../../_data/cars';
+import { DatabaseService, imagePath } from '../database.service';
 
 @Component({
-  selector: 'app-carlist',
-  templateUrl: './carlist.component.html',
-  styleUrls: ['./carlist.component.scss']
+    selector: 'app-carlist',
+    templateUrl: './carlist.component.html',
+    styleUrls: ['./carlist.component.scss']
 })
 export class CarlistComponent implements OnInit {
 
-  carlist = Carlist;
-  image = CarImage;
+    cars;
 
-  constructor() { }
+    imagePath = imagePath;
 
-  ngOnInit() {
-  }
+    isLoaded = false;
+
+    constructor(private dbService: DatabaseService) { }
+
+    ngOnInit() {
+        this.dbService.getCars().on('value', resp => {
+            this.cars = resp.val();
+            this.isLoaded = true;
+        });
+    }
 
 }

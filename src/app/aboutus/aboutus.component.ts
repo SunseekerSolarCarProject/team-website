@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { History, Challenge, Mission } from '../../_data/aboutus';
+import { DatabaseService, imagePath } from '../database.service';
 
 @Component({
     selector: 'app-aboutus',
@@ -13,11 +13,13 @@ export class AboutusComponent implements OnInit {
     challenge = false;
     mission = false;
 
-    historyInfo = History;
-    challengeInfo = Challenge;
-    missionInfo = Mission;
+    aboutus;
 
-    constructor(private route: ActivatedRoute) { }
+    imagePath = imagePath;
+
+    isLoaded = false;
+
+    constructor(private route: ActivatedRoute, private dbService: DatabaseService) { }
 
     ngOnInit() {
         this.route.params.subscribe(params => {
@@ -43,6 +45,10 @@ export class AboutusComponent implements OnInit {
                 this.mission = true;
                 break;
         }
+        this.dbService.getAboutus().on('value', resp => {
+            this.aboutus = resp.val();
+            this.isLoaded = true;
+        });
     }
 
 }

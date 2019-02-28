@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MeetingTimes, HomeImage, HomeInfo, HomeLogo } from '../../_data/homepage';
+import { DatabaseService, snapshotToArray, imagePath } from '../database.service';
 
 @Component({
     selector: 'app-home',
@@ -8,14 +8,18 @@ import { MeetingTimes, HomeImage, HomeInfo, HomeLogo } from '../../_data/homepag
 })
 export class HomeComponent implements OnInit {
 
-    meetingTimes = MeetingTimes;
-    image = HomeImage;
-    info = HomeInfo;
-    logo = HomeLogo;
+    homepage;
+    loadedData = false;
 
-    constructor() { }
+    imagePath = imagePath;
+
+    constructor(private dbService: DatabaseService) { }
 
     ngOnInit() {
+        this.dbService.getHomepage().on('value', resp => {
+            this.homepage = resp.val();
+            this.loadedData = true;
+        });
     }
 
 }

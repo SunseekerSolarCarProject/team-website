@@ -1,7 +1,6 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { CurrentMembers, CurrentHeaderImage, CurrentPageTitle } from '../../_data/current-members';
 import { ActivatedRoute } from '@angular/router';
-import { Alumni, NotPictured, AlumniHeaderImage, AlumniPageTitle } from '../../_data/alumni';
+import { DatabaseService, snapshotToArray, imagePath } from '../database.service';
 
 @Component({
     selector: 'app-team',
@@ -15,21 +14,30 @@ export class TeamComponent implements OnInit {
     current = false;
     past = false;
 
-    currentMembers = CurrentMembers;
-    alumni = Alumni;
-    notPictured = NotPictured;
-    currentImage = CurrentHeaderImage;
-    alumniImage = AlumniHeaderImage;
-    currentTitle = CurrentPageTitle;
-    alumniTitle = AlumniPageTitle;
+    members;
+    alumni;
+
+    imagePath = imagePath;
+
+    isLoaded = false;
 
     constructor(
         private route: ActivatedRoute,
+        private dbService: DatabaseService
     ) { }
 
     ngOnInit() {
         this.route.params.subscribe(params => {
             this.changeTab(params.members);
+        });
+        this.dbService.getMembers().on('value', resp => {
+            this.members = resp.val();
+            this.isLoaded = true;
+            console.log(this.members);
+        });
+
+        this.dbService.getAlumni().on('value', resp => {
+            this.alumni = resp.val();
         });
     }
 

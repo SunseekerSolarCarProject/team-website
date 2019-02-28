@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Sponsors, PastSponsors, SponsorImage } from '../../_data/sponsors';
 import { ActivatedRoute } from '@angular/router';
+import { DatabaseService, imagePath } from '../database.service';
 
 @Component({
     selector: 'app-sponsors',
@@ -9,12 +9,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class SponsorsComponent implements OnInit {
 
-    sponsors = Sponsors;
-    past = PastSponsors;
     current = true;
-    image = SponsorImage;
 
-    constructor( private route: ActivatedRoute) { }
+    sponsorInfo;
+
+    imagePath = imagePath;
+
+    isLoaded;
+
+    constructor( private route: ActivatedRoute, private dbService: DatabaseService) { }
 
     ngOnInit() {
         this.route.params.subscribe(params => {
@@ -31,6 +34,10 @@ export class SponsorsComponent implements OnInit {
                 this.current = false;
                 break;
         }
+        this.dbService.getSponsors().on('value', resp => {
+            this.sponsorInfo = resp.val();
+            this.isLoaded = true;
+        });
     }
 
 }

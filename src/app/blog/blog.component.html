@@ -1,0 +1,48 @@
+<app-header></app-header>
+<div class="container-fluid" *ngIf="isLoaded">
+    <div class="img-container">
+        <img src="assets/_images/blog/third-meeting/nick-talking.JPG" class="banner">
+        <div class="img-overlay">
+        </div>
+    </div>
+    <div class="container margin-bottom-10">
+        <div class="blog">
+            <div *ngFor="let b of blogPosts">
+                <div class="page-header">
+                    <h2 [innerText]="b.title"></h2>
+                    <h5 [innerText]="b.date"></h5>
+                </div>
+                <p [innerText]="b.body"></p>
+                <hr>
+                <p>
+                    <span class="glyphicon glyphicon-user"></span>
+                    <span [innerText]="b.author"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<button id="editButton" type="button" style="display: none;" class="btn btn-info btn-lg" data-toggle="modal" data-target="#edit">Open Modal</button>
+<div id="edit" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Create Blog Post</h4>
+            </div>
+            <div class="modal-body">
+                <label>Title: </label>
+                <input type="text" class="form-control" [(ngModel)]="title">
+                <label>Body: </label>
+                <textarea class="form-control" rows="15" [(ngModel)]="body"></textarea>
+                <label>Author: </label>
+                <input type="text" class="form-control" [(ngModel)]="author">
+            </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-success" data-dismiss="modal" (click)="post()">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

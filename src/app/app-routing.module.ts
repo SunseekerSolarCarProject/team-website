@@ -7,6 +7,7 @@ import { CarlistComponent } from './carlist/carlist.component';
 import { CardetailsComponent } from './cardetails/cardetails.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { DonateComponent } from './donate/donate.component';
+import { BlogComponent } from './blog/blog.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -16,7 +17,8 @@ const routes: Routes = [
   { path: 'carlist', component: CarlistComponent},
   { path: 'cardetail/:car', component: CardetailsComponent},
   { path: 'sponsors/:current', component: SponsorsComponent},
-  { path: 'donate', component: DonateComponent}
+  { path: 'donate', component: DonateComponent},
+  { path: 'blog', component: BlogComponent}
 ];
 
 @NgModule({

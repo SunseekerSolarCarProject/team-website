@@ -1,7 +1,7 @@
 <app-header></app-header>
-<div class="container-fluid">
+<div class="container-fluid" *ngIf="isLoaded">
     <div class="img-container">
-        <img [src]="details.picture" class="banner">
+        <img [src]="imagePath + details.picture" class="banner">
         <div class="img-overlay">
             <div class="overlay-title" [innerHTML]="details.title"></div>
         </div>

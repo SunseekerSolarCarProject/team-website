@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CarDetails } from '../../_data/cars';
+import { DatabaseService, imagePath } from '../database.service';
 
 @Component({
     selector: 'app-cardetails',
@@ -9,12 +9,20 @@ import { CarDetails } from '../../_data/cars';
 })
 export class CardetailsComponent implements OnInit {
 
-    details: any;
+    details;
 
-    constructor( private route: ActivatedRoute) { }
+    imagePath = imagePath;
+
+    isLoaded = false;
+
+    constructor( private route: ActivatedRoute, private dbService: DatabaseService) { }
 
     ngOnInit() {
-        this.details = CarDetails[this.route.snapshot.url[1].path.replace(' ', '')];
+        const car = this.route.snapshot.url[1].path.replace(' ', '');
+        this.dbService.getCarDetail(car).on('value', resp => {
+            this.details = resp.val();
+            this.isLoaded = true;
+        });
     }
 
 }

@@ -18,6 +18,9 @@ import { CarlistComponent } from './carlist/carlist.component';
 import { CardetailsComponent } from './cardetails/cardetails.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { DonateComponent } from './donate/donate.component';
+import { DatabaseService } from './database.service';
+import { BlogComponent } from './blog/blog.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -32,17 +35,19 @@ import { DonateComponent } from './donate/donate.component';
     CarlistComponent,
     CardetailsComponent,
     SponsorsComponent,
-    DonateComponent
+    DonateComponent,
+    BlogComponent
   ],
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
     BsDropdownModule.forRoot(),
     TooltipModule.forRoot(),
     ModalModule.forRoot(),
     CollapseModule.forRoot(),
   ],
-  providers: [],
+  providers: [DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
