@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DatabaseService, imagePath } from '../database.service';
+import { DatabaseService } from '../database.service';
+import { Header, Sponsor } from '../interfaces';
 
 @Component({
     selector: 'app-sponsors',
@@ -9,13 +10,16 @@ import { DatabaseService, imagePath } from '../database.service';
 })
 export class SponsorsComponent implements OnInit {
 
+    header: Header;
     current = true;
 
-    sponsorInfo;
+    sponsors: Sponsor[];
+    pastSponsors: Sponsor[] = new Array();
 
-    imagePath = imagePath;
+    headerLoaded = false;
+    sponsorsLoaded = false;
 
-    isLoaded;
+    tiers = ['Platinum', 'Gold', 'Silver', 'Bronze', 'Individual', 'WMU Bronco', 'Solar Cell'];
 
     constructor( private route: ActivatedRoute, private dbService: DatabaseService) { }
 
@@ -23,20 +27,39 @@ export class SponsorsComponent implements OnInit {
         this.route.params.subscribe(params => {
             this.changeTab(params.current);
         });
+        this.dbService.getHeaders().subscribe(resp => {
+            this.header = resp.find(h => {
+                return h.fields.Page === 'sponsors';
+            }).fields;
+            this.headerLoaded = true;
+        });
+        this.dbService.getSponsors().subscribe(resp => {
+            this.sponsors = resp.map(s => s.fields);
+        });
+        this.dbService.getPastSponsors().subscribe(resp => {
+            const past = resp.map(s => {
+                return {id: s.id, ...s.fields};
+            }).filter(r => {
+                return this.pastSponsors.filter(a => a.id === r.id).length === 0;
+            });
+            this.pastSponsors = [...this.pastSponsors, ...past];
+            this.sponsorsLoaded = true;
+        });
     }
 
     changeTab(tab) {
-        switch (tab) {
-            case 'current':
-                this.current = true;
-                break;
-            case 'past':
-                this.current = false;
-                break;
-        }
-        this.dbService.getSponsors().on('value', resp => {
-            this.sponsorInfo = resp.val();
-            this.isLoaded = true;
+        this.current = tab === 'current';
+    }
+
+    getTier(tier) {
+        return this.sponsors.filter(s => {
+            return s.Tier === tier;
+        });
+    }
+
+    getPastTier(tier) {
+        return this.pastSponsors.filter(p => {
+            return p.Tier === tier;
         });
     }
 

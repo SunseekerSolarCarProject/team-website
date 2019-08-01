@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DatabaseService, imagePath } from '../database.service';
+import { DatabaseService } from '../database.service';
+import { Header, AboutUs } from '../interfaces';
 
 @Component({
     selector: 'app-aboutus',
@@ -9,46 +10,54 @@ import { DatabaseService, imagePath } from '../database.service';
 })
 export class AboutusComponent implements OnInit {
 
-    history = false;
-    challenge = false;
-    mission = false;
+    headers: Header[];
+    currentTab = 'history';
 
-    aboutus;
+    aboutus: AboutUs[];
 
-    imagePath = imagePath;
-
-    isLoaded = false;
+    headerLoaded = false;
+    aboutusLoaded = false;
 
     constructor(private route: ActivatedRoute, private dbService: DatabaseService) { }
 
     ngOnInit() {
         this.route.params.subscribe(params => {
-            this.changeTab(params.page);
+            this.currentTab = params.page;
+            this.dbService.getAboutus().subscribe(resp => {
+                this.aboutus = resp.map(r => r.fields);
+                this.aboutusLoaded = true;
+            });
+        });
+        this.dbService.getHeaders().subscribe(resp => {
+            this.headers = resp.map(h =>  h.fields);
+            this.headerLoaded = true;
         });
     }
 
     changeTab(tab) {
-        switch (tab) {
-            case 'history':
-                this.history = true;
-                this.challenge = false;
-                this.mission = false;
-                break;
+        this.currentTab = tab;
+    }
+
+    get currentHeader() {
+        return this.headers.find(h => h.Page === this.currentTab);
+    }
+
+    get currentInfo() {
+        switch (this.currentTab) {
             case 'challenge':
-                this.history = false;
-                this.challenge = true;
-                this.mission = false;
-                break;
+                return [
+                    this.aboutus.find(a => a.Tab === 'asc'),
+                    this.aboutus.find(a => a.Tab === 'wsc')
+                ];
+            case 'history':
+                return [
+                    this.aboutus.find(a => a.Tab === 'history')
+                ];
             case 'mission':
-                this.history = false;
-                this.challenge = false;
-                this.mission = true;
-                break;
+                return [
+                    this.aboutus.find(a => a.Tab === 'mission')
+                ];
         }
-        this.dbService.getAboutus().on('value', resp => {
-            this.aboutus = resp.val();
-            this.isLoaded = true;
-        });
     }
 
 }

@@ -8,6 +8,8 @@ import { CardetailsComponent } from './cardetails/cardetails.component';
 import { SponsorsComponent } from './sponsors/sponsors.component';
 import { DonateComponent } from './donate/donate.component';
 import { BlogComponent } from './blog/blog.component';
+import { MemberdetailComponent } from './memberdetail/memberdetail.component';
+import { AdoptComponent } from './adopt/adopt.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,7 +20,9 @@ const routes: Routes = [
   { path: 'cardetail/:car', component: CardetailsComponent},
   { path: 'sponsors/:current', component: SponsorsComponent},
   { path: 'donate', component: DonateComponent},
-  { path: 'blog', component: BlogComponent}
+  { path: 'blog', component: BlogComponent},
+  { path: 'member/:path', component: MemberdetailComponent},
+  { path: 'adopt', component: AdoptComponent}
 ];
 
 @NgModule({

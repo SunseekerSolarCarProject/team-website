@@ -1,49 +1,16 @@
-<app-header></app-header>
-<div class="container-fluid" *ngIf="isLoaded">
-
+<app-navbar></app-navbar>
+<div class="container-fluid" *ngIf="headerLoaded && aboutusLoaded">
     <div>
-        <div *ngIf="history">
-            <div class="img-container">
-                <img [src]="imagePath + aboutus.history.image" class="banner">
-                <div class="img-overlay">
-                </div>
+        <app-header [header]="currentHeader"></app-header>
+        <div class="container">
+            <div class="page-header" *ngIf="currentInfo[0]">
+                <h1 [innerText]="currentInfo[0].Title"></h1>
             </div>
-            <div class="container">
-                <div class="page-header">
-                    <h1 [innerText]="aboutus.history.title"></h1>
-                </div>
-                <span class="text" [innerHTML]="aboutus.history.info"></span>
+            <span  *ngIf="currentInfo[0]" class="text" [innerHTML]="currentInfo[0].Info"></span>
+            <div class="page-header" *ngIf="currentInfo[1]">
+                <h1 [innerText]="currentInfo[1].Title"></h1>
             </div>
-        </div>
-        <div *ngIf="challenge">
-            <div class="img-container">
-                <img [src]="imagePath + aboutus.challenge.image" class="banner">
-                <div class="img-overlay">
-                </div>
-            </div>
-            <div class="container">
-                <div class="page-header">
-                    <h1 [innerText]="aboutus.challenge.ascTitle"></h1>
-                </div>
-                <span class="text" [innerHTML]="aboutus.challenge.ascInfo"></span>
-                <div class="page-header">
-                    <h1 [innerText]="aboutus.challenge.worldTitle"></h1>
-                </div>
-                <span class="text" [innerHTML]="aboutus.challenge.worldInfo"></span>
-            </div>
-        </div>
-        <div *ngIf="mission">
-            <div class="img-container">
-                <img [src]="imagePath + aboutus.mission.image" class="banner">
-                <div class="img-overlay">
-                </div>
-            </div>
-            <div class="container">
-                <div class="page-header">
-                    <h1 [innerText]="aboutus.mission.title"></h1>
-                </div>
-                <span class="text" [innerHTML]="aboutus.mission.info"></span>
-            </div>
+            <span *ngIf="currentInfo[1]" class="text" [innerHTML]="currentInfo[1].Info"></span>
         </div>
     </div>
     <div class="spacer"></div>

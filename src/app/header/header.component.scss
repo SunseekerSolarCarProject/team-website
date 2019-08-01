@@ -1,72 +1,15 @@
-.logo {
-    height: 50px;
-}
-
-.navbar, li{
-    height: 75px;
-}
-
-.navbar li a{
-    margin-top: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 12pt;
-    transition: all 0.5s;
+.page-header{
     text-align: center;
-    padding: 0;
-    margin: 15px;
-
-    &::before{
-        content: "";
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #fff;
-        visibility: hidden;
-        -webkit-transform: scaleX(0);
-        transform: scaleX(0);
-        -webkit-transition: all 0.3s ease-in-out 0s;
-        transition: all 0.3s ease-in-out 0s;
-    }
-
-    &:hover::before{
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1);
-    }
+    padding-bottom:50px;
 }
 
-.icon {
-    height: 30px;
+.info-container{
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 14pt;
 }
 
-.icon-wrapper{
-    width: 40px;
-}
-
-.donate{
-    color: #ffcb0c;
-    background-color: white;
-    border-radius: 5px;
-    padding: 10px;
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-
-    &:hover{
-        padding: 14px;
-    }
-}
-
-.navbar-inverse, .navbar-nav .open a{
-    background-color: rgba(0,0,0,0);
-    border-color: rgba(0,0,0,0);
-}
-
-.dropdown-menu li{
-    height: 30px;
-    a{
-        color: #414042;
-    }
+.logo{
+    height: 50%;
+    opacity: 0.5;
 }

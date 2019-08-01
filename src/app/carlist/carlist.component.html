@@ -1,15 +1,11 @@
-<app-header></app-header>
-<div class="container-fluid" *ngIf="isLoaded">
-    <div class="img-container">
-        <img [src]="imagePath + cars.carImage" class="banner">
-        <div class="img-overlay">
-        </div>
-    </div>
+<app-navbar></app-navbar>
+<div class="container-fluid" *ngIf="headerLoaded && carsLoaded">
+    <app-header [header]="header"></app-header>
     <div class="car-table">
-        <div *ngFor="let c of cars.carlist" class="car" routerLink="/cardetail/{{c.title}}">
-            <img class="car-pic" [src]="imagePath + c.picture">
+        <div *ngFor="let c of cars" class="car" routerLink="/cardetail/{{c.id}}">
+            <img class="car-pic" [src]="dbService.getImage(c.Icon)">
             <div class="overlay">
-                <p [innerText]="c.title" class="title"></p>
+                <p [innerText]="c.Car" class="title"></p>
                 <div class="button">View Details</div>
             </div>
         </div>

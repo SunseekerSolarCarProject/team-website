@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="img-container">
+        <img src="assets/_images/homepage/solar-farm.jpg" class="banner">
+        <div class="img-overlay">
+        </div>
+    </div>
+    <div class="container" *ngIf="isLoaded">
+        <div class="key">
+            <div class="cell"></div>
+            <span>= Adopted</span>
+            <div class="cell empty"></div>
+            <span>= Open for adoption</span>
+        </div>
+        <div class="car-container">
+            <div class="car">
+                <div class="sub1">
+                    <div class="cell" [class.empty]="f.name === ''" *ngFor="let f of front; let i = index">
+                        <button type="button" class="invisable" data-toggle="modal" [attr.data-target]="'#1-'+i"></button>
+                        <div id="1-{{i}}" class="modal fade" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <h4 class="modal-title">
+                                            <span *ngIf="f.name === ''">Adopt Me!</span>
+                                            <img *ngIf="f.name !== ''" [src]="imagePath+f.logo" width="100">
+                                            <span *ngIf="f.name !== ''" [innerText]="f.name"></span>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="spacer">
+                    <br>
+                </div>
+                <div class="sub2">
+                    <div class="cell" [class.empty]="i.name === ''" *ngFor="let i of back"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

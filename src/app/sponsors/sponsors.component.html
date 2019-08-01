@@ -1,10 +1,6 @@
-<app-header></app-header>
-<div class="container-fluid" *ngIf="isLoaded">
-    <div class="img-container">
-        <img [src]="imagePath + sponsorInfo.sponsorImage" class="banner">
-        <div class="img-overlay">
-        </div>
-    </div>
+<app-navbar></app-navbar>
+<div class="container-fluid" *ngIf="headerLoaded && sponsorsLoaded">
+    <app-header [header]="header"></app-header>
     <div class="row">
         <div class="button" [routerLink]="['/donate']">Become a Sponsor</div>
         <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158" class="button">WMU Giving Portal</a>
@@ -13,104 +9,45 @@
     </div>
 
     <div class="current-sponsors" *ngIf="current">
-        <span class="header">
-            Platinum Sponsors
-        </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.platinum">
-            <img [src]="imagePath + s.logo" class="logo">
-            <div class="info">
-                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-                <p class="text" [innerText]="s.location"></p>
-                <p class="text" [innerHTML]="s.description"></p>
+        <div *ngFor="let t of tiers">
+            <div  [class]="t + ' tier'" *ngIf="getTier(t).length > 0">
+                <span class="header">
+                    {{t}} Sponsors
+                </span>
+                <div class="sponsor" *ngFor="let s of getTier(t)">
+                    <img [src]="dbService.getImage(s.Logo)" class="logo">
+                    <div class="info">
+                        <a [class.link]="s.Link" [class.non-link]="!s.Link" [href]="s.Link" [innerText]="s.Company"></a>
+                        <p *ngIf="s.Location" class="text" [innerText]="s.Location"></p>
+                        <p *ngIf="s.Description" class="text" [innerHTML]="s.Description"></p>
+                    </div>
+                </div>
             </div>
         </div>
         <span class="header">
-            Gold Sponsors
+            Trailer Sponsors
         </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.gold">
-            <img [src]="imagePath + s.logo" class="logo">
-            <div class="info">
-                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-                <p class="text" [innerText]="s.location"></p>
-                <p class="text" [innerText]="s.description"></p>
-            </div>
-        </div>
-        <span class="header">
-            Silver Sponsors
-        </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.silver">
-            <img [src]="imagePath + s.logo" class="logo">
-            <div class="info">
-                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-                <p class="text" [innerText]="s.location"></p>
-                <p class="text" [innerText]="s.description"></p>
-            </div>
-        </div>
-        <span class="header">
-            Bronze Sponsors
-        </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.bronze">
-            <img [src]="imagePath + s.logo" class="logo">
-            <div class="info">
-                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-                <p class="text" [innerText]="s.location"></p>
-                <p class="text" [innerText]="s.description"></p>
-            </div>
-        </div>
-        <span class="header">
-            Individual Sponsors
-        </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.individual">
-            <img [src]="imagePath + s.logo" class="logo">
-            <div class="info">
-                <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-                <p class="text" [innerText]="s.location"></p>
-                <p class="text" [innerText]="s.description"></p>
-            </div>
-        </div>
         <div class="sponsor">
-            <img src="assets/_images/sponsors/trailer.png" class="logo">
+            <img [src]="dbService.getImage(getTier('Trailer')[0].Logo)" class="logo">
             <div class="info">
-                <p *ngFor="let n of sponsorInfo.sponsors.trailer" class="text" [innerText]="n"></p>
+                <p *ngFor="let n of getTier('Trailer')" class="text" [innerText]="n.Company"></p>
             </div>
         </div>
     </div>
     <div class="past-sponsors" *ngIf="!current">
-        <span class="header">
-            Platinum Sponsors
-        </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.platinum">
-            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-        </div>
-        <span class="header">
-            Gold Sponsors
-        </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.gold">
-            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-        </div>
-        <span class="header">
-            Silver Sponsors
-        </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.silver">
-            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-        </div>
-        <span class="header">
-            Bronze Sponsors
-        </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.bronze">
-            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-        </div>
-        <span class="header">
-            WMU Bronco Sponsors
-        </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.bronco">
-            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
-        </div>
-        <span class="header">
-            Solar Cell Sponsors
-        </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.solarcell">
-            <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
+        <div *ngFor="let t of tiers">
+            <div  [class]="t + ' tier'" *ngIf="getPastTier(t).length > 0">
+                <span class="header">
+                    {{t}} Sponsors
+                </span>
+                <div class="grid">
+                    <div class="column" *ngFor="let s of getPastTier(t)">
+                        <div class="info">
+                            <a [class.link]="s.Link" [class.non-link]="!s.Link" [href]="s.Link" [innerText]="s.Company"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

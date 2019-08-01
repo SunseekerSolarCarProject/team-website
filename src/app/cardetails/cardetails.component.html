@@ -1,26 +1,30 @@
-<app-header></app-header>
+<app-navbar></app-navbar>
 <div class="container-fluid" *ngIf="isLoaded">
     <div class="img-container">
-        <img [src]="imagePath + details.picture" class="banner">
+        <img [src]="dbService.getImage(details.Picture)" class="banner">
         <div class="img-overlay">
-            <div class="overlay-title" [innerHTML]="details.title"></div>
+            <div class="overlay-title" [innerHTML]="details.Car"></div>
         </div>
     </div>
     <div class="specs">
         <div class="mechanical">
             <span class="title">Mechanical Specifications</span>
-            <div class="row" *ngFor="let m of details.mechanical">
-                <span class="name" [innerText]="m.name"></span>
-                <div class="spacer"></div>
-                <span class="value" [innerText]="m.value"></span>
+            <div *ngFor="let m of mechanical">
+                <div class="row" *ngIf="m.value">
+                    <span class="name" [innerText]="m.name"></span>
+                    <div class="spacer"></div>
+                    <span class="value" [innerHTML]="m.value"></span>
+                </div>
             </div>
         </div>
         <div class="electrical">
             <span class="title">Electrical Specifications</span>
-            <div class="row" *ngFor="let e of details.electrical">
-                <span class="name" [innerText]="e.name"></span>
-                <div class="spacer"></div>
-                <span class="value" [innerHTML]="e.value"></span>
+            <div *ngFor="let e of electrical">
+                <div  class="row" *ngIf="e.value">
+                    <span class="name" [innerText]="e.name"></span>
+                    <div class="spacer"></div>
+                    <span class="value" [innerHTML]="e.value"></span>
+                </div>
             </div>
         </div>
     </div>

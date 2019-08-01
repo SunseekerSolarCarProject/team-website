@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { DatabaseService, imagePath, snapshotToArray } from '../database.service';
+import { DatabaseService } from '../database.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -23,7 +23,6 @@ export class BlogComponent implements OnInit {
 
     ngOnInit() {
         this.dbService.getBlog().on('value', resp => {
-            this.blogPosts = snapshotToArray(resp);
             this.blogPosts = this.flipArray(this.blogPosts);
             this.isLoaded = true;
         });

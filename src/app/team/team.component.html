@@ -1,48 +1,43 @@
-<app-header></app-header>
-<div class="container-fluid" *ngIf="isLoaded">
+<app-navbar></app-navbar>
+<div class="container-fluid" *ngIf="headerLoaded && membersLoaded">
     <div>
+        <app-header [header]="header"></app-header>
         <div *ngIf="current" class="members">
-            <div class="img-container">
-                <img [src]="imagePath + members.currentHeaderImage" class="banner">
-                <div class="img-overlay">
-                    <div class="overlay-title" [innerHTML]="members.currentPageTitle"></div>
-                </div>
-            </div>
             <div class="tree container">
                 <div class="leads">
-                    <div class="lead" *ngIf="members.currentMembers.lead.picture">
-                        <app-person [person]="members.currentMembers.lead" ></app-person>
+                    <div class="lead" *ngIf="getPosition('Project Lead')">
+                        <app-person [person]="getPosition('Project Lead')"></app-person>
                     </div>
-                    <div class="lead" *ngIf="members.currentMembers.assistant.picture">
-                        <app-person [person]="members.currentMembers.assistant" ></app-person>
+                    <div class="lead" *ngIf="getPosition('Assistant Project Lead')">
+                        <app-person [person]="getPosition('Assistant Project Lead')"></app-person>
                     </div>
                 </div>
                 <div class="leads">
-                    <div class="lead" *ngIf="members.currentMembers.mechanical.picture">
-                        <app-person [person]="members.currentMembers.mechanical"></app-person>
+                    <div class="lead" *ngIf="getPosition('Mechanical Lead')">
+                        <app-person [person]="getPosition('Mechanical Lead')"></app-person>
                     </div>
-                    <div class="lead" *ngIf="members.currentMembers.electrical.picture">
-                        <app-person [person]="members.currentMembers.electrical" ></app-person>
+                    <div class="lead" *ngIf="getPosition('Electrical Lead')">
+                        <app-person [person]="getPosition('Electrical Lead')"></app-person>
                     </div>
-                    <div class="lead" *ngIf="members.currentMembers.aero.picture">
-                        <app-person [person]="members.currentMembers.aero"></app-person>
+                    <div class="lead" *ngIf="getPosition('Aero Lead')">
+                        <app-person [person]="getPosition('Aero Lead')"></app-person>
                     </div>
-                    <div class="lead" *ngIf="members.currentMembers.webmaster.picture">
-                        <app-person [person]="members.currentMembers.webmaster" ></app-person>
+                    <div class="lead" *ngIf="getPosition('Webmaster')">
+                        <app-person [person]="getPosition('Webmaster')"></app-person>
                     </div>
-                    <div class="lead" *ngIf="members.currentMembers.business.picture">
-                        <app-person [person]="members.currentMembers.business" ></app-person>
+                    <div class="lead" *ngIf="getPosition('Business Lead')">
+                        <app-person [person]="getPosition('Business Lead')"></app-person>
                     </div>
                 </div>
                 <hr class="line">
                 <div class="people">
-                    <div class="person" *ngFor="let m of members.currentMembers.members">
-                        <app-person *ngIf="m.picture" [person]="m" ></app-person>
+                    <div class="person" *ngFor="let m of getMembers()" [hidden]="!m">
+                        <app-person [person]="m"></app-person>
                     </div>
                 </div>
                 <br>
                 <div class="people">
-                    <div class="person" *ngFor="let m of members.currentMembers.advisors">
+                    <div class="person" *ngFor="let m of getAdvisors()">
                         <app-person [person]="m" ></app-person>
                     </div>
                 </div>
@@ -52,20 +47,14 @@
             </div>
         </div>
         <div *ngIf="past">
-            <div class="img-container">
-                <img [src]="imagePath + alumni.alumniHeaderImage" class="banner">
-                <div class="img-overlay">
-                    <div class="overlay-title" [innerHTML]="alumni.alumniPageTitle"></div>
-                </div>
-            </div>
             <div class="people">
-                <div class="person" *ngFor="let a of alumni.alumni">
+                <div class="person" *ngFor="let a of getAlumni()">
                     <app-person [person]="a" ></app-person>
                 </div>
             </div>
             <div class="not-pictured container">
                 <div class="titles">Not Pictured</div>
-                <span [innerText]="alumni.notPictured"></span>
+                <span *ngFor="let name of getNotPictured(); let i = index; let l = count" [innerText]="name + getSeperator(i, l)"></span>
             </div>
         </div>
     </div>

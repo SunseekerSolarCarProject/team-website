@@ -1,4 +1,4 @@
-<app-header></app-header>
+<app-navbar></app-navbar>
 <div class="container-fluid">
     <div class="img-container" id="image">
         <img src="assets/_images/homepage/sunny-texas-day.jpg" class="banner">
@@ -50,64 +50,48 @@
 
         <p class="page-header">Sponsorship Tiers</p>
         <div class="tier">
-            <p class="header">Platinum</p>
-            <p class="text">Donations valued at no less than $10,000.</p>
+            <p class="header">Diamond</p>
+            <p class="text">Donations valued at no less than $25,000.</p>
             <ul>
-                <li>Logo will be placed on out current car.
-                    <a href="donate#info">(1)</a>
-                </li>
-                <li>Larger area reserved on our car for the sponsor</li>
-                <li>Logo placed on website.
-                    <a href="donate#info">(2)</a>
-                </li>
-                <li>Link to sponsor website
-                    <a href="donate#info">(3)</a>
-                </li>
-                <li>A short description provided by the sponsor may be added to sponsor page
-                    <a href="donate#info">(4)</a>
-                </li>
+                <li *ngFor="let item of generateTier(0)" [innerText]="item"></li>
             </ul>
         </div>
 
         <div class="tier">
-            <p class="header">Gold</p>
-            <p class="text">Donations valued from $5,000 and up to $9,999.</p>
+            <p class="header">Platinum</p>
+            <p class="text">Donations valued from $14,000 and up to $24,999.</p>
             <ul>
-                <li>Logo will be placed on out current car.
-                    <a href="donate#info">(1)</a>
-                </li>
-                <li>Logo placed on website.
-                    <a href="donate#info">(2)</a>
-                </li>
-                <li>Link to sponsor website
-                    <a href="donate#info">(3)</a>
-                </li>
-                <li>A short description provided by the sponsor may be added to sponsor page
-                    <a href="donate#info">(4)</a>
-                </li>
+                <li *ngFor="let item of generateTier(1)" [innerText]="item"></li>
+            </ul>
+        </div>
+        <div class="tier">
+            <p class="header">Gold</p>
+            <p class="text">Donations valued from $8,000 and up to $13,999.</p>
+            <ul>
+                <li *ngFor="let item of generateTier(2)" [innerText]="item"></li>
             </ul>
         </div>
         <div class="tier">
             <p class="header">Silver</p>
-            <p class="text">Donations valued from $1,000 and up to $4,999.</p>
+            <p class="text">Donations valued from $5,000 and up to $7,999.</p>
             <ul>
-                <li>Logo placed on website.
-                    <a href="donate#info">(2)</a>
-                </li>
-                <li>Link to sponsor website
-                    <a href="donate#info">(3)</a>
-                </li>
+                <li *ngFor="let item of generateTier(3)" [innerText]="item"></li>
             </ul>
         </div>
         <div class="tier">
             <p class="header">Bronze</p>
-            <p class="text">Donations valued at no more than $999.</p>
+            <p class="text">Donations valued from $1,000 and up to $4,999.</p>
             <ul>
-                <li>Logo placed on website.
-                    <a href="donate#info">(2)</a>
-                </li>
+                <li *ngFor="let item of generateTier(3)" [innerText]="item"></li>
             </ul>
         </div>
+        <div class="tier">
+                <p class="header">Adopt a Cell</p>
+                <p class="text">Donations valued from $250 and up to $999.</p>
+                <ul>
+                    <li>Company name and logo on our Adopt a Cell Page on the website</li>
+                </ul>
+            </div>
 
         <p class="page-header" id="info">Additional Information</p>
         <p class="text">All donations are welcome, if you are donating something besides or in addition to cash, we ask that you also provide

@@ -1,37 +1,65 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
+import { Airtable, Base } from 'ngx-airtable';
 
 @Injectable()
 export class DatabaseService {
 
-  constructor() { }
-    getHomepage() {
-        return firebase.database().ref('homepage');
+    base: Base;
+
+    constructor(private airtable: Airtable) { }
+
+    getBase() {
+        this.base = this.airtable.base('appi09iP9sn2pprfV');
+    }
+
+    getHeaders() {
+        return this.base.table({ tableName: 'Headers' }).select().firstPage();
+    }
+
+    getMeetingTimes() {
+        return this.base.table({ tableName: 'Meeting Times'}).select().firstPage();
     }
 
     getMembers() {
-        return firebase.database().ref('currentMembers');
-    }
-
-    getCars() {
-        return firebase.database().ref('cars');
-    }
-
-    getCarDetail(car) {
-        return firebase.database().ref('cars/carDetails/' + car);
+        return this.base.table({ tableName: 'Members'}).select({filterByFormula: 'Current'}).firstPage();
     }
 
     getAlumni() {
-        return firebase.database().ref('alumni');
+        return this.base.table({ tableName: 'Members'}).select({filterByFormula: 'NOT(Current)'}).eachPage();
+    }
+
+    getMember(name) {
+        return this.base.table({ tableName: 'Members'}).find(name);
     }
 
     getAboutus() {
-        return firebase.database().ref('aboutus');
+        return this.base.table({ tableName: 'AboutUs'}).select().firstPage();
+    }
+
+    getCars() {
+        return this.base.table({ tableName: 'Cars'}).select().firstPage();
+    }
+
+    getCar(car) {
+        return this.base.table({ tableName: 'Cars'}).find(car);
     }
 
     getSponsors() {
-        return firebase.database().ref('sponsors');
+        return this.base.table({ tableName: 'Sponsors'}).select({filterByFormula: 'Current'}).firstPage();
     }
+
+    getPastSponsors() {
+        return this.base.table({ tableName: 'Sponsors'}).select({filterByFormula: 'NOT(Current)'}).eachPage();
+    }
+
+    getImage(pic) {
+        if (pic) {
+            return pic[0].url;
+        }
+    }
+
+
 
     getBlog() {
         return firebase.database().ref('blog').orderByChild('date');
@@ -48,18 +76,9 @@ export class DatabaseService {
         });
     }
 
+    getCells() {
+        return firebase.database().ref('adoptacell');
+    }
+
 }
-
-export const imagePath = 'assets/_images/';
-
-export const snapshotToArray = snapshot => {
-    const returnArr = [];
-    snapshot.forEach(childSnapshot => {
-        const item = childSnapshot.val();
-        item.key = childSnapshot.key;
-        returnArr.push(item);
-    });
-
-    return returnArr;
-};
 

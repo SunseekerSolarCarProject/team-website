@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Renderer2 } from '@angular/core';
-import { imagePath } from '../database.service';
+import { DatabaseService } from '../database.service';
+import { Router } from '@angular/router';
+import { Member } from '../interfaces';
 
 @Component({
     selector: 'app-person',
@@ -8,15 +10,14 @@ import { imagePath } from '../database.service';
 })
 export class PersonComponent implements OnInit {
 
-    @Input() person: Person;
+    @Input() person: Member;
+    @Input() profile: boolean;
 
     funny = false;
 
     inputBuffer = [];
 
-    imagePath = imagePath;
-
-    constructor(private renderer: Renderer2) { }
+    constructor(private renderer: Renderer2, private router: Router, public dbService: DatabaseService) { }
 
     ngOnInit() {
         this.renderer.listen('document', 'keypress', e => {
@@ -33,15 +34,7 @@ export class PersonComponent implements OnInit {
     }
 
     get isFunnyPic() {
-        return this.person.funnyPic != null && this.funny;
+        return this.person.FunnyPic != null && this.funny;
     }
 
-}
-
-interface Person {
-    picture: string;
-    name: string;
-    title: string;
-    linkedin: string;
-    funnyPic: string;
 }

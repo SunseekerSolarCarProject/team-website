@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DatabaseService, imagePath } from '../database.service';
+import { DatabaseService } from '../database.service';
+import { Car } from '../interfaces';
 
 @Component({
     selector: 'app-cardetails',
@@ -9,9 +10,7 @@ import { DatabaseService, imagePath } from '../database.service';
 })
 export class CardetailsComponent implements OnInit {
 
-    details;
-
-    imagePath = imagePath;
+    details: Car;
 
     isLoaded = false;
 
@@ -19,10 +18,34 @@ export class CardetailsComponent implements OnInit {
 
     ngOnInit() {
         const car = this.route.snapshot.url[1].path.replace(' ', '');
-        this.dbService.getCarDetail(car).on('value', resp => {
-            this.details = resp.val();
+        this.dbService.getCar(car).subscribe(resp => {
+            this.details = resp.fields;
             this.isLoaded = true;
         });
+    }
+
+    get mechanical() {
+        return [
+            {name: 'Body and Frame', value: this.details.BodyFrame},
+            {name: 'Suspension', value: this.details.Suspension},
+            {name: 'Layout', value: this.details.Layout},
+            {name: 'Rims', value: this.details.Rims},
+            {name: 'Tires', value: this.details.Tires},
+            {name: 'Weight with Driver', value: this.details.Weight}
+        ];
+    }
+
+    get electrical() {
+        return [
+            {name: 'Battery', value: this.details.Battery},
+            {name: 'Motors', value: this.details.Motors},
+            {name: 'Solar Array Area', value: this.details.ArrayArea},
+            {name: 'Solar Array Output', value: this.details.ArrayOutput},
+            {name: 'Solar Cells', value: this.details.SolarCells},
+            {name: 'Battery Weight', value: this.details.BatteryWeight},
+            {name: 'Top Speed', value: this.details.TopSpeed},
+            {name: 'Motor Peak Power', value: this.details.MotorPeak}
+        ];
     }
 
 }

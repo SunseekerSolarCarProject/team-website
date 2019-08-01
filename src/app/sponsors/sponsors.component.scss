@@ -5,14 +5,17 @@
     padding-bottom: 50px;
 }
 
+.current-sponsors .info {
+    flex-grow: 1;
+}
+
 .sponsor{
     display: flex;
     align-items: center;
 }
 
 .info{
-    background-color: whitesmoke;
-    flex-grow: 1;
+    background-color: rgba(whitesmoke, 0.5);
     padding: 20px;
     margin: 20px;
 }
@@ -23,6 +26,7 @@
 }
 
 .logo{
+    min-width: 200px;
     width: 200px;
     height: auto;
 }
@@ -61,4 +65,33 @@
         width: 250px;
         text-align: center;
     }
+}
+
+.tier {
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #aaaaaa;
+    margin-bottom: 50px;
+}
+
+.Platinum {
+    background-color: rgba(#e5e4e2, 0.25);
+}
+
+.Gold {
+    background-color: rgba(252, 195, 15, 0.25);
+}
+
+.Silver {
+    background-color: rgba(#c0c0c0, 0.25);
+}
+
+.Bronze {
+    background-color: rgba(#cd7f32, 0.25);
+}
+
+.grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
