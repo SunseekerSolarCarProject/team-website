@@ -1,0 +1,21 @@
+.image-preview {
+    width: 70px;
+    height: 88px;
+    background-color: darkgray;
+    position: relative;
+    margin: 10px;
+    background-size: contain;
+}
+
+.edit-icon {
+    border-radius: 50%;
+    background-color: lightgray;
+    position: absolute;
+    right: -5px;
+    top: -5px;
+    padding: 5px;
+}
+
+.image-input {
+    display: none;
+}

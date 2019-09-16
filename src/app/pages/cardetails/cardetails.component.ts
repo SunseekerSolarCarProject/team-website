@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DatabaseService, imagePath } from '../database.service';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
     selector: 'app-cardetails',
@@ -11,18 +11,14 @@ export class CardetailsComponent implements OnInit {
 
     details;
 
-    imagePath = imagePath;
-
-    isLoaded = false;
-
     constructor( private route: ActivatedRoute, private dbService: DatabaseService) { }
 
-    ngOnInit() {
+    async ngOnInit() {
         const car = this.route.snapshot.url[1].path.replace(' ', '');
-        this.dbService.getCarDetail(car).on('value', resp => {
-            this.details = resp.val();
-            this.isLoaded = true;
-        });
+        const response = await this.dbService.getCarDetail(car);
+        this.details = response.val();
+        this.details.electrical = Object.values(this.details.electrical);
+        this.details.mechanical = Object.values(this.details.mechanical);
     }
 
 }

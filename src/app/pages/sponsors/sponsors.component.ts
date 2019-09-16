@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DatabaseService, imagePath } from '../database.service';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
     selector: 'app-sponsors',
@@ -13,10 +13,6 @@ export class SponsorsComponent implements OnInit {
 
     sponsorInfo;
 
-    imagePath = imagePath;
-
-    isLoaded;
-
     constructor( private route: ActivatedRoute, private dbService: DatabaseService) { }
 
     ngOnInit() {
@@ -25,7 +21,7 @@ export class SponsorsComponent implements OnInit {
         });
     }
 
-    changeTab(tab) {
+    async changeTab(tab) {
         switch (tab) {
             case 'current':
                 this.current = true;
@@ -34,9 +30,10 @@ export class SponsorsComponent implements OnInit {
                 this.current = false;
                 break;
         }
-        this.dbService.getSponsors().on('value', resp => {
-            this.sponsorInfo = resp.val();
-            this.isLoaded = true;
+        const response = await this.dbService.getSponsors();
+        this.sponsorInfo = response.val();
+        Object.keys(this.sponsorInfo.sponsors).forEach(key => {
+            this.sponsorInfo.sponsors[key] = Object.values(this.sponsorInfo.sponsors[key]);
         });
     }
 

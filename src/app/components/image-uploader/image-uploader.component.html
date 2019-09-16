@@ -1,0 +1,4 @@
+<div #imagePreview class="image-preview">
+    <span class="glyphicon glyphicon-pencil edit-icon" (click)="fileInput.click()"></span>
+    <input #fileInput type="file" class="image-input" (change)="fileUploaded($event)">
+</div>

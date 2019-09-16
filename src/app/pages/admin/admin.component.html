@@ -1,0 +1,25 @@
+<ul class="nav nav-tabs">
+    <li *ngFor="let tab of tabs; let i = index" [class.active]="currentTab === i">
+        <a (click)="tabClicked(i)" [innerText]="tab"></a>
+    </li>
+</ul>
+
+<!-- Meetings -->
+<div *ngIf="currentTab === 0">
+    <app-edit-table [config]="meetingConfig" [tableData]="meetings" (updated)="getMeetings()" (createRow)="createMeeting($event)" (editRow)="editMeeting($event)"></app-edit-table>
+</div>
+
+<!-- Members -->
+<div *ngIf="currentTab === 1">
+    <!-- <app-edit-table [config]="memberConfig" [tableData]="members" (updated)="getMembers()" (createRow)="saveMember($event)"></app-edit-table> -->
+</div>
+
+<!-- Sponsors -->
+<div *ngIf="currentTab === 2">
+
+</div>
+
+<!-- Cars -->
+<div *ngIf="currentTab === 3">
+
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { DatabaseService, imagePath, snapshotToArray } from '../database.service';
+import { DatabaseService, snapshotToArray } from '../../services/database.service';
 import { Router } from '@angular/router';
 
 @Component({

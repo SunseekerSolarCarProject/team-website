@@ -1,12 +1,12 @@
 <app-header></app-header>
-<div class="container-fluid" *ngIf="isLoaded">
+<div class="container-fluid">
     <div class="img-container">
-        <img [src]="imagePath + cars.carImage" class="banner">
+        <img [src]="imagePath + cars?.carImage" class="banner">
         <div class="img-overlay">
         </div>
     </div>
     <div class="car-table">
-        <div *ngFor="let c of cars.carlist" class="car" routerLink="/cardetail/{{c.title}}">
+        <div *ngFor="let c of cars?.carlist" class="car" routerLink="/cardetail/{{c.title}}">
             <img class="car-pic" [src]="imagePath + c.picture">
             <div class="overlay">
                 <p [innerText]="c.title" class="title"></p>

@@ -1,7 +1,7 @@
 <app-header></app-header>
-<div class="container-fluid" *ngIf="isLoaded">
+<div class="container-fluid">
     <div class="img-container">
-        <img [src]="imagePath + sponsorInfo.sponsorImage" class="banner">
+        <img [src]="imagePath + sponsorInfo?.sponsorImage" class="banner">
         <div class="img-overlay">
         </div>
     </div>
@@ -16,7 +16,7 @@
         <span class="header">
             Platinum Sponsors
         </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.platinum">
+        <div class="sponsor" *ngFor="let s of sponsorInfo?.sponsors.platinum">
             <img [src]="imagePath + s.logo" class="logo">
             <div class="info">
                 <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
@@ -27,7 +27,7 @@
         <span class="header">
             Gold Sponsors
         </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.gold">
+        <div class="sponsor" *ngFor="let s of sponsorInfo?.sponsors.gold">
             <img [src]="imagePath + s.logo" class="logo">
             <div class="info">
                 <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
@@ -38,7 +38,7 @@
         <span class="header">
             Silver Sponsors
         </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.silver">
+        <div class="sponsor" *ngFor="let s of sponsorInfo?.sponsors.silver">
             <img [src]="imagePath + s.logo" class="logo">
             <div class="info">
                 <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
@@ -49,7 +49,7 @@
         <span class="header">
             Bronze Sponsors
         </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.bronze">
+        <div class="sponsor" *ngFor="let s of sponsorInfo?.sponsors.bronze">
             <img [src]="imagePath + s.logo" class="logo">
             <div class="info">
                 <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
@@ -60,7 +60,7 @@
         <span class="header">
             Individual Sponsors
         </span>
-        <div class="sponsor" *ngFor="let s of sponsorInfo.sponsors.individual">
+        <div class="sponsor" *ngFor="let s of sponsorInfo?.sponsors.individual">
             <img [src]="imagePath + s.logo" class="logo">
             <div class="info">
                 <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
@@ -71,7 +71,7 @@
         <div class="sponsor">
             <img src="assets/_images/sponsors/trailer.png" class="logo">
             <div class="info">
-                <p *ngFor="let n of sponsorInfo.sponsors.trailer" class="text" [innerText]="n"></p>
+                <p *ngFor="let n of sponsorInfo?.sponsors.trailer" class="text" [innerText]="n"></p>
             </div>
         </div>
     </div>
@@ -79,37 +79,37 @@
         <span class="header">
             Platinum Sponsors
         </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.platinum">
+        <div class="info" *ngFor="let s of sponsorInfo?.pastSponsors.platinum">
             <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
         </div>
         <span class="header">
             Gold Sponsors
         </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.gold">
+        <div class="info" *ngFor="let s of sponsorInfo?.pastSponsors.gold">
             <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
         </div>
         <span class="header">
             Silver Sponsors
         </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.silver">
+        <div class="info" *ngFor="let s of sponsorInfo?.pastSponsors.silver">
             <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
         </div>
         <span class="header">
             Bronze Sponsors
         </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.bronze">
+        <div class="info" *ngFor="let s of sponsorInfo?.pastSponsors.bronze">
             <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
         </div>
         <span class="header">
             WMU Bronco Sponsors
         </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.bronco">
+        <div class="info" *ngFor="let s of sponsorInfo?.pastSponsors.bronco">
             <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
         </div>
         <span class="header">
             Solar Cell Sponsors
         </span>
-        <div class="info" *ngFor="let s of sponsorInfo.pastSponsors.solarcell">
+        <div class="info" *ngFor="let s of sponsorInfo?.pastSponsors.solarcell">
             <a [class.link]="s.link != '#'" [class.non-link]="s.link == '#'" [href]="s.link" [innerText]="s.title"></a>
         </div>
     </div>

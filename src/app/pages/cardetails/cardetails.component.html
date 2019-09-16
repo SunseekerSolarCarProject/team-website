@@ -1,15 +1,15 @@
 <app-header></app-header>
-<div class="container-fluid" *ngIf="isLoaded">
+<div class="container-fluid">
     <div class="img-container">
-        <img [src]="imagePath + details.picture" class="banner">
+        <img [src]="imagePath + details?.picture" class="banner">
         <div class="img-overlay">
-            <div class="overlay-title" [innerHTML]="details.title"></div>
+            <div class="overlay-title" [innerHTML]="details?.title"></div>
         </div>
     </div>
     <div class="specs">
         <div class="mechanical">
             <span class="title">Mechanical Specifications</span>
-            <div class="row" *ngFor="let m of details.mechanical">
+            <div class="row" *ngFor="let m of details?.mechanical">
                 <span class="name" [innerText]="m.name"></span>
                 <div class="spacer"></div>
                 <span class="value" [innerText]="m.value"></span>
@@ -17,7 +17,7 @@
         </div>
         <div class="electrical">
             <span class="title">Electrical Specifications</span>
-            <div class="row" *ngFor="let e of details.electrical">
+            <div class="row" *ngFor="let e of details?.electrical">
                 <span class="name" [innerText]="e.name"></span>
                 <div class="spacer"></div>
                 <span class="value" [innerHTML]="e.value"></span>

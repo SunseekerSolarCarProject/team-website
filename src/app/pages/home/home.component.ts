@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService, snapshotToArray, imagePath } from '../database.service';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
     selector: 'app-home',
@@ -11,8 +11,6 @@ export class HomeComponent implements OnInit {
     homepage;
     loadedData = false;
 
-    imagePath = imagePath;
-
     constructor(private dbService: DatabaseService) { }
 
     ngOnInit() {
@@ -20,6 +18,7 @@ export class HomeComponent implements OnInit {
             this.homepage = resp.val();
             this.loadedData = true;
         });
+        this.dbService.getSpreadsheet();
     }
 
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DatabaseService, imagePath } from '../database.service';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
     selector: 'app-carlist',
@@ -10,17 +10,12 @@ export class CarlistComponent implements OnInit {
 
     cars;
 
-    imagePath = imagePath;
-
-    isLoaded = false;
-
     constructor(private dbService: DatabaseService) { }
 
-    ngOnInit() {
-        this.dbService.getCars().on('value', resp => {
-            this.cars = resp.val();
-            this.isLoaded = true;
-        });
+    async ngOnInit() {
+        const response = await this.dbService.getCars();
+        this.cars = response.val();
+        this.cars.carlist = Object.values(this.cars.carlist);
     }
 
 }

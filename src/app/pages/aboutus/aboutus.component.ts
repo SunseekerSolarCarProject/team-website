@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DatabaseService, imagePath } from '../database.service';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
     selector: 'app-aboutus',
@@ -14,8 +14,6 @@ export class AboutusComponent implements OnInit {
     mission = false;
 
     aboutus;
-
-    imagePath = imagePath;
 
     isLoaded = false;
 

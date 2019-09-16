@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { TeamComponent } from './team/team.component';
-import { AboutusComponent } from './aboutus/aboutus.component';
-import { CarlistComponent } from './carlist/carlist.component';
-import { CardetailsComponent } from './cardetails/cardetails.component';
-import { SponsorsComponent } from './sponsors/sponsors.component';
-import { DonateComponent } from './donate/donate.component';
-import { BlogComponent } from './blog/blog.component';
+import { AboutusComponent } from './pages/aboutus/aboutus.component';
+import { AdminComponent } from './pages/admin/admin.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { CardetailsComponent } from './pages/cardetails/cardetails.component';
+import { CarlistComponent } from './pages/carlist/carlist.component';
+import { DonateComponent } from './pages/donate/donate.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SponsorsComponent } from './pages/sponsors/sponsors.component';
+import { TeamComponent } from './pages/team/team.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'cardetail/:car', component: CardetailsComponent},
   { path: 'sponsors/:current', component: SponsorsComponent},
   { path: 'donate', component: DonateComponent},
-  { path: 'blog', component: BlogComponent}
+  { path: 'blog', component: BlogComponent},
+  { path: 'admin', component: AdminComponent}
 ];
 
 @NgModule({

@@ -1,0 +1,22 @@
+<form [formGroup]="form">
+    <table class="table">
+        <thead>
+            <tr>
+                <th *ngFor="let key of tableKeys">{{key | titlecase}}</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of tableData; let i = index" formArrayName="data">
+                <td *ngFor="let key of tableKeys; let j = index" [formGroupName]="i">
+                    <input *ngIf="(key !== 'id' || !item[key]) && config[j].type !== 'image'" class="form-control" [type]="config[j].type" [formControlName]="key" [placeholder]="key">
+                    <app-image-uploader *ngIf="config[j].type === 'image'" [formControlName]="key"></app-image-uploader>
+                </td>
+                <td>
+                    <button *ngIf="item?.id" [disabled]="isDisabled(i)" class="btn btn-primary" (click)="edit(i)">Edit</button>
+                    <button *ngIf="!item?.id" [disabled]="isDisabled(i)" class="btn btn-success" (click)="create(i)">Create</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
