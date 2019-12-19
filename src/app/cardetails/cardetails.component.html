@@ -1,5 +1,5 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" *ngIf="isLoaded">
+<div class="container-fluid" *ngIf="details">
     <div class="img-container">
         <img [src]="dbService.getImage(details.Picture)" class="banner">
         <div class="img-overlay">

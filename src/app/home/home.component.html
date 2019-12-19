@@ -1,6 +1,6 @@
-<app-navbar></app-navbar>
-<div class="container-fluid" *ngIf="loadedData">
-    <app-header [header]="header"></app-header>
+<app-navbar *ngIf="isPc"></app-navbar>
+<div class="container-fluid">
+    <app-header *ngIf="header" [header]="header" [isPc]="isPC"></app-header>
 
     <!-- <div class="section-header">
         <h1>Calendar</h1>
@@ -13,7 +13,7 @@
             frameborder="0">
         </iframe>
     </div> -->
-    <div class="container" *ngIf="meetingTimes">
+    <div class="container" *ngIf="meetingTimes && isPc">
         <h1 class="center">
             Meeting Times | {{getMeeting('Semester').Day}}
         </h1>
@@ -81,9 +81,108 @@
             </span>
         </div>
     </div>
+    <div class="container" *ngIf="meetingTimes && !isPc">
+        <h3 class="center">
+            Meeting Times
+        </h3>
+        <h3 class="center">
+            {{getMeeting('Semester').Day}}
+        </h3>
+        <div class="meeting-time-mobil bottom-border center" *ngIf="getMeeting('General').Day">
+            <span>
+                <span class="glyphicon glyphicon-user"></span> &nbsp; General Team Meeting
+            </span>
+            <div>
+                <p>
+                    {{getMeeting('General').Day}} {{getMeeting('General').Time}} 
+                </p>
+                <p>
+                    {{getMeeting('General').Building}} {{getMeeting('General').Room}}
+                </p>
+            </div>
+        </div>
+        <div class="meeting-time-mobil bottom-border center" *ngIf="getMeeting('Mechanical').Day">
+            <span>
+                <span class="glyphicon glyphicon-cog"></span> &nbsp; Mechanical Team Meeting
+            </span>
+            <div>
+                <p>
+                    {{getMeeting('Mechanical').Day}} {{getMeeting('Mechanical').Time}} 
+                </p>
+                <p>
+                    {{getMeeting('Mechanical').Building}} {{getMeeting('Mechanical').Room}}
+                </p>
+            </div>
+        </div>
+        <div class="meeting-time-mobil bottom-border center" *ngIf="getMeeting('CS').Day">
+            <span>
+                <i class='fas fa-code-branch'></i> &nbsp; CS Team Meeting
+            </span>
+            <div>
+                <p>
+                    {{getMeeting('CS').Day}} {{getMeeting('CS').Time}} 
+                </p>
+                <p>
+                    {{getMeeting('CS').Building}} {{getMeeting('CS').Room}}
+                </p>
+            </div>
+        </div>
+        <div class="submeeting-time-mobil center" *ngIf="getMeeting('Battery').Day">
+            <span>
+                <i class="fas fa-battery-full"></i> &nbsp; Battery
+            </span>
+            <div>
+                <p>
+                    {{getMeeting('Battery').Day}} {{getMeeting('Battery').Time}} 
+                </p>
+                <p>
+                    {{getMeeting('Battery').Building}} {{getMeeting('Battery').Room}}
+                </p>
+            </div>
+        </div>
+        <div class="submeeting-time-mobil center" *ngIf="getMeeting('Solar').Day">
+            <span>
+                <i class='fas fa-sun'></i> &nbsp; Solar
+            </span>
+            <div>
+                <p>
+                    {{getMeeting('Solar').Day}} {{getMeeting('Solar').Time}} 
+                </p>
+                <p>
+                    {{getMeeting('Solar').Building}} {{getMeeting('Solar').Room}}
+                </p>
+            </div>
+        </div>
+        <div class="submeeting-time-mobil center bottom-border bottom-padding" *ngIf="getMeeting('PCB').Day">
+            <span>
+                <i class='fas fa-microchip'></i> &nbsp; PCB
+            </span>
+            <div>
+                <p>
+                    {{getMeeting('PCB').Day}} {{getMeeting('PCB').Time}} 
+                </p>
+                <p>
+                    {{getMeeting('PCB').Building}} {{getMeeting('PCB').Room}}
+                </p>
+            </div>
+        </div>
+        <div class="meeting-time-mobil center" *ngIf="getMeeting('Business').Day">
+            <span>
+                <i class="fas fa-briefcase"></i> &nbsp; Business Team Meeting
+            </span>
+            <div>
+                <p>
+                    {{getMeeting('Business').Day}} {{getMeeting('Business').Time}} 
+                </p>
+                <p>
+                    {{getMeeting('Business').Building}} {{getMeeting('Business').Room}}
+                </p>
+            </div>
+        </div>
+    </div>
 </div>
 <br>
 <br>
 <br>
 <br>
-<app-footer></app-footer>
+<app-footer [isPc]="isPc"></app-footer>

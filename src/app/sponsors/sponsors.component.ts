@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../database.service';
-import { Header, Sponsor } from '../interfaces';
+import { Header, Sponsor, AirtableResponse } from '../interfaces';
 
 @Component({
     selector: 'app-sponsors',
@@ -23,28 +23,20 @@ export class SponsorsComponent implements OnInit {
 
     constructor( private route: ActivatedRoute, private dbService: DatabaseService) { }
 
-    ngOnInit() {
+    async ngOnInit() {
         this.route.params.subscribe(params => {
             this.changeTab(params.current);
         });
-        this.dbService.getHeaders().subscribe(resp => {
-            this.header = resp.find(h => {
-                return h.fields.Page === 'sponsors';
-            }).fields;
-            this.headerLoaded = true;
-        });
-        this.dbService.getSponsors().subscribe(resp => {
-            this.sponsors = resp.map(s => s.fields);
-        });
-        this.dbService.getPastSponsors().subscribe(resp => {
-            const past = resp.map(s => {
-                return {id: s.id, ...s.fields};
-            }).filter(r => {
-                return this.pastSponsors.filter(a => a.id === r.id).length === 0;
-            });
-            this.pastSponsors = [...this.pastSponsors, ...past];
-            this.sponsorsLoaded = true;
-        });
+        this.header = await this.dbService.getHeader('sponsors');
+        const currentResponse = await this.dbService.getSponsors();
+        this.sponsors = this.dbService.getAirtableRecords(currentResponse as AirtableResponse);
+        console.log(this.sponsors);
+        var pastResopnse = await this.dbService.getPastSponsors();
+            this.pastSponsors = this.dbService.getAirtableRecords(pastResopnse as AirtableResponse);
+            while ((pastResopnse as any).offset) {
+                pastResopnse = await this.dbService.getPastSponsors((pastResopnse as any).offset);
+                this.pastSponsors = [...this.pastSponsors, ...this.dbService.getAirtableRecords(pastResopnse as AirtableResponse)];
+            }
     }
 
     changeTab(tab) {

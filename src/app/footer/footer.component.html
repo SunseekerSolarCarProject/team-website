@@ -1,8 +1,8 @@
 <div class="container">
-    <img src="assets/_images/logo.png" class="logo">
-    <div class="space-filler"></div>
+    <img *ngIf="isPc" src="assets/_images/logo.png" class="logo">
+    <div *ngIf="isPc" class="space-filler"></div>
     <div class="row">
-        <div class="links">
+        <div class="links" *ngIf="isPc">
             <a href="mailto: sunseeker@wmich.edu">Send us an Email</a>
             <a [routerLink]="['/donate']">Become A Sponsor</a>
             <a href="https://www.wmich.edu/">Western Michigan University</a>

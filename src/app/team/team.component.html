@@ -1,32 +1,34 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" *ngIf="headerLoaded && membersLoaded">
+<div class="container-fluid">
     <div>
-        <app-header [header]="header"></app-header>
-        <div *ngIf="current" class="members">
+        <app-header *ngIf="header" [header]="header"></app-header>
+        <div *ngIf="current && members" class="members">
             <div class="tree container">
                 <div class="leads">
-                    <div class="lead" *ngIf="getPosition('Project Lead')">
-                        <app-person [person]="getPosition('Project Lead')"></app-person>
-                    </div>
-                    <div class="lead" *ngIf="getPosition('Assistant Project Lead')">
-                        <app-person [person]="getPosition('Assistant Project Lead')"></app-person>
+                    <div class="lead" *ngIf="getPosition('President')">
+                        <app-person [person]="getPosition('President')"></app-person>
                     </div>
                 </div>
                 <div class="leads">
+                    <div class="lead" *ngIf="getPosition('Director of Business')">
+                        <app-person [person]="getPosition('Director of Business')"></app-person>
+                    </div>
+                    <div class="lead" *ngIf="getPosition('Director of Operations')">
+                        <app-person [person]="getPosition('Director of Operations')"></app-person>
+                    </div>
+                    <div class="lead" *ngIf="getPosition('Director of Engineering')">
+                        <app-person [person]="getPosition('Director of Engineering')"></app-person>
+                    </div>
+                </div>
+                <div class="leads">
+                    <div class="lead" *ngIf="getPosition('Webmaster')">
+                        <app-person [person]="getPosition('Webmaster')"></app-person>
+                    </div>
                     <div class="lead" *ngIf="getPosition('Mechanical Lead')">
                         <app-person [person]="getPosition('Mechanical Lead')"></app-person>
                     </div>
                     <div class="lead" *ngIf="getPosition('Electrical Lead')">
                         <app-person [person]="getPosition('Electrical Lead')"></app-person>
-                    </div>
-                    <div class="lead" *ngIf="getPosition('Aero Lead')">
-                        <app-person [person]="getPosition('Aero Lead')"></app-person>
-                    </div>
-                    <div class="lead" *ngIf="getPosition('Webmaster')">
-                        <app-person [person]="getPosition('Webmaster')"></app-person>
-                    </div>
-                    <div class="lead" *ngIf="getPosition('Business Lead')">
-                        <app-person [person]="getPosition('Business Lead')"></app-person>
                     </div>
                 </div>
                 <hr class="line">
@@ -46,7 +48,7 @@
                 <br>
             </div>
         </div>
-        <div *ngIf="past">
+        <div *ngIf="past && alumni">
             <div class="people">
                 <div class="person" *ngFor="let a of getAlumni()">
                     <app-person [person]="a" ></app-person>

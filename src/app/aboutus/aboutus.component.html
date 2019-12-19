@@ -1,8 +1,8 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" *ngIf="headerLoaded && aboutusLoaded">
+<div class="container-fluid">
     <div>
-        <app-header [header]="currentHeader"></app-header>
-        <div class="container">
+        <app-header *ngIf="headers" [header]="currentHeader"></app-header>
+        <div class="container" *ngIf="aboutus">
             <div class="page-header" *ngIf="currentInfo[0]">
                 <h1 [innerText]="currentInfo[0].Title"></h1>
             </div>

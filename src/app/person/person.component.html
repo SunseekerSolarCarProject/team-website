@@ -3,8 +3,8 @@
     <img class="picture" [class.transparent]='isFunnyPic' [src]="dbService.getImage(person.Picture)" width="280px" height="350px">
     <div class="overlay">
         <p [innerText]="person.Name" class="name"></p>
-        <p *ngIf="person.Title" [innerText]="funny ? person.FunnyTitle : person.Title" class="title"></p>
+        <p *ngIf="funny ? person.FunnyTitle : person.Position" [innerText]="funny ? person.FunnyTitle : person.Position" class="title"></p>
         <a [href]="person.Linkedin" *ngIf="person.Linkedin && !person.Bio"><img src="assets/_images/social-icons/linkedin-small.png"></a>
-        <a  [routerLink]="['/member/'+person.id]" *ngIf="person.Bio" type="button" class="btn bg-gold">View Profile</a>
+        <a  [routerLink]="['/member/'+person.Name]" *ngIf="person.Bio" type="button" class="btn bg-gold">View Profile</a>
     </div>
 </div>

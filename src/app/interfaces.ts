@@ -21,15 +21,17 @@ export interface MeetingTime {
     Day: string;
     Room: string;
     Time: string;
+    Priority: number;
 }
 
 export interface Member {
     id: string;
     Name: string;
     Current: boolean;
-    EBoard: boolean;
+    Position: 'President' | 'Director of Operations' | 'Director of Business' | 'Director of Engineering' | 'Webmaster' | 'Mechanical' | 'Electrical' | 'Business' | 'Operations' | 'Electrical Lead' | 'Mechanical Lead' | 'Advisor' | 'Aero Lead' | 'Driver Lead';
     Picture: Image[];
     FunnyPic: Image[];
+    FunnyTitle: string;
     Title: string;
     Major: string;
     Quote: string;
@@ -83,4 +85,14 @@ export interface Sponsor {
     Logo: Image;
     Location: string;
     Link: string;
+}
+
+export interface AirtableResponse {
+    records: AirtableRecord[];
+}
+
+export interface AirtableRecord {
+    id: string;
+    createdTime: string;
+    fields: any;
 }

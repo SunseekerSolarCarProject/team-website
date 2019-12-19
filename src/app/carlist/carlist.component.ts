@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../database.service';
-import { Header, Car } from '../interfaces';
+import { Header, Car, AirtableResponse } from '../interfaces';
 
 @Component({
     selector: 'app-carlist',
@@ -17,19 +17,10 @@ export class CarlistComponent implements OnInit {
 
     constructor(private dbService: DatabaseService) { }
 
-    ngOnInit() {
-        this.dbService.getHeaders().subscribe(resp => {
-            this.header = resp.find(h => {
-                return h.fields.Page === 'cars';
-            }).fields;
-            this.headerLoaded = true;
-        });
-        this.dbService.getCars().subscribe(resp => {
-            this.cars = resp.map(r => {
-                return {id: r.id, ...r.fields};
-            });
-            this.carsLoaded = true;
-        });
+    async ngOnInit() {
+        this.header = await this.dbService.getHeader('cars');
+        const carResponse = await this.dbService.getCars();
+        this.cars = this.dbService.getAirtableRecords(carResponse as AirtableResponse);
     }
 
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../database.service';
-import { Member, Header } from '../interfaces';
+import { Member, Header, AirtableResponse } from '../interfaces';
 
 @Component({
     selector: 'app-team',
@@ -33,38 +33,32 @@ export class TeamComponent implements OnInit {
             this.changeTab(params.members);
         });
 
-        this.dbService.getHeaders().subscribe(resp => {
-            this.header = resp.find(h => {
-                return h.fields.Page === this.currentTab;
-            }).fields;
-            this.headerLoaded = true;
-        });
+        this.header = await this.dbService.getHeader(this.currentTab);
 
-        await this.dbService.getMembers().subscribe(resp => {
-            this.members = resp.map(r => {
-                return {id: r.id, ...r.fields};
-            });
-        });
-        await this.dbService.getAlumni().subscribe(resp => {
-            const alum = resp.map(r => {
-                return {id: r.id, ...r.fields};
-            }).filter(r => {
-                return this.alumni.filter(a => a.id === r.id).length === 0;
-            });
-            this.alumni = [...this.alumni, ...alum];
-            this.membersLoaded = true;
-        });
+        if (this.current) {
+            const memberResponse = await this.dbService.getMembers();
+            this.members = this.dbService.getAirtableRecords(memberResponse as AirtableResponse);
+        }
+
+        if (this.past) {
+            var memberResponse = await this.dbService.getAlumni();
+            this.alumni = this.dbService.getAirtableRecords(memberResponse as AirtableResponse);
+            while ((memberResponse as any).offset) {
+                memberResponse = await this.dbService.getAlumni((memberResponse as any).offset);
+                this.alumni = [...this.alumni, ...this.dbService.getAirtableRecords(memberResponse as AirtableResponse)];
+            }
+        }
     }
 
     getPosition(title) {
         return this.members.find(r => {
-            return r.Title === title;
+            return r.Position === title;
         });
     }
 
     getMembers() {
         return this.members.filter(r => {
-            return !r.EBoard && r.Current;
+            return this.isNotEBoar(r.Position) && r.Current;
         }).sort((a, b) => {
             const la = this.getLastName(a.Name);
             const lb = this.getLastName(b.Name);
@@ -73,6 +67,24 @@ export class TeamComponent implements OnInit {
             }
             return -1;
         });
+    }
+
+    isNotEBoar(position) {
+        if (
+            position === 'President' ||
+            position === 'Director of Operations' ||
+            position === 'Director of Business' ||
+            position === 'Director of Engineering' ||
+            position === 'Webmaster' ||
+            position === 'Mechanical Lead' ||
+            position === 'Electrical Lead' ||
+            position === 'Advisor' ||
+            position === 'Aero Lead' ||
+            position === 'Driver Lead'
+        ){
+            return false;
+        }
+        return true;
     }
 
     getAdvisors() {
@@ -109,7 +121,7 @@ export class TeamComponent implements OnInit {
         });
     }
 
-    changeTab(tab) {
+    async changeTab(tab) {
         switch (tab) {
             case 'current':
                 this.current = true;
@@ -120,11 +132,7 @@ export class TeamComponent implements OnInit {
                 this.past = true;
                 break;
         }
-        this.dbService.getHeaders().subscribe(resp => {
-            this.header = resp.find(h => {
-                return h.fields.Page === this.currentTab;
-            }).fields;
-        });
+        this.header = await this.dbService.getHeader(this.currentTab);
     }
 
     getSeperator(index, total) {

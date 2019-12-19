@@ -21,6 +21,5 @@ export class AppComponent {
   constructor(private databaseService: DatabaseService) {
     localStorage.removeItem('firebase:previous_websocket_failure');
     firebase.initializeApp(config);
-    this.databaseService.getBase();
   }
 }

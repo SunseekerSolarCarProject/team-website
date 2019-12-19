@@ -1,56 +1,84 @@
 import { Injectable } from '@angular/core';
 import * as firebase from 'firebase';
 import { Airtable, Base } from 'ngx-airtable';
+import { HttpClient } from '@angular/common/http';
+import { AirtableResponse, Header } from './interfaces';
 
 @Injectable()
 export class DatabaseService {
 
     base: Base;
+    headers: Header[];
 
-    constructor(private airtable: Airtable) { }
+    constructor(private http: HttpClient) { }
 
-    getBase() {
-        this.base = this.airtable.base('appi09iP9sn2pprfV');
+    getAirtableRecords(response: AirtableResponse) {
+        return response.records.map(record => record.fields);
     }
 
-    getHeaders() {
-        return this.base.table({ tableName: 'Headers' }).select().firstPage();
+    async getHeaders() {
+        const headerResponse = await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/headers?api_key=keyWQOwc7ZNY12T0o').toPromise();
+        this.headers = this.getAirtableRecords(headerResponse as AirtableResponse);
     }
 
-    getMeetingTimes() {
-        return this.base.table({ tableName: 'Meeting Times'}).select().firstPage();
+    async getAllHeaders() {
+        if (!this.headers) {
+            await this.getHeaders();
+        }
+        return this.headers;
     }
 
-    getMembers() {
-        return this.base.table({ tableName: 'Members'}).select({filterByFormula: 'Current'}).firstPage();
+    async getHeader(page: string) {
+        if (!this.headers) {
+            await this.getHeaders();
+        }
+        return this.headers.find(header => header.Page === page);
     }
 
-    getAlumni() {
-        return this.base.table({ tableName: 'Members'}).select({filterByFormula: 'NOT(Current)'}).eachPage();
+    async getMeetingTimes() {
+        return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/meetings?api_key=keyWQOwc7ZNY12T0o').toPromise();
     }
 
-    getMember(name) {
-        return this.base.table({ tableName: 'Members'}).find(name);
+    async getMembers() {
+        return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/members?api_key=keyWQOwc7ZNY12T0o&filterByFormula=Current').toPromise();
     }
 
-    getAboutus() {
-        return this.base.table({ tableName: 'AboutUs'}).select().firstPage();
+    async getAlumni(offset?: string) {
+        if (offset) {
+            return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/members?api_key=keyWQOwc7ZNY12T0o&filterByFormula=NOT(Current)&offset='+offset).toPromise();
+        }
+        return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/members?api_key=keyWQOwc7ZNY12T0o&filterByFormula=NOT(Current)').toPromise();
     }
 
-    getCars() {
-        return this.base.table({ tableName: 'Cars'}).select().firstPage();
+    async getMember(name) {
+        return await this.http.get(`https://api.airtable.com/v0/appi09iP9sn2pprfV/members?api_key=keyWQOwc7ZNY12T0o&filterByFormula=Name="${name}"`).toPromise();
+
     }
 
-    getCar(car) {
-        return this.base.table({ tableName: 'Cars'}).find(car);
+    async getAboutus() {
+        return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/aboutus?api_key=keyWQOwc7ZNY12T0o').toPromise();
     }
 
-    getSponsors() {
-        return this.base.table({ tableName: 'Sponsors'}).select({filterByFormula: 'Current'}).firstPage();
+    async getCars() {
+        return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/cars?api_key=keyWQOwc7ZNY12T0o').toPromise();
     }
 
-    getPastSponsors() {
-        return this.base.table({ tableName: 'Sponsors'}).select({filterByFormula: 'NOT(Current)'}).eachPage();
+    async getCar(car) {
+        return await this.http.get(`https://api.airtable.com/v0/appi09iP9sn2pprfV/cars?api_key=keyWQOwc7ZNY12T0o&filterByFormula=Car="${car}"`).toPromise();
+
+    }
+
+    async getSponsors() {
+        // return this.base.table({ tableName: 'Sponsors'}).select({filterByFormula: 'Current'}).firstPage();
+        return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/sponsors?api_key=keyWQOwc7ZNY12T0o&filterByFormula=Current').toPromise();
+
+    }
+
+    async getPastSponsors(offset?: string) {
+        if (offset) {
+            return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/sponsors?api_key=keyWQOwc7ZNY12T0o&filterByFormula=NOT(Current)&offset='+offset).toPromise();
+        }
+        return await this.http.get('https://api.airtable.com/v0/appi09iP9sn2pprfV/sponsors?api_key=keyWQOwc7ZNY12T0o&filterByFormula=NOT(Current)').toPromise();
     }
 
     getImage(pic) {

@@ -1,14 +1,14 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" *ngIf="headerLoaded && sponsorsLoaded">
-    <app-header [header]="header"></app-header>
+<div class="container-fluid">
+    <app-header *ngIf="header" [header]="header"></app-header>
     <div class="row">
         <div class="button" [routerLink]="['/donate']">Become a Sponsor</div>
-        <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158" class="button">WMU Giving Portal</a>
+        <a href="https://secure.wmualumni.org/s/give?funds=PSUN" class="button">WMU Giving Portal</a>
         <div *ngIf="current" (click)="changeTab('past')" class="button">Past Sponsors</div>
         <div *ngIf="!current" (click)="changeTab('current')" class="button">Current Sponsors</div>
     </div>
 
-    <div class="current-sponsors" *ngIf="current">
+    <div class="current-sponsors" *ngIf="current && sponsors">
         <div *ngFor="let t of tiers">
             <div  [class]="t + ' tier'" *ngIf="getTier(t).length > 0">
                 <span class="header">
@@ -34,7 +34,7 @@
             </div>
         </div>
     </div>
-    <div class="past-sponsors" *ngIf="!current">
+    <div class="past-sponsors" *ngIf="!current && pastSponsors">
         <div *ngFor="let t of tiers">
             <div  [class]="t + ' tier'" *ngIf="getPastTier(t).length > 0">
                 <span class="header">

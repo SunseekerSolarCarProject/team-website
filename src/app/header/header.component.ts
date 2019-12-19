@@ -9,6 +9,7 @@ import { Header } from '../interfaces';
 export class HeaderComponent implements OnInit {
 
   @Input() header: Header;
+  @Input() isPc: boolean;
 
   constructor() { }
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../database.service';
-import { Header, MeetingTime } from '../interfaces';
+import { Header, MeetingTime, AirtableResponse } from '../interfaces';
 
 @Component({
     selector: 'app-home',
@@ -11,23 +11,18 @@ export class HomeComponent implements OnInit {
 
     header: Header;
     meetingTimes: MeetingTime[];
-    loadedData = false;
 
     constructor(private dbService: DatabaseService) { }
 
-    ngOnInit() {
-        this.dbService.getHeaders().subscribe(resp => {
-            this.header = resp.find(h => {
-                return h.fields.Page === 'home';
-            }).fields;
-            this.loadedData = true;
-        });
+    get isPc() {
+        return window.innerWidth > 750;
+    }
 
-        this.dbService.getMeetingTimes().subscribe(resp => {
-            this.meetingTimes = resp.map(r => {
-                return r.fields;
-            });
-        });
+    async ngOnInit() {
+        this.header = await this.dbService.getHeader('home');
+
+        const meetings = await this.dbService.getMeetingTimes();
+        this.meetingTimes = this.dbService.getAirtableRecords(meetings as AirtableResponse);
     }
 
     getMeeting(team) {

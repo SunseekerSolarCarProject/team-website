@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
-<div class="container-fluid" *ngIf="isLoaded">
-    <div class="img-container" *ngIf="isLoaded">
+<div class="container-fluid" *ngIf="person">
+    <div class="img-container">
         <img [src]="dbService.getImage(person.Banner)" class="banner">
         <div class="img-overlay">
             <div class="overlay-title" [innerHTML]="person.Quote"></div>
@@ -12,7 +12,7 @@
                 <p class="title" [innerText]="'About '+firstName"></p>
                 <p>
                     <span class="subtitle">Team Position: </span>
-                    <span [innerText]="funny ? person.FunnyTitle : person.Title"></span>
+                    <span [innerText]="funny && person.FunnyTitles ? person.FunnyTitle : person.Position"></span>
                 </p>
                 <p *ngIf="person.Major">
                     <span class="subtitle">Major: </span>

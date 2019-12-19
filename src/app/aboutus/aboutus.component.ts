@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../database.service';
-import { Header, AboutUs } from '../interfaces';
+import { Header, AboutUs, AirtableResponse } from '../interfaces';
 
 @Component({
     selector: 'app-aboutus',
@@ -20,18 +20,13 @@ export class AboutusComponent implements OnInit {
 
     constructor(private route: ActivatedRoute, private dbService: DatabaseService) { }
 
-    ngOnInit() {
-        this.route.params.subscribe(params => {
+    async ngOnInit() {
+        this.route.params.subscribe(async params => {
             this.currentTab = params.page;
-            this.dbService.getAboutus().subscribe(resp => {
-                this.aboutus = resp.map(r => r.fields);
-                this.aboutusLoaded = true;
-            });
+            const aboutusResponse = await this.dbService.getAboutus();
+            this.aboutus = this.dbService.getAirtableRecords(aboutusResponse as AirtableResponse);
         });
-        this.dbService.getHeaders().subscribe(resp => {
-            this.headers = resp.map(h =>  h.fields);
-            this.headerLoaded = true;
-        });
+        this.headers = await this.dbService.getAllHeaders();
     }
 
     changeTab(tab) {

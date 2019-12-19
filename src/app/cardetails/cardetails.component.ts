@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DatabaseService } from '../database.service';
-import { Car } from '../interfaces';
+import { Car, AirtableResponse } from '../interfaces';
 
 @Component({
     selector: 'app-cardetails',
@@ -16,12 +16,10 @@ export class CardetailsComponent implements OnInit {
 
     constructor( private route: ActivatedRoute, private dbService: DatabaseService) { }
 
-    ngOnInit() {
-        const car = this.route.snapshot.url[1].path.replace(' ', '');
-        this.dbService.getCar(car).subscribe(resp => {
-            this.details = resp.fields;
-            this.isLoaded = true;
-        });
+    async ngOnInit() {
+        const car = this.route.snapshot.url[1].path;
+        const carResponse = await this.dbService.getCar(car);
+        this.details = this.dbService.getAirtableRecords(carResponse as AirtableResponse)[0];
     }
 
     get mechanical() {

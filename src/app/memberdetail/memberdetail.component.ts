@@ -1,7 +1,7 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
 import { DatabaseService } from '../database.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Member } from '../interfaces';
+import { Member, AirtableResponse } from '../interfaces';
 
 @Component({
     selector: 'app-memberdetail',
@@ -24,15 +24,14 @@ export class MemberdetailComponent implements OnInit {
         private renderer: Renderer2
     ) { }
 
-    ngOnInit() {
+    async ngOnInit() {
         let path;
         this.route.params.subscribe(params => {
             path = params.path;
         });
-        this.dbService.getMember(path).subscribe(resp => {
-            this.person = resp.fields;
-            this.isLoaded = true;
-        });
+        const memberResponse = await this.dbService.getMember(path);
+        this.person = this.dbService.getAirtableRecords(memberResponse as AirtableResponse)[0];
+        console.log(this.person);
 
         this.renderer.listen('document', 'keypress', e => {
             this.inputBuffer.push(e.key);
