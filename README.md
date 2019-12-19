@@ -12,9 +12,7 @@ It is recomended that you install [xampp](https://www.apachefriends.org/index.ht
 
 After cloning this repo run `npm install` in the directory
 
-To start a test server run `npm start` and open `localhost:4200`
-
-All editable data is located in one of the ts files in the `_data` folder
+To start a test server run `npm start` and open `localhost:4200` in a browser
 
 Images are stored in the `assets/_images` folder
 
