@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <app-header *ngIf="header" [header]="header"></app-header>
+    <div class="row">
+        <div class="button" [routerLink]="['/donate']">Become a Sponsor</div>
+        <a href="https://secure.wmualumni.org/s/give?funds=PSUN" class="button">WMU Giving Portal</a>
+        <div *ngIf="current" (click)="changeTab('past')" class="button">Past Sponsors</div>
+        <div *ngIf="!current" (click)="changeTab('current')" class="button">Current Sponsors</div>
+    </div>
+
+    <div class="current-sponsors" *ngIf="current && sponsors">
+        <div *ngFor="let t of tiers">
+            <div  [class]="t + ' tier'" *ngIf="getTier(t).length > 0">
+                <span class="header">
+                    {{t}} Sponsors
+                </span>
+                <div class="sponsor" *ngFor="let s of getTier(t)">
+                    <img [src]="dbService.getImage(s.Logo)" class="logo">
+                    <div class="info">
+                        <a [class.link]="s.Link" [class.non-link]="!s.Link" [href]="s.Link" [innerText]="s.Company"></a>
+                        <p *ngIf="s.Location" class="text" [innerText]="s.Location"></p>
+                        <p *ngIf="s.Description" class="text" [innerHTML]="s.Description"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span class="header">
+            Trailer Sponsors
+        </span>
+        <div class="sponsor">
+            <img [src]="dbService.getImage(getTier('Trailer')[0].Logo)" class="logo">
+            <div class="info">
+                <p *ngFor="let n of getTier('Trailer')" class="text" [innerText]="n.Company"></p>
+            </div>
+        </div>
+    </div>
+    <div class="past-sponsors" *ngIf="!current && pastSponsors">
+        <div *ngFor="let t of tiers">
+            <div  [class]="t + ' tier'" *ngIf="getPastTier(t).length > 0">
+                <span class="header">
+                    {{t}} Sponsors
+                </span>
+                <div class="grid">
+                    <div class="column" *ngFor="let s of getPastTier(t)">
+                        <div class="info">
+                            <a [class.link]="s.Link" [class.non-link]="!s.Link" [href]="s.Link" [innerText]="s.Company"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

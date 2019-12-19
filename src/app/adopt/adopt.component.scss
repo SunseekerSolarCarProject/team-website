@@ -1,0 +1,57 @@
+
+.car {
+    border: black 1px solid;
+    height: 400px;
+    width: 900px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: #fcc30f;
+}
+
+.sub1, .sub2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 300px;
+}
+
+.spacer {
+    width: 300px;
+    height: 100%;
+}
+
+.car-container {
+    display: flex;
+    justify-content: center;
+    height: 1000px;
+    padding-top: 50px;
+}
+
+.cell {
+    height: 20px;
+    width: 20px;
+    border-radius: 5px;
+    background-color: black;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.empty {
+    background-color: gray;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px
+}
+
+.invisable {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}

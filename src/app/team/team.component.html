@@ -1,0 +1,64 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div>
+        <app-header *ngIf="header" [header]="header"></app-header>
+        <div *ngIf="current && members" class="members">
+            <div class="tree container">
+                <div class="leads">
+                    <div class="lead" *ngIf="getPosition('President')">
+                        <app-person [person]="getPosition('President')"></app-person>
+                    </div>
+                </div>
+                <div class="leads">
+                    <div class="lead" *ngIf="getPosition('Director of Business')">
+                        <app-person [person]="getPosition('Director of Business')"></app-person>
+                    </div>
+                    <div class="lead" *ngIf="getPosition('Director of Operations')">
+                        <app-person [person]="getPosition('Director of Operations')"></app-person>
+                    </div>
+                    <div class="lead" *ngIf="getPosition('Director of Engineering')">
+                        <app-person [person]="getPosition('Director of Engineering')"></app-person>
+                    </div>
+                </div>
+                <div class="leads">
+                    <div class="lead" *ngIf="getPosition('Webmaster')">
+                        <app-person [person]="getPosition('Webmaster')"></app-person>
+                    </div>
+                    <div class="lead" *ngIf="getPosition('Mechanical Lead')">
+                        <app-person [person]="getPosition('Mechanical Lead')"></app-person>
+                    </div>
+                    <div class="lead" *ngIf="getPosition('Electrical Lead')">
+                        <app-person [person]="getPosition('Electrical Lead')"></app-person>
+                    </div>
+                </div>
+                <hr class="line">
+                <div class="people">
+                    <div class="person" *ngFor="let m of getMembers()" [hidden]="!m">
+                        <app-person [person]="m"></app-person>
+                    </div>
+                </div>
+                <br>
+                <div class="people">
+                    <div class="person" *ngFor="let m of getAdvisors()">
+                        <app-person [person]="m" ></app-person>
+                    </div>
+                </div>
+            </div>
+            <div class="spacer">
+                <br>
+            </div>
+        </div>
+        <div *ngIf="past && alumni">
+            <div class="people">
+                <div class="person" *ngFor="let a of getAlumni()">
+                    <app-person [person]="a" ></app-person>
+                </div>
+            </div>
+            <div class="not-pictured container">
+                <div class="titles">Not Pictured</div>
+                <span *ngFor="let name of getNotPictured(); let i = index; let l = count" [innerText]="name + getSeperator(i, l)"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

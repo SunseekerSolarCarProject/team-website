@@ -1,0 +1,38 @@
+.navbar-inverse{
+    background-color: #663300;
+    border: 1px solid #663300;
+}
+
+.page-header, .header{
+    font-size: 18pt;
+}
+
+.text{
+    font-size: 14pt;
+}
+
+li{
+    font-size: 12pt;
+}
+
+.tier{
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 50px;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+.button{
+    background-color: #ffcb0c;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+}

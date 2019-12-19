@@ -1,0 +1,14 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <app-header *ngIf="header" [header]="header"></app-header>
+    <div class="car-table" *ngIf="cars">
+        <div *ngFor="let c of cars" class="car">
+            <img class="car-pic" [src]="dbService.getImage(c.Icon)">
+            <div class="overlay">
+                <p [innerText]="c.Car" class="title"></p>
+                <div class="button"  [routerLink]="['/cardetail/' + c.Car]">View Details</div>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>

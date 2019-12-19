@@ -1,0 +1,18 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div>
+        <app-header *ngIf="headers" [header]="currentHeader"></app-header>
+        <div class="container" *ngIf="aboutus">
+            <div class="page-header" *ngIf="currentInfo[0]">
+                <h1 [innerText]="currentInfo[0].Title"></h1>
+            </div>
+            <span  *ngIf="currentInfo[0]" class="text" [innerHTML]="currentInfo[0].Info"></span>
+            <div class="page-header" *ngIf="currentInfo[1]">
+                <h1 [innerText]="currentInfo[1].Title"></h1>
+            </div>
+            <span *ngIf="currentInfo[1]" class="text" [innerHTML]="currentInfo[1].Info"></span>
+        </div>
+    </div>
+    <div class="spacer"></div>
+</div>
+<app-footer></app-footer>

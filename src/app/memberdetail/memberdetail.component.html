@@ -1,0 +1,59 @@
+<app-navbar></app-navbar>
+<div class="container-fluid" *ngIf="person">
+    <div class="img-container">
+        <img [src]="dbService.getImage(person.Banner)" class="banner">
+        <div class="img-overlay">
+            <div class="overlay-title" [innerHTML]="person.Quote"></div>
+        </div>
+    </div>
+    <div class="container margin-bottom-10">
+        <div class="flex">
+            <div class="bio">
+                <p class="title" [innerText]="'About '+firstName"></p>
+                <p>
+                    <span class="subtitle">Team Position: </span>
+                    <span [innerText]="funny && person.FunnyTitles ? person.FunnyTitle : person.Position"></span>
+                </p>
+                <p *ngIf="person.Major">
+                    <span class="subtitle">Major: </span>
+                    <span [innerText]="person.Major"></span>
+                </p>
+                <p *ngIf="person && person.Start">
+                    <span class="subtitle">Joined: </span>
+                    <span [innerText]="person.Start"></span>
+                </p>
+                <p [innerText]="person.Bio"></p>
+            </div>
+            <div class="info">
+                <div *ngIf="person.Picture" class="person">
+                    <img class="funny" [class.transparent]='!isFunnyPic' [src]="dbService.getImage(person.FunnyPic)" width="280px" height="350px">
+                    <img class="picture" [class.transparent]='isFunnyPic' [src]="dbService.getImage(person.Picture)" width="280px" height="350px">
+                </div>
+                <p class="padding-bottom-10" *ngIf="person.FactTitle" class="title" [innerText]="person.FactTitle"></p>
+                <p class="padding-bottom-10" *ngIf="person.Fact1" [innerText]="person.Fact1"></p>
+                <p class="padding-bottom-10" *ngIf="person.Fact2" [innerText]="person.Fact2"></p>
+                <p class="padding-bottom-10" *ngIf="person.Fact3" [innerText]="person.Fact3"></p>
+                <hr>
+                <div class="row">
+                    <a href="person.Linkedin" *ngIf="person.Linkedin">
+                        <img src="assets/_images/social-icons/linkedin-small.png" class="icon">
+                    </a>
+                    <a href="person.Facebook" *ngIf="person.Facebook">
+                        <img src="assets/_images/social-icons/facebook.png" class="icon">
+                    </a>
+                    <a href="person.Github" *ngIf="person.Github">
+                        <img src="assets/_images/social-icons/github.png" class="icon">
+                    </a>
+                    <a href="person.Twitter" *ngIf="person.Twitter">
+                        <img src="assets/_images/social-icons/twitter.png" class="icon">
+                    </a>
+                    <a href="person.Instagram" *ngIf="person.Instagram">
+                        <img src="assets/_images/social-icons/instagram.png" class="icon">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

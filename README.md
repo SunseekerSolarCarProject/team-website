@@ -1,38 +1,27 @@
-# Sunseeker Solar Car Project - Team Website
+# Solar Car Website
 
-This repository contains the source for the Sunseeker Solar Car Project's Team Website. You can visit the website at: [https://www.wmich.edu/sunseeker](https://www.wmich.edu/sunseeker)
+This is the website for the WMU sunseeker solar car team
 
-## Requirements
+## Prerequisite
 
-- Jekyll
-- NodeJS and npm
-- Bower
+You must download [node.js](https://nodejs.org/en/)
 
-## Installing and Configuring
+It is recomended that you install [xampp](https://www.apachefriends.org/index.html) for testing
 
-Once you have cloned the repository onto your machine, you will want to do the following to get the website up and running.
+## Setup
 
-Firstly, install all of the dependencies, like so:
+After cloning this repo run `npm install` in the directory
 
-```sh
-$ npm install
-$ bower install
-```
+To start a test server run `npm start` and open `localhost:4200` in a browser
 
-That's it, you are now ready to run the website locally, like so:
+Images are stored in the `assets/_images` folder
 
-```sh
-$ jekyll serve watch
-```
+## Build
 
-## Good to knows
+When done making changes run the `npm run build` 
 
-To make our JavaScripts a little nicer to work with, we utilize Browserify. That being so, we have a node script which must be run to compile the JavaScript files. This script can be run with the following:
+The built file will be generated in the dist folder
 
-```sh
-$ node deploy.js
-```
+**The contents of the dist file are the only thing that gets loaded to the server**
 
-This script must be run after each modification made to any of the JavaScript files.
-
-only upload the _site folder when adding changes to Western Server
+To test the built dist folder copy it in the htdocs file of xampp and open localhost/dist

@@ -1,0 +1,112 @@
+<app-navbar></app-navbar>
+<div class="container-fluid">
+    <div class="img-container" id="image">
+        <img src="assets/_images/homepage/sunny-texas-day.jpg" class="banner">
+        <div class="img-overlay">
+        </div>
+    </div>
+    <!-- <nav id="nav" class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <span class="navbar-brand">Donate</span>
+            </div>
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="https://secure.wmualumni.org/s/give?funds=PSUN">$25</a>
+                </li>
+                <li>
+                    <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158&amount=50">$50</a>
+                </li>
+                <li>
+                    <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158&amount=100">$100</a>
+                </li>
+                <li>
+                    <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158&amount=250">$250</a>
+                </li>
+                <li>
+                    <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158&amount=500">$500</a>
+                </li>
+                <li>
+                    <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158&amount=1000">$1000</a>
+                </li>
+                <li>
+                    <a href="https://securelb.imodules.com/s/1428/gid2/index.aspx?sid=1428&gid=2&pgid=418&cid=1173&bledit=1&dids=158&amount=2500">$2500</a>
+                </li>
+            </ul>
+            <div class="navbar-form navbar-left">
+                <div class="form-group">
+                    <input type="number" id="donation" placeholder="">
+                    <button class="button" (click)="donate()">Continue</button>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <div class="container">
+        <p class="page-header">Making a donation</p>
+        <p class="text">All monetary donations can be made through Western Michigan University's secure, online
+            <a href="https://secure.wmualumni.org/s/give?funds=PSUN">giving portal</a> by choosing an amount. If you have any questions, or would like to donate something other than
+            money, please let us know by sending an email to
+            <a href="mailto: sunseeker@wmich.edu">sunseeker@wmich.edu</a>. Continue reading below for more information regarding the perks of being a sponsor!</p>
+
+        <p class="page-header">Sponsorship Tiers</p>
+        <div class="tier">
+            <p class="header">Diamond</p>
+            <p class="text">Donations valued at no less than $25,000.</p>
+            <ul>
+                <li *ngFor="let item of generateTier(0)" [innerText]="item"></li>
+            </ul>
+        </div>
+
+        <div class="tier">
+            <p class="header">Platinum</p>
+            <p class="text">Donations valued from $14,000 and up to $24,999.</p>
+            <ul>
+                <li *ngFor="let item of generateTier(1)" [innerText]="item"></li>
+            </ul>
+        </div>
+        <div class="tier">
+            <p class="header">Gold</p>
+            <p class="text">Donations valued from $8,000 and up to $13,999.</p>
+            <ul>
+                <li *ngFor="let item of generateTier(2)" [innerText]="item"></li>
+            </ul>
+        </div>
+        <div class="tier">
+            <p class="header">Silver</p>
+            <p class="text">Donations valued from $5,000 and up to $7,999.</p>
+            <ul>
+                <li *ngFor="let item of generateTier(3)" [innerText]="item"></li>
+            </ul>
+        </div>
+        <div class="tier">
+            <p class="header">Bronze</p>
+            <p class="text">Donations valued from $1,000 and up to $4,999.</p>
+            <ul>
+                <li *ngFor="let item of generateTier(3)" [innerText]="item"></li>
+            </ul>
+        </div>
+        <div class="tier">
+                <p class="header">Adopt a Cell</p>
+                <p class="text">Donations valued from $250 and up to $999.</p>
+                <ul>
+                    <li>Company name and logo on our Adopt a Cell Page on the website</li>
+                </ul>
+            </div>
+
+        <p class="page-header" id="info">Additional Information</p>
+        <p class="text">All donations are welcome, if you are donating something besides or in addition to cash, we ask that you also provide
+            a value for the goods and/or services. We will need a value to properly place you or your organization into a
+            sponsorship tier. If you make multiple donations, the cumulative value will determine your sponsorship tier.</p>
+        <ol>
+            <li>Logo on exterior — The placement will be on the exterior of the current solar car. The size of the logo will
+                be determined by sponsorship tier.</li>
+            <li>Logo on website — Will be placed on the Our Sponsors page with company name and location. We ask that you provide
+                the following: a logo, company name, and its location.</li>
+            <li>Link to website — Links will be automatically be added for the sponsor unless specified otherwise.</li>
+            <li>Sponsor description — A description of no more than 400 characters may be provided to be displaed on the Our
+                Sponsors page next to your logo and company name.</li>
+        </ol>
+        <br>
+    </div>
+</div>
+<app-footer></app-footer>

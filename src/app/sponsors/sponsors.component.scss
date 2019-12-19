@@ -1,0 +1,97 @@
+.current-sponsors, .past-sponsors{
+    margin-right: 15%;
+    margin-left: 15%;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+.current-sponsors .info {
+    flex-grow: 1;
+}
+
+.sponsor{
+    display: flex;
+    align-items: center;
+}
+
+.info{
+    background-color: rgba(whitesmoke, 0.5);
+    padding: 20px;
+    margin: 20px;
+}
+
+.header{
+    font-size: 20pt;
+    text-decoration: underline;
+}
+
+.logo{
+    min-width: 200px;
+    width: 200px;
+    height: auto;
+}
+
+.link{
+    color: black;
+    text-decoration: underline;
+    font-size: 14pt;
+}
+
+.non-link{
+    color: black;
+    text-decoration: none;
+    font-size: 14pt;
+}
+
+.text{
+    font-size: 12pt;
+}
+
+.button{
+    background-color: #ffcb0c;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+.row{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+    div, a{
+        width: 250px;
+        text-align: center;
+    }
+}
+
+.tier {
+    padding: 50px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px #aaaaaa;
+    margin-bottom: 50px;
+}
+
+.Platinum {
+    background-color: rgba(#e5e4e2, 0.25);
+}
+
+.Gold {
+    background-color: rgba(252, 195, 15, 0.25);
+}
+
+.Silver {
+    background-color: rgba(#c0c0c0, 0.25);
+}
+
+.Bronze {
+    background-color: rgba(#cd7f32, 0.25);
+}
+
+.grid {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}

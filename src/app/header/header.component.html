@@ -1,0 +1,13 @@
+<div class="img-container" *ngIf="header">
+    <img [src]="header.Image[0].url" class="banner">
+    <div class="img-overlay">
+        <img class="overlay-title logo" [src]="header.Logo[0].url" *ngIf="header.Logo">
+        <div class="overlay-title" [innerHTML]="header.ImageTitle" *ngIf="header.ImageTitle"></div>
+    </div>
+</div>
+
+
+<div class="page-header" *ngIf="header.Info">
+    <h1 [innerText]="header.InfoTitle"></h1>
+    <div class="container" [class.info-container]="isPC" [innerHTML]="header.Info"></div>
+</div>
