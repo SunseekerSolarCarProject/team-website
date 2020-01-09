@@ -15,9 +15,9 @@
     </div> -->
     <div class="container" *ngIf="meetingTimes && isPc">
         <h1 class="center">
-            Meeting Times | {{getMeeting('Semester').Day}}
+            Meeting Times | {{getMeeting('Semester')?.Day}}
         </h1>
-        <div class="meeting-time bottom-border" *ngIf="getMeeting('General').Day">
+        <div class="meeting-time bottom-border" *ngIf="getMeeting('General')?.Day">
             <span>
                 <span class="glyphicon glyphicon-user"></span> &nbsp; General Team Meeting
             </span>
@@ -25,7 +25,7 @@
                 {{getMeeting('General').Day}} {{getMeeting('General').Time}} | {{getMeeting('General').Building}} {{getMeeting('General').Room}}
             </span>
         </div>
-        <div class="meeting-time bottom-border" *ngIf="getMeeting('Mechanical').Day">
+        <div class="meeting-time bottom-border" *ngIf="getMeeting('Mechanical')?.Day">
             <span>
                 <span class="glyphicon glyphicon-cog"></span> &nbsp; Mechanical Team Meeting
             </span>
@@ -33,7 +33,7 @@
                     {{getMeeting('Mechanical').Day}} {{getMeeting('Mechanical').Time}} | {{getMeeting('Mechanical').Building}} {{getMeeting('Mechanical').Room}}
             </span>
         </div>
-        <div class="meeting-time bottom-border" *ngIf="getMeeting('CS').Day">
+        <div class="meeting-time bottom-border" *ngIf="getMeeting('CS')?.Day">
             <span>
                 <i class='fas fa-code-branch'></i> &nbsp; CS Team Meeting
             </span>
@@ -45,10 +45,11 @@
             <span>
                 <span class="glyphicon glyphicon-flash"></span> &nbsp; Electrical
             </span>
-            <span>
+            <span *ngIf="getMeeting('Electrical')?.Day">
+                {{getMeeting('Electrical').Day}} {{getMeeting('Electrical').Time}} | {{getMeeting('Electrical').Building}} {{getMeeting('Electrical').Room}}
             </span>
         </div>
-        <div class="submeeting-time" *ngIf="getMeeting('Battery').Day">
+        <div class="submeeting-time" *ngIf="getMeeting('Battery')?.Day">
             <span>
                 <i class="fas fa-battery-full"></i> &nbsp; Battery
             </span>
@@ -56,7 +57,7 @@
                     {{getMeeting('Battery').Day}} {{getMeeting('Battery').Time}} | {{getMeeting('Battery').Building}} {{getMeeting('Battery').Room}}
             </span>
         </div>
-        <div class="submeeting-time" *ngIf="getMeeting('Solar').Day">
+        <div class="submeeting-time" *ngIf="getMeeting('Solar')?.Day">
             <span>
                 <i class='fas fa-sun'></i> &nbsp; Solar
             </span>
@@ -64,7 +65,7 @@
                     {{getMeeting('Solar').Day}} {{getMeeting('Solar').Time}} | {{getMeeting('Solar').Building}} {{getMeeting('Solar').Room}}
             </span>
         </div>
-        <div class="submeeting-time bottom-border bottom-padding" *ngIf="getMeeting('PCB').Day">
+        <div class="submeeting-time" *ngIf="getMeeting('PCB')?.Day">
             <span>
                 <i class='fas fa-microchip'></i> &nbsp; PCB
             </span>
@@ -72,7 +73,8 @@
                     {{getMeeting('PCB').Day}} {{getMeeting('PCB').Time}} | {{getMeeting('PCB').Building}} {{getMeeting('PCB').Room}}
             </span>
         </div>
-        <div class="meeting-time" *ngIf="getMeeting('Business').Day">
+        <div class="bottom-border bottom-padding"></div>
+        <div class="meeting-time" *ngIf="getMeeting('Business')?.Day">
             <span>
                 <i class="fas fa-briefcase"></i> &nbsp; Business Team Meeting
             </span>
